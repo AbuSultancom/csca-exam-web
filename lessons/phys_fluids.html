@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس: ميكانيكا الموائع | Masterclass: Fluids</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--accent);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(247, 37, 133, 0.08);
+            border: 2px solid var(--accent);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الموائع | Fluids Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">ميكانيكا الموائع: لغة الضغط والجريان <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Fluid Mechanics: The Language of Pressure & Flow</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(247, 37, 133, 0.1), transparent); border-color: var(--accent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>علم الماء والهواء:</h3>
+                    <p>أهلاً بك يا بطل. الموائع هي السوائل والغازات. هندسة الموائع تفسر كيف تطفو السفن وكيف تطير
+                        الطائرات. سنشرح هنا أهم قوانينها التي تأتي في اختبار CSCA.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Science of Water & Air:</h3>
+                    <p>Welcome, hero. Fluids are liquids and gases. Fluid mechanics explains how ships float and planes
+                        fly. We explain the core rules for the CSCA here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: PRESSURE -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: الضغط في الموائع (Fluid Pressure)</h3>
+                    <p>الضغط داخل السائل يعتمد فقط على الكثافة والعمق والجاذبية.</p>
+                    <div class="logic-card">\( P = \rho g h \) | حيث \( \rho \): الكثافة، \( g \): الجاذبية، \( h \):
+                        العمق.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Fluid Pressure</h3>
+                    <p>Pressure within a fluid depends solely on density, depth, and gravity.</p>
+                    <div class="logic-card">\( P = \rho g h \) | \( \rho \): density, \( g \): gravity, \( h \): depth.
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>احسب ضغط الماء (\( \rho = 1000 \, kg/m^3 \)) على عمق 10 أمتار (\( g = 10 \)).</p>
+                        <p><strong>الحل:</strong><br>
+                            1. التعويض: \( P = 1000 \times 10 \times 10 \). <br>
+                            2. الحساب: \( 100,000 \, Pa = 1 \, atm \). <br> <strong>النتيجة:</strong> الضغط هو 100 ألف
+                            باسكال.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>Calculate water pressure (\( \rho = 1000 \)) at 10m depth (\( g = 10 \)).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Substitute: \( P = 1000 \times 10 \times 10 \). <br>
+                            2. Calculation: \( 100,000 \, Pa = 1 \, atm \). <br> <strong>Result:</strong> 100,000
+                            Pascals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: ARCHIMEDES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: قاعدة أرخميدس (Archimedes' Principle)</h3>
+                    <p>قوة الطفو تساوي وزن المائع المزاح.</p>
+                    <div class="logic-card">\( F_b = \rho_{fluid} V_{submerged} g \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Archimedes' Principle</h3>
+                    <p>Buoyancy force equals the weight of the displaced fluid.</p>
+                    <div class="logic-card">\( F_b = \rho_{fluid} V_{submerged} g \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تكتيكي (Tactical Example):</h4>
+                        <p>هل يغرق جسم كتلته 2 كجم وحجمه 3 لترات إذا وضع في الماء؟ (\( \rho = 1 \)).</p>
+                        <p><strong>الحل:</strong><br>
+                            1. كثافة الجسم: \( \rho_{obj} = 2 / 3 < 1 \). <br>
+                                2. بما أن كثافة الجسم أقل من كثافة الماء، فإنه سيطفو. <br> <strong>النتيجة:</strong> لن
+                                يغرق الجسم.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Tactical Example:</h4>
+                        <p>Will a 2kg object with 3L volume sink in water (\( \rho = 1 \))?</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Density of object: \( \rho_{obj} = 2 / 3 < 1 \). <br>
+                                2. Since object density is less than water's, it floats. <br> <strong>Result:</strong>
+                                The object will NOT sink.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE QUIZ -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--accent);">📝 اختبر معلوماتك | Practice Quiz</h2>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q1:</strong> إذا كان الضغط عند عمق معادل لعمود من الزئبق هو 760 ملم زئبقي، هذا الضغط يسمى:
+                </p>
+                <div style="margin: 10px 0;">
+                    A) ضغط الطفو &nbsp; B) الضغط الجوي (Atmospheric Pressure) &nbsp; C) الضغط الديناميكي &nbsp; D) صفر
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الضغط الجوي القياسي يعادل ضغط عمود 76 سم من الزئبق.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q2:</strong> وفقاً لمعادلة برنولي، عندما تزداد سرعة المائع، فإن ضغطه:</p>
+                <div style="margin: 10px 0;">
+                    A) يزداد &nbsp; B) يقل (Decreases) &nbsp; C) يثبت &nbsp; D) يصبح سالباً
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">هذا هو المبدأ الفيزيائي الذي يفسر طيران الطائرات: سرعة
+                        أعلى تعني ضغطاً أقل.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للفيزياء | المنهج الذهبي</p>
+    </footer>
+</body>
+
+</html>

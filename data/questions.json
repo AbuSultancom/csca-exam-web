@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "subject": "رياضيات | Math",
+        "question": "إذا كان \\(A \\cup B = A \\cap B\\)، فما هي العلاقة بين A و B؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">If \\(A \\cup B = A \\cap B\\), what is the relationship between A and B?</span>",
+        "options": [
+            "A = B",
+            "A ⊆ B",
+            "B ⊆ A",
+            "لا توجد علاقة | No relationship"
+        ],
+        "answer": 0,
+        "explanation": "عندما يتساوى الاتحاد مع التقاطع، فهذا يعني أن جميع العناصر في الاتحاد موجودة في التقاطع، وهذا لا يحدث إلا إذا كانت المجموعتان متطابقتين تماماً (A = B).",
+        "eng_explanation": "When the union equals the intersection, it implies all elements in the union are also in the intersection, which only happens if the two sets are identical (A = B)."
+    },
+    {
+        "id": 2,
+        "subject": "رياضيات | Math",
+        "question": "حل المتباينة: \\(x^2 - 5x + 6 < 0\\) <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Solve the inequality: \\(x^2 - 5x + 6 < 0\\)</span>",
+        "options": [
+            "x < 2 or x > 3",
+            "2 < x < 3",
+            "x <= 2 or x >= 3",
+            "-3 < x < -2"
+        ],
+        "answer": 1,
+        "explanation": "بتحليل المقدار: (x-2)(x-3) < 0. الجذور هي 2 و 3. بما أن معامل x تربيع موجب، فإن المنطقة بين الجذور تكون سالبة. إذن الحل هو الفترة (2, 3).",
+        "eng_explanation": "Factoring: (x-2)(x-3) < 0. The roots are 2 and 3. Since the x^2 coefficient is positive, the region between the roots is negative. Thus, 2 < x < 3."
+    },
+    {
+        "id": 3,
+        "subject": "فيزياء | Physics",
+        "question": "ما هو الشغل المبذول لرفع جسم كتلته 5kg لمسافة 10m رأسياً؟ (\\(g = 10m/s^2\\)) <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">What is the work done to lift a 5kg mass 10m vertically? (\\(g = 10\\))</span>",
+        "options": [
+            "50 J",
+            "500 J",
+            "250 J",
+            "100 J"
+        ],
+        "answer": 1,
+        "explanation": "الشغل يساوي التغير في طاقة الوضع: W = mgh = 5 * 10 * 10 = 500 J.",
+        "eng_explanation": "Work equals the change in potential energy: W = mgh = 5 * 10 * 10 = 500 J."
+    },
+    {
+        "id": 4,
+        "subject": "فيزياء | Physics",
+        "question": "مقاومتان 4Ω و 12Ω موصلتان على التوازي. ما هي المقاومة المكافئة؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Two resistors 4Ω and 12Ω are in parallel. Find Req.</span>",
+        "options": [
+            "16 Ω",
+            "8 Ω",
+            "3 Ω",
+            "4 Ω"
+        ],
+        "answer": 2,
+        "explanation": "في التوازي: 1/Req = 1/4 + 1/12 = 3/12 + 1/12 = 4/12 = 1/3. إذن Req = 3 Ω.",
+        "eng_explanation": "In parallel: 1/Req = 1/4 + 1/12 = 1/3, so Req = 3 Ω."
+    },
+    {
+        "id": 5,
+        "subject": "رياضيات | Math",
+        "question": "ما هو ميل الخط المستقيم العمودي على المستقيم الذي معادلته \\(y = 2x + 1\\)؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">What is the slope of the line perpendicular to \\(y = 2x + 1\\)?</span>",
+        "options": [
+            "2",
+            "-2",
+            "1/2",
+            "-1/2"
+        ],
+        "answer": 3,
+        "explanation": "ميل المستقيم المعطى هو 2. ميل العمودي هو مقلوب الميل بعكس الإشارة: -1/2.",
+        "eng_explanation": "The slope of the given line is 2. The perpendicular slope is the negative reciprocal: -1/2."
+    },
+    {
+        "id": 6,
+        "subject": "فيزياء | Physics",
+        "question": "ضوء ينتقل من الهواء (n=1) إلى الزجاج (n=1.5). إذا كانت زاوية السقوط 30 درجة، فما جيب زاوية الانكسار؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Light moves from air (n=1) to glass (n=1.5). If incidence angle is 30°, find sin of refraction.</span>",
+        "options": [
+            "1/2",
+            "1/3",
+            "2/3",
+            "1/4"
+        ],
+        "answer": 1,
+        "explanation": "باستخدام قانون سنيل: n1 sin θ1 = n2 sin θ2 => 1 * sin(30) = 1.5 * sin θ2 => 0.5 = 1.5 sin θ2 => sin θ2 = 1/3.",
+        "eng_explanation": "Using Snell's Law: n1 sin θ1 = n2 sin θ2 => 1 * sin(30) = 1.5 * sin θ2 => 0.5 = 1.5 sin θ2 => sin θ2 = 1/3."
+    },
+    {
+        "id": 7,
+        "subject": "فيزياء | Physics",
+        "question": "ما هي طاقة فوتون تردده \\(6 \\times 10^{14} \\, Hz\\)؟ (\\(h = 6.6 \\times 10^{-34}\\)) <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">What is the energy of a photon with frequency \\(6 \\times 10^{14} \\, Hz\\)?</span>",
+        "options": [
+            "3.96 x 10^-19 J",
+            "6.6 x 10^-34 J",
+            "1.1 x 10^-48 J",
+            "4.0 x 10^-19 J"
+        ],
+        "answer": 0,
+        "explanation": "باستخدام E = hf: E = 6.6e-34 * 6e14 = 39.6e-20 = 3.96e-19 J.",
+        "eng_explanation": "Using E = hf: E = 6.6e-34 * 6e14 = 39.6e-20 = 3.96e-19 J."
+    },
+    {
+        "id": 8,
+        "subject": "رياضيات | Math",
+        "question": "للقطع الناقص \\(\\frac{x^2}{25} + \frac{y^2}{16} = 1\\)، ما هي المسافة من المركز إلى البؤرة؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">For the ellipse \\(\\frac{x^2}{25} + \frac{y^2}{16} = 1\\), find the distance from center to focus (c).</span>",
+        "options": [
+            "5",
+            "4",
+            "3",
+            "9"
+        ],
+        "answer": 2,
+        "explanation": "في القطع الناقص: c^2 = a^2 - b^2 = 25 - 16 = 9. لذا c = 3.",
+        "eng_explanation": "In an ellipse: c^2 = a^2 - b^2 = 25 - 16 = 9. Thus c = 3."
+    },
+    {
+        "id": 9,
+        "subject": "رياضيات | Math",
+        "question": "ما هى قيمة النهاية \\\\( \\\\lim_{x \\\\to 0} \\\\frac{\\\\sin x}{x} \\\\)\\(؟\\) <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">What is the limit of \\\\( \\\\frac{\\\\sin x}{x} \\\\) as x approaches 0?</span>",
+        "options": [
+            "0",
+            "1",
+            "∞",
+            "-1"
+        ],
+        "answer": 1,
+        "explanation": "هذه نهاية شهيرة في التفاضل وتساوي 1.",
+        "eng_explanation": "This is a fundamental trigonometric limit and equals 1."
+    },
+    {
+        "id": 10,
+        "subject": "فيزياء | Physics",
+        "question": "قوة الطفو المؤثرة على جسم تساوي: <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">The buoyancy force on an object equals:</span>",
+        "options": [
+            "وزن الجسم",
+            "حجم الجسم",
+            "وزن المائع المزاح | Weight of displaced fluid",
+            "الضغط الجوي"
+        ],
+        "answer": 2,
+        "explanation": "حسب مبدأ أرخميدس، قوة الطفو تساوي وزن كمية السائل التي دفعها الجسم بعيداً.",
+        "eng_explanation": "Per Archimedes' Principle, buoyancy is equal to the weight of the fluid the object displaces."
+    },
+    {
+        "id": 11,
+        "subject": "كيمياء | Chemistry",
+        "question": "أي من هذه المدارات يتسع لـ 10 إلكترونات كحد أقصى؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Which subshell holds a maximum of 10 electrons?</span>",
+        "options": [
+            "s",
+            "p",
+            "d",
+            "f"
+        ],
+        "answer": 2,
+        "explanation": "المدارات الفرعية: s(2), p(6), d(10), f(14).",
+        "eng_explanation": "Subshell capacities: s=2, p=6, d=10, f=14."
+    },
+    {
+        "id": 12,
+        "subject": "كيمياء | Chemistry",
+        "question": "الرابطة في جزيء \\\\( HCl \\\\) هي: <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Bond type in \\\\( HCl \\\\) is:</span>",
+        "options": [
+            "أيونية",
+            "تساهمية قطبية | Polar Covalent",
+            "تساهمية نقية",
+            "هيدروجينية"
+        ],
+        "answer": 1,
+        "explanation": "بسبب فرق الكهروسالبية بين الكلور والهيدروجين، تنجذب الإلكترونات نحو الكلور أكثر.",
+        "eng_explanation": "Due to the electronegativity difference, chloride pulls electrons more, making it polar covalent."
+    }
+]

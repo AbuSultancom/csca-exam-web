@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس: المجموعات والمتباينات | Masterclass: Sets & Inequalities</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--primary);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 4px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(76, 201, 240, 0.08);
+            border: 2px solid var(--primary);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--primary);
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">المجموعات | Sets Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">المجموعات والمتباينات: المرجع الشامل <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Sets & Inequalities: The Comprehensive Reference</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(76, 201, 240, 0.1), transparent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>أهلاً بك في طريق التفوق:</h3>
+                    <p>هذا الدرس ليس مجرد معلومات؛ هو **نظام تفكير**. اختبار CSCA لا يختبر حفظك، بل يختبر قدرتك على
+                        تحليل العلاقات بين المجموعات وفك رموز المتباينات. سنأخذ كل قاعدة، نشرحها بعمق، ثم نطبق عليها
+                        مثالاً تفصيلياً كأننا في قاعة المحاضرات تماماً.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Welcome to the Path of Excellence:</h3>
+                    <p>This lesson is not just info; it's a **thinking system**. The CSCA exam doesn't test
+                        memorization, but your ability to analyze set relationships and decode inequalities. We will
+                        take every rule, explain it deeply, and apply a detailed example as if we were in a lecture hall
+                        together.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: DEFINITIONS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 1: تعريف المجموعة والرموز الأساسية</h3>
+                    <p>المجموعة تجمع عناصر "معرفة جيداً". الرموز هي لغتنا:</p>
+                    <ul>
+                        <li>\( \in \): ينتمي (للعنصر الواحد).</li>
+                        <li>\( \notin \): لا ينتمي.</li>
+                        <li>\( \subseteq \): مجموعة جزئية (علاقة بين مجموعتين).</li>
+                        <li>\( \emptyset \): المجموعة الخالية (لا تحوي شيئاً).</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 1: Set Definition & Core Symbols</h3>
+                    <p>A set is a collection of "well-defined" items. Symbols are our language:</p>
+                    <ul>
+                        <li>\( \in \): Belongs to (for a single element).</li>
+                        <li>\( \notin \): Does not belong to.</li>
+                        <li>\( \subseteq \): Subset (relation between two sets).</li>
+                        <li>\( \emptyset \): Empty set (contains nothing).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال توضيحي (Example):</h4>
+                        <p>لتكن \( A = \{1, 2, \{3\}\} \). هل العبارات التالية صحيحة؟</p>
+                        <ol>
+                            <li>\( 1 \in A \)? <strong>نعم</strong>، الواحد عنصر داخل الأقواس.</li>
+                            <li>\( \{3\} \in A \)? <strong>نعم</strong>، المجموعة \(\{3\}\) تعامل هنا كعنصر داخل A.</li>
+                            <li>\( 3 \in A \)? <strong>خطأ</strong>، الثلاثة محبوسة داخل مجموعة فرعية وليست حرة.</li>
+                        </ol>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>Let \( A = \{1, 2, \{3\}\} \). Are these true?</p>
+                        <ol>
+                            <li>\( 1 \in A \)? <strong>Yes</strong>, 1 is an element inside the brackets.</li>
+                            <li>\( \{3\} \in A \)? <strong>Yes</strong>, the set \(\{3\}\) acts as an element here.</li>
+                            <li>\( 3 \in A \)? <strong>False</strong>, 3 is trapped inside a subset, not a free element
+                                of A.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: UNION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 2: الاتحاد (Union \( \cup \))</h3>
+                    <p>الاتحاد يعني "كل شيء". نجمع عناصر المجموعتين في سلة واحدة ونحذف المكرر. في المنطق، الاتحاد هو
+                        كلمة **"أو" (OR)**.</p>
+                    <div class="logic-card">\( A \cup B = \{x : x \in A \text{ or } x \in B\} \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 2: Union (\( \cup \))</h3>
+                    <p>Union means "everything". We gather elements of both sets in one basket and delete duplicates. In
+                        logic, Union represents the word **"OR"**.</p>
+                    <div class="logic-card">\( A \cup B = \{x : x \in A \text{ or } x \in B\} \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>إذا كان \( A = \{x | x \leq 3\} \) و \( B = \{x | x > 0\} \). أوجد \( A \cup B \).</p>
+                        <p><strong>الحل:</strong> بما أن A تأخذ كل ما هو أقل من 3، و B تأخذ كل ما هو أكبر من 0، فإنهما
+                            يغطيان خط الأعداد كاملاً. <br> <strong>النتيجة:</strong> \( \mathbb{R} \) أو \( (-\infty,
+                            \infty) \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>If \( A = \{x | x \leq 3\} \) and \( B = \{x | x > 0\} \). Find \( A \cup B \).</p>
+                        <p><strong>Solution:</strong> Since A covers everything below 3, and B covers everything above
+                            0, they overlap and cover the entire number line. <br> <strong>Result:</strong> \(
+                            \mathbb{R} \) or \( (-\infty, \infty) \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: INTERSECTION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 3: التقاطع (Intersection \( \cap \))</h3>
+                    <p>التقاطع هو "المنطقة المشتركة". نختار فقط العناصر الموجودة في A **وَ** B في نفس الوقت. هو كلمة
+                        **"وَ" (AND)**.</p>
+                    <div class="logic-card">\( A \cap B = \{x : x \in A \text{ and } x \in B\} \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 3: Intersection (\( \cap \))</h3>
+                    <p>Intersection is the "common area". We pick only elements present in A **AND** B simultaneously.
+                        It represents the logical **"AND"**.</p>
+                    <div class="logic-card">\( A \cap B = \{x : x \in A \text{ and } x \in B\} \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>بإستخدام نفس المجموعات في المثال السابق (\( x \leq 3 \) و \( x > 0 \)). أوجد التقاطع.</p>
+                        <p><strong>الحل:</strong> هي القيم التي تحقق الشرطين معاً؛ أي أكبر من 0 وأصغر من أو تساوي 3.
+                            <br> <strong>النتيجة:</strong> \( (0, 3] \).
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>Using the same sets (\( x \leq 3 \) and \( x > 0 \)). Find the intersection.</p>
+                        <p><strong>Solution:</strong> The values satisfying both conditions: greater than 0 AND less
+                            than/equal to 3. <br> <strong>Result:</strong> \( (0, 3] \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 4: QUADRATIC INEQUALITIES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 4: المتباينات التربيعية (Quadratic Inequalities)</h3>
+                    <p>حل المتباينة من الدرجة الثانية (\(ax^2 + bx + c > 0\)) يتعدى مجرد إيجاد الجذور. يجب دراسة
+                        الإشارة.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 4: Quadratic Inequalities</h3>
+                    <p>Solving a 2nd-degree inequality (\(ax^2 + bx + c > 0\)) goes beyond finding roots. You must
+                        perform a Sign Analysis.</p>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--primary); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 خطوات الحل (Steps):</h4>
+                        <ol class="step-list">
+                            <li class="step-item"><span class="step-num">1</span> حلل المقدار لأقواس (Factorize).</li>
+                            <li class="step-item"><span class="step-num">2</span> أوجد "النقاط الحرجة" (الجذور).</li>
+                            <li class="step-item"><span class="step-num">3</span> ارسم خط الأعداد واختبر كل فترة.</li>
+                        </ol>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 Steps to Solve:</h4>
+                        <ol class="step-list">
+                            <li class="step-item"><span class="step-num">1</span> Factorize the expression.</li>
+                            <li class="step-item"><span class="step-num">2</span> Find the "Critical Points" (roots).
+                            </li>
+                            <li class="step-item"><span class="step-num">3</span> Draw a number line and test each
+                                interval.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>حل: \( x^2 - x - 6 > 0 \)</p>
+                        <p>1. التحليل: \( (x - 3)(x + 2) > 0 \). الجذور هي 3 و -2.</p>
+                        <p>2. خط الأعداد: <br>
+                            - نضع -2 و 3 على الخط. <br>
+                            - نختبر 0 (بينهم): \( 0^2 - 0 - 6 = -6 \) (سالب). <br>
+                            - نختبر 4 (بعدهم): \( 4^2 - 4 - 6 = 6 \) (موجب). <br>
+                            - نختبر -3 (قبلهم): \( (-3)^2 - (-3) - 6 = 6 \) (موجب).</p>
+                        <p><strong>الحل:</strong> كونه طلب \( > 0 \) (موجب)، نأخذ الأطراف. <br>
+                            <strong>النتيجة:</strong> \( (-\infty, -2) \cup (3, \infty) \).
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>Solve: \( x^2 - x - 6 > 0 \)</p>
+                        <p>1. Factor: \( (x - 3)(x + 2) > 0 \). Roots are 3 and -2.</p>
+                        <p>2. Number Line Analysis: <br>
+                            - Place -2 and 3 on the line. <br>
+                            - Test 0 (between): \( -6 \) (Negative). <br>
+                            - Test 4 (after): \( 6 \) (Positive). <br>
+                            - Test -3 (before): \( 6 \) (Positive).</p>
+                        <p><strong>Solution:</strong> Since it asks for \( > 0 \) (Positive), we take the outer wings.
+                            <br> <strong>Result:</strong> \( (-\infty, -2) \cup (3, \infty) \).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: ABSOLUTE VALUE -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 5: متباينات القيمة المطلقة (Absolute Value)</h3>
+                    <p>القيمة المطلقة \( |x| \) تعبر عن المسافة من الصفر. لها حالتان في الاختبار:</p>
+                    <ul>
+                        <li>\( |x| < a \implies -a < x < a \) (محصور بين رقمين).</li>
+                        <li>\( |x| > a \implies x > a \text{ or } x < -a \) (الأطراف).</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 5: Absolute Value Inequalities</h3>
+                    <p>\( |x| \) represents distance from zero. Two main cases in exams:</p>
+                    <ul>
+                        <li>\( |x| < a \implies -a < x < a \) (Trapped between values).</li>
+                        <li>\( |x| > a \implies x > a \text{ or } x < -a \) (Outer wings).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال التحدي (Challenge):</h4>
+                        <p>حل: \( |2x - 1| \leq 5 \)</p>
+                        <p><strong>الحل:</strong> نفك المطلق باستخدام القاعدة الأولى: <br>
+                            \( -5 \leq 2x - 1 \leq 5 \). <br>
+                            نضيف 1 للأطراف: \( -4 \leq 2x \leq 6 \). <br>
+                            نقسم على 2: \( -2 \leq x \leq 3 \).</p>
+                        <p><strong>النتيجة:</strong> \( [-2, 3] \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Challenge Example:</h4>
+                        <p>Solve: \( |2x - 1| \leq 5 \)</p>
+                        <p><strong>Solution:</strong> Unfold the absolute value using Case 1: <br>
+                            \( -5 \leq 2x - 1 \leq 5 \). <br>
+                            Add 1 to all sides: \( -4 \leq 2x \leq 6 \). <br>
+                            Divide by 2: \( -2 \leq x \leq 3 \).</p>
+                        <p><strong>Result:</strong> \( [-2, 3] \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757;">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح النجاة (Survival Tips):</h3>
+                    <ul>
+                        <li>إذا ضربت المتباينة في سالب، **اعكس الإشارة فوراً**. هذا أكثر خطأ يضيع درجات.</li>
+                        <li>في المجموعات، \( \{a, b\} \) هي نفسها \( \{b, a\} \). الترتيب لا يهم داخل أقواس المجموعة.
+                        </li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Survival Tips:</h3>
+                    <ul>
+                        <li>If you multiply an inequality by a negative, **FLIP the sign immediately**. This is the #1
+                            grade killer.</li>
+                        <li>In sets, \( \{a, b\} \) is the same as \( \{b, a\} \). Order does not matter inside curly
+                            brackets.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--primary);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Symbols -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q1:</strong> إذا كان \( A = \{1, 2, 3, 4\} \) و \( B = \{2, 4\} \). أي من التالي صحيح؟ <br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">If \( A = \{1, 2, 3, 4\} \) and \( B = \{2, 4\} \),
+                        which is true?</span>
+                </p>
+                <div style="margin: 10px 0;">
+                    A) \( B \in A \) &nbsp; B) \( B \subseteq A \) &nbsp; C) \( 5 \in A \) &nbsp; D) \( 2 \subseteq A \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">B هي مجموعة، لذا نستخدم رمز المجموعة الجزئية \( \subseteq
+                        \). العنصر 2 ينتمي وليس مجموعة جزئية.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q2:</strong> أي من الرموز التالية يمثل "المجموعة الخالية" التي لا تحوي عناصر؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Which symbol represents the "Empty Set"?</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( \{0\} \) &nbsp; B) \( \emptyset \) &nbsp; C) \( \{ \emptyset \} \) &nbsp; D) \( [ ] \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( \emptyset \) أو \( \{ \} \) هما الرمزان الوحيدان
+                        للمجموعة الخالية. أما \( \{0\} \) فتحوي الرقم صفر.</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: Union -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q3:</strong> \( A = \{x | 1 < x \leq 5\} \)، \( B=\{x | 4 < x < 10\} \). أوجد \( A \cup B
+                        \).</p>
+                        <div style="margin: 10px 0;">
+                            A) \( (1, 10) \) &nbsp; B) \( (1, 5] \) &nbsp; C) \( (4, 10) \) &nbsp; D) \( [1, 10] \)
+                        </div>
+                        <details>
+                            <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                            <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                            <p style="font-size: 0.9em; opacity: 0.8;">الاتحاد يدمج الفترتين من أصغر بداية (1) لأكبر
+                                نهاية (10).</p>
+                        </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q4:</strong> إذا كانت \( A \cup B = A \)، فماذا نستنتج؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">If \( A \cup B = A \), what can we conclude?</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( A \subseteq B \) &nbsp; B) \( B \subseteq A \) &nbsp; C) \( A \cap B = \emptyset \) &nbsp; D)
+                    \( A = B \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">إذا لم يضف الاتحاد مع B شيئاً جديداً لـ A، فهذا يعني أن B
+                        موجودة بالكامل داخل A.</p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Intersection -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q5:</strong> \( A = \{1, 3, 5\} \)، \( B = \{2, 4, 6\} \). أوجد \( A \cap B \).</p>
+                <div style="margin: 10px 0;">
+                    A) \( \{1, 2, 3, 4, 5, 6\} \) &nbsp; B) \( \{ \} \) &nbsp; C) \( \emptyset \) &nbsp; D) B and C are
+                    correct
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: D</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">لا توجد عناصر مشتركة، لذا الناتج هو المجموعة الخالية،
+                        ويرمز لها بكلا الرمزين.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q6:</strong> المجموعتان \( A = \{x | x^2-1=0\} \) و \( B = \{1, -1\} \). التقاطع بينهما هو:
+                </p>
+                <div style="margin: 10px 0;">
+                    A) \( \{1\} \) &nbsp; B) \( \{-1\} \) &nbsp; C) \( \{1, -1\} \) &nbsp; D) \( \emptyset \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">حل المعادلة \( x^2=1 \) هو \( 1, -1 \)، وهي نفس عناصر B.
+                    </p>
+                </details>
+            </div>
+
+            <!-- Q7 & Q8: Quadratic -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q7:</strong> حل المتباينة \( x^2 \leq 4 \) هو: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Solve \( x^2 \leq 4 \).</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( x \leq 2 \) &nbsp; B) \( x \leq -2 \) &nbsp; C) \( -2 \leq x \leq 2 \) &nbsp; D) \( x \geq 2
+                    \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">بأخذ الجذر، القيمة تكون محصورة بين السالب والموجب للجذر.
+                    </p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q8:</strong> متى تكون المتباينة \( ax^2 + bx + c < 0 \) لها حل لجميع قيم
+                        \(x\)\(\mathbb{R}\)؟</p>
+                        <div style="margin: 10px 0;">
+                            A) \( \Delta < 0, a> 0 \) &nbsp; B) \( \Delta < 0, a < 0 \) &nbsp; C) \( \Delta> 0 \) &nbsp;
+                                    D) \( a = 0 \)
+                        </div>
+                        <details>
+                            <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                            <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                            <p style="font-size: 0.9em; opacity: 0.8;">لكي تكون سالبة دائماً، يجب ألا تقطع محور X
+                                (\(\Delta < 0\)) وأن تكون مفتوحة للأسفل (\(a < 0\)).</p>
+                        </details>
+            </div>
+
+            <!-- Q9 & Q10: Absolute -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q9:</strong> حل المتباينة \( |x-5| > 2 \):</p>
+                <div style="margin: 10px 0;">
+                    A) \( 3 < x < 7 \) &nbsp; B) \( x> 7 \) or \( x < 3 \) &nbsp; C) \( x < 7 \) &nbsp; D) \( x> 3 \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">القاعدة: أطراف. \( x-5 > 2 \implies x > 7 \) أو \( x-5 <
+                            -2 \implies x < 3 \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q10:</strong> أي من التالي يمثل حل \( |x| \leq -1 \)\(؟\)</p>
+                <div style="margin: 10px 0;">
+                    A) \( x \geq 1 \) &nbsp; B) \( x \leq -1 \) &nbsp; C) \( \emptyset \) &nbsp; D) \( \mathbb{R} \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">مطلق أي رقم مستحيل أن يكون أصغر من رقم سالب.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للرياضيات | المنهج الذهبي | The Golden Syllabus</p>
+    </footer>
+</body>
+
+</html>

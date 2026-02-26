@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس الكيمياء: الاتزان والسرعة | Chemistry Masterclass: Equilibrium & Rates</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid #4ade80;
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid #2ecc71;
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(74, 222, 128, 0.08);
+            border: 2px solid #4ade80;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: #4ade80;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الكيمياء | Chemistry Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">سرعة التفاعل والاتزان: التوازن الديناميكي <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Rates & Equilibrium: The Dynamic Balance</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(74, 222, 128, 0.1), transparent); border-color: #4ade80;">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>كيف تحدث التفاعلات؟</h3>
+                    <p>بعض التفاعلات تنفجر في ثوانٍ، وبعضها يحتاج لآلاف السنين. سنفهم هنا ما الذي "يسرع" التفاعلات، وكيف
+                        يتوقف التفاعل في حالة "اتزان" حيث تتساوى سرعة التفاعل الأمامي والعكسي.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>How Do Reactions Happen?</h3>
+                    <p>Some reactions explode in seconds; others take millennia. We'll understand what "speeds up"
+                        reactions and how they reach "Equilibrium"—where forward and reverse rate are identical.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: REACTION RATES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: العوامل المؤثرة على السرعة</h3>
+                    <p>لكي يحدث تفاعل، يجب أن تصطدم الجزيئات بطاقة كافية (طاقة التنشيط) وفي اتجاه صحيح.</p>
+                    <div class="logic-card">العوامل: التركيز، درجة الحرارة، المحفزات (Catalysts)، ومساحة السطح.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Factors Affecting Rates</h3>
+                    <p>For a reaction to occur, particles must collide with sufficient energy (Activation Energy) and
+                        proper orientation.</p>
+                    <div class="logic-card">Factors: Concentration, Temp, Catalysts, and Surface Area.</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Example):</h4>
+                        <p>لماذا نستخدم المحفزات في عوادم السيارات؟</p>
+                        <p><strong>الحل:</strong><br>
+                            لأنها توفر "مساراً بديلاً" للتفاعل بطاقة تنشيط **أقل**، مما يسرع التخلص من الغازات السامة.
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Example:</h4>
+                        <p>Why use catalysts in car exhausts?</p>
+                        <p><strong>Solution:</strong><br>
+                            They provide an "alternative path" with **lower** activation energy, speeding up the
+                            neutralization of toxic gases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: LE CHATELIER -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: قاعدة لوشاتيليه (Le Chatelier's)</h3>
+                    <p>إذا أثرت "إجهاداً" على نظام متزن، سيعمل النظام على تقليص أثر هذا الإجهاد.</p>
+                    <div class="logic-card">زيادة التركيز \(\implies\) التوجيه للجهة المقابلة | زيادة الضغط \(\implies\)
+                        التوجيه للمولات الأقل غازاً.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Le Chatelier's Principle</h3>
+                    <p>If you apply stress to a system in equilibrium, it shifts to counteract that stress.</p>
+                    <div class="logic-card">Add product \(\implies\) shift left | Increase Pressure \(\implies\) shift
+                        to side with fewer gas moles.</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تكتيكي (Tactical):</h4>
+                        <p>في تفاعل تكوين الأمونيا \( N_2 + 3H_2 \rightleftharpoons 2NH_3 \)، ماذا يحدث عند زيادة الضغط؟
+                        </p>
+                        <p><strong>الحل:</strong><br>
+                            اليسار فيه 4 مولات غاز، واليمين 2 مول. بزيادة الضغط، يهرب التفاعل لليمين (جهة الأمونيا).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Tactical Example:</h4>
+                        <p>In \( N_2 + 3H_2 \rightleftharpoons 2NH_3 \), what happens if pressure increases?</p>
+                        <p><strong>Solution:</strong><br>
+                            Left has 4 gas moles, Right has 2. System shifts Right (towards ammonia) to reduce pressure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE QUIZ -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: #4ade80;">📝 اختبر معلوماتك | Practice Quiz</h2>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q1:</strong> المحفز (Catalyst) يؤثر على:</p>
+                <div style="margin: 10px 0;">
+                    A) مكان الاتزان &nbsp; B) ثابت الاتزان \(K_{eq}\) &nbsp; C) سرعة الوصول للاتزان &nbsp; D) كمية
+                    النواتج القصوى
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">المحفز يزيد السرعة في كلا الاتجاهين بنفس الدرجة، فلا يغير
+                        الكميات ولكنه يسرع الوقت فقط.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q2:</strong> ثابت الاتزان \(K_{eq}\) يتغير حصراً بتغير:</p>
+                <div style="margin: 10px 0;">
+                    A) الضغط &nbsp; B) التركيز &nbsp; C) درجة الحرارة (Temperature) &nbsp; D) الحجم
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">قيمة الثابت \(K\) هي دالة في الحرارة فقط؛ العوامل الأخرى
+                        تغير الموقع ولا تغير الثابت.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للكيمياء | المنهج الذهبي</p>
+    </footer>
+</body>
+
+</html>

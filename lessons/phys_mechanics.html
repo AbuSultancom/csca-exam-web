@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس الفيزياء: الميكانيكا | Masterclass: Physics Mechanics</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--accent);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(247, 37, 133, 0.08);
+            border: 2px solid var(--accent);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--accent);
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الميكانيكا | Mechanics Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">الميكانيكا: قوانين الحركة والقوة <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Mechanics: Laws of Motion & Force</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(247, 37, 133, 0.1), transparent); border-color: var(--accent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>سر النجاح في الفيزياء:</h3>
+                    <p>أهلاً بك يا بطل. الفيزياء هي لغة الكون الرقمية. في هذا الفصل، سنقوم بتفكيك قوانين الحركة والقوة
+                        إلى جزيئات بسيطة. ركز في **وحدات القياس** و **تحليل الاتجاهات**. سنبدأ بكل قاعدة على حدة، ونحل
+                        عليها مثالاً تفصيلياً كأنني أشرح لك وجهاً لوجه.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Secrets of Success in Physics:</h3>
+                    <p>Welcome, hero. Physics is the cosmic language of numbers. In this chapter, we will break down the
+                        laws of motion and force into simple atoms. Focus on **Units** and **Directional Analysis**.
+                        We'll take each rule one by one and solve a detailed example as if I'm lecturing directly to
+                        you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: KINEMATICS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 1: معادلات الحركة (Kinematics Equations)</h3>
+                    <p>إذا كان التسارع (\(a\)) ثابتاً، نستخدم هذه المعادلات الثلاث لربط السرعة والزمن والمسافة:</p>
+                    <div class="logic-card">
+                        1. \( v = v_0 + at \) <br>
+                        2. \( \Delta x = v_0t + \frac{1}{2}at^2 \) <br>
+                        3. \( v^2 = v_0^2 + 2a\Delta x \)
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 1: Equations of Motion (Kinematics)</h3>
+                    <p>When acceleration (\(a\)) is constant, we use these three equations to relate velocity, time, and
+                        distance:</p>
+                    <div class="logic-card">
+                        1. \( v = v_0 + at \) <br>
+                        2. \( \Delta x = v_0t + \frac{1}{2}at^2 \) <br>
+                        3. \( v^2 = v_0^2 + 2a\Delta x \)
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>بدأت سيارة حركتها من السكون بتسارع ثابت مقداره \( 2 \, m/s^2 \). ما هي سرعتها بعد 5 ثوانٍ؟
+                            وكم المسافة المقطوعة؟</p>
+                        <p><strong>الحل:</strong><br>
+                            1. السكون يعني \( v_0 = 0 \).<br>
+                            2. السرعة: \( v = 0 + (2 \times 5) = 10 \, m/s \).<br>
+                            3. المسافة: \( \Delta x = 0(5) + \frac{1}{2}(2)(5^2) = 25 \, m \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>A car starts from rest at a constant acceleration of \( 2 \, m/s^2 \). Find its velocity
+                            after 5 seconds and the total distance covered.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. "Rest" means \( v_0 = 0 \).<br>
+                            2. Velocity: \( v = 0 + (2 \times 5) = 10 \, m/s \).<br>
+                            3. Distance: \( \Delta x = 0(5) + \frac{1}{2}(2)(5^2) = 25 \, m \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: NEWTON'S 2ND LAW -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 2: قانون نيوتن الثاني (\( F = ma \))</h3>
+                    <p>القوة ليست مجرد سحب، بل هي ما يغير الحالة الحركية. مجموع القوى في اتجاه ما يساوي الكتلة في
+                        التسارع في ذلك الاتجاه.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 2: Newton's Second Law (\( F = ma \))</h3>
+                    <p>Force isn't just a push/pull; it's the cause of motion changes. The sum of forces equals mass
+                        times acceleration in that specific direction.</p>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 خريطة حل مسائل القوة:</h4>
+                        <ol class="step-list">
+                            <li class="step-item"><span class="step-num">1</span> ارسم مخطط الجسم الحر (FBD).</li>
+                            <li class="step-item"><span class="step-num">2</span> حلل القوى المائلة لمركبتين (X، Y).
+                            </li>
+                            <li class="step-item"><span class="step-num">3</span> طبق \( \sum F = ma \) لكل محور.</li>
+                        </ol>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 Force Workflow:</h4>
+                        <ol class="step-list">
+                            <li class="step-item"><span class="step-num">1</span> Draw a Free Body Diagram (FBD).</li>
+                            <li class="step-item"><span class="step-num">2</span> Resolve inclined forces into X and Y.
+                            </li>
+                            <li class="step-item"><span class="step-num">3</span> Apply \( \sum F = ma \) individually
+                                for each axis.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>صندوق كتلته \( 10 \, kg \) يسحب عمودياً للأعلى بواسطة حبل بقوة \( 120 \, N \). أوجد تسارعه.
+                            (استخدم \( g=10 \)).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. القوى: الشد (\(T=120\)) للأعلى، والوزن (\(W=mg=100\)) للأسفل.<br>
+                            2. محصلة القوى: \( 120 - 100 = 20 \, N \).<br>
+                            3. التسارع: \( a = F/m = 20 / 10 = 2 \, m/s^2 \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>A 10kg box is pulled vertically upward by a rope with \( 120 \, N \). Find its acceleration.
+                            (Use \( g=10 \)).</p>
+                        <p><strong>Tactical Solution:</strong><br>
+                            1. Forces: Tension (\(T=120\)) UP, Weight (\(W=mg=100\)) DOWN.<br>
+                            2. Net Force: \( 120 - 100 = 20 \, N \).<br>
+                            3. Acceleration: \( a = F/m = 20 / 10 = 2 \, m/s^2 \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: ENERGY CONSERVATION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 3: حفظ الطاقة الميكانيكية</h3>
+                    <p>في غياب الاحتكاك، الطاقة لا تفنى ولا تستحدث، بل تتحول من طاقة وضع (جسم مرتفع) إلى طاقة حركة (جسم
+                        يسقط).</p>
+                    <div class="logic-card">\( KE_1 + PE_1 = KE_2 + PE_2 \) <br> \( \frac{1}{2}mv^2 + mgh =
+                        \text{Constant} \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 3: Conservation of Mechanical Energy</h3>
+                    <p>In the absence of friction, energy is neither created nor destroyed, but changes from Potential
+                        Energy (at height) to Kinetic Energy (during fall).</p>
+                    <div class="logic-card">\( KE_1 + PE_1 = KE_2 + PE_2 \) <br> \( \frac{1}{2}mv^2 + mgh =
+                        \text{Constant} \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>جسم يسقط من ارتفاع 20م من السكون. ما هي سرعته عند ملامسة الأرض؟ (أهمل مقاومة الهواء، \( g=10
+                            \)).</p>
+                        <p><strong>الحل:</strong><br>
+                            1. عند القمة: \( PE = m \times 10 \times 20 = 200m \)، \( KE = 0 \).<br>
+                            2. عند الأرض: \( PE = 0 \)، \( KE = \frac{1}{2}mv^2 \).<br>
+                            3. الربط: \( 200m = \frac{1}{2}mv^2 \implies v = \sqrt{400} = 20 \, m/s \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Example:</h4>
+                        <p>An object falls from 20m starting from rest. Find its velocity just before impact. (Ignore
+                            air resistance, \( g=10 \)).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. At Top: \( PE = m \times 10 \times 20 = 200m \), \( KE = 0 \).<br>
+                            2. At Bottom: \( PE = 0 \), \( KE = \frac{1}{2}mv^2 \).<br>
+                            3. Linking: \( 200m = \frac{1}{2}mv^2 \implies v = \sqrt{400} = 20 \, m/s \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL ADVICE -->
+        <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.05);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس (Survival Tips):</h3>
+                    <ul>
+                        <li>تذكر دائماً أن القوة والسرعة كميات **متجهة**. الاتجاه يغير كل الحسابات.</li>
+                        <li>لا تخلط بين "الكتلة" و"الوزن". الكتلة ثابتة بالجرام، والوزن قوة بالنيوتن تعتمد على الجاذبية.
+                        </li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's Survival Tips:</h3>
+                    <ul>
+                        <li>Always remember that Force and Velocity are **Vectors**. Direction changes everything.</li>
+                        <li>Don't confuse "Mass" with "Weight". Mass is constant in kg; Weight is a force in Newtons
+                            depending on gravity.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--accent);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Kinematics -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q1:</strong> جسم يتحرك بسرعة منتظمة مقدارها \( 10 \, m/s \). كم المسافة التي يقطعها في
+                    دقيقتين؟ <br> <span style="font-size: 0.85em; opacity: 0.8;">An object moves at a constant speed of
+                        10 m/s. How far does it travel in 2 minutes?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 20 m &nbsp; B) 600 m &nbsp; C) 1200 m &nbsp; D) 100 m
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الدقيقتان تساويان 120 ثانية. المسافة = السرعة × الزمن =
+                        \( 10 \times 120 = 1200 \, m \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q2:</strong> سيارة تزيد سرعتها من \( 5 \, m/s \) إلى \( 15 \, m/s \) خلال \( 5 \) ثوانٍ. ما
+                    مقدار تسارعها؟ <br> <span style="font-size: 0.85em; opacity: 0.8;">A car accelerates from 5 m/s to
+                        15 m/s in 5s. Find acceleration.</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( 2 \, m/s^2 \) &nbsp; B) \( 3 \, m/s^2 \) &nbsp; C) \( 10 \, m/s^2 \) &nbsp; D) \( 1 \, m/s^2
+                    \)
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">التسارع = \( (v - v_0) / t = (15 - 5) / 5 = 10 / 5 = 2 \,
+                        m/s^2 \).</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: Newton -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q3:</strong> إذا أثرت قوة \( 50 \, N \) على جسم كتلته \( 5 \, kg \)، فما هو تسارعه؟ <br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">A force of 50N acts on a 5kg mass. Find
+                        acceleration.</span>
+                </p>
+                <div style="margin: 10px 0;">
+                    A) \( 0.1 \, m/s^2 \) &nbsp; B) \( 10 \, m/s^2 \) &nbsp; C) \( 250 \, m/s^2 \) &nbsp; D) \( 5 \,
+                    m/s^2 \)
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">بناءً على \( F = ma \)، فإن \( a = F / m = 50 / 5 = 10 \,
+                        m/s^2 \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q4:</strong> جسم كتلته \( 2 \, kg \) يسقط سقوطاً حراً. ما القوة المؤثرة عليه؟ (\( g=10 \)).
+                    <br> <span style="font-size: 0.85em; opacity: 0.8;">A 2kg object is in free fall. What is the force
+                        acting on it?</span>
+                </p>
+                <div style="margin: 10px 0;">
+                    A) 10 N &nbsp; B) 20 N &nbsp; C) 0 N &nbsp; D) 5 N
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">القوة هي الوزن \( W = mg = 2 \times 10 = 20 \, N \).</p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Energy -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q5:</strong> ما هي طاقة وضع جسم كتلته \( 1 \, kg \) على ارتفاع \( 10 \, m \)\(؟\) (\( g=10
+                    \)). <br> <span style="font-size: 0.85em; opacity: 0.8;">What is the PE of a 1kg mass at 10m
+                        height?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 10 J &nbsp; B) 100 J &nbsp; C) 50 J &nbsp; D) 0 J
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( PE = mgh = 1 \times 10 \times 10 = 100 \, J \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q6:</strong> إذا تضاعفت سرعة جسم، فإن طاقة حركته تصبح: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">If velocity doubles, Kinetic Energy becomes:</span></p>
+                <div style="margin: 10px 0;">
+                    A) الضعف (Double) &nbsp; B) ثلاثة أمثال &nbsp; C) أربعة أمثال (4x) &nbsp; D) تظل كما هي
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">بما أن \( KE = 0.5 mv^2 \)، فإن مربع الضعف (2 تربيع)
+                        يساوي 4 مراث.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للفيزياء | المنهج الذهبي | The Golden Syllabus Physics</p>
+    </footer>
+</body>
+
+</html>

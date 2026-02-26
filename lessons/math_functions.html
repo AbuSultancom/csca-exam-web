@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس: الدوال والمتتاليات | Masterclass: Functions & Sequences</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--primary);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(76, 201, 240, 0.08);
+            border: 2px solid var(--primary);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--primary);
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الدوال | Functions Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">الدوال والمتتاليات: أسرار السلوك الرياضي <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Functions & Sequences: Mathematical Behavior Secrets</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(76, 201, 240, 0.1), transparent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>لماذا ندرس الدوال؟:</h3>
+                    <p>أهلاً بك يا بطل. الدوال هي حجر الأساس للتفاضل والتكامل وكل الهندسة الحديثة. في هذا الدرس، ستتعلم
+                        كيف تقرأ سلوك الدالة، وكيف تحسب مجالها، وكيف تتعامل مع الأسس واللوغاريتمات. سنشرح كل نقطة، نضع
+                        قاعدتها، ثم نحلها بمثال شامل.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Why Study Functions?:</h3>
+                    <p>Welcome, hero. Functions are the foundation of Calculus and modern Engineering. In this lesson,
+                        you will learn to read function behavior, calculate domains, and master exponents and
+                        logarithms. We explain each point, state the rule, and solve a comprehensive example.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: DOMAIN -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: المجال والمدى (Domain & Range)</h3>
+                    <p><strong>المجال:</strong> هو كل القيم المسموح بإدخالها للـ \(x\). <br>
+                        <strong>المدى:</strong> هو كل النتائج الممكنة للـ \(y\).
+                    </p>
+                    <div class="logic-card">القاعدة الذهبية: المقام لا يساوي صفراً، وما تحت الجذر الزوجي يجب أن يكون
+                        موجباً (\(\geq 0\)).</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Domain & Range</h3>
+                    <p><strong>Domain:</strong> Every allowed \(x\)-input. <br>
+                        <strong>Range:</strong> Every possible \(y\)-output.
+                    </p>
+                    <div class="logic-card">Golden Rule: Denominator \(\neq 0\); Inner part of even roots must be
+                        non-negative (\(\geq 0\)).</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>أوجد مجال الدالة \( f(x) = \frac{1}{x - 3} + \sqrt{x - 1} \).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. للكسر: المقام \( x-3 \neq 0 \implies x \neq 3 \).<br>
+                            2. للجذر: ما بداخله \( x-1 \geq 0 \implies x \geq 1 \).<br>
+                            3. الدمج: كل الأرقام من 1 إلى مالانهاية باستثناء الرقم 3. <br> <strong>النتيجة:</strong> \(
+                            [1, 3) \cup (3, \infty) \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>Find the domain of \( f(x) = \frac{1}{x - 3} + \sqrt{x - 1} \).</p>
+                        <p><strong>Tactical Solution:</strong><br>
+                            1. For the fraction: Denom \( x-3 \neq 0 \implies x \neq 3 \).<br>
+                            2. For the root: Inner \( x-1 \geq 0 \implies x \geq 1 \).<br>
+                            3. Merge: Everything from 1 to \(\infty\) except 3. <br> <strong>Result:</strong> \( [1, 3)
+                            \cup (3, \infty) \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: LOGARITHMS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: قوانين الأسس واللوغاريتمات</h3>
+                    <p>اللوغاريتم هو العملية العكسية لرفع الأس. قوانينها تسهل حساب الأرقام الكبيرة:</p>
+                    <div class="logic-card">
+                        \( \log(AB) = \log A + \log B \) <br>
+                        \( \log(A/B) = \log A - \log B \) <br>
+                        \( \log(A^n) = n \log A \)
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Exponent & Logarithm Rules</h3>
+                    <p>Logarithms are the inverse of exponentiation. These rules simplify complex calculations:</p>
+                    <div class="logic-card">
+                        \( \log(AB) = \log A + \log B \) <br>
+                        \( \log(A/B) = \log A - \log B \) <br>
+                        \( \log(A^n) = n \log A \)
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>حل المعادلة: \( \log_2(x) + \log_2(4) = 5 \).</p>
+                        <p><strong>الحل:</strong><br>
+                            1. ندمج اللوغاريتمات: \( \log_2(4x) = 5 \).<br>
+                            2. نحول للصيغة الأسية: \( 4x = 2^5 \).<br>
+                            3. الحساب: \( 4x = 32 \implies x = 8 \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>Solve: \( \log_2(x) + \log_2(4) = 5 \).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Merge Logs: \( \log_2(4x) = 5 \).<br>
+                            2. Exponential Form: \( 4x = 2^5 \).<br>
+                            3. Calculate: \( 4x = 32 \implies x = 8 \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: GEOMETRIC SEQUENCES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: المتتاليات الهندسية اللانهائية</h3>
+                    <p>تستطيع جمع أرقام لا تنتهي إذا كانت كل خطوة "تصغر" بنسبة ثابتة (\(r\)).</p>
+                    <div class="logic-card">\( S_\infty = \frac{a_1}{1 - r} \) بشرط أن يكون \( |r| < 1 \).</div>
+                    </div>
+                    <div class="eng-content">
+                        <h3>Point 3: Infinite Geometric Series</h3>
+                        <p>You can sum infinite numbers if each subsequent term shrinks by a fixed ratio (\(r\)).</p>
+                        <div class="logic-card">\( S_\infty = \frac{a_1}{1 - r} \) provided \( |r| < 1 \).</div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="bilingual-row">
+                            <div class="ara-content">
+                                <h4>📌 مثال عملي (Practical Example):</h4>
+                                <p>أوجد مجموع المتتالية: \( 10 + 5 + 2.5 + 1.25 + \dots \)</p>
+                                <p><strong>الحل التكتيكي:</strong><br>
+                                    1. تحديد المعطيات: الحد الأول \( a_1 = 10 \)، النسبة \( r = 5/10 = 0.5 \).<br>
+                                    2. بما أن \( |0.5| < 1 \)، نطبق القانون: \( S_\infty=\frac{10}{1 - 0.5} \).<br>
+                                        3. الحساب: \( 10 / 0.5 = 20 \). <br> <strong>النتيجة:</strong> مجموعهم جميعاً
+                                        للأبد هو 20.</p>
+                            </div>
+                            <div class="eng-content">
+                                <h4>📌 Illustrative Example:</h4>
+                                <p>Find the sum of: \( 10 + 5 + 2.5 + 1.25 + \dots \)</p>
+                                <p><strong>Tactical Solution:</strong><br>
+                                    1. Identify Data: First term \( a_1 = 10 \), Ratio \( r = 5/10 = 0.5 \).<br>
+                                    2. Since \( |0.5| < 1 \), apply formula: \( S_\infty=\frac{10}{1 - 0.5} \).<br>
+                                        3. Calculate: \( 10 / 0.5 = 20 \). <br> <strong>Result:</strong> Their sum
+                                        forever is 20.</p>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.05);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس لاختبار CSCA:</h3>
+                    <ul>
+                        <li>تذكر أن \( \log(0) \) و \( \log(\text{سالب}) \) غير معرفين تماماً.</li>
+                        <li>في المتتاليات، تأكد دائماً من قيمة (\(r\)). إذا كانت أكبر من 1، المجموع هو "مالانهائية" وليس
+                            له قانون.</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's CSCA Tips:</h3>
+                    <ul>
+                        <li>Remember \( \log(0) \) and \( \log(\text{negative}) \) are completely undefined.</li>
+                        <li>In sequences, check (\(r\)) first. If \( |r| \geq 1 \), the sum is "Infinite"—no specific
+                            number.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--primary);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Domain -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q1:</strong> ما هو مجال الدالة \( f(x) = \frac{1}{\sqrt{x-2}} \)\(؟\) <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Find the domain of \( f(x) = \frac{1}{\sqrt{x-2}}
+                        \).</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( x \geq 2 \) &nbsp; B) \( x > 2 \) &nbsp; C) \( x < 2 \) &nbsp; D) \( \mathbb{R} \) </div>
+                        <details>
+                            <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                            <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                            <p style="font-size: 0.9em; opacity: 0.8;">ما تحت الجذر يحب أن يكون \( \geq 0 \)، ولكن لأنه
+                                في المقام، لا يمكن أن يساوي صفر. لذا \( x-2 > 0 \implies x > 2 \).</p>
+                        </details>
+                </div>
+
+                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                    <p><strong>Q2:</strong> مدى الدالة \( f(x) = x^2 + 5 \) هو: <br> <span
+                            style="font-size: 0.85em; opacity: 0.8;">The range of \( f(x) = x^2 + 5 \) is:</span></p>
+                    <div style="margin: 10px 0;">
+                        A) \( [0, \infty) \) &nbsp; B) \( [5, \infty) \) &nbsp; C) \( (-\infty, \infty) \) &nbsp; D) \(
+                        (5, \infty) \)
+                    </div>
+                    <details>
+                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                        <p style="font-size: 0.9em; opacity: 0.8;">بما أن \( x^2 \) دائماً \( \geq 0 \)، فإن أقل قيمة
+                            للدالة هي \( 0 + 5 = 5 \).</p>
+                    </details>
+                </div>
+
+                <!-- Q3 & Q4: Logs -->
+                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                    <p><strong>Q3:</strong> \( \log_{10}(5) + \log_{10}(2) \) يساوي: <br> <span
+                            style="font-size: 0.85em; opacity: 0.8;">\( \log_{10}(5) + \log_{10}(2) \) equals:</span>
+                    </p>
+                    <div style="margin: 10px 0;">
+                        A) \( \log_{10}(7) \) &nbsp; B) 1 &nbsp; C) 10 &nbsp; D) 0
+                    </div>
+                    <details>
+                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                        <p style="font-size: 0.9em; opacity: 0.8;">قاعدة الجمع تتحول لضرب داخل اللوغاريتم: \( \log(5
+                            \times 2) = \log(10) = 1 \).</p>
+                    </details>
+                </div>
+
+                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                    <p><strong>Q4:</strong> إذا كان \( 3^x = 81 \)، فما قيمة \(x\)\(؟\) <br> <span
+                            style="font-size: 0.85em; opacity: 0.8;">If \( 3^x = 81 \), find x.</span></p>
+                    <div style="margin: 10px 0;">
+                        A) 2 &nbsp; B) 3 &nbsp; C) 4 &nbsp; D) 5
+                    </div>
+                    <details>
+                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                        <p style="font-size: 0.9em; opacity: 0.8;">\( 3 \times 3 \times 3 \times 3 = 81 \)، لذا \( x=4
+                            \). باللوغاريتمات: \( x = \log_3(81) = 4 \).</p>
+                    </details>
+                </div>
+
+                <!-- Q5 & Q6: Series -->
+                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                    <p><strong>Q5:</strong> ما هو مجموع المتتالية الهندسية \( 1, 1/3, 1/9, \dots \) إلى مالانهاية؟ <br>
+                        <span style="font-size: 0.85em; opacity: 0.8;">Infinite sum of \( 1, 1/3, 1/9, \dots \)</span>
+                    </p>
+                    <div style="margin: 10px 0;">
+                        A) 1.5 &nbsp; B) 2 &nbsp; C) 3 &nbsp; D) 1.33
+                    </div>
+                    <details>
+                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                        <p style="font-size: 0.9em; opacity: 0.8;">\( S = a / (1-r) = 1 / (1 - 1/3) = 1 / (2/3) = 3/2 =
+                            1.5 \).</p>
+                    </details>
+                </div>
+
+                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                    <p><strong>Q6:</strong> في المتتالية الهندسية التي حدها الأول 2 ونسبتها 3، ما هو الحد الرابع؟ <br>
+                        <span style="font-size: 0.85em; opacity: 0.8;">In a GP with \( a=2, r=3 \), find the 4th
+                            term.</span>
+                    </p>
+                    <div style="margin: 10px 0;">
+                        A) 54 &nbsp; B) 18 &nbsp; C) 162 &nbsp; D) 6
+                    </div>
+                    <details>
+                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                        <p style="font-size: 0.9em; opacity: 0.8;">القانون: \( a_n = a \times r^{n-1} = 2 \times 3^{4-1}
+                            = 2 \times 27 = 54 \).</p>
+                    </details>
+                </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للرياضيات | المنهج الذهبي | The Golden Syllabus</p>
+    </footer>
+</body>
+
+</html>

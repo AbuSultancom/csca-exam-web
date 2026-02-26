@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس: الاحتمالات والإحصاء | Masterclass: Stats & Probability</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--primary);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(76, 201, 240, 0.08);
+            border: 2px solid var(--primary);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--primary);
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الإحصاء | Stats Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">الإحصاء والاحتمالات: فن التنبؤ <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Statistics & Probability: The Art of Prediction</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(76, 201, 240, 0.1), transparent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>علم المستقبل المضمون:</h3>
+                    <p>أهلاً بك يا بطل. الإحصاء هو الأداة التي تستخدمها الدول والعلماء لاتخاذ القرارات. في هذا الدرس،
+                        ستتعلم كيف تعد الاحتمالات المعقدة، وكيف تفهم التوزيع الطبيعي للبيانات، وأهم شيء: **متى يكون
+                        الترتيب مهماً ومتى لا يكون**. سنشرح كل قاعدة بالتفصيل مع مثال تطبيقي شامل.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Science of Guaranteed Future:</h3>
+                    <p>Welcome, hero. Statistics is the tool nations and scientists use to make decisions. You'll learn
+                        counting complex probabilities, understanding Normal Distribution, and critically: **when order
+                        matters vs. when it doesn't**. We explain each rule in detail with comprehensive practical
+                        examples.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: COUNTING -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: التباديل ضد التوافيق (P vs C)</h3>
+                    <p>هذا هو السؤال الأهم: هل الترتيب مهم؟ <br>
+                        <strong>التباديل (\(P\)):</strong> الترتيب مهم (كراسي، أرقام سرية). <br>
+                        <strong>التوافيق (\(C\)):</strong> الترتيب غير مهم (فريق كورة، لجنة).
+                    </p>
+                    <div class="logic-card">\( P(n, k) = \frac{n!}{(n-k)!} \) | \( C(n, k) = \frac{n!}{k!(n-k)!} \)
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Permutations vs Combinations</h3>
+                    <p>Ask yourself: Does order matter? <br>
+                        <strong>Permutations (P):</strong> Order matters (Chairs, Passwords). <br>
+                        <strong>Combinations (C):</strong> Order DOES NOT matter (Teams, Committees).
+                    </p>
+                    <div class="logic-card">\( P(n, k) = \frac{n!}{(n-k)!} \) | \( C(n, k) = \frac{n!}{k!(n-k)!} \)
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>بكم طريقة يمكن اختيار فريق من 3 طلاب من أصل 5 طلاب؟</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. بما أنه فريق (اللجنة)، الترتيب غير مهم. <br>
+                            2. نستخدم التوافيق (\(C\)). <br>
+                            3. الحساب: \( C(5, 3) = \frac{5 \times 4 \times 3}{3 \times 2 \times 1} = 10 \). <br>
+                            <strong>النتيجة:</strong> هناك 10 طرق مختلفة.
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>How many ways can we choose a team of 3 students from 5?</p>
+                        <p><strong>Tactical Solution:</strong><br>
+                            1. Since it's a team, the order is IRRELEVANT. <br>
+                            2. Use Combinations (\(C\)). <br>
+                            3. Calculation: \( C(5, 3) = \frac{5 \times 4 \times 3}{3 \times 2 \times 1} = 10 \). <br>
+                            <strong>Result:</strong> 10 different ways.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: BINOMIAL THEOREM -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: نظرية ذات الحدين (Binomial Theorem)</h3>
+                    <p>تستخدم لفك القوس المرفوع لأي قوة (\(n\)). في اختبار CSCA، يطلبون دائماً **معامل** لمتغير معين.
+                    </p>
+                    <div class="logic-card">الصيغة العامة للحد العام: \( T_{k+1} = \binom{n}{k} a^k b^{n-k} \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Binomial Theorem</h3>
+                    <p>Used to expand binomials raised to power (\(n\)). Typical CSCA questions ask for the
+                        **coefficient** of a specific term.</p>
+                    <div class="logic-card">General Term Formula: \( T_{k+1} = \binom{n}{k} a^k b^{n-k} \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>أوجد الحد الثالث في فك القوس \( (x+1)^4 \).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. الحد الثالث يعني \( k=2 \) (تذكر أنها \( k+1 \)).<br>
+                            2. التعويض: \( T_3 = C(4, 2) \times x^2 \times 1^2 \).<br>
+                            3. الحساب: \( C(4, 2) = 6 \). <br> <strong>النتيجة:</strong> \( 6x^2 \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>Find the 3rd term of \( (x+1)^4 \).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. 3rd term means \( k=2 \) (since it fits \( T_{k+1} \)).<br>
+                            2. Substitute: \( T_3 = C(4, 2) \times x^2 \times 1^2 \).<br>
+                            3. Calculation: \( C(4, 2) = 6 \). <br> <strong>Result:</strong> \( 6x^2 \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: NORMAL DISTRIBUTION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: التوزيع الطبيعي (Normal Distribution)</h3>
+                    <p>البيانات في الطبيعة تتبع "شكل الجرس". المدرس الصيني يهتم بمعرفة النسب الثابتة.</p>
+                    <div class="logic-card">قاعدة النجاة: 68% عند \( \pm 1\sigma \)، و 95% عند \( \pm 2\sigma \).</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 3: Normal Distribution</h3>
+                    <p>Natural data follows the "Bell Curve". Chinese examiners expect you to know fixed empirical
+                        percentages.</p>
+                    <div class="logic-card">Survival Code: 68% within \( \pm 1\sigma \), and 95% within \( \pm 2\sigma
+                        \).</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>عينة بها 100 طالب، المتوسط 70 والانحراف المعياري 5. كم طالباً تقريباً درجتهم بين 65 و 75؟</p>
+                        <p><strong>الحل:</strong><br>
+                            1. المدى 65-75 يمثل 70 ناقص 5 و 70 زائد 5 (أي انحراف واحد).<br>
+                            2. النسبة هي 68%. <br> <strong>النتيجة:</strong> نضرب \( 0.68 \times 100 = 68 \) طالب.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>In a sample of 100 students, the mean is 70 and std deviation is 5. Roughly how many score
+                            between 65 and 75?</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Range 65-75 represents 70-5 and 70+5 (exactly \( \pm 1 \sigma \)).<br>
+                            2. The percentage is 68%. <br> <strong>Result:</strong> \( 0.68 \times 100 = 68 \) students.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.05);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس (Survival Tips):</h3>
+                    <ul>
+                        <li>تذكر دائماً أن مجموع الاحتمالات لأي حادثة يجب أن يكون **1 (أو 100%)**. إذا طلع معك أكثر، حلك
+                            خطأ.</li>
+                        <li>في نظرية ذات الحدين، إذا طلب "الحد الرابع"، عوض \( k=3 \) دائماً. (الرقم أقل بمقدار 1).</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's Survival Tips:</h3>
+                    <ul>
+                        <li>Always remember: Sum of all probabilities in an event MUST be **1 (100%)**. If you get more,
+                            rethink.</li>
+                        <li>In Binomial expansion, if asked for "Term 4", always use \( k=3 \). (Index is always 1
+                            less).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--primary);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Permutations/Combinations -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q1:</strong> بكم طريقة يمكن ترتيب 4 كتب مختلفة على رف؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">In how many ways can 4 different books be arranged on a
+                        shelf?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 4 &nbsp; B) 12 &nbsp; C) 24 &nbsp; D) 16
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الترتيب مهم، لذا نستخدم المضروب \( 4! = 4 \times 3 \times
+                        2 \times 1 = 24 \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q2:</strong> صندوق به 6 كرات، نريد اختيار كرتين معاً. كم عدد الطرق؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">6 balls in a box, choose 2 together. How many
+                        ways?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 15 &nbsp; B) 30 &nbsp; C) 12 &nbsp; D) 36
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الترتيب غير مهم، نستخدم التوافيق: \( C(6, 2) = (6 \times
+                        5) / (2 \times 1) = 15 \).</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: Binomial -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q3:</strong> ما هو معامل \( x^2 \) في فك \( (x+1)^3 \)\(؟\) <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Coefficient of \( x^2 \) in \( (x+1)^3 \).</span></p>
+                <div style="margin: 10px 0;">
+                    A) 1 &nbsp; B) 2 &nbsp; C) 3 &nbsp; D) 4
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">باستخدام نظرية ذات الحدين، المعامل هو \( \binom{3}{1} = 3
+                        \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q4:</strong> مجموع المعاملات في فك \( (x+y)^n \) دائماً يساوي: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">The sum of coefficients in \( (x+y)^n \) is:</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( n^2 \) &nbsp; B) \( 2^n \) &nbsp; C) \( 2n \) &nbsp; D) \( n! \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">بوضع \( x=1, y=1 \) في المعادلة، نحصل على المجموع \(
+                        (1+1)^n = 2^n \).</p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Normal Distribution -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q5:</strong> في التوزيع الطبيعي، ما هي نسبة البيانات التي تقع ضمن انحرافين معياريين (\( \pm
+                    2\sigma \)) من المتوسط؟ <br> <span style="font-size: 0.85em; opacity: 0.8;">% of data within 2
+                        standard deviations?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 68% &nbsp; B) 95% &nbsp; C) 99.7% &nbsp; D) 50%
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">هذه قاعدة ثابتة في الإحصاء: 1 انحراف = 68%، 2 انحراف =
+                        95%.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q6:</strong> إذا كان المتوسط 50 والانحراف المعياري 10، فما هي قيمة الدرجة المعيارية (\(z\))
+                    للرقم 70؟ <br> <span style="font-size: 0.85em; opacity: 0.8;">If mean=50, std=10, find z-score for
+                        70.</span></p>
+                <div style="margin: 10px 0;">
+                    A) 1 &nbsp; B) 2 &nbsp; C) 20 &nbsp; D) -2
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( z = (X - \mu) / \sigma = (70 - 50) / 10 = 20 / 10 = 2
+                        \).</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للرياضيات | المنهج الذهبي | The Golden Syllabus</p>
+    </footer>
+</body>
+
+</html>

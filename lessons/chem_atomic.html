@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس الكيمياء: البناء الذري | Chemistry Masterclass: Atomic Structure</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid #4ade80;
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid #2ecc71;
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(74, 222, 128, 0.08);
+            border: 2px solid #4ade80;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: #4ade80;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الكيمياء | Chemistry Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">البناء الذري: قصة الجسيمات <br> <span style="font-size: 0.6em; opacity: 0.8;">Atomic
+                Structure: The Tale of Particles</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(74, 222, 128, 0.1), transparent); border-color: #4ade80;">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>أبجدية المادة:</h3>
+                    <p>أهلاً بك يا عالم المستقبل. في الكيمياء، "الذرة" هي كل شيء. في هذا الدرس سنغوص في قلب النواة، نفهم
+                        البروتونات، الإلكترونات، وكيف يتوزعون في مدارات الطاقة وفقاً لقوانين الكم.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>The ABCs of Matter:</h3>
+                    <p>Welcome, future scientist. In chemistry, the "Atom" is everything. In this lesson, we dive into
+                        the nucleus, understanding protons, electrons, and their configuration in energy levels.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: SUBATOMIC PARTICLES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: مكونات الذرة (Subatomic Particles)</h3>
+                    <p>الذرة تتكون من نواة (بروتونات + نيترونات) وسحابة من الإلكترونات.</p>
+                    <div class="logic-card">العدد الذري (\(Z\)) = عدد البروتونات | العدد الكتلي (\(A\)) = بروتونات +
+                        نيترونات.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Atomic Components</h3>
+                    <p>An atom consists of a nucleus (protons + neutrons) and an electron cloud.</p>
+                    <div class="logic-card">Atomic Number (\(Z\)) = # of Protons | Mass Number (\(A\)) = Protons +
+                        Neutrons.</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال للمحترفين (Pro Example):</h4>
+                        <p>عنصر الليثيوم \( {}^7_3\text{Li} \). أوجد مكوناته.</p>
+                        <p><strong>الحل:</strong><br>
+                            1. عدد البروتونات = العدد السفلي = 3. <br>
+                            2. عدد النيترونات = \( 7 - 3 = 4 \). <br> <strong>النتيجة:</strong> 3 بروتونات و 4 نيترونات.
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Pro Example:</h4>
+                        <p>Lithium \( {}^7_3\text{Li} \). Find its components.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Protons = Atomic core (Bottom) = 3. <br>
+                            2. Neutrons = \( 7 - 3 = 4 \). <br> <strong>Result:</strong> 3 protons and 4 neutrons.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: ELECTRON CONFIGURATION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: التوزيع الإلكتروني (Electron Config)</h3>
+                    <p>تتوزع الإلكترونات في مستويات الطاقة \( (1, 2, 3...) \) وتحت المستويات \( (s, p, d, f) \).</p>
+                    <div class="logic-card">قاعدة \( s, s, p, s, p, s \)... (1s 2s 2p 3s 3p).</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Electron Configuration</h3>
+                    <p>Electrons reside in shells (\( 1, 2, 3... \)) and subshells (\( s, p, d, f \)).</p>
+                    <div class="logic-card">Order: 1s, 2s, 2p, 3s, 3p, 4s...</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تدريب (Exercise):</h4>
+                        <p>ما هو التوزيع الإلكتروني للأكسجين (\( Z=8 \))؟</p>
+                        <p><strong>الحل:</strong><br>
+                            نوزع الـ 8 إلكترونات: \( 1s^2, 2s^2, 2p^4 \). <br> <strong>النتيجة:</strong> المستوى الأخير
+                            (التكافؤ) يحتوي 6 إلكترونات.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Exercise:</h4>
+                        <p>What is the electron config of Oxygen (\( Z=8 \))?</p>
+                        <p><strong>Solution:</strong><br>
+                            Distribute 8 electrons: \( 1s^2, 2s^2, 2p^4 \). <br> <strong>Result:</strong> The outer
+                            shell has 6 valence electrons.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE QUIZ -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: #4ade80;">📝 اختبر معلوماتك | Practice Quiz</h2>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q1:</strong> ذرات لنفس العنصر تختلف في عدد النيترونات تسمى:</p>
+                <div style="margin: 10px 0;">
+                    A) أيونات &nbsp; B) نظائر (Isotopes) &nbsp; C) متشاكلات &nbsp; D) مركبات
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">النظائر لها نفس عدد البروتونات (نفس العنصر) ولكن كتلة
+                        ذرية مختلفة بسبب النيترونات.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q2:</strong> وفقاً لمبدأ باولي، كم عدد الإلكترونات الأقصى في المستوى الفرعي \( p \)\(؟\)</p>
+                <div style="margin: 10px 0;">
+                    A) 2 &nbsp; B) 6 &nbsp; C) 10 &nbsp; D) 14
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">المستوى الفرعي p يحتوي 3 غرف (أوربيتالات)، كل غرفة تتسع
+                        لإلكترونين كحد أقصى.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للكيمياء | المنهج الذهبي</p>
+    </footer>
+</body>
+
+</html>

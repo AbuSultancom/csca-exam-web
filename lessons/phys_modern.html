@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس الفيزياء الحديثة | Masterclass: Modern Physics</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--accent);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(247, 37, 133, 0.08);
+            border: 2px solid var(--accent);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--accent);
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الحديثة | Modern Physics Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">الفيزياء الحديثة: أسرار الذرة والكم <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Modern Physics: Quantum & Atomic Secrets</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(247, 37, 133, 0.1), transparent); border-color: var(--accent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>بوابة المستقبل:</h3>
+                    <p>أهلاً بك يا بطل. الفيزياء الحديثة هي لغة التكنولوجيا والنووي والليزرات. في هذا الدرس، ستتعلم كيف
+                        تتحول المادة إلى طاقة، وكيف تقفز الإلكترونات بين المستويات، وأهم شيء: **لماذا تفشل قوانين نيوتن
+                        في عالم الذرة**. سنشرح كل قاعدة بالتفصيل مع مثال تطبيقي شامل ومرحلة بمرحلة.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Gateway to the Future:</h3>
+                    <p>Welcome, hero. Modern Physics is the language of tech, nuclear power, and lasers. You will learn
+                        how mass turns into energy, how electrons jump levels, and crucially: **why Newton's laws fail
+                        at the atomic scale**. We explain each rule in detail with comprehensive practical examples.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: PHOTON -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: طاقة الفوتون (Photon Energy)</h3>
+                    <p>الضوء يتصرف كجسيمات تسمى فوتونات. طاقة الفوتون تعتمد على التردد (\(f\)) فقط.</p>
+                    <div class="logic-card">\( E = hf = \frac{hc}{\lambda} \) | حيث \( h = 6.6 \times 10^{-34} \, J.s
+                        \).</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Photon Energy</h3>
+                    <p>Light behaves as particles called photons. A photon's energy depends solely on its frequency
+                        (\(f\)).</p>
+                    <div class="logic-card">\( E = hf = \frac{hc}{\lambda} \) | Where \( h = 6.6 \times 10^{-34} \, J.s
+                        \).</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>ضوء طوله الموجي \( 330 \, nm \). أوجد طاقة الفوتون الواحد بالجول. (\( c=3 \times 10^8 \)).
+                        </p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. الصيغة: \( E = (hc) / \lambda \). <br>
+                            2. تعويض: \( E = \frac{(6.6 \times 10^{-34}) \times (3 \times 10^8)}{330 \times 10^{-9}} \).
+                            <br>
+                            3. الحساب: \( E = \frac{19.8 \times 10^{-26}}{330 \times 10^{-9}} = 6 \times 10^{-19} \, J
+                            \).
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>Light with wavelength \( 330 \, nm \). Find its photon energy in Joules. (\( c=3 \times 10^8
+                            \)).</p>
+                        <p><strong>Tactical Solution:</strong><br>
+                            1. Formula: \( E = (hc) / \lambda \). <br>
+                            2. Substitute: \( E = \frac{(6.6 \times 10^{-34}) \times (3 \times 10^8)}{330 \times
+                            10^{-9}} \). <br>
+                            3. Calculation: \( E = 6 \times 10^{-19} \, J \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: PHOTOELECTRIC -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: التأثير الكهروضوئي (Photoelectric Effect)</h3>
+                    <p>عند سقوط الضوء على فلز، تنطلق إلكترونات إذا كانت طاقة الضوء (\(hf\)) أكبر من طاقة تماسك الإلكترون
+                        بالسطح (دالة الشغل \(\Phi\)).</p>
+                    <div class="logic-card">\( hf = \Phi + K_{max} \) | الطاقة الكلية = دالة الشغل + طاقة الحركة
+                        للإلكترون.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Photoelectric Effect</h3>
+                    <p>When light hits metal, electrons are emitted if the photon energy (\(hf\)) exceeds the surface's
+                        Work Function (\(\Phi\)).</p>
+                    <div class="logic-card">\( hf = \Phi + K_{max} \) | Total Energy = Work Function + Kinetic Energy.
+                    </div>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 أسرار العتبة (Critical Secret):</h4>
+                        <p>الشدة (السطوع) تزيد عدد الإلكترونات، لكنها **لا تزيد طاقة حركتها**. التردد (اللون) هو الذي
+                            يزيد طاقة الحركة.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 Threshold Secret:</h4>
+                        <p>Intensity (Brightness) increases current (number of electrons) but **NEVER increases kinetic
+                            energy**. Frequency (Color) increases energy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>ضوء طاقته \( 10 \, eV \) سقط على فلز دالة شغله \( 4 \, eV \). ما هي أقصى طاقة حركة للإلكترون
+                            المنبعث؟</p>
+                        <p><strong>الحل:</strong><br>
+                            1. التعويض: \( K_{max} = E - \Phi \). <br>
+                            2. الحساب: \( 10 - 4 = 6 \, eV \). <br> <strong>النتيجة:</strong> يخرج الإلكترون بقوة 6
+                            إلكترون فولت.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>Light with 10eV hits a metal with Work Function 4eV. Calculate the emitted electron's maximum
+                            K.E.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Substitute: \( K_{max} = E - \Phi \). <br>
+                            2. Calculation: \( 10 - 4 = 6 \, eV \). <br> <strong>Result:</strong> 6eV kinetic energy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: NUCLEAR DECAY -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: النشاط الإشعاعي (Half-Life)</h3>
+                    <p>المادة المشعة تتحلل بمرور الزمن. عمر النصف (\(T_{1/2}\)) هو الوقت اللازم لتحلل نصف الكمية.</p>
+                    <div class="logic-card">\( N_{rem} = N_0 \times (1/2)^n \) | حيث \( n \): عدد مرات عمر النصف.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 3: Nuclear Decay (Half-Life)</h3>
+                    <p>Radioactive matter decays over time. Half-life (\(T_{1/2}\)) is the time required for half the
+                        original sample to transform.</p>
+                    <div class="logic-card">\( N_{rem} = N_0 \times (1/2)^n \) | \( n \): number of half-life cycles.
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>عينة مادة كتلها 80 جم، عمر نصفها 5 ساعات. كم يتبقى منها بعد 15 ساعة؟</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. نحسب عدد الدورات: \( 15 / 5 = 3 \) دورات. <br>
+                            2. الحساب: \( 80 \times (1/2) \to 40 \times (1/2) \to 20 \times (1/2) \to 10 \). <br>
+                            <strong>النتيجة:</strong> يتبقى 10 جرامات.
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>A mass of 80g has \( T_{1/2} = 5 \) hours. How much remains after 15 hours?</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Number of cycles: \( 15 / 5 = 3 \). <br>
+                            2. Decay chain: \( 80 \to 40 \to 20 \to 10 \). <br> <strong>Result:</strong> 10g remains.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757;">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس (Survival Tips):</h3>
+                    <ul>
+                        <li>في حالة انبعاث الإلكترون، إذا سألك الاختبار عن "سرعة" الإلكترون، تذكر أن \( KE = 0.5 mv^2
+                            \).</li>
+                        <li>لا تحفظ كل الثوابت؛ المدرس الصيني يعطيها لك في ورقة الاختبار، لكن عليك معرفة كيف "تستخدمها"
+                            وبأي وحدات.</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's Survival Tips:</h3>
+                    <ul>
+                        <li>If asked for "electron speed" during emission, link \( KE = 0.5 mv^2 \).</li>
+                        <li>Don't waste time memorizing constants like \(h\); the exam provides them. Focus on "how" to
+                            apply them correctly.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--accent);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Photons -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q1:</strong> إذا تضاعف تردد الضوء، فإن طاقة الفوتون الواحد: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">If light frequency doubles, the energy of one
+                        photon:</span></p>
+                <div style="margin: 10px 0;">
+                    A) تقل للنصف &nbsp; B) تظل كما هي &nbsp; C) تتضاعف (Doubles) &nbsp; D) تزداد 4 أضعاف
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">وفقاً لقانون بلانك \( E = hf \)، العلاقة طردية خطية مع
+                        التردد.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q2:</strong> أي من التالي يصف طاقة الفوتون الضوئي بشكل صحيح؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Which correctly describes photon energy?</span></p>
+                <div style="margin: 10px 0;">
+                    A) تعتمد على شدة الضوء &nbsp; B) تعتمد على التردد فقط &nbsp; C) تعتمد على سرعة الضوء فقط &nbsp; D)
+                    لا تتغير أبداً
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">طاقة الفوتون الواحد تعتمد كلياً على التردد (\(f\)) أو
+                        الطول الموجي (\(\lambda\)).</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: Photoelectric -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q3:</strong> في التأثير الكهروضوئي، "زيادة الشدة" للضوء الساقط تؤدي لزيادة: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">In photoelectric effect, "increasing intensity"
+                        increases:</span></p>
+                <div style="margin: 10px 0;">
+                    A) طاقة حركة الإلكترونات &nbsp; B) عدد الإلكترونات المنبعثة (Current) &nbsp; C) التردد &nbsp; D)
+                    سرعة الفوتونات
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الشدة تعني عدد فوتونات أكثر، مما يعني تحرير عدد إلكترونات
+                        أكثر، لكن طاقة كل إلكترون لا تتغير.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q4:</strong> أقل تردد يلزم لتحرير إلكترونات من سطح الفلز يسمى: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Min frequency to emit electrons is called:</span></p>
+                <div style="margin: 10px 0;">
+                    A) تردد الرنين &nbsp; B) تردد العتبة (Threshold Frequency) &nbsp; C) التردد الحرج &nbsp; D) تردد
+                    بلانك
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">هو تردد العتبة (\(f_0\))، وإذا كان تردد الضوء أقل منه، لا
+                        ينبعث أي إلكترون مهما كانت الشدة عالية.</p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Half-Life -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q5:</strong> مادة مشعة عمر نصفها يومان. بعد كم يوم يتبقى 1/8 من الكمية الأصلية؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Half-life is 2 days. After how many days does 1/8
+                        remain?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 4 أيام &nbsp; B) 6 أيام &nbsp; C) 8 أيام &nbsp; D) يومان
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">التحلل: \( 1 \to 1/2 \to 1/4 \to 1/8 \). احتجنا 3 دورات.
+                        \( 3 \times 2 = 6 \) أيام.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q6:</strong> أي من الإشعاعات التالية له أكبر قدرة على الاختراق؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Which radiation has the highest penetration
+                        power?</span></p>
+                <div style="margin: 10px 0;">
+                    A) ألفا &nbsp; B) بيتا &nbsp; C) جاما (Gamma) &nbsp; D) الضوء المرئي
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">أشعة جاما هي موجات كهرومغناطيسية عالية الطاقة لا تحمل
+                        شحنة، لذا تخترق الأجسام بعمق كبير.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للفيزياء | المنهج الذهبي | The Golden Syllabus Modern Physics</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس: التفاضل والتكامل | Masterclass: Calculus</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--primary);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(76, 201, 240, 0.08);
+            border: 2px solid var(--primary);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">التكامل | Calculus Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">التفاضل والتكامل: محرك التغيير <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Calculus: The Engine of Change</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(76, 201, 240, 0.1), transparent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>جوهر الرياضيات المتقدمة:</h3>
+                    <p>أهلاً بك يا بطل. التفاضل يدور حول "مدى سرعة التغيير" (الميل)، بينما التكامل يدور حول "تراكم
+                        الكميات" (المساحة). في هذا الدرس، ستتعلم كيف تشتق وتكامل الدوال الأساسية التي ستواجهها في اختبار
+                        CSCA.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>The Core of Advanced Math:</h3>
+                    <p>Welcome, hero. Differentiation is about "how fast something changes" (slope), while Integration
+                        is about "accumulation" (area). You'll learn the essential derivatives and integrals for the
+                        CSCA.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: DERIVATIVES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: قواعد الاشتقاق (Differentiation Rules)</h3>
+                    <p>لأي دالة \( x^n \)، نضرب في الأس ونطرح منه واحد.</p>
+                    <div class="logic-card">\( \frac{d}{dx}(x^n) = n x^{n-1} \) | \( \frac{d}{dx}(\sin x) = \cos x \)
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Differentiation Rules</h3>
+                    <p>For any function \( x^n \), power comes to the front and decreases by 1.</p>
+                    <div class="logic-card">\( \frac{d}{dx}(x^n) = n x^{n-1} \) | \( \frac{d}{dx}(\sin x) = \cos x \)
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Example):</h4>
+                        <p>أوجد مشتقة الدالة \( f(x) = 3x^2 + 5x \).</p>
+                        <p><strong>الحل:</strong><br>
+                            1. مشتقة \( 3x^2 \) هي \( 2 \times 3x = 6x \). <br>
+                            2. مشتقة \( 5x \) هي \( 5 \). <br>
+                            <strong>النتيجة:</strong> \( f'(x) = 6x + 5 \).
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Example:</h4>
+                        <p>Find the derivative of \( f(x) = 3x^2 + 5x \).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Power rule for \( 3x^2 \) yields \( 6x \). <br>
+                            2. Linear derivative for \( 5x \) is \( 5 \). <br>
+                            <strong>Result:</strong> \( 6x + 5 \).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: INTEGRATION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: التكامل غير المحدود</h3>
+                    <p>التكامل هو عكس التفاضل؛ نزيد الأس واحداً ونقسم عليه، ولا ننسى ثابت التكامل (\(C\)).</p>
+                    <div class="logic-card">\( \int x^n dx = \frac{x^{n+1}}{n+1} + C \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Indefinite Integration</h3>
+                    <p>Antiderivative: Add 1 to the power, divide by the new power. Always add the constant (\(C\)).</p>
+                    <div class="logic-card">\( \int x^n dx = \frac{x^{n+1}}{n+1} + C \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Example):</h4>
+                        <p>احسب \( \int (2x + 3) dx \).</p>
+                        <p><strong>الحل:</strong><br>
+                            1. تكامل \( 2x \) هو \( 2 \frac{x^2}{2} = x^2 \). <br>
+                            2. تكامل \( 3 \) هو \( 3x \). <br>
+                            <strong>النتيجة:</strong> \( x^2 + 3x + C \).
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Example:</h4>
+                        <p>Calculate \( \int (2x + 3) dx \).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Integrate \( 2x \) to get \( x^2 \). <br>
+                            2. Integrate constant \( 3 \) to get \( 3x \). <br>
+                            <strong>Result:</strong> \( x^2 + 3x + C \).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE QUIZ -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--primary);">📝 اختبر معلوماتك | Practice Quiz</h2>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q1:</strong> ما هي مشتقة الدالة \( f(x) = \ln(x) \)\(؟\)</p>
+                <div style="margin: 10px 0;">
+                    A) \( e^x \) &nbsp; B) \( 1/x \) &nbsp; C) \( 1 \) &nbsp; D) \( x \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">مشتقة اللوغاريتم الطبيعي هي دائماً واحد على الحجة.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q2:</strong> احسب قيمة التكامل المحدود \( \int_0^1 2x dx \).</p>
+                <div style="margin: 10px 0;">
+                    A) 0 &nbsp; B) 1 &nbsp; C) 2 &nbsp; D) 0.5
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( [x^2]_0^1 = 1^2 - 0^2 = 1 \).</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للرياضيات | المنهج الذهبي</p>
+    </footer>
+</body>
+
+</html>

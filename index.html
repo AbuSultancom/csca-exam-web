@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع دراسة اختبار CCSA الصيني</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>أكاديمية CSCA للتميز <br> <span style="font-size: 0.5em; opacity: 0.8;">CSCA Excellence Academy</span>
+            </h1>
+            <p>منصتك الشاملة لاجتياز اختبار القدرات الدراسية الصيني في الرياضيات والفيزياء<br>
+                <span style="font-size: 0.9em; opacity: 0.7;">Your comprehensive platform to pass the Chinese CSCA exam
+                    in Math and Physics</span>
+            </p>
+            <div class="search-container">
+                <input type="text" id="search"
+                    placeholder="ابحث عن درس، قاعدة، أو سؤال... | Search for a lesson, rule, or question..." />
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; gap: 30px;">
+                <a href="index.html" class="active">الرئيسية | Home</a>
+                <a href="questions.html">بنك الأسئلة | Question Bank</a>
+                <a href="#about">حول الاختبار | About Exam</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="subject-section"
+            style="background: rgba(76, 201, 240, 0.05); padding: 40px; border-radius: 20px; border: 1px solid var(--primary); margin-bottom: 40px; margin-top: 40px;">
+            <h2 class="section-title">🛡️ دليل النجاة في الاختبار (Exam Survival Guide)</h2>
+            <div class="grid">
+                <div class="card glass">
+                    <h4>💡 استراتيجية الحل (Strategic Solving)</h4>
+                    <p>لا تتوقف عند سؤال صعب! ابدأ بالأسئلة التي تعرفها لتكسب ثقة، ثم عد للبقية. <br>Don't get stuck!
+                        Start with easy ones to build momentum.</p>
+                </div>
+                <div class="card glass">
+                    <h4>📉 استبعاد الخيارات (Elimination)</h4>
+                    <p>إذا لم تعرف الحل، استبعد الإجابات "المستحيلة" منطقياً، هذا يرفع نسبة نجاحك في التخمين.
+                        <br>Eliminate impossible answers to improve your guessing odds.
+                    </p>
+                </div>
+                <div class="card glass">
+                    <h4>🕒 تنظيم الوقت (Time Management)</h4>
+                    <p>لديك 60 دقيقة لـ 48 سؤالاً. أي دقيقة ونصف للسؤال الواحد. <br>You have 60 mins for 48 Qs (1.5 min
+                        per question).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="subject-section">
+            <h2 class="section-title">📘 مسار الرياضيات (Mathematics)</h2>
+            <div class="grid" id="math-lessons">
+                <div class="card glass lesson-card">
+                    <h3>المجموعات والمتباينات <br> <span style="font-size: 0.7em; color: var(--primary);">Sets and
+                            Inequalities</span></h3>
+                    <p>الأساسيات، العمليات على المجموعات، وحل المتباينات المعقدة.<br>Basics, set operations, and solving
+                        complex inequalities.</p>
+                    <a href="lessons/math_sets.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الدوال والمتتاليات <br> <span style="font-size: 0.7em; color: var(--primary);">Functions and
+                            Sequences</span></h3>
+                    <p>الدوال المثلثية، الأسية، واللوغاريتمية، والمتتاليات.<br>Trigonometric, exponential, logarithmic
+                        functions, and sequences.</p>
+                    <a href="lessons/math_functions.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الهندسة والجبر <br> <span style="font-size: 0.7em; color: var(--primary);">Geometry and
+                            Algebra</span></h3>
+                    <p>الهندسة التحليلية، الأعداد المركبة، والأشعة.<br>Analytic geometry, complex numbers, and vectors.
+                    </p>
+                    <a href="lessons/math_geometry.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الاحتمالات والإحصاء <br> <span style="font-size: 0.7em; color: var(--primary);">Probability and
+                            Statistics</span></h3>
+                    <p>توزيع البيانات، الاحتمالات الشرطية، والتوزيع الطبيعي.<br>Data distribution, conditional
+                        probability, and normal distribution.</p>
+                    <a href="lessons/math_stats.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="subject-section">
+            <h2 class="section-title">🚀 مسار الفيزياء (Physics)</h2>
+            <div class="grid" id="physics-lessons">
+                <div class="card glass lesson-card">
+                    <h3>الميكانيكا <br> <span style="font-size: 0.7em; color: var(--accent);">Mechanics</span></h3>
+                    <p>الحركة، قوانين نيوتن، الطاقة، والزخم الزاوي.<br>Motion, Newton's laws, energy, and angular
+                        momentum.</p>
+                    <a href="lessons/phys_mechanics.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الكهرباء والمغناطيسية <br> <span style="font-size: 0.7em; color: var(--accent);">Electricity and
+                            Magnetism</span></h3>
+                    <p>الكهرباء الساكنة، الدوائر، والمجالات المغناطيسية.<br>Electrostatics, circuits, and magnetic
+                        fields.</p>
+                    <a href="lessons/phys_electricity.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الديناميكا الحرارية <br> <span
+                            style="font-size: 0.7em; color: var(--accent);">Thermodynamics</span></h3>
+                    <p>قوانين الغازات، الطاقة الداخلية، والقانون الأول.<br>Gas laws, internal energy, and the 1st law.
+                    </p>
+                    <a href="lessons/phys_thermo.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>البصريات والموجات <br> <span style="font-size: 0.7em; color: var(--accent);">Optics &
+                            Waves</span></h3>
+                    <p>انعكاس وانكسار الضوء، المرايا، العدسات، والتدخل.<br>Reflection, refraction, mirrors, lenses, and
+                        interference.</p>
+                    <a href="lessons/phys_optics.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الفيزياء الحديثة <br> <span style="font-size: 0.7em; color: var(--accent);">Modern
+                            Physics</span></h3>
+                    <p>فيزياء الكم، الذرة، النواة، والنسبية العامة.<br>Quantum, atoms, nuclei, and general relativity.
+                    </p>
+                    <a href="lessons/phys_modern.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>ميكانيكا الموائع <br> <span style="font-size: 0.7em; color: var(--accent);">Fluids</span></h3>
+                    <p>الضغط، قاعدة أرخميدس، ومعادلة برنولي.<br>Pressure, Archimedes, and Bernoulli.</p>
+                    <a href="lessons/phys_fluids.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="subject-section">
+            <h2 class="section-title" style="color: #4ade80;">🧪 مسار الكيمياء (Chemistry)</h2>
+            <div class="grid" id="chemistry-lessons">
+                <div class="card glass lesson-card">
+                    <h3>البناء الذري <br> <span style="font-size: 0.7em; color: #4ade80;">Atomic Structure</span></h3>
+                    <p>الجدول الدوري، التوزيع الإلكتروني، والاتجاهات.<br>Periodic table, and electronic configs.</p>
+                    <a href="lessons/chem_atomic.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الروابط الكيميائية <br> <span style="font-size: 0.7em; color: #4ade80;">Chemical Bonding</span>
+                    </h3>
+                    <p>الأيونية، التساهمية، وقوى بين الجزيئات.<br>Ionic, covalent, and intermolecular forces.</p>
+                    <a href="lessons/chem_bonding.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الاتزان والسرعة <br> <span style="font-size: 0.7em; color: #4ade80;">Equilibrium & Rates</span>
+                    </h3>
+                    <p>سرعة التفاعل، الثوابت، وقاعدة لوشاتيليه.<br>Reaction rates, constants, and Le Chatelier.</p>
+                    <a href="lessons/chem_equilibrium.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+                <div class="card glass lesson-card">
+                    <h3>الكيمياء العضوية <br> <span style="font-size: 0.7em; color: #4ade80;">Organic Chemistry</span>
+                    </h3>
+                    <p>الألكانات، الألكينات، والمجموعات الوظيفية.<br>Alkanes, alkenes, and functional groups.</p>
+                    <a href="lessons/chem_organic.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="subject-section">
+            <h2 class="section-title">📉 الرياضيات المتقدمة (Advanced Math)</h2>
+            <div class="grid">
+                <div class="card glass lesson-card">
+                    <h3>التفاضل والتكامل <br> <span style="font-size: 0.7em; color: var(--primary);">Calculus</span>
+                    </h3>
+                    <p>المشتقات، التكاملات، وقواعد السلسلة.<br>Derivatives, integrals, and chain rules.</p>
+                    <a href="lessons/math_calculus.html" class="btn">ابدأ الدراسة | Start Studying</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="developer-sig" style="text-align: center; padding: 40px;">
+        <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية CSCA - جميع الحقوق محفوظة | CSCA Academy - All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

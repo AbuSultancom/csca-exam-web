@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس: الهندسة والجبر | Masterclass: Geometry & Algebra</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--primary);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(76, 201, 240, 0.08);
+            border: 2px solid var(--primary);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--primary);
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الهندسة | Geometry Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">الهندسة التحليلية والجبر: لغة الأبعاد <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Analytic Geometry & Algebra: The Dimension Language</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(76, 201, 240, 0.1), transparent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>لماذا ندرس الهندسة التحليلية؟:</h3>
+                    <p>أهلاً بك يا بطل. الهندسة التحليلية هي الجسر بين الرسم والجبر. في هذا الدرس، ستتعلم كيف تحول
+                        الخطوط والدوائر والقطوع إلى معادلات دقيقة. هذا الفصل حيوي جداً لاختبار CSCA، خاصةً في موضوعي
+                        **ميل المستقيم** و **القطوع المخروطية**. سنشرح القاعدة ونحل عليها مثالاً تفصيلياً كأننا في قاعة
+                        التدريس.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Why Study Analytic Geometry?:</h3>
+                    <p>Welcome, hero. Analytic Geometry is the bridge between graphics and algebra. You'll learn to turn
+                        lines, circles, and sections into precise equations. This chapter is vital for the CSCA,
+                        especially **Slope** and **Conics**. We explain the rule and solve a detailed example together.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: SLOPE -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: ميل المستقيم والتعامد</h3>
+                    <p>ميل المستقيم (\(m\)) يمثل "انحدار" الخط. إذا كان لدينا مستقيمان متعامدان، فإن حاصل ضرب ميلهما
+                        يساوي -1.</p>
+                    <div class="logic-card">\( m = \frac{y_2 - y_1}{x_2 - x_1} \) <br> شرط التعامد: \( m_1 \times m_2 =
+                        -1 \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Slope & Perpendicular Lines</h3>
+                    <p>Slope (\(m\)) represents a line's steepness. If two lines are perpendicular, the product of their
+                        slopes is -1.</p>
+                    <div class="logic-card">\( m = \frac{y_2 - y_1}{x_2 - x_1} \) <br> Perpendicular Condition: \( m_1
+                        \times m_2 = -1 \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>أوجد ميل المستقيم العمودي على المستقيم المار بالنقاط \( (2, 3) \) و \( (4, 7) \).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. ميل المستقيم الأصلي: \( m = \frac{7 - 3}{4 - 2} = 4 / 2 = 2 \).<br>
+                            2. ميل العمودي: بما أن \( m_1 \times m_2 = -1 \)، إذن \( 2 \times m_2 = -1 \).<br>
+                            3. النتيجة: \( m_2 = -1/2 = -0.5 \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>Find the slope of a line perpendicular to a line passing through \( (2, 3) \) and \( (4, 7)
+                            \).</p>
+                        <p><strong>Tactical Solution:</strong><br>
+                            1. Original Slope: \( m = \frac{7 - 3}{4 - 2} = 4 / 2 = 2 \).<br>
+                            2. Perpendicular Slope: Since \( m_1 \times m_2 = -1 \), then \( 2 \times m_2 = -1 \).<br>
+                            3. Result: \( m_2 = -0.5 \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: ELLIPSE -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: القطع الناقص (Ellipse Mastery)</h3>
+                    <p>القطع الناقص له بؤرتان وقيمة (\(a\)) تعبر عن نصف القطر الأطول. دائماً ما يكون المقام الأكبر مرتبط
+                        بالمحور الأكبر.</p>
+                    <div class="logic-card">المعادلة: \( \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \) <br> العلاقة البؤرية:
+                        \( c^2 = a^2 - b^2 \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Ellipse Mastery</h3>
+                    <p>An ellipse has two foci. (\(a\)) represents the semi-major radius. The largest denominator always
+                        dictates the major axis orientation.</p>
+                    <div class="logic-card">Equation: \( \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \) <br> Focal Relation:
+                        \( c^2 = a^2 - b^2 \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>لقطع ناقص معادلته: \( \frac{x^2}{25} + \frac{y^2}{9} = 1 \). أوجد إحداثيات البؤرتين.</p>
+                        <p><strong>الحل:</strong><br>
+                            1. تحديد القيم: \( a^2 = 25 \), \( b^2 = 9 \).<br>
+                            2. حساب البعد البؤري: \( c^2 = 25 - 9 = 16 \implies c = 4 \).<br>
+                            3. بما أن المقام الأكبر تحت \(x\)، فالبؤرتان على المحور السيني. <br>
+                            <strong>النتيجة:</strong> \( F_1(4, 0) \) و \( F_2(-4, 0) \).
+                        </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>Given the ellipse \( \frac{x^2}{25} + \frac{y^2}{9} = 1 \). Find the coordinates of the foci.
+                        </p>
+                        <p><strong>Solution:</strong><br>
+                            1. Identify: \( a^2 = 25 \), \( b^2 = 9 \).<br>
+                            2. Calculate \(c\): \( c^2 = 25 - 9 = 16 \implies c = 4 \).<br>
+                            3. Since the larger denom is under \(x\), the foci lie on the x-axis. <br>
+                            <strong>Result:</strong> \( F_1(4, 0) \), \( F_2(-4, 0) \).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: VECTORS DOT PRODUCT -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: ضرب المتجهات والتعامد</h3>
+                    <p>الضرب الداخلي (Dot Product) يعطي قيمة رقمية. إذا كان الناتج صفراً، فالمتجهان متعامدان (زاوية 90
+                        درجة).</p>
+                    <div class="logic-card">\( \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 \) <br> شرط التعامد: \( \vec{a}
+                        \cdot \vec{b} = 0 \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 3: Vector Dot Product & Orthogonality</h3>
+                    <p>The Dot Product yields a scalar. If result is zero, the vectors are orthogonal (perpendicular,
+                        90° angle).</p>
+                    <div class="logic-card">\( \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 \) <br> Orthogonal Rule: \(
+                        \vec{a} \cdot \vec{b} = 0 \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>هل المتجهان \( \vec{u}(2, -3) \) و \( \vec{v}(6, 4) \) متعامدان؟</p>
+                        <p><strong>الحل:</strong><br>
+                            1. نحسب الضرب الداخلي: \( (2 \times 6) + (-3 \times 4) \).<br>
+                            2. الحساب: \( 12 - 12 = 0 \).<br>
+                            3. النتيجة: نعم، المتجهان متعامدان.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>Are vectors \( \vec{u}(2, -3) \) and \( \vec{v}(6, 4) \) perpendicular?</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Dot Product: \( (2 \times 6) + (-3 \times 4) \).<br>
+                            2. Calculate: \( 12 - 12 = 0 \).<br>
+                            3. Result: Yes, they are perpendicular.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.05);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس (Survival Tips):</h3>
+                    <ul>
+                        <li>دائماً حول معادلة القطع للصيغة القياسية (\( = 1 \)) قبل البدء في الحساب.</li>
+                        <li>لا تخلط بين ميل المستقيم الموازي (يكون نفسه) وميل المستقيم العمودي (مقلوب بعكس الإشارة).
+                        </li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's Survival Tips:</h3>
+                    <ul>
+                        <li>Always convert conic equations to Standard Form (\( = 1 \)) before starting calculations.
+                        </li>
+                        <li>Don't mix Parallel Slope (same) with Perpendicular Slope (negative reciprocal).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--primary);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Slope -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q1:</strong> ما هو ميل المستقيم الموازي للمستقيم \( y = -3x + 10 \)\(؟\) <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">What is the slope of a line parallel to \( y = -3x + 10
+                        \)?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 3 &nbsp; B) -3 &nbsp; C) 1/3 &nbsp; D) -1/3
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">المستقيمات المتوازية لها نفس الميل تماماً.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q2:</strong> إذا كان حاصل ضرب ميل مستقيمين هو -1، فهذا يعني أنهما: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">If the product of two slopes is -1, the lines
+                        are:</span></p>
+                <div style="margin: 10px 0;">
+                    A) متوازيان &nbsp; B) منطبقان &nbsp; C) متعامدان (Perpendicular) &nbsp; D) متقاطعان بزاوية 45
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">هذا هو التعريف الرياضي للتعامد في الهندسة التحليلية.</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: Ellipse -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q3:</strong> في القطع الناقص \( \frac{x^2}{16} + \frac{y^2}{7} = 1 \)، ما هو البعد البؤري
+                    \(c\)\(؟\) <br> <span style="font-size: 0.85em; opacity: 0.8;">Find focal distance \(c\) for the
+                        given ellipse.</span></p>
+                <div style="margin: 10px 0;">
+                    A) 4 &nbsp; B) 3 &nbsp; C) 9 &nbsp; D) 23
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( c^2 = a^2 - b^2 = 16 - 7 = 9 \implies c = 3 \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q4:</strong> أي معادلة تمثل قطعاً ناقصاً محوره الأكبر رأسي (على محور Y)؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Which equation has a vertical major axis?</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( \frac{x^2}{25} + \frac{y^2}{9} = 1 \) &nbsp; B) \( \frac{x^2}{9} + \frac{y^2}{25} = 1 \)
+                    &nbsp; C) \( x^2 + y^2 = 1 \) &nbsp; D) \( x^2 - y^2 = 1 \)
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">يكون الرأس رأسياً إذا كان المقام الأكبر تحت الـ \(y\).
+                    </p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Vectors -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q5:</strong> إذا كان \( \vec{a} = (1, 2) \) و \( \vec{b} = (3, k) \) ومتعامدان، فما قيمة
+                    \(k\)\(؟\) <br> <span style="font-size: 0.85em; opacity: 0.8;">If \( \vec{a} \perp \vec{b} \), find
+                        k.</span></p>
+                <div style="margin: 10px 0;">
+                    A) -1.5 &nbsp; B) 1.5 &nbsp; C) -6 &nbsp; D) 0
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الضرب الداخلي يجب أن يكون صفراً: \( (1 \times 3) + (2
+                        \times k) = 0 \implies 3 + 2k = 0 \implies k = -3/2 = -1.5 \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q6:</strong> طول المتجه \( \vec{v}(3, 4) \) هو: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">The magnitude of vector (3, 4) is:</span></p>
+                <div style="margin: 10px 0;">
+                    A) 7 &nbsp; B) 1 &nbsp; C) 5 &nbsp; D) 25
+                </div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( |v| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+                        \).</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للرياضيات | المنهج الذهبي | The Golden Syllabus</p>
+    </footer>
+</body>
+
+</html>

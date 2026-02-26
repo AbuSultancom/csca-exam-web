@@ -1,0 +1,65 @@
+[
+    {
+        "id": "math1",
+        "subject": "math",
+        "title": "المجموعات والمتباينات | Sets & Inequalities",
+        "path": "lessons/math_sets.html",
+        "summary": "أساسيات المجموعات، العمليات، وحل المتباينات من الدرجة الأولى والثانية والكسرية."
+    },
+    {
+        "id": "math2",
+        "subject": "math",
+        "title": "الدوال والمتتاليات | Functions & Sequences",
+        "path": "lessons/math_functions.html",
+        "summary": "دراسة الدوال (الأسية، اللوغاريتمية، المثلثية)، المتتاليات الحسابية والهندسية، ومبادئ التفاضل."
+    },
+    {
+        "id": "math3",
+        "subject": "math",
+        "title": "الهندسة والجبر | Geometry & Algebra",
+        "path": "lessons/math_geometry.html",
+        "summary": "الهندسة التحليلية، المتجهات، الأعداد المركبة، المصفوفات، والمحددات."
+    },
+    {
+        "id": "math4",
+        "subject": "math",
+        "title": "الاحتمالات والإحصاء | Probability & Statistics",
+        "path": "lessons/math_stats.html",
+        "summary": "نماذج الاحتمالات الكلاسيكية، المقاييس الإحصائية، والتوزيع الطبيعي."
+    },
+    {
+        "id": "phys1",
+        "subject": "physics",
+        "title": "الميكانيكا | Mechanics",
+        "path": "lessons/phys_mechanics.html",
+        "summary": "قوانين الحركة، نيوتن، الزخم، الطاقة، الجاذبية، والديناميكا الدورانية."
+    },
+    {
+        "id": "phys2",
+        "subject": "physics",
+        "title": "الكهرباء والمغناطيسية | Electricity & Magnetism",
+        "path": "lessons/phys_electricity.html",
+        "summary": "الدوائر الكهربائية، قوانين كيرشوف، الحث الكهرومغناطيسي، والفيزياء المغناطيسية."
+    },
+    {
+        "id": "phys3",
+        "subject": "physics",
+        "title": "الديناميكا الحرارية | Thermodynamics",
+        "path": "lessons/phys_thermo.html",
+        "summary": "نظرية الحركة للغازات، القانون الأول للديناميكا الحرارية، وقوانين الغاز المثالي."
+    },
+    {
+        "id": "phys4",
+        "subject": "physics",
+        "title": "البصريات والموجات | Optics & Waves",
+        "path": "lessons/phys_optics.html",
+        "summary": "البصريات الهندسية (المرايا والعدسات) والفيزيائية (التداخل والحيود)."
+    },
+    {
+        "id": "phys5",
+        "subject": "physics",
+        "title": "الفيزياء الحديثة | Modern Physics",
+        "path": "lessons/phys_modern.html",
+        "summary": "البنية الذرية، الفيزياء النووية، التأثير الكهروضوئي، ومبادئ النسبية."
+    }
+]

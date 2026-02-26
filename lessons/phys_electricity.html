@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس الفيزياء: الكهرباء والمغناطيسية | Masterclass: Electricity & Magnetism</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--accent);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(247, 37, 133, 0.08);
+            border: 2px solid var(--accent);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--accent);
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الكهرباء | Electricity Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">الكهرباء والمغناطيسية: القوى الخفية <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Electricity & Magnetism: The Invisible Forces</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(247, 37, 133, 0.1), transparent); border-color: var(--accent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>بوابة الإلكترونيات:</h3>
+                    <p>أهلاً بك يا بطل. الكهرباء هي المحرك الفعلي للصناعة الحديثة. في هذا الدرس، ستتعلم كيف تتحرك
+                        الشحنات وتتفاعل مع المجالات المغناطيسية. سنشرح كل قاعدة، نضع صيغتها الرياضية، ثم نطبق مثالاً
+                        شاملاً كأننا نجري تجربة في مختبر حقيقي.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Gateway to Electronics:</h3>
+                    <p>Welcome, hero. Electricity is the actual driver of modern industry. In this lesson, you'll learn
+                        how charges move and interact with magnetic fields. We explain each rule, state its math
+                        formula, and solve a comprehensive example as if we're conducting a lab experiment together.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: COULOMB -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 1: قانون كولوم (Coulomb's Law)</h3>
+                    <p>يحسب القوة بين شحنتين (\(q_1, q_2\)). المسافة هي العامل الأكبر هنا؛ فالعلاقة **عكسية مع مربع
+                        المسافة** (\(1/r^2\)).</p>
+                    <div class="logic-card">\( F = k \frac{q_1 q_2}{r^2} \text{ where } k = 9 \times 10^9 \, N.m^2/C^2
+                        \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 1: Coulomb's Law</h3>
+                    <p>Calculates the force between two charges. Distance is the key factor; the relation is **inversely
+                        proportional to the square of distance** (\(1/r^2\)).</p>
+                    <div class="logic-card">\( F = k \frac{q_1 q_2}{r^2} \text{ where } k = 9 \times 10^9 \, N.m^2/C^2
+                        \)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال عملي (Practical Example):</h4>
+                        <p>شحنتان موجبتا الشحنة \( 2 \, \mu C \) و \( 4 \, \mu C \). إذا كانت المسافة بينهما 2 متر، ما
+                            القوة المتبادلة؟ (\( 1 \, \mu C = 10^{-6} \, C \)).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. تحويل الوحدات: \( q_1 = 2 \times 10^{-6} \)، \( q_2 = 4 \times 10^{-6} \).<br>
+                            2. تعويض: \( F = (9 \times 10^9) \times \frac{2 \times 10^{-6} \times 4 \times 10^{-6}}{2^2}
+                            \).<br>
+                            3. الحساب: \( F = 9 \times 10^9 \times \frac{8 \times 10^{-12}}{4} = 9 \times 10^9 \times 2
+                            \times 10^{-12} \).<br>
+                            4. النتيجة: \( 18 \times 10^{-3} \, N \) أو \( 0.018 \, N \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Illustrative Example:</h4>
+                        <p>Two positive charges \( 2 \, \mu C \) and \( 4 \, \mu C \). If distance is 2m, find the
+                            force. (\( 1 \, \mu C = 10^{-6} \, C \)).</p>
+                        <p><strong>Tactical Solution:</strong><br>
+                            1. Convert Units: \( q_1 = 2 \times 10^{-6} \), \( q_2 = 4 \times 10^{-6} \).<br>
+                            2. Substitute: \( F = (9 \times 10^9) \times \frac{2 \times 10^{-6} \times 4 \times
+                            10^{-6}}{2^2} \).<br>
+                            3. Calculate: \( F = 9 \times 10^9 \times \frac{8 \times 10^{-12}}{4} = 9 \times 10^9 \times
+                            2 \times 10^{-12} \).<br>
+                            4. Result: \( 0.018 \, N \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: OHM'S LAW & CIRCUITS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 2: الدوائر والمقاومات (DC Circuits)</h3>
+                    <p><strong>التوالي (Series):</strong> التيار ثابت، نجمع المقاومات \( R = R_1 + R_2 \). <br>
+                        <strong>التوازي (Parallel):</strong> الجهد ثابت، المقاومة المكافئة تقل \( \frac{1}{R} =
+                        \frac{1}{R_1} + \frac{1}{R_2} \).
+                    </p>
+                    <div class="logic-card">قانون أوم: \( V = IR \) | الجهد = التيار × المقاومة</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 2: DC Circuits & Resistors</h3>
+                    <p><strong>Series:</strong> Constant Current, add resistances \( R = R_1 + R_2 \). <br>
+                        <strong>Parallel:</strong> Constant Voltage, total resistance drops \( \frac{1}{R} =
+                        \frac{1}{R_1} + \frac{1}{R_2} \).
+                    </p>
+                    <div class="logic-card">Ohm's Law: \( V = IR \) | Voltage = Current × Resistance</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>مقاومتان 6Ω و 3Ω موصلتان على التوازي ببطارية 12V. ما هو التيار الكلي الخارج من البطارية؟</p>
+                        <p><strong>الحل:</strong><br>
+                            1. المقاومة المكافئة: \( 1/R = 1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2 \implies R = 2 \, \Omega
+                            \).<br>
+                            2. التيار الكلي: \( I = V/R = 12 / 2 = 6 \, A \).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>Resistors 6Ω and 3Ω are in parallel with a 12V battery. Find the total current drawn.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Equivalent R: \( 1/R = 1/6 + 1/3 = 3/6 = 1/2 \implies R = 2 \, \Omega \).<br>
+                            2. Total Current: \( I = V/R = 12 / 2 = 6 \, A \).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: LORENTZ FORCE & RHR -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 3: المغناطيسية وقوة لورنتز</h3>
+                    <p>الشحنة المتحركة (\(v\)) داخل مجال مغناطيسي (\(B\)) تنحرف بقوة عمودية (\(F\)).</p>
+                    <div class="logic-card">\( F = q v B \sin(\theta) \) <br> استخدم قاعدة "اليد اليمنى" للاتجاه.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 3: Magnetism & Lorentz Force</h3>
+                    <p>A moving charge (\(v\)) inside a magnetic field (\(B\)) is deflected by a perpendicular force
+                        (\(F\)).</p>
+                    <div class="logic-card">\( F = q v B \sin(\theta) \) <br> Use the "Right-Hand Rule" for direction.
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق قاعدة اليد اليمنى:</h4>
+                        <p>بروتون (موجب) يتحرك لليمين (\(+X\)) في مجال مغناطيسي لداخل الورقة (\(-Z\)). ما اتجاه القوة؟
+                        </p>
+                        <p><strong>الحل:</strong><br>
+                            1. الإبهام: لليمين (السرعة).<br>
+                            2. الأصابع: للداخل (المجال).<br>
+                            3. باطن الكف: للأعلى (\(+Y\)). <br> <strong>النتيجة:</strong> القوة للأعلى.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 RHR Application:</h4>
+                        <p>A proton (+ive) moves Right (\(+X\)) into a Field pointing into the page (\(-Z\)). Find Force
+                            direction.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Thumb: Right (Velocity).<br>
+                            2. Fingers: Into page (Field).<br>
+                            3. Palm: Upward (\(+Y\)). <br> <strong>Result:</strong> Force points UP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.05);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس (Survival Tips):</h3>
+                    <ul>
+                        <li>تذكر دائماً أن الإلكترون شحنته **سالبة**؛ لذا حركته تكون في اتجاه معكوس لنتائج قاعدة اليد
+                            اليمنى (استخدم كف اليد اليسار أو اعكس النتيجة النهائية).</li>
+                        <li>في مسائل التوازي، النتيجة النهائية لـ \(R\) يجب أن تكون **أصغر** من أصغر مقاومة في الدائرة.
+                        </li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's Survival Tips:</h3>
+                    <ul>
+                        <li>Remember Electrons are **negative**; they move in the OPPOSITE direction of the Right-Hand
+                            Rule palm.</li>
+                        <li>In Parallel circuits, final \(R\) MUST be **smaller** than the smallest resistor in the
+                            setup.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--accent);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Electrostatics -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q1:</strong> إذا تضاعفت المسافة بين شحنتين، فإن القوة الكهربائية بينهما تصبح: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">If distance between two charges doubles, the force
+                        becomes:</span></p>
+                <div style="margin: 10px 0;">
+                    A) الضعف &nbsp; B) النصف &nbsp; C) الربع (1/4) &nbsp; D) 4 أضعاف
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">قانون كولوم هو قانون "تربيع عكسي". تضاعف المسافة (2) يجعل
+                        القوة \( 1/2^2 = 1/4 \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q2:</strong> ما هي وحدة قياس شدة المجال الكهربائي؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">What is the unit of Electric Field Intensity?</span>
+                </p>
+                <div style="margin: 10px 0;">
+                    A) C &nbsp; B) N/C &nbsp; C) V &nbsp; D) J
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( E = F / q \)، لذا الوحدة هي نيوتن لكل كولوم.</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: DC Circuits -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q3:</strong> مقاومتان \( 10 \Omega \) و \( 40 \Omega \) موصلتان على التوالي. المقاومة
+                    المكافئة هي: <br> <span style="font-size: 0.85em; opacity: 0.8;">Two resistors (10 and 40 ohms) in
+                        series. Req is:</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( 50 \Omega \) &nbsp; B) \( 8 \Omega \) &nbsp; C) \( 30 \Omega \) &nbsp; D) \( 400 \Omega \)
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">في التوالي، نجمع المقاومات ببساطة: \( 10 + 40 = 50 \).
+                    </p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q4:</strong> أي مما يلي يظل ثابتاً في جميع أجزاء دائرة التوازي؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">What remains constant in all parts of a parallel
+                        circuit?</span></p>
+                <div style="margin: 10px 0;">
+                    A) التيار (Current) &nbsp; B) الجهد (Voltage) &nbsp; C) المقاومة &nbsp; D) القدرة
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">في التوصيل على التوازي، يكون فرق الجهد (\(V\)) متساوياً
+                        على جميع الفروع.</p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Magnetism -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q5:</strong> شحنة موجبة تتحرك لليمين في مجال مغناطيسي للداخل. اتجاه القوة هو: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Positive charge moving Right in a magnetic field
+                        directed IN. Force direction?</span></p>
+                <div style="margin: 10px 0;">
+                    A) للأعلى &nbsp; B) للأسفل &nbsp; C) لليمين &nbsp; D) لليسار
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">باستخدام قاعدة اليد اليمنى: الإبهام لليمين، الأصابع
+                        للداخل، راحة اليد تشير للأعلى.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q6:</strong> القوة المغناطيسية على شحنة ساكنة تساوي: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Magnetic force on a stationary charge is:</span></p>
+                <div style="margin: 10px 0;">
+                    A) أقصى قيمة &nbsp; B) \( qvB \) &nbsp; C) صفر &nbsp; D) \( B/q \)
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">بما أن \( v = 0 \)، فإن قانون \( F = qvB \sin \theta \)
+                        يعطي صفر.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للفيزياء | المنهج الذهبي | The Golden Syllabus</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس الفيزياء: البصريات والموجات | Masterclass: Optics & Waves</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--accent);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(247, 37, 133, 0.08);
+            border: 2px solid var(--accent);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--accent);
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">البصريات | Optics Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">البصريات والموجات: لغة الضوء والاهتزاز <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Optics & Waves: The Language of Light & Vibration</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(247, 37, 133, 0.1), transparent); border-color: var(--accent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>علم الرؤية والضوء:</h3>
+                    <p>أهلاً بك يا بطل. البصريات هي الأساس لتكنولوجيا الألياف البصرية والكاميرات. في هذا الدرس، ستتعلم
+                        كيف ينكسر الضوء، وكيف تتكون الصور في المرايا والعدسات. سنشرح كل قاعدة بالتفصيل مع مثال تطبيقي
+                        شامل ومرحلة بمرحلة.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Science of Sight & Light:</h3>
+                    <p>Welcome, hero. Optics is the core of fiber optics and imaging technologies. You will learn how
+                        light refracts and how images form in mirrors and lenses. We'll explain each rule in detail with
+                        comprehensive, step-by-step practical examples.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: WAVE PROP -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: خصائص الموجات (Wave Properties)</h3>
+                    <p>الموجة هي اضطراب ينقل الطاقة. سرعة الموجة (\(v\)) ترتبط بترددها (\(f\)) وطولها الموجي
+                        (\(\lambda\)).</p>
+                    <div class="logic-card">\( v = f \lambda \) | السرعة ثابتة لموجة الضوء في الفراغ (\( 3 \times 10^8
+                        \, m/s \)).</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Wave Properties</h3>
+                    <p>A wave is a disturbance carrying energy. Wave speed (\(v\)) links to its frequency (\(f\)) and
+                        wavelength (\(\lambda\)).</p>
+                    <div class="logic-card">\( v = f \lambda \) | Light speed in vacuum is constant (\( 3 \times 10^8 \,
+                        m/s \)).</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>ضوء تردده \( 5 \times 10^{14} \, Hz \). أوجد طوله الموجي في الفراغ.</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. الصيغة: \( \lambda = v / f \). <br>
+                            2. تعويض: \( \lambda = (3 \times 10^8) / (5 \times 10^{14}) \). <br>
+                            3. الحساب: \( \lambda = 0.6 \times 10^{-6} = 600 \, nm \). <br> <strong>النتيجة:</strong>
+                            هذا هو ضوء برتقالي اللون.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>Light with frequency \( 5 \times 10^{14} \, Hz \). Find its wavelength in vacuum.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Formula: \( \lambda = v / f \). <br>
+                            2. Substitute: \( \lambda = (3 \times 10^8) / (5 \times 10^{14}) \). <br>
+                            3. Calculation: \( \lambda = 0.6 \times 10^{-6} = 600 \, nm \). <br>
+                            <strong>Result:</strong> Orange light wavelength.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: SNELL'S LAW -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: انكسار الضوء (Refraction)</h3>
+                    <p>ينحرف مسار الضوء عند انتقاله بين وسطين مختلفين. يحكم هذه الحركة معامل الانكسار (\(n\)).</p>
+                    <div class="logic-card">قانون سنيل: \( n_1 \sin \theta_1 = n_2 \sin \theta_2 \) | \( n = c/v \).
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Light Refraction</h3>
+                    <p>Light's path bends when transitioning between two different media. This is governed by the
+                        refractive index (\(n\)).</p>
+                    <div class="logic-card">Snell's Law: \( n_1 \sin \theta_1 = n_2 \sin \theta_2 \) | \( n = c/v \).
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>ضوء يسقط من الهواء (\(n=1\)) على سطح ماء (\(n=1.33\)) بزاوية سقوط 30 درجة. أوجد جيب زاوية
+                            الانكسار (\(\sin \theta_2\)).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. تعويض: \( 1 \times \sin(30^\circ) = 1.33 \times \sin \theta_2 \). <br>
+                            2. بما أن \( \sin(30^\circ) = 0.5 \). <br>
+                            3. الحساب: \( \sin \theta_2 = 0.5 / 1.33 \approx 0.375 \). </p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>Light moves from air (n=1) to water (n=1.33) with incidence angle 30°. Find its refraction
+                            sine (\(\sin \theta_2\)).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Substitute: \( 1 \times \sin(30^\circ) = 1.33 \times \sin \theta_2 \). <br>
+                            2. Given \( \sin(30^\circ) = 0.5 \). <br>
+                            3. Calculation: \( \sin \theta_2 = 0.5 / 1.33 \approx 0.375 \). </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: THIN LENS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: المرايا والعدسات (Mirrors & Lenses)</h3>
+                    <p>تستخدم "معادلة العدسة الرقيقة" لحساب موضع الصورة المتكونة.</p>
+                    <div class="logic-card">\( \frac{1}{f} = \frac{1}{v} + \frac{1}{u} \) <br> حيث \(f\): البعد البؤري،
+                        \(v\): بعد الصورة، \(u\): بعد الجسم.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 3: Mirrors & Lenses</h3>
+                    <p>The "Thin Lens Equation" is used to find the image position.</p>
+                    <div class="logic-card">\( \frac{1}{f} = \frac{1}{v} + \frac{1}{u} \) <br> \(f\): Focal length,
+                        \(v\): Image distance, \(u\): Object distance.</div>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 خريطة الإشارات (Sign Rules):</h4>
+                        <ol class="step-list">
+                            <li class="step-item"><span class="step-num">1</span> **المرايا والعدسات (المجمعة):** \(f\)
+                                موجب.</li>
+                            <li class="step-item"><span class="step-num">2</span> **الصور الحقيقية:** \(v\) موجب؛
+                                **الصور التقديرية (الخلفية):** \(v\) سالب.</li>
+                        </ol>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 Sign Rules Workflow:</h4>
+                        <ol class="step-list">
+                            <li class="step-item"><span class="step-num">1</span> **Converging mirrors/lenses:** \(f\)
+                                is positive.</li>
+                            <li class="step-item"><span class="step-num">2</span> **Real images:** \(v\) is positive;
+                                **Virtual images:** \(v\) is negative.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>عدسة محدبة بعدها البؤري \( 10 \, cm \)، وضع جسم على بعد \( 15 \, cm \). أين تتكون الصورة؟</p>
+                        <p><strong>الحل:</strong><br>
+                            1. \( 1/v = 1/f - 1/u = 1/10 - 1/15 \).<br>
+                            2. توحيد مقامات: \( 3/30 - 2/30 = 1/30 \).<br>
+                            3. النتيجة: \( v = 30 \, cm \) (صورة حقيقية ومكبرة).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>A convex lens (\( f=10 \, cm \)) has an object at \( u=15 \, cm \). Where is the image?</p>
+                        <p><strong>Solution:</strong><br>
+                            1. \( 1/v = 1/f - 1/u = 1/10 - 1/15 \).<br>
+                            2. Common Denom: \( 3/30 - 2/30 = 1/30 \).<br>
+                            3. Result: \( v = 30 \, cm \) (Real, magnified image).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757;">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس (Survival Tips):</h3>
+                    <ul>
+                        <li>تذكر دائماً أن **معامل الانكسار (\(n\)) للهواء هو 1**. هو أصغر قيمة ممكنة، ولا يوجد \(n\)
+                            أقل من 1.</li>
+                        <li>الانعكاس الكلي الداخلي لا يحدث إلا عندما ينتقل الضوء من وسط **كثيف** (مثل الزجاج) لوسط **أقل
+                            كثافة** (مثل الهواء) وبزاوية أكبر من الزاوية الحرجة.</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's Survival Tips:</h3>
+                    <ul>
+                        <li>Remember: **Air's refractive index (n) is 1**. It is the minimum; no medium has an n less
+                            than 1.</li>
+                        <li>Total Internal Reflection ONLY happens when light goes from a **dense** medium (Glass) to a
+                            **less dense** one (Air) above the critical angle.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--accent);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Waves -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q1:</strong> إذا كان الطول الموجي لضوء ما هو \( 400 \, nm \)، فما هو تردده؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">If wavelength is 400nm, find frequency. (\(c=3 \times
+                        10^8\)).</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( 7.5 \times 10^{14} \, Hz \) &nbsp; B) \( 1.2 \times 10^{15} \, Hz \) &nbsp; C) \( 4 \times
+                    10^{14} \, Hz \) &nbsp; D) \( 3 \times 10^8 \, Hz \)
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( f = c / \lambda = (3 \times 10^8) / (400 \times
+                        10^{-9}) = 0.75 \times 10^{15} = 7.5 \times 10^{14} \, Hz \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q2:</strong> أي الموجات التالية لا تحتاج لوسط مادي للانتقال؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Which wave doesn't need a medium?</span></p>
+                <div style="margin: 10px 0;">
+                    A) الصوت &nbsp; B) موجات الماء &nbsp; C) الضوء (Light) &nbsp; D) الزلازل
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الضوء موجة كهرومغناطيسية تنتقل في الفراغ، بينما الصوت
+                        موجة ميكانيكية تحتاج لوسط.</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: Refraction -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q3:</strong> عند انتقال الضوء من الهواء للزجاج، فإن سرعته: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">When light goes from Air to Glass, its speed:</span>
+                </p>
+                <div style="margin: 10px 0;">
+                    A) تزداد &nbsp; B) تقل (Decreases) &nbsp; C) تظل ثابتة &nbsp; D) تصبح صفر
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الزجاج وسط أكثر كثافة ضوئية (\(n\) أعلى)، لذا السرعة تقل
+                        (\(v = c/n\)).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q4:</strong> زاوية السقوط التي تقابلها زاوية انكسار 90 درجة تسمى: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Angle of incidence resulting in 90° refraction
+                        is:</span></p>
+                <div style="margin: 10px 0;">
+                    A) الزاوية القائمة &nbsp; B) الزاوية الحرجة (Critical Angle) &nbsp; C) زاوية الانعكاس &nbsp; D) صفر
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">هذا هو تعريف الزاوية الحرجة التي يبدأ بعدها الانعكاس
+                        الكلي الداخلي.</p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Lenses -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q5:</strong> عدسة بعدها البؤري \( 20 \, cm \)، ما هي "قوتها" بالديوبتر؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Focal length 20cm, what is its optical Power?</span>
+                </p>
+                <div style="margin: 10px 0;">
+                    A) 5 D &nbsp; B) 0.05 D &nbsp; C) 20 D &nbsp; D) 2 D
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( P = 1 / f(m) \). الـ 20 سم هي 0.2 متر. \( 1 / 0.2 = 5
+                        \, D \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q6:</strong> الصورة المتكونة في المرآة المستوية تكون دائماً: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Images in a plane mirror are always:</span></p>
+                <div style="margin: 10px 0;">
+                    A) حقيقية مقلوبة &nbsp; B) تقديرية معتدلة (Virtual, Erect) &nbsp; C) حقيقية معتدلة &nbsp; D) مصغرة
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">خصائص المرآة المستوية: تقديرية، معتدلة، معكوسة جانبياً،
+                        ومساوية للجسم في الحجم.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للفيزياء | المنهج الذهبي | The Golden Syllabus Physics</p>
+    </footer>
+</body>
+
+</html>

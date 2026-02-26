@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس الفيزياء: الديناميكا الحرارية | Masterclass: Thermodynamics</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid var(--accent);
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid var(--secondary);
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(247, 37, 133, 0.08);
+            border: 2px solid var(--accent);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--accent);
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الحرارية | Thermo Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">الديناميكا الحرارية: لغة الطاقة والمادة <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Thermodynamics: The Language of Energy & Matter</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(247, 37, 133, 0.1), transparent); border-color: var(--accent);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>علم المحركات والكون:</h3>
+                    <p>أهلاً بك يا بطل. الديناميكا الحرارية لا تتعلق فقط بالماء الساخن، بل هي الأساس لتوليد الكهرباء
+                        ومحركات الطائرات. في هذا الدرس، ستتعلم كيف تربط الحرارة بالشغل، وكيف تفهم قوانين الغازات التي
+                        تحكم كل شيء حولك. سنشرح كل قاعدة بالتفصيل مع مثال تطبيقي شامل.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Science of Engines & The Universe:</h3>
+                    <p>Welcome, hero. Thermodynamics isn't just about hot water; it's the foundation of power generation
+                        and jet engines. You'll learn how to link heat with work and understand the Gas Laws governing
+                        everything around you. We explain each rule in detail with comprehensive practical examples.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: GAS LAWS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: قوانين الغاز المثالي (Gas Laws)</h3>
+                    <p>هناك ثلاث متغيرات تتحكم في الغاز: الضغط (\(P\))، الحجم (\(V\))، والحرارة (\(T\)).</p>
+                    <div class="logic-card">
+                        1. غاز محصور (بويل): \( P_1V_1 = P_2V_2 \) (علاقة عكسية). <br>
+                        2. قانون الغاز العام: \( \frac{P_1V_1}{T_1} = \frac{P_2V_2}{T_2} \). <br>
+                        3. معادلة الحالة: \( PV = nRT \).
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Ideal Gas Laws</h3>
+                    <p>Three variables control a gas: Pressure (\(P\)), Volume (\(V\)), and Temperature (\(T\)).</p>
+                    <div class="logic-card">
+                        1. Boyle's Law: \( P_1V_1 = P_2V_2 \) (Inverse relation). <br>
+                        2. General Gas Law: \( \frac{P_1V_1}{T_1} = \frac{P_2V_2}{T_2} \). <br>
+                        3. State Equation: \( PV = nRT \).
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تطبيق عملي (Application):</h4>
+                        <p>غاز حجمه \( 10 \, L \) عند ضغط \( 1 \, atm \). إذا ضغطنا الغاز ليصبح حجمه \( 2 \, L \)، فما
+                            هو الضغط الجديد؟ (بفرض ثبوت الحرارة).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. بما أن الحرارة ثابتة، نستخدم قانون بويل: \( P_1V_1 = P_2V_2 \). <br>
+                            2. تعويض: \( 1 \times 10 = P_2 \times 2 \). <br>
+                            3. الحساب: \( P_2 = 10 / 2 = 5 \, atm \). <br> <strong>النتيجة:</strong> الضغط زاد 5 مرات
+                            لأن الحجم قل 5 مرات.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Practical Application:</h4>
+                        <p>A gas occupies \( 10 \, L \) at \( 1 \, atm \). If squeezed to \( 2 \, L \), what is the new
+                            Pressure? (Assume constant temperature).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Using Boyle's: \( P_1V_1 = P_2V_2 \). <br>
+                            2. Substitute: \( 1 \times 10 = P_2 \times 2 \). <br>
+                            3. Calculation: \( P_2 = 10 / 2 = 5 \, atm \). <br> <strong>Result:</strong> Pressure
+                            multiplies by 5 as volume shrinks to 1/5th.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: 1ST LAW -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: القانون الأول للديناميكا الحرارية</h3>
+                    <p>الطاقة محفوظة. التغير في الطاقة الداخلية للنظام (\( \Delta U \)) هو الفرق بين الحرارة المضافة
+                        (\(Q\)) والشغل المبذول بواسطة النظام (\(W\)).</p>
+                    <div class="logic-card">\( \Delta U = Q - W \)</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: First Law of Thermodynamics</h3>
+                    <p>Energy is conserved. The change in internal energy (\( \Delta U \)) is the difference between
+                        heat added (\(Q\)) and work done by the system (\(W\)).</p>
+                    <div class="logic-card">\( \Delta U = Q - W \)</div>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 خريطة الإشارات (Sign Convention):</h4>
+                        <ol class="step-list">
+                            <li class="step-item"><span class="step-num">1</span> **الحرارة:** موجبة (\(+\)) إذا دخلت
+                                للنظام، سالبة (\(-\)) إذا خرجت.</li>
+                            <li class="step-item"><span class="step-num">2</span> **الشغل:** موجب (\(+\)) إذا النظام بذل
+                                شغل (تمدد)، سالب (\(-\)) إذا بُذل عليه (انضغاط).</li>
+                        </ol>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 Secret Sign Map:</h4>
+                        <ol class="step-list">
+                            <li class="step-item"><span class="step-num">1</span> **Heat:** Positive (\(+\)) if added TO
+                                system; negative (\(-\)) if REMOVED.</li>
+                            <li class="step-item"><span class="step-num">2</span> **Work:** Positive (\(+\)) if BY
+                                system (expansion); negative (\(-\)) if ON system (compression).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>نظام حراري أضفنا له \( 500 \, J \) من الحرارة، وبذل هو شغلاً مقداره \( 200 \, J \). أوجد
+                            التغير في طاقته الداخلية.</p>
+                        <p><strong>الحل:</strong><br>
+                            1. معطيات: \( Q = +500 \), \( W = +200 \).<br>
+                            2. تعويض: \( \Delta U = 500 - 200 = 300 \, J \). <br> <strong>النتيجة:</strong> النظام زادت
+                            حرارته الداخلية بمقدار 300 جول.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>500J of heat is added, and the system performs 200J of work. Find \( \Delta U \).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Data: \( Q = +500 \), \( W = +200 \).<br>
+                            2. Substitute: \( \Delta U = 500 - 200 = 300 \, J \). <br> <strong>Result:</strong> Internal
+                            energy increased by 300J.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: HEAT TRANSFER -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: طرق انتقال الحرارة</h3>
+                    <p>الحرارة لا تنتقل بشكل عشوائي، بل بثلاث طرق:</p>
+                    <ul>
+                        <li><strong>التوصيل (Conduction):</strong> خلال المواد الصلبة (لمس).</li>
+                        <li><strong>الحمل (Convection):</strong> خلال السوائل والغازات (تيارات).</li>
+                        <li><strong>الإشعاع (Radiation):</strong> خلال الفراغ (أشعة شمس).</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 3: Modes of Heat Transfer</h3>
+                    <p>Heat moves through three distinct methods:</p>
+                    <ul>
+                        <li><strong>Conduction:</strong> Through solids (Direct contact).</li>
+                        <li><strong>Convection:</strong> Through fluids/gases (Currents).</li>
+                        <li><strong>Radiation:</strong> Through vacuum (Sunlight).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757;">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس (Survival Tips):</h3>
+                    <ul>
+                        <li>دائماً حول الحرارة للـ **كلفن (Kelvin)** في قوانين الغازات (\( K = C + 273 \)). إذا تركتها
+                            بالسليوس، المسألة ستكون خاطئة.</li>
+                        <li>إذا كان هناك "انضغاط" غاز، الشغل (\(W\)) يكون سالباً، مما يزيد الطاقة الداخلية (\( \Delta U
+                            \)) حتى لو لم نضيف حرارة.</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's Survival Tips:</h3>
+                    <ul>
+                        <li>Always convert degrees to **Kelvin** (\( K = C + 273 \)). Calculating gas behavior in
+                            Celsius leads to total failure.</li>
+                        <li>In compression, Work (\(W\)) is negative, which boosts internal energy (\( \Delta U \)) even
+                            if no external heat is added.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: var(--accent);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
+                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+
+            <!-- Q1 & Q2: Gas Laws -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q1:</strong> إذا تضاعفت درجة حرارة غاز محصور (بالكلفن) مع ثبوت الحجم، فإن الضغط: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">If Kelvin temperature of a gas doubles at constant
+                        volume, the pressure:</span></p>
+                <div style="margin: 10px 0;">
+                    A) يقل للنصف &nbsp; B) يتضاعف (Doubles) &nbsp; C) يظل ثابتاً &nbsp; D) يزداد 4 أضعاف
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">وفقاً لقانون أمونتون (شارل للضغط)، العلاقة طردية بين
+                        الضغط والحرارة عند ثبات الحجم.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q2:</strong> ما هي قيمة الصفر المطلق بالسليزيوس؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">What is Absolute Zero in Celsius?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 0 C &nbsp; B) 100 C &nbsp; C) -273.15 C &nbsp; D) 273.15 C
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الصفر المطلق هو 0 كلفن، وهو ما يعادل -273.15 سليزيوس.</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: 1st Law -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q3:</strong> عند ضغط غاز في أسطوانة معزولة حرارياً (\(Q=0\))، فإن الطاقة الداخلية له: <br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">Compressing gas in an insulated cylinder (Q=0),
+                        internal energy:</span>
+                </p>
+                <div style="margin: 10px 0;">
+                    A) تزداد (Increases) &nbsp; B) تقل &nbsp; C) تنعدم &nbsp; D) تظل ثابتة
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">بما أن \( \Delta U = Q - W \)، وبما أن الشغل بُذل على
+                        الغاز (\(W\) سالب)، فإن \(\Delta U\) تصبح موجبة، فتزداد الحرارة.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q4:</strong> في عملية أيزوثيرمية (درجة حرارة ثابتة)، \( \Delta U \) تساوي: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">In an isothermal process, \( \Delta U \) is:</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( Q + W \) &nbsp; B) صفر &nbsp; C) \( Q \) &nbsp; D) مالانهاية
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الطاقة الداخلية تعتمد فقط على درجة الحرارة، فإذا كانت
+                        الحرارة ثابتة، فالتغير صفر.</p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Heat Transfer -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q5:</strong> تنتقل حرارة الشمس للأرض بشكل أساسي عن طريق: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Sun's heat reaches Earth primarily via:</span></p>
+                <div style="margin: 10px 0;">
+                    A) التوصيل &nbsp; B) الحمل &nbsp; C) الإشعاع (Radiation) &nbsp; D) الاحتكاك
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الفراغ بين الشمس والأرض لا يسمح بالتوصيل أو الحمل،
+                        الإشعاع هو الطريقة الوحيدة.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q6:</strong> أي مادة هي الأكفأ في توصيل الحرارة؟ <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Which substance is the most efficient heat
+                        conductor?</span></p>
+                <div style="margin: 10px 0;">
+                    A) الخشب &nbsp; B) الهواء &nbsp; C) الفضة (Silver) &nbsp; D) الماء
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">المعادن (وخاصة الفضة والنحاس) هي الأكفأ بفضل وجود
+                        الإلكترونات الحرة.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للفيزياء | المنهج الذهبي | The Golden Syllabus</p>
+    </footer>
+</body>
+
+</html>
