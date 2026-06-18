@@ -105,28 +105,50 @@
                 if (q.subject.includes('Physics')) tagClass = 'tag-phys';
                 if (q.subject.includes('Chemistry')) tagClass = 'tag-chem';
 
+                // Get question text (works with both old and new format)
+                const questionText = q.question_ar || q.question || '';
+                const questionEn = q.question_en || '';
+                const optionsList = q.options || [];
+                // Normalize options: if they're objects {label, text}, convert to strings
+                const optLabels = optionsList.map(o => typeof o === 'string' ? o : `${o.label}. ${o.text}`);
+                // Find correct answer text
+                let correctText = '';
+                if (q.correct) {
+                    const correctOpt = optionsList.find(o => (o.label || '').trim() === q.correct.trim() || (typeof o === 'string' && o.startsWith(q.correct)));
+                    if (correctOpt) {
+                        correctText = typeof correctOpt === 'string' ? correctOpt : `${correctOpt.label}. ${correctOpt.text}`;
+                    } else {
+                        correctText = q.correct;
+                    }
+                } else if (q.answer !== undefined) {
+                    correctText = optLabels[q.answer] || '';
+                }
+                const explanationAr = q.explanation_ar || q.explanation || '';
+                const explanationEn = q.explanation_en || q.eng_explanation || '';
+
                 const card = document.createElement('div');
                 card.className = 'card glass question-card';
                 card.innerHTML = `
                     <span class="tag ${tagClass}">${q.subject}</span>
-                    <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>${q.question}</strong></p>
+                    <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>${questionText}</strong></p>
+                    ${questionEn ? `<p style="font-size: 0.9rem; color: #94a3b8; direction: ltr; text-align: left; margin-bottom: 15px;"><em>${questionEn}</em></p>` : ''}
                     <div style="margin: 15px 0; padding-right: 20px;">
-                        ${q.options.map((opt, i) => `
+                        ${optLabels.map((opt, i) => `
                             <label style="display: block; margin: 10px 0; cursor: pointer;">
-                                <input type="radio" name="q${q.id}" style="margin-right: 10px;"> ${opt}
+                                <input type="radio" name="q${q.id}" style="margin-left: 10px;"> ${opt}
                             </label>
                         `).join('')}
                     </div>
                     <details style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
                         <summary style="color: var(--primary); cursor: pointer; font-weight: bold;">💡 عرض شرح الأستاذ | View Teacher's Explanation</summary>
                         <div style="padding: 20px; background: rgba(0,0,0,0.2); margin-top: 15px; border-radius: 12px; border-right: 4px solid #4ade80;">
-                            <p style="color: #4ade80; font-weight: bold; margin-bottom: 10px;">الإجابة الصحيحة: ${q.options[q.answer]}</p>
+                            <p style="color: #4ade80; font-weight: bold; margin-bottom: 10px;">الإجابة الصحيحة: ${correctText}</p>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div style="text-align: right;">
-                                    <p style="font-size: 0.95rem; color: #fff;">${q.explanation}</p>
+                                    <p style="font-size: 0.95rem; color: #fff;">${explanationAr}</p>
                                 </div>
                                 <div style="text-align: left; direction: ltr; color: #cbd5e1; font-size: 0.9rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 15px;">
-                                    <p>${q.eng_explanation}</p>
+                                    <p>${explanationEn}</p>
                                 </div>
                             </div>
                         </div>
