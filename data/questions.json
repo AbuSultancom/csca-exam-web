@@ -2,169 +2,2161 @@
     {
         "id": 1,
         "subject": "رياضيات | Math",
-        "question": "إذا كان \\(A \\cup B = A \\cap B\\)، فما هي العلاقة بين A و B؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">If \\(A \\cup B = A \\cap B\\), what is the relationship between A and B?</span>",
+        "topic": "sets",
+        "question_ar": "إذا كان \\(A \\cup B = A \\cap B\\)، فما هي العلاقة بين A و B؟",
+        "question_en": "If \\(A \\cup B = A \\cap B\\), what is the relationship between A and B?",
         "options": [
-            "A = B",
-            "A ⊆ B",
-            "B ⊆ A",
-            "لا توجد علاقة | No relationship"
+            {"label": "A", "text": "A = B"},
+            {"label": "B", "text": "A ⊆ B"},
+            {"label": "C", "text": "B ⊆ A"},
+            {"label": "D", "text": "لا توجد علاقة | No relationship"}
         ],
-        "answer": 0,
-        "explanation": "عندما يتساوى الاتحاد مع التقاطع، فهذا يعني أن جميع العناصر في الاتحاد موجودة في التقاطع، وهذا لا يحدث إلا إذا كانت المجموعتان متطابقتين تماماً (A = B).",
-        "eng_explanation": "When the union equals the intersection, it implies all elements in the union are also in the intersection, which only happens if the two sets are identical (A = B)."
+        "correct": "A",
+        "explanation_ar": "عندما يتساوى الاتحاد مع التقاطع، فهذا يعني أن جميع العناصر في الاتحاد موجودة في التقاطع، وهذا لا يحدث إلا إذا كانت المجموعتان متطابقتين تماماً (A = B).",
+        "explanation_en": "When the union equals the intersection, it implies all elements in the union are also in the intersection, which only happens if the two sets are identical (A = B).",
+        "difficulty": "medium"
     },
     {
         "id": 2,
         "subject": "رياضيات | Math",
-        "question": "حل المتباينة: \\(x^2 - 5x + 6 < 0\\) <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Solve the inequality: \\(x^2 - 5x + 6 < 0\\)</span>",
+        "topic": "inequalities",
+        "question_ar": "حل المتباينة: \\(x^2 - 5x + 6 < 0\\)",
+        "question_en": "Solve the inequality: \\(x^2 - 5x + 6 < 0\\)",
         "options": [
-            "x < 2 or x > 3",
-            "2 < x < 3",
-            "x <= 2 or x >= 3",
-            "-3 < x < -2"
+            {"label": "A", "text": "x < 2 or x > 3"},
+            {"label": "B", "text": "2 < x < 3"},
+            {"label": "C", "text": "x ≤ 2 or x ≥ 3"},
+            {"label": "D", "text": "-3 < x < -2"}
         ],
-        "answer": 1,
-        "explanation": "بتحليل المقدار: (x-2)(x-3) < 0. الجذور هي 2 و 3. بما أن معامل x تربيع موجب، فإن المنطقة بين الجذور تكون سالبة. إذن الحل هو الفترة (2, 3).",
-        "eng_explanation": "Factoring: (x-2)(x-3) < 0. The roots are 2 and 3. Since the x^2 coefficient is positive, the region between the roots is negative. Thus, 2 < x < 3."
+        "correct": "B",
+        "explanation_ar": "بتحليل المقدار: (x-2)(x-3) < 0. الجذور هي 2 و 3. بما أن معامل x تربيع موجب، فإن المنطقة بين الجذور تكون سالبة. إذن الحل هو الفترة (2, 3).",
+        "explanation_en": "Factoring: (x-2)(x-3) < 0. The roots are 2 and 3. Since the x² coefficient is positive, the region between the roots is negative. Thus, 2 < x < 3.",
+        "difficulty": "easy"
     },
     {
         "id": 3,
         "subject": "فيزياء | Physics",
-        "question": "ما هو الشغل المبذول لرفع جسم كتلته 5kg لمسافة 10m رأسياً؟ (\\(g = 10m/s^2\\)) <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">What is the work done to lift a 5kg mass 10m vertically? (\\(g = 10\\))</span>",
+        "topic": "mechanics",
+        "question_ar": "ما هو الشغل المبذول لرفع جسم كتلته 5kg لمسافة 10m رأسياً؟ (\\(g = 10m/s^2\\))",
+        "question_en": "What is the work done to lift a 5kg mass 10m vertically? (\\(g = 10\\))",
         "options": [
-            "50 J",
-            "500 J",
-            "250 J",
-            "100 J"
+            {"label": "A", "text": "50 J"},
+            {"label": "B", "text": "500 J"},
+            {"label": "C", "text": "250 J"},
+            {"label": "D", "text": "100 J"}
         ],
-        "answer": 1,
-        "explanation": "الشغل يساوي التغير في طاقة الوضع: W = mgh = 5 * 10 * 10 = 500 J.",
-        "eng_explanation": "Work equals the change in potential energy: W = mgh = 5 * 10 * 10 = 500 J."
+        "correct": "B",
+        "explanation_ar": "الشغل يساوي التغير في طاقة الوضع: W = mgh = 5 × 10 × 10 = 500 J.",
+        "explanation_en": "Work equals the change in potential energy: W = mgh = 5 × 10 × 10 = 500 J.",
+        "difficulty": "easy"
     },
     {
         "id": 4,
         "subject": "فيزياء | Physics",
-        "question": "مقاومتان 4Ω و 12Ω موصلتان على التوازي. ما هي المقاومة المكافئة؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Two resistors 4Ω and 12Ω are in parallel. Find Req.</span>",
+        "topic": "electricity",
+        "question_ar": "مقاومتان 4Ω و 12Ω موصلتان على التوازي. ما هي المقاومة المكافئة؟",
+        "question_en": "Two resistors 4Ω and 12Ω are in parallel. Find the equivalent resistance.",
         "options": [
-            "16 Ω",
-            "8 Ω",
-            "3 Ω",
-            "4 Ω"
+            {"label": "A", "text": "16 Ω"},
+            {"label": "B", "text": "8 Ω"},
+            {"label": "C", "text": "3 Ω"},
+            {"label": "D", "text": "4 Ω"}
         ],
-        "answer": 2,
-        "explanation": "في التوازي: 1/Req = 1/4 + 1/12 = 3/12 + 1/12 = 4/12 = 1/3. إذن Req = 3 Ω.",
-        "eng_explanation": "In parallel: 1/Req = 1/4 + 1/12 = 1/3, so Req = 3 Ω."
+        "correct": "C",
+        "explanation_ar": "في التوازي: 1/Req = 1/4 + 1/12 = 3/12 + 1/12 = 4/12 = 1/3. إذن Req = 3 Ω.",
+        "explanation_en": "In parallel: 1/Req = 1/4 + 1/12 = 1/3, so Req = 3 Ω.",
+        "difficulty": "easy"
     },
     {
         "id": 5,
         "subject": "رياضيات | Math",
-        "question": "ما هو ميل الخط المستقيم العمودي على المستقيم الذي معادلته \\(y = 2x + 1\\)؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">What is the slope of the line perpendicular to \\(y = 2x + 1\\)?</span>",
+        "topic": "geometry",
+        "question_ar": "ما هو ميل الخط المستقيم العمودي على المستقيم الذي معادلته \\(y = 2x + 1\\)؟",
+        "question_en": "What is the slope of the line perpendicular to \\(y = 2x + 1\\)?",
         "options": [
-            "2",
-            "-2",
-            "1/2",
-            "-1/2"
+            {"label": "A", "text": "2"},
+            {"label": "B", "text": "-2"},
+            {"label": "C", "text": "1/2"},
+            {"label": "D", "text": "-1/2"}
         ],
-        "answer": 3,
-        "explanation": "ميل المستقيم المعطى هو 2. ميل العمودي هو مقلوب الميل بعكس الإشارة: -1/2.",
-        "eng_explanation": "The slope of the given line is 2. The perpendicular slope is the negative reciprocal: -1/2."
+        "correct": "D",
+        "explanation_ar": "ميل المستقيم المعطى هو 2. ميل العمودي هو مقلوب الميل بعكس الإشارة: -1/2.",
+        "explanation_en": "The slope of the given line is 2. The perpendicular slope is the negative reciprocal: -1/2.",
+        "difficulty": "easy"
     },
     {
         "id": 6,
         "subject": "فيزياء | Physics",
-        "question": "ضوء ينتقل من الهواء (n=1) إلى الزجاج (n=1.5). إذا كانت زاوية السقوط 30 درجة، فما جيب زاوية الانكسار؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Light moves from air (n=1) to glass (n=1.5). If incidence angle is 30°, find sin of refraction.</span>",
+        "topic": "optics",
+        "question_ar": "ضوء ينتقل من الهواء (n=1) إلى الزجاج (n=1.5). إذا كانت زاوية السقوط 30 درجة، فما جيب زاوية الانكسار؟",
+        "question_en": "Light moves from air (n=1) to glass (n=1.5). If incidence angle is 30°, find sin of refraction angle.",
         "options": [
-            "1/2",
-            "1/3",
-            "2/3",
-            "1/4"
+            {"label": "A", "text": "1/2"},
+            {"label": "B", "text": "1/3"},
+            {"label": "C", "text": "2/3"},
+            {"label": "D", "text": "1/4"}
         ],
-        "answer": 1,
-        "explanation": "باستخدام قانون سنيل: n1 sin θ1 = n2 sin θ2 => 1 * sin(30) = 1.5 * sin θ2 => 0.5 = 1.5 sin θ2 => sin θ2 = 1/3.",
-        "eng_explanation": "Using Snell's Law: n1 sin θ1 = n2 sin θ2 => 1 * sin(30) = 1.5 * sin θ2 => 0.5 = 1.5 sin θ2 => sin θ2 = 1/3."
+        "correct": "B",
+        "explanation_ar": "باستخدام قانون سنيل: n₁ sin θ₁ = n₂ sin θ₂ → 1 × sin(30) = 1.5 × sin θ₂ → 0.5 = 1.5 sin θ₂ → sin θ₂ = 1/3.",
+        "explanation_en": "Using Snell's Law: n₁ sin θ₁ = n₂ sin θ₂ → 1 × sin(30) = 1.5 × sin θ₂ → 0.5 = 1.5 sin θ₂ → sin θ₂ = 1/3.",
+        "difficulty": "medium"
     },
     {
         "id": 7,
         "subject": "فيزياء | Physics",
-        "question": "ما هي طاقة فوتون تردده \\(6 \\times 10^{14} \\, Hz\\)؟ (\\(h = 6.6 \\times 10^{-34}\\)) <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">What is the energy of a photon with frequency \\(6 \\times 10^{14} \\, Hz\\)?</span>",
+        "topic": "modern",
+        "question_ar": "ما هي طاقة فوتون تردده \\(6 \\times 10^{14} Hz\\)؟ (\\(h = 6.6 \\times 10^{-34}\\))",
+        "question_en": "What is the energy of a photon with frequency \\(6 \\times 10^{14} Hz\\)?",
         "options": [
-            "3.96 x 10^-19 J",
-            "6.6 x 10^-34 J",
-            "1.1 x 10^-48 J",
-            "4.0 x 10^-19 J"
+            {"label": "A", "text": "3.96 × 10⁻¹⁹ J"},
+            {"label": "B", "text": "6.6 × 10⁻³⁴ J"},
+            {"label": "C", "text": "1.1 × 10⁻⁴⁸ J"},
+            {"label": "D", "text": "4.0 × 10⁻¹⁹ J"}
         ],
-        "answer": 0,
-        "explanation": "باستخدام E = hf: E = 6.6e-34 * 6e14 = 39.6e-20 = 3.96e-19 J.",
-        "eng_explanation": "Using E = hf: E = 6.6e-34 * 6e14 = 39.6e-20 = 3.96e-19 J."
+        "correct": "A",
+        "explanation_ar": "باستخدام E = hf: E = 6.6×10⁻³⁴ × 6×10¹⁴ = 39.6×10⁻²⁰ = 3.96×10⁻¹⁹ J.",
+        "explanation_en": "Using E = hf: E = 6.6×10⁻³⁴ × 6×10¹⁴ = 39.6×10⁻²⁰ = 3.96×10⁻¹⁹ J.",
+        "difficulty": "medium"
     },
     {
         "id": 8,
         "subject": "رياضيات | Math",
-        "question": "للقطع الناقص \\(\\frac{x^2}{25} + \frac{y^2}{16} = 1\\)، ما هي المسافة من المركز إلى البؤرة؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">For the ellipse \\(\\frac{x^2}{25} + \frac{y^2}{16} = 1\\), find the distance from center to focus (c).</span>",
+        "topic": "geometry",
+        "question_ar": "للقطع الناقص \\(\\frac{x^2}{25} + \\frac{y^2}{16} = 1\\)، ما هي المسافة من المركز إلى البؤرة؟",
+        "question_en": "For the ellipse \\(\\frac{x^2}{25} + \\frac{y^2}{16} = 1\\), find the distance from center to focus (c).",
         "options": [
-            "5",
-            "4",
-            "3",
-            "9"
+            {"label": "A", "text": "5"},
+            {"label": "B", "text": "4"},
+            {"label": "C", "text": "3"},
+            {"label": "D", "text": "9"}
         ],
-        "answer": 2,
-        "explanation": "في القطع الناقص: c^2 = a^2 - b^2 = 25 - 16 = 9. لذا c = 3.",
-        "eng_explanation": "In an ellipse: c^2 = a^2 - b^2 = 25 - 16 = 9. Thus c = 3."
+        "correct": "C",
+        "explanation_ar": "في القطع الناقص: c² = a² - b² = 25 - 16 = 9. لذا c = 3.",
+        "explanation_en": "In an ellipse: c² = a² - b² = 25 - 16 = 9. Thus c = 3.",
+        "difficulty": "medium"
     },
     {
         "id": 9,
         "subject": "رياضيات | Math",
-        "question": "ما هى قيمة النهاية \\\\( \\\\lim_{x \\\\to 0} \\\\frac{\\\\sin x}{x} \\\\)\\(؟\\) <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">What is the limit of \\\\( \\\\frac{\\\\sin x}{x} \\\\) as x approaches 0?</span>",
+        "topic": "calculus",
+        "question_ar": "ما قيمة النهاية \\(\\lim_{x \\to 0} \\frac{\\sin x}{x}\\)؟",
+        "question_en": "What is the limit \\(\\lim_{x \\to 0} \\frac{\\sin x}{x}\\)?",
         "options": [
-            "0",
-            "1",
-            "∞",
-            "-1"
+            {"label": "A", "text": "0"},
+            {"label": "B", "text": "1"},
+            {"label": "C", "text": "∞"},
+            {"label": "D", "text": "-1"}
         ],
-        "answer": 1,
-        "explanation": "هذه نهاية شهيرة في التفاضل وتساوي 1.",
-        "eng_explanation": "This is a fundamental trigonometric limit and equals 1."
+        "correct": "B",
+        "explanation_ar": "هذه نهاية شهيرة في التفاضل وتساوي 1.",
+        "explanation_en": "This is a fundamental trigonometric limit and equals 1.",
+        "difficulty": "easy"
     },
     {
         "id": 10,
         "subject": "فيزياء | Physics",
-        "question": "قوة الطفو المؤثرة على جسم تساوي: <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">The buoyancy force on an object equals:</span>",
+        "topic": "fluids",
+        "question_ar": "قوة الطفو المؤثرة على جسم تساوي:",
+        "question_en": "The buoyancy force on an object equals:",
         "options": [
-            "وزن الجسم",
-            "حجم الجسم",
-            "وزن المائع المزاح | Weight of displaced fluid",
-            "الضغط الجوي"
+            {"label": "A", "text": "وزن الجسم | Weight of the object"},
+            {"label": "B", "text": "حجم الجسم | Volume of the object"},
+            {"label": "C", "text": "وزن المائع المزاح | Weight of displaced fluid"},
+            {"label": "D", "text": "الضغط الجوي | Atmospheric pressure"}
         ],
-        "answer": 2,
-        "explanation": "حسب مبدأ أرخميدس، قوة الطفو تساوي وزن كمية السائل التي دفعها الجسم بعيداً.",
-        "eng_explanation": "Per Archimedes' Principle, buoyancy is equal to the weight of the fluid the object displaces."
+        "correct": "C",
+        "explanation_ar": "حسب مبدأ أرخميدس، قوة الطفو تساوي وزن كمية السائل التي دفعها الجسم بعيداً.",
+        "explanation_en": "Per Archimedes' Principle, buoyancy equals the weight of displaced fluid.",
+        "difficulty": "easy"
     },
     {
         "id": 11,
         "subject": "كيمياء | Chemistry",
-        "question": "أي من هذه المدارات يتسع لـ 10 إلكترونات كحد أقصى؟ <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Which subshell holds a maximum of 10 electrons?</span>",
+        "topic": "atomic",
+        "question_ar": "أي من هذه المدارات يتسع لـ 10 إلكترونات كحد أقصى؟",
+        "question_en": "Which subshell holds a maximum of 10 electrons?",
         "options": [
-            "s",
-            "p",
-            "d",
-            "f"
+            {"label": "A", "text": "s"},
+            {"label": "B", "text": "p"},
+            {"label": "C", "text": "d"},
+            {"label": "D", "text": "f"}
         ],
-        "answer": 2,
-        "explanation": "المدارات الفرعية: s(2), p(6), d(10), f(14).",
-        "eng_explanation": "Subshell capacities: s=2, p=6, d=10, f=14."
+        "correct": "C",
+        "explanation_ar": "المدارات الفرعية: s(2), p(6), d(10), f(14). d به 5 أوربيتالات × 2 = 10.",
+        "explanation_en": "Subshell capacities: s=2, p=6, d=10, f=14. d has 5 orbitals × 2 = 10 electrons.",
+        "difficulty": "easy"
     },
     {
         "id": 12,
         "subject": "كيمياء | Chemistry",
-        "question": "الرابطة في جزيء \\\\( HCl \\\\) هي: <br> <span style=\"font-size: 0.8em; color: var(--text-dim);\">Bond type in \\\\( HCl \\\\) is:</span>",
+        "topic": "bonding",
+        "question_ar": "الرابطة في جزيء \\(HCl\\) هي:",
+        "question_en": "The bond type in \\(HCl\\) is:",
         "options": [
-            "أيونية",
-            "تساهمية قطبية | Polar Covalent",
-            "تساهمية نقية",
-            "هيدروجينية"
+            {"label": "A", "text": "أيونية | Ionic"},
+            {"label": "B", "text": "تساهمية قطبية | Polar Covalent"},
+            {"label": "C", "text": "تساهمية غير قطبية | Nonpolar Covalent"},
+            {"label": "D", "text": "هيدروجينية | Hydrogen bond"}
         ],
-        "answer": 1,
-        "explanation": "بسبب فرق الكهروسالبية بين الكلور والهيدروجين، تنجذب الإلكترونات نحو الكلور أكثر.",
-        "eng_explanation": "Due to the electronegativity difference, chloride pulls electrons more, making it polar covalent."
+        "correct": "B",
+        "explanation_ar": "بسبب فرق الكهروسالبية بين الكلور والهيدروجين (~0.9)، تنجذب الإلكترونات نحو الكلور أكثر، فتصبح الرابطة قطبية.",
+        "explanation_en": "Due to the electronegativity difference (~0.9), electrons are pulled more towards chlorine, making it polar covalent.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 13,
+        "subject": "رياضيات | Math",
+        "topic": "functions",
+        "question_ar": "ما هو مجال الدالة \\(f(x) = \\frac{1}{x-3}\\)؟",
+        "question_en": "What is the domain of \\(f(x) = \\frac{1}{x-3}\\)?",
+        "options": [
+            {"label": "A", "text": "ℝ \\ {3}"},
+            {"label": "B", "text": "ℝ"},
+            {"label": "C", "text": "x > 3"},
+            {"label": "D", "text": "x < 3"}
+        ],
+        "correct": "A",
+        "explanation_ar": "المقام x-3 ≠ 0 → x ≠ 3. إذن المجال هو جميع الأعداد الحقيقية ما عدا 3.",
+        "explanation_en": "The denominator x-3 ≠ 0 → x ≠ 3. So the domain is all real numbers except 3.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 14,
+        "subject": "كيمياء | Chemistry",
+        "topic": "stoichiometry",
+        "question_ar": "كم عدد المولات في 88 g من \\(CO_2\\)؟ (\\(C=12, O=16\\))",
+        "question_en": "How many moles are in 88 g of \\(CO_2\\)?",
+        "options": [
+            {"label": "A", "text": "1 mol"},
+            {"label": "B", "text": "2 mol"},
+            {"label": "C", "text": "4 mol"},
+            {"label": "D", "text": "0.5 mol"}
+        ],
+        "correct": "B",
+        "explanation_ar": "M = 12 + 32 = 44 g/mol. n = 88/44 = 2 mol.",
+        "explanation_en": "M = 12 + 32 = 44 g/mol. n = 88/44 = 2 mol.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 15,
+        "subject": "فيزياء | Physics",
+        "topic": "mechanics",
+        "question_ar": "جسم كتلته 2 kg يتحرك بسرعة 3 m/s. ما طاقته الحركية؟",
+        "question_en": "A 2 kg object moves at 3 m/s. What is its kinetic energy?",
+        "options": [
+            {"label": "A", "text": "6 J"},
+            {"label": "B", "text": "9 J"},
+            {"label": "C", "text": "18 J"},
+            {"label": "D", "text": "3 J"}
+        ],
+        "correct": "B",
+        "explanation_ar": "KE = ½mv² = ½ × 2 × 9 = 9 J.",
+        "explanation_en": "KE = ½mv² = ½ × 2 × 9 = 9 J.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 16,
+        "subject": "رياضيات | Math",
+        "topic": "sequences",
+        "question_ar": "المتتالية 3, 7, 11, 15, ... هي متتالية :",
+        "question_en": "The sequence 3, 7, 11, 15, ... is:",
+        "options": [
+            {"label": "A", "text": "حسابية أساسها 3 | Arithmetic, d=3"},
+            {"label": "B", "text": "حسابية أساسها 4 | Arithmetic, d=4"},
+            {"label": "C", "text": "هندسية نسبتها 3 | Geometric, r=3"},
+            {"label": "D", "text": "هندسية نسبتها 4 | Geometric, r=4"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الفرق بين كل حدين متتاليين: 7-3=4، 11-7=4، 15-11=4. إذن هي متتالية حسابية أساسها 4.",
+        "explanation_en": "The difference between consecutive terms: 7-3=4, 11-7=4, 15-11=4. It's an arithmetic sequence with d=4.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 17,
+        "subject": "كيمياء | Chemistry",
+        "topic": "equilibrium",
+        "question_ar": "ثابت الاتزان \\(K_c\\) يتغير حصراً بتغير:",
+        "question_en": "The equilibrium constant \\(K_c\\) changes only when:",
+        "options": [
+            {"label": "A", "text": "الضغط | Pressure"},
+            {"label": "B", "text": "التركيز | Concentration"},
+            {"label": "C", "text": "درجة الحرارة | Temperature"},
+            {"label": "D", "text": "الحجم | Volume"}
+        ],
+        "correct": "C",
+        "explanation_ar": "قيمة K هي دالة في درجة الحرارة فقط. العوامل الأخرى تغير موقع الاتزان وليس قيمة K.",
+        "explanation_en": "K is a function of temperature only. Other factors change equilibrium position, not K's value.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 18,
+        "subject": "فيزياء | Physics",
+        "topic": "electricity",
+        "question_ar": "مقاومتان 4Ω و 6Ω موصلتان على التوالي. ما المقاومة المكافئة؟",
+        "question_en": "Two resistors 4Ω and 6Ω are in series. Find the equivalent resistance.",
+        "options": [
+            {"label": "A", "text": "10 Ω"},
+            {"label": "B", "text": "2.4 Ω"},
+            {"label": "C", "text": "2 Ω"},
+            {"label": "D", "text": "24 Ω"}
+        ],
+        "correct": "A",
+        "explanation_ar": "في التوالي: R_eq = R₁ + R₂ = 4 + 6 = 10 Ω.",
+        "explanation_en": "In series: R_eq = R₁ + R₂ = 4 + 6 = 10 Ω.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 19,
+        "subject": "كيمياء | Chemistry",
+        "topic": "organic",
+        "question_ar": "الصيغة العامة للألكانات هي:",
+        "question_en": "The general formula of alkanes is:",
+        "options": [
+            {"label": "A", "text": "\\(C_nH_{2n}\\)"},
+            {"label": "B", "text": "\\(C_nH_{2n+2}\\)"},
+            {"label": "C", "text": "\\(C_nH_{2n-2}\\)"},
+            {"label": "D", "text": "\\(C_nH_n\\)"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الألكانات مشبعة بالهيدروجين، صيغتها العامة \\(C_nH_{2n+2}\\).",
+        "explanation_en": "Alkanes are saturated hydrocarbons, general formula \\(C_nH_{2n+2}\\).",
+        "difficulty": "easy"
+    },
+    {
+        "id": 20,
+        "subject": "رياضيات | Math",
+        "topic": "statistics",
+        "question_ar": "ما هو الوسيط (Median) للأعداد: 2, 5, 7, 8, 10؟",
+        "question_en": "What is the median of: 2, 5, 7, 8, 10?",
+        "options": [
+            {"label": "A", "text": "5"},
+            {"label": "B", "text": "7"},
+            {"label": "C", "text": "6.4"},
+            {"label": "D", "text": "8"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الأعداد مرتبة. عددها فردي (5) → الوسيط هو القيمة الثالثة = 7.",
+        "explanation_en": "Numbers are sorted. 5 values (odd) → the 3rd value is the median = 7.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 21,
+        "subject": "كيمياء | Chemistry",
+        "topic": "kinetics",
+        "question_ar": "أي العوامل التالية لا يؤثر على معدل التفاعل؟",
+        "question_en": "Which factor does NOT affect reaction rate?",
+        "options": [
+            {"label": "A", "text": "درجة الحرارة | Temperature"},
+            {"label": "B", "text": "التركيز | Concentration"},
+            {"label": "C", "text": "قيمة \\(\\Delta G\\) | Value of \\(\\Delta G\\)"},
+            {"label": "D", "text": "المحفزات | Catalysts"}
+        ],
+        "correct": "C",
+        "explanation_ar": "°G تحدد التلقائية وليس السرعة. العوامل المؤثرة على السرعة: التركيز، الحرارة، المحفزات، مساحة السطح.",
+        "explanation_en": "ΔG determines spontaneity, not rate. Rate factors: concentration, temperature, catalysts, surface area.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 22,
+        "subject": "فيزياء | Physics",
+        "topic": "thermodynamics",
+        "question_ar": "ما هي درجة الحرارة 100°C بوحدة الكلفن؟",
+        "question_en": "What is 100°C in Kelvin?",
+        "options": [
+            {"label": "A", "text": "100 K"},
+            {"label": "B", "text": "173 K"},
+            {"label": "C", "text": "373 K"},
+            {"label": "D", "text": "-173 K"}
+        ],
+        "correct": "C",
+        "explanation_ar": "K = C + 273 = 100 + 273 = 373 K.",
+        "explanation_en": "K = °C + 273 = 100 + 273 = 373 K.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 23,
+        "subject": "كيمياء | Chemistry",
+        "topic": "equilibrium",
+        "question_ar": "في تفاعل \\(N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g)\\)، زيادة الضغط تؤدي إلى:",
+        "question_en": "In \\(N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g)\\), increasing pressure will:",
+        "options": [
+            {"label": "A", "text": "تحريك التفاعل لليسار | Shift left"},
+            {"label": "B", "text": "تحريك التفاعل لليمين | Shift right"},
+            {"label": "C", "text": "لا تأثير | No effect"},
+            {"label": "D", "text": "إيقاف التفاعل | Stop the reaction"}
+        ],
+        "correct": "B",
+        "explanation_ar": "اليسار 4 مولات غاز، اليمين 2 مول. زيادة الضغط تدفع نحو الجهة ذات المولات الأقل (اليمين).",
+        "explanation_en": "Left: 4 gas moles, Right: 2 gas moles. Higher pressure shifts to the side with fewer moles (right).",
+        "difficulty": "medium"
+    },
+    {
+        "id": 24,
+        "subject": "رياضيات | Math",
+        "topic": "calculus",
+        "question_ar": "ما هي مشتقة \\(f(x) = x^3 + 2x\\)؟",
+        "question_en": "What is the derivative of \\(f(x) = x^3 + 2x\\)?",
+        "options": [
+            {"label": "A", "text": "3x² + 2"},
+            {"label": "B", "text": "x³ + 2"},
+            {"label": "C", "text": "3x + 2"},
+            {"label": "D", "text": "x² + 2"}
+        ],
+        "correct": "A",
+        "explanation_ar": "مشتقة x³ = 3x²، ومشتقة 2x = 2. إذن f'(x) = 3x² + 2.",
+        "explanation_en": "Derivative of x³ = 3x², and derivative of 2x = 2. So f'(x) = 3x² + 2.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 25,
+        "subject": "فيزياء | Physics",
+        "topic": "waves",
+        "question_ar": "إذا كان تردد موجة 50 Hz وسرعتها 340 m/s، فما طولها الموجي؟",
+        "question_en": "If a wave has frequency 50 Hz and speed 340 m/s, what is its wavelength?",
+        "options": [
+            {"label": "A", "text": "6.8 m"},
+            {"label": "B", "text": "0.147 m"},
+            {"label": "C", "text": "17,000 m"},
+            {"label": "D", "text": "1.7 m"}
+        ],
+        "correct": "A",
+        "explanation_ar": "λ = v/f = 340/50 = 6.8 m.",
+        "explanation_en": "λ = v/f = 340/50 = 6.8 m.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 26,
+        "subject": "كيمياء | Chemistry",
+        "topic": "bonding",
+        "question_ar": "ما الشكل الهندسي لجزيء \\(NH_3\\)؟",
+        "question_en": "What is the molecular geometry of \\(NH_3\\)?",
+        "options": [
+            {"label": "A", "text": "رباعي السطوح | Tetrahedral"},
+            {"label": "B", "text": "هرم ثلاثي | Trigonal pyramidal"},
+            {"label": "C", "text": "منحني | Bent"},
+            {"label": "D", "text": "خطي | Linear"}
+        ],
+        "correct": "B",
+        "explanation_ar": "NH₃ له 4 أزواج إلكترونية (3 روابط + 1 زوج حر) → VSEPR: شكل هرم ثلاثي بزاوية 107°.",
+        "explanation_en": "NH₃ has 4 electron pairs (3 bonds + 1 lone pair) → VSEPR: trigonal pyramidal, bond angle 107°.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 27,
+        "subject": "رياضيات | Math",
+        "topic": "sets",
+        "question_ar": "إذا كانت \\(A = \\{1,2,3\\}\\) و \\(B = \\{2,3,4\\}\\)، فما قيمة \\(A \\cap B\\)؟",
+        "question_en": "If \\(A = \\{1,2,3\\}\\) and \\(B = \\{2,3,4\\}\\), what is \\(A \\cap B\\)?",
+        "options": [
+            {"label": "A", "text": "{1,2,3,4}"},
+            {"label": "B", "text": "{2,3}"},
+            {"label": "C", "text": "{1,4}"},
+            {"label": "D", "text": "{}"}
+        ],
+        "correct": "B",
+        "explanation_ar": "التقاطع = العناصر المشتركة بين المجموعتين = {2, 3}.",
+        "explanation_en": "Intersection = elements common to both sets = {2, 3}.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 28,
+        "subject": "كيمياء | Chemistry",
+        "topic": "kinetics",
+        "question_ar": "التفاعل \\(A + B \\rightarrow C\\) من الرتبة الأولى بالنسبة لـ A والرتبة الأولى بالنسبة لـ B. الرتبة الكلية هي:",
+        "question_en": "Reaction \\(A + B \\rightarrow C\\) is 1st order in A and 1st order in B. The overall order is:",
+        "options": [
+            {"label": "A", "text": "1"},
+            {"label": "B", "text": "2"},
+            {"label": "C", "text": "3"},
+            {"label": "D", "text": "0"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الرتبة الكلية = مجموع الأسس = 1 + 1 = 2 (من الرتبة الثانية).",
+        "explanation_en": "Overall order = sum of exponents = 1 + 1 = 2 (second order).",
+        "difficulty": "medium"
+    },
+    {
+        "id": 29,
+        "subject": "فيزياء | Physics",
+        "topic": "electricity",
+        "question_ar": "قانون أوم ينص على أن:",
+        "question_en": "Ohm's Law states that:",
+        "options": [
+            {"label": "A", "text": "V = I × R"},
+            {"label": "B", "text": "V = I / R"},
+            {"label": "C", "text": "I = V × R"},
+            {"label": "D", "text": "R = V × I"}
+        ],
+        "correct": "A",
+        "explanation_ar": "قانون أوم: فرق الجهد (V) = التيار (I) × المقاومة (R).",
+        "explanation_en": "Ohm's Law: Voltage (V) = Current (I) × Resistance (R).",
+        "difficulty": "easy"
+    },
+    {
+        "id": 30,
+        "subject": "كيمياء | Chemistry",
+        "topic": "atomic",
+        "question_ar": "التوزيع الإلكتروني 1s² 2s² 2p⁶ 3s² 3p⁵ يعود للعنصر:",
+        "question_en": "The electron configuration 1s² 2s² 2p⁶ 3s² 3p⁵ belongs to element:",
+        "options": [
+            {"label": "A", "text": "Ar (Z=18)"},
+            {"label": "B", "text": "Cl (Z=17)"},
+            {"label": "C", "text": "S (Z=16)"},
+            {"label": "D", "text": "P (Z=15)"}
+        ],
+        "correct": "B",
+        "explanation_ar": "مجموع الإلكترونات = 2+2+6+2+5 = 17. العدد الذري 17 = الكلور (Cl).",
+        "explanation_en": "Total electrons = 2+2+6+2+5 = 17. Atomic number 17 = Chlorine (Cl).",
+        "difficulty": "easy"
+    },
+    {
+        "id": 31,
+        "subject": "رياضيات | Math",
+        "topic": "functions",
+        "question_ar": "إذا كانت \\(f(x) = 2x + 1\\)، فما قيمة \\(f^{-1}(7)\\)؟",
+        "question_en": "If \\(f(x) = 2x + 1\\), find \\(f^{-1}(7)\\).",
+        "options": [
+            {"label": "A", "text": "3"},
+            {"label": "B", "text": "15"},
+            {"label": "C", "text": "4"},
+            {"label": "D", "text": "7"}
+        ],
+        "correct": "A",
+        "explanation_ar": "f(x) = 2x+1 → للدالة العكسية: y = 2x+1 → x = (y-1)/2. f⁻¹(7) = (7-1)/2 = 3.",
+        "explanation_en": "f(x) = 2x+1 → inverse: y = 2x+1 → x = (y-1)/2. f⁻¹(7) = (7-1)/2 = 3.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 32,
+        "subject": "كيمياء | Chemistry",
+        "topic": "stoichiometry",
+        "question_ar": "المادة المحددة (Limiting Reagent) هي:",
+        "question_en": "The limiting reagent is:",
+        "options": [
+            {"label": "A", "text": "المادة التي تستهلك أولاً وتحدد كمية الناتج"},
+            {"label": "B", "text": "المادة الفائضة بعد التفاعل"},
+            {"label": "C", "text": "المادة التي تزيد من سرعة التفاعل"},
+            {"label": "D", "text": "المادة التي لا تشارك في التفاعل"}
+        ],
+        "correct": "A",
+        "explanation_ar": "المادة المحددة تنفد أولاً وتحدد أقصى كمية من الناتج يمكن تكوينها.",
+        "explanation_en": "The limiting reagent is consumed first and determines the maximum amount of product formed.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 33,
+        "subject": "فيزياء | Physics",
+        "topic": "modern",
+        "question_ar": "في التأثير الكهروضوئي، طاقة الإلكترون المنبعث تعتمد على:",
+        "question_en": "In the photoelectric effect, the emitted electron's energy depends on:",
+        "options": [
+            {"label": "A", "text": "شدة الضوء فقط | Light intensity only"},
+            {"label": "B", "text": "تردد الضوء | Light frequency"},
+            {"label": "C", "text": "مساحة المعدن | Metal surface area"},
+            {"label": "D", "text": "درجة الحرارة | Temperature"}
+        ],
+        "correct": "B",
+        "explanation_ar": "KE = hf - φ. طاقة الإلكترون تعتمد على تردد الضوء (f)، وليس شدته. شدة الضوء تؤثر على عدد الإلكترونات فقط.",
+        "explanation_en": "KE = hf - φ. Electron energy depends on light frequency (f), not intensity. Intensity affects the number of electrons.",
+        "difficulty": "hard"
+    },
+    {
+        "id": 34,
+        "subject": "كيمياء | Chemistry",
+        "topic": "equilibrium",
+        "question_ar": "ما هو pH لمحلول \\(HCl\\) تركيزه 0.0001 M؟",
+        "question_en": "What is the pH of 0.0001 M \\(HCl\\)?",
+        "options": [
+            {"label": "A", "text": "1"},
+            {"label": "B", "text": "4"},
+            {"label": "C", "text": "10"},
+            {"label": "D", "text": "7"}
+        ],
+        "correct": "B",
+        "explanation_ar": "HCl حمض قوي → [H⁺] = 10⁻⁴ M. pH = -log(10⁻⁴) = 4.",
+        "explanation_en": "HCl is a strong acid → [H⁺] = 10⁻⁴ M. pH = -log(10⁻⁴) = 4.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 35,
+        "subject": "رياضيات | Math",
+        "topic": "statistics",
+        "question_ar": "ما هو الوسط الحسابي للأعداد: 4, 8, 12, 16؟",
+        "question_en": "What is the mean of: 4, 8, 12, 16?",
+        "options": [
+            {"label": "A", "text": "8"},
+            {"label": "B", "text": "10"},
+            {"label": "C", "text": "12"},
+            {"label": "D", "text": "9"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الوسط = (4+8+12+16)/4 = 40/4 = 10.",
+        "explanation_en": "Mean = (4+8+12+16)/4 = 40/4 = 10.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 36,
+        "subject": "كيمياء | Chemistry",
+        "topic": "organic",
+        "question_ar": "المجموعة الوظيفية في الكحولات هي:",
+        "question_en": "The functional group in alcohols is:",
+        "options": [
+            {"label": "A", "text": "-OH"},
+            {"label": "B", "text": "-COOH"},
+            {"label": "C", "text": "-NH₂"},
+            {"label": "D", "text": "-CHO"}
+        ],
+        "correct": "A",
+        "explanation_ar": "الكحولات تحتوي على مجموعة الهيدروكسيل (-OH). اللاحقة النظامية هي -انول.",
+        "explanation_en": "Alcohols contain the hydroxyl group (-OH). The IUPAC suffix is -anol.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 37,
+        "subject": "فيزياء | Physics",
+        "topic": "mechanics",
+        "question_ar": "قانون نيوتن الثالث ينص على أن:",
+        "question_en": "Newton's Third Law states:",
+        "options": [
+            {"label": "A", "text": "F = ma"},
+            {"label": "B", "text": "كل فعل له رد فعل مساو له في المقدار ومعاكس في الاتجاه"},
+            {"label": "C", "text": "الجسم يبقى على حالته ما لم تؤثر عليه قوة"},
+            {"label": "D", "text": "الطاقة لا تفنى ولا تستحدث"}
+        ],
+        "correct": "B",
+        "explanation_ar": "لكل قوة فعل، هناك قوة رد فعل مساوية في المقدار ومضادة في الاتجاه.",
+        "explanation_en": "For every action force, there is an equal and opposite reaction force.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 38,
+        "subject": "كيمياء | Chemistry",
+        "topic": "bonding",
+        "question_ar": "الرابطة في جزيء \\(H_2\\) هي:",
+        "question_en": "The bond in \\(H_2\\) is:",
+        "options": [
+            {"label": "A", "text": "تساهمية غير قطبية | Nonpolar covalent"},
+            {"label": "B", "text": "تساهمية قطبية | Polar covalent"},
+            {"label": "C", "text": "أيونية | Ionic"},
+            {"label": "D", "text": "فلزية | Metallic"}
+        ],
+        "correct": "A",
+        "explanation_ar": "لأن الذرتين متطابقتين، فرق الكهروسالبية صفر، فلا توجد قطبية.",
+        "explanation_en": "Both atoms are identical, electronegativity difference is zero, so the bond is nonpolar.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 39,
+        "subject": "رياضيات | Math",
+        "topic": "geometry",
+        "question_ar": "مساحة دائرة نصف قطرها 7 cm (باستخدام \\(\\pi \\approx 22/7\\))؟",
+        "question_en": "Area of a circle with radius 7 cm (using \\(\\pi \\approx 22/7\\))?",
+        "options": [
+            {"label": "A", "text": "154 cm²"},
+            {"label": "B", "text": "44 cm²"},
+            {"label": "C", "text": "22 cm²"},
+            {"label": "D", "text": "308 cm²"}
+        ],
+        "correct": "A",
+        "explanation_ar": "المساحة = πr² = (22/7) × 49 = 154 cm².",
+        "explanation_en": "Area = πr² = (22/7) × 49 = 154 cm².",
+        "difficulty": "easy"
+    },
+    {
+        "id": 40,
+        "subject": "كيمياء | Chemistry",
+        "topic": "bonding",
+        "question_ar": "أي من هذه الجزيئات قطبي؟",
+        "question_en": "Which of these molecules is polar?",
+        "options": [
+            {"label": "A", "text": "CO₂"},
+            {"label": "B", "text": "CH₄"},
+            {"label": "C", "text": "H₂O"},
+            {"label": "D", "text": "CCl₄"}
+        ],
+        "correct": "C",
+        "explanation_ar": "H₂O له شكل منحني وعزم ثنائي قطب صافي غير صفري. البقية متناظرة وعزمها صفري.",
+        "explanation_en": "H₂O is bent with a non-zero net dipole moment. The others are symmetric with zero net dipole.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 41,
+        "subject": "فيزياء | Physics",
+        "topic": "fluids",
+        "question_ar": "مبدأ باسكال ينص على أن الضغط ينتقل:",
+        "question_en": "Pascal's Principle states that pressure is transmitted:",
+        "options": [
+            {"label": "A", "text": "في اتجاه واحد فقط | In one direction only"},
+            {"label": "B", "text": "بالتساوي في جميع الاتجاهات في السائل"},
+            {"label": "C", "text": "مع فقدان في الطاقة | With energy loss"},
+            {"label": "D", "text": "فقط في الغازات | Only in gases"}
+        ],
+        "correct": "B",
+        "explanation_ar": "مبدأ باسكال: الضغط المؤثر على سائل محصور ينتقل بالتساوي إلى جميع أجزاء السائل وجدران الوعاء.",
+        "explanation_en": "Pascal's Principle: pressure applied to an enclosed fluid is transmitted equally throughout the fluid.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 42,
+        "subject": "كيمياء | Chemistry",
+        "topic": "thermochemistry",
+        "question_ar": "تفاعل \\(\\Delta H = +50 \\, kJ/mol\\) و \\(\\Delta S = +100 \\, J/mol·K\\)، عند أي درجة حرارة يصبح تلقائياً؟",
+        "question_en": "Reaction with \\(\\Delta H = +50 \\, kJ/mol\\) and \\(\\Delta S = +100 \\, J/mol·K\\), at what temperature does it become spontaneous?",
+        "options": [
+            {"label": "A", "text": "أقل من 500 K"},
+            {"label": "B", "text": "فوق 500 K"},
+            {"label": "C", "text": "دائماً تلقائي"},
+            {"label": "D", "text": "أبداً لا يصبح تلقائياً"}
+        ],
+        "correct": "B",
+        "explanation_ar": "عند \\(\\Delta G = 0\\): T = \\(\\Delta H/\\Delta S = 50,000/100 = 500 K\\). فوق 500 K: \\(\\Delta G < 0\\) ← تلقائي.",
+        "explanation_en": "At \\(\\Delta G = 0\\): T = \\(\\Delta H/\\Delta S = 50,000/100 = 500 K\\). Above 500 K: \\(\\Delta G < 0\\) ← spontaneous.",
+        "difficulty": "hard"
+    },
+    {
+        "id": 43,
+        "subject": "رياضيات | Math",
+        "topic": "calculus",
+        "question_ar": "ما قيمة \\(\\int 2x \\, dx\\)؟",
+        "question_en": "What is \\(\\int 2x \\, dx\\)?",
+        "options": [
+            {"label": "A", "text": "x² + C"},
+            {"label": "B", "text": "2x² + C"},
+            {"label": "C", "text": "x + C"},
+            {"label": "D", "text": "2 + C"}
+        ],
+        "correct": "A",
+        "explanation_ar": "∫ 2x dx = x² + C. نزيد الأس 1 ونقسم على الأس الجديد.",
+        "explanation_en": "∫ 2x dx = x² + C. Increase the power by 1 and divide by the new power.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 44,
+        "subject": "كيمياء | Chemistry",
+        "topic": "atomic",
+        "question_ar": "ما عدد النيوترونات في ذرة \\(^{37}_{17}Cl\\)؟",
+        "question_en": "How many neutrons are in \\(^{37}_{17}Cl\\)?",
+        "options": [
+            {"label": "A", "text": "17"},
+            {"label": "B", "text": "20"},
+            {"label": "C", "text": "37"},
+            {"label": "D", "text": "54"}
+        ],
+        "correct": "B",
+        "explanation_ar": "عدد النيوترونات = A - Z = 37 - 17 = 20.",
+        "explanation_en": "Number of neutrons = A - Z = 37 - 17 = 20.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 45,
+        "subject": "فيزياء | Physics",
+        "topic": "thermodynamics",
+        "question_ar": "في دورة كارنو، كفاءة المحرك تعتمد على:",
+        "question_en": "In a Carnot cycle, engine efficiency depends on:",
+        "options": [
+            {"label": "A", "text": "نوع الوقود | Fuel type"},
+            {"label": "B", "text": "درجة حرارة المصعد والمبرد"},
+            {"label": "C", "text": "سرعة المحرك | Engine speed"},
+            {"label": "D", "text": "حجم المحرك | Engine size"}
+        ],
+        "correct": "B",
+        "explanation_ar": "كفاءة كارنو = 1 - T_c/T_h. تعتمد فقط على درجات حرارة المصعد (T_h) والمبرد (T_c).",
+        "explanation_en": "Carnot efficiency = 1 - T_c/T_h. Depends only on the hot (T_h) and cold (T_c) reservoir temperatures.",
+        "difficulty": "hard"
+    },
+    {
+        "id": 46,
+        "subject": "كيمياء | Chemistry",
+        "topic": "organic",
+        "question_ar": "تفاعل الإيثيلين مع البروم (Br₂) هو تفاعل:",
+        "question_en": "The reaction of ethene with bromine (Br₂) is:",
+        "options": [
+            {"label": "A", "text": "استبدال | Substitution"},
+            {"label": "B", "text": "إضافة | Addition"},
+            {"label": "C", "text": "إزالة | Elimination"},
+            {"label": "D", "text": "بلمرة | Polymerization"}
+        ],
+        "correct": "B",
+        "explanation_ar": "كسر الرابطة π في الإيثيلين وإضافة Br₂ عبر الرابطة المزدوجة → تفاعل إضافة. يختفي لون البروم الأحمر.",
+        "explanation_en": "Breaking the π bond in ethene and adding Br₂ across the double bond → addition reaction. The red bromine color disappears.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 47,
+        "subject": "رياضيات | Math",
+        "topic": "probability",
+        "question_ar": "ما احتمال ظهور عدد فردي عند رمي حجر نرد مرة واحدة؟",
+        "question_en": "What is the probability of rolling an odd number on a fair die?",
+        "options": [
+            {"label": "A", "text": "1/6"},
+            {"label": "B", "text": "1/3"},
+            {"label": "C", "text": "1/2"},
+            {"label": "D", "text": "2/3"}
+        ],
+        "correct": "C",
+        "explanation_ar": "الأعداد الفردية: 1, 3, 5 (3 نتائج من أصل 6). الاحتمال = 3/6 = 1/2.",
+        "explanation_en": "Odd numbers: 1, 3, 5 (3 outcomes out of 6). Probability = 3/6 = 1/2.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 48,
+        "subject": "فيزياء | Physics",
+        "topic": "optics",
+        "question_ar": "في المرآة المقعرة، إذا كان الجسم بين البؤرة والمرآة، تكون الصورة:",
+        "question_en": "In a concave mirror, if the object is between the focus and the mirror, the image is:",
+        "options": [
+            {"label": "A", "text": "حقيقية ومقلوبة | Real and inverted"},
+            {"label": "B", "text": "خيالية ومعتدلة ومكبرة | Virtual, upright, magnified"},
+            {"label": "C", "text": "حقيقية ومكبرة | Real and magnified"},
+            {"label": "D", "text": "خيالية ومصغرة | Virtual and diminished"}
+        ],
+        "correct": "B",
+        "explanation_ar": "عندما يكون الجسم بين البؤرة F والمرآة المقعرة، تتكون صورة خيالية (وراء المرآة) معتدلة مكبرة — مثل مرآة الحلاقة.",
+        "explanation_en": "When the object is between focus (F) and a concave mirror, a virtual, upright, magnified image forms — like in a shaving mirror.",
+        "difficulty": "hard"
+    },
+    {
+        "id": 49,
+        "subject": "كيمياء | Chemistry",
+        "topic": "equilibrium",
+        "question_ar": "المحلول المنظم (Buffer) هو الذي:",
+        "question_en": "A buffer solution is one that:",
+        "options": [
+            {"label": "A", "text": "يغير لونه بتغير pH"},
+            {"label": "B", "text": "يقاوم التغير في pH عند إضافة حمض أو قاعدة"},
+            {"label": "C", "text": "له pH = 7 دائماً"},
+            {"label": "D", "text": "يذيب جميع المواد"}
+        ],
+        "correct": "B",
+        "explanation_ar": "المحلول المنظم يقاوم التغير في pH. يتكون من حمض ضعيف وقاعدته المترافقة (أو العكس).",
+        "explanation_en": "A buffer resists pH change. It consists of a weak acid and its conjugate base (or vice versa).",
+        "difficulty": "medium"
+    },
+    {
+        "id": 50,
+        "subject": "رياضيات | Math",
+        "topic": "functions",
+        "question_ar": "حل المعادلة: \\(\\log_2(x) = 3\\)",
+        "question_en": "Solve: \\(\\log_2(x) = 3\\)",
+        "options": [
+            {"label": "A", "text": "x = 8"},
+            {"label": "B", "text": "x = 6"},
+            {"label": "C", "text": "x = 9"},
+            {"label": "D", "text": "x = 2³"}
+        ],
+        "correct": "A",
+        "explanation_ar": "log₂(x) = 3 → x = 2³ = 8.",
+        "explanation_en": "log₂(x) = 3 → x = 2³ = 8.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 51,
+        "subject": "كيمياء | Chemistry",
+        "topic": "atomic",
+        "question_ar": "أي من أعداد الكم التالية غير ممكن؟",
+        "question_en": "Which set of quantum numbers is NOT possible?",
+        "options": [
+            {"label": "A", "text": "(4, 2, 0, +½)"},
+            {"label": "B", "text": "(3, 2, -2, -½)"},
+            {"label": "C", "text": "(2, 2, 0, +½)"},
+            {"label": "D", "text": "(3, 1, 1, -½)"}
+        ],
+        "correct": "C",
+        "explanation_ar": "عند n=2، ℓ يمكن أن يكون 0 (s) أو 1 (p) فقط. ℓ=2 يعني d، وهو غير ممكن للمستوى الثاني.",
+        "explanation_en": "For n=2, ℓ can only be 0 (s) or 1 (p). ℓ=2 (d) is not possible for the second shell.",
+        "difficulty": "hard"
+    },
+    {
+        "id": 52,
+        "subject": "فيزياء | Physics",
+        "topic": "electricity",
+        "question_ar": "تيار كهربائي مقداره 2 A يمر في مقاومة 10 Ω لمدة 5 دقائق. ما الطاقة المستهلكة؟",
+        "question_en": "A current of 2 A flows through a 10 Ω resistor for 5 minutes. Find the energy consumed.",
+        "options": [
+            {"label": "A", "text": "200 J"},
+            {"label": "B", "text": "12,000 J"},
+            {"label": "C", "text": "1,200 J"},
+            {"label": "D", "text": "20,000 J"}
+        ],
+        "correct": "B",
+        "explanation_ar": "E = I²Rt = 2² × 10 × (5×60) = 4 × 10 × 300 = 12,000 J.",
+        "explanation_en": "E = I²Rt = 2² × 10 × (5×60) = 4 × 10 × 300 = 12,000 J.",
+        "difficulty": "hard"
+    },
+    {
+        "id": 53,
+        "subject": "كيمياء | Chemistry",
+        "topic": "stoichiometry",
+        "question_ar": "المردود النظري لتفاعل هو 40 g، والمردود الفعلي 34 g. النسبة المئوية للمردود هي:",
+        "question_en": "Theoretical yield is 40 g, actual yield is 34 g. The percent yield is:",
+        "options": [
+            {"label": "A", "text": "85%"},
+            {"label": "B", "text": "75%"},
+            {"label": "C", "text": "90%"},
+            {"label": "D", "text": "80%"}
+        ],
+        "correct": "A",
+        "explanation_ar": "% Yield = (34/40) × 100% = 85%.",
+        "explanation_en": "% Yield = (34/40) × 100% = 85%.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 54,
+        "subject": "رياضيات | Math",
+        "topic": "geometry",
+        "question_ar": "ما حجم مكعب طول ضلعه 5 cm؟",
+        "question_en": "What is the volume of a cube with side 5 cm?",
+        "options": [
+            {"label": "A", "text": "25 cm³"},
+            {"label": "B", "text": "125 cm³"},
+            {"label": "C", "text": "15 cm³"},
+            {"label": "D", "text": "50 cm³"}
+        ],
+        "correct": "B",
+        "explanation_ar": "حجم المكعب = الضلع³ = 5³ = 125 cm³.",
+        "explanation_en": "Volume of a cube = side³ = 5³ = 125 cm³.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 55,
+        "subject": "كيمياء | Chemistry",
+        "topic": "bonding",
+        "question_ar": "تهجين ذرة الكربون في الميثان \\(CH_4\\) هو:",
+        "question_en": "The hybridization of carbon in methane \\(CH_4\\) is:",
+        "options": [
+            {"label": "A", "text": "sp"},
+            {"label": "B", "text": "sp²"},
+            {"label": "C", "text": "sp³"},
+            {"label": "D", "text": "sp³d"}
+        ],
+        "correct": "C",
+        "explanation_ar": "الكربون في CH₄ يرتبط بـ 4 ذرات → 4 مدارات مهجنة → sp³. الشكل: رباعي السطوح بزاوية 109.5°.",
+        "explanation_en": "Carbon in CH₄ bonds to 4 atoms → 4 hybrid orbitals → sp³. Shape: tetrahedral, angle 109.5°.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 56,
+        "subject": "فيزياء | Physics",
+        "topic": "mechanics",
+        "question_ar": "سيارة كتلتها 1000 kg تتسارع من السكون إلى 20 m/s خلال 10 s. ما القوة المحصلة؟",
+        "question_en": "A 1000 kg car accelerates from rest to 20 m/s in 10 s. Find the net force.",
+        "options": [
+            {"label": "A", "text": "200 N"},
+            {"label": "B", "text": "2000 N"},
+            {"label": "C", "text": "20,000 N"},
+            {"label": "D", "text": "100 N"}
+        ],
+        "correct": "B",
+        "explanation_ar": "التسارع a = (20-0)/10 = 2 m/s². F = ma = 1000 × 2 = 2000 N.",
+        "explanation_en": "Acceleration a = (20-0)/10 = 2 m/s². F = ma = 1000 × 2 = 2000 N.",
+        "difficulty": "medium"
+    },
+    {
+        "id": 57,
+        "subject": "كيمياء | Chemistry",
+        "topic": "organic",
+        "question_ar": "أيزومرات C₄H₁₀ عددها:",
+        "question_en": "The number of isomers of C₄H₁₀ is:",
+        "options": [
+            {"label": "A", "text": "2"},
+            {"label": "B", "text": "3"},
+            {"label": "C", "text": "4"},
+            {"label": "D", "text": "5"}
+        ],
+        "correct": "A",
+        "explanation_ar": "C₄H₁₀ له أيزومران: بيوتان (مستقيم) و 2-ميثيل بروبان (متفرع).",
+        "explanation_en": "C₄H₁₀ has 2 isomers: butane (straight chain) and 2-methylpropane (branched).",
+        "difficulty": "medium"
+    },
+    {
+        "id": 58,
+        "subject": "رياضيات | Math",
+        "topic": "sequences",
+        "question_ar": "المتتالية الهندسية: 2, 6, 18, ... أساسها هو:",
+        "question_en": "The geometric sequence: 2, 6, 18, ... has common ratio:",
+        "options": [
+            {"label": "A", "text": "2"},
+            {"label": "B", "text": "3"},
+            {"label": "C", "text": "4"},
+            {"label": "D", "text": "1/3"}
+        ],
+        "correct": "B",
+        "explanation_ar": "r = 6/2 = 18/6 = 3. الأساس (النسبة المشتركة) = 3.",
+        "explanation_en": "r = 6/2 = 18/6 = 3. The common ratio is 3.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 59,
+        "subject": "كيمياء | Chemistry",
+        "topic": "thermochemistry",
+        "question_ar": "إذا كان \\(\\Delta H = -100 \\, kJ\\) و \\(\\Delta S = +200 \\, J/K\\)، فالتفاعل:",
+        "question_en": "If \\(\\Delta H = -100 \\, kJ\\) and \\(\\Delta S = +200 \\, J/K\\), the reaction is:",
+        "options": [
+            {"label": "A", "text": "تلقائي دائماً | Always spontaneous"},
+            {"label": "B", "text": "غير تلقائي أبداً | Never spontaneous"},
+            {"label": "C", "text": "تلقائي فقط في درجات الحرارة المنخفضة"},
+            {"label": "D", "text": "تلقائي فقط في درجات الحرارة العالية"}
+        ],
+        "correct": "A",
+        "explanation_ar": "عندما ΔH < 0 و ΔS > 0، يكون ΔG = ΔH - TΔS سالباً دائماً لأي درجة حرارة. التفاعل تلقائي دائماً.",
+        "explanation_en": "When ΔH < 0 and ΔS > 0, ΔG = ΔH - TΔS is always negative at any temperature. Always spontaneous.",
+        "difficulty": "hard"
+    },
+    {
+        "id": 60,
+        "subject": "فيزياء | Physics",
+        "topic": "modern",
+        "question_ar": "معادلة أينشتاين التي تعادل الكتلة والطاقة هي:",
+        "question_en": "Einstein's equation equating mass and energy is:",
+        "options": [
+            {"label": "A", "text": "E = mc"},
+            {"label": "B", "text": "E = mc²"},
+            {"label": "C", "text": "E = ½mv²"},
+            {"label": "D", "text": "E = hf"}
+        ],
+        "correct": "B",
+        "explanation_ar": "E = mc² هي معادلة أينشتاين الشهيرة للتكافؤ بين الكتلة والطاقة، حيث c هي سرعة الضوء.",
+        "explanation_en": "E = mc² is Einstein's famous mass-energy equivalence equation, where c is the speed of light.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "m61",
+        "subject": "رياضيات | Math",
+        "topic": "Sets",
+        "question_ar": "إذا كانت المجموعة A تحتوي على 5 عناصر والمجموعة B تحتوي على 7 عناصر، وكان عدد عناصر \\\\(A \\\\cap B\\\\) يساوي 3، فما عدد عناصر \\\\(A \\\\cup B\\\\)؟",
+        "question_en": "If set A has 5 elements, set B has 7 elements, and \\\\(|A \\\\cap B| = 3\\\\), what is \\\\(|A \\\\cup B|\\\\)?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "9"},
+            {"label": "B", "text": "12"},
+            {"label": "C", "text": "15"},
+            {"label": "D", "text": "8"}
+        ],
+        "correct": "A",
+        "explanation_ar": "باستخدام مبدأ العد: |A ∪ B| = |A| + |B| - |A ∩ B| = 5 + 7 - 3 = 9.",
+        "explanation_en": "Using the inclusion-exclusion principle: |A ∪ B| = |A| + |B| - |A ∩ B| = 5 + 7 - 3 = 9.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m62",
+        "subject": "رياضيات | Math",
+        "topic": "Sets",
+        "question_ar": "حل متباينة القيمة المطلقة: \\\\(|2x - 5| \\\\leq 3\\\\)",
+        "question_en": "Solve the absolute value inequality: \\\\(|2x - 5| \\\\leq 3\\\\)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "x ≤ 4"},
+            {"label": "B", "text": "1 ≤ x ≤ 4"},
+            {"label": "C", "text": "x ≥ 1"},
+            {"label": "D", "text": "-1 ≤ x ≤ 4"}
+        ],
+        "correct": "B",
+        "explanation_ar": "|2x - 5| ≤ 3 → -3 ≤ 2x - 5 ≤ 3 → 2 ≤ 2x ≤ 8 → 1 ≤ x ≤ 4.",
+        "explanation_en": "|2x - 5| ≤ 3 → -3 ≤ 2x - 5 ≤ 3 → 2 ≤ 2x ≤ 8 → 1 ≤ x ≤ 4.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m63",
+        "subject": "رياضيات | Math",
+        "topic": "Sets",
+        "question_ar": "حل نظام المتباينات: \\\\(x + y \\\\leq 6\\\\) و \\\\(2x - y \\\\geq 0\\\\) مع \\\\(x \\\\geq 0\\\\) و \\\\(y \\\\geq 0\\\\)، ما أقصى قيمة للدالة \\\\(f = 3x + 2y\\\\) في منطقة الحل؟",
+        "question_en": "Solve the system: \\\\(x + y \\\\leq 6\\\\), \\\\(2x - y \\\\geq 0\\\\), \\\\(x \\\\geq 0\\\\), \\\\(y \\\\geq 0\\\\). Find the maximum of \\\\(f = 3x + 2y\\\\) in the feasible region.",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "12"},
+            {"label": "B", "text": "14"},
+            {"label": "C", "text": "16"},
+            {"label": "D", "text": "18"}
+        ],
+        "correct": "B",
+        "explanation_ar": "رؤوس منطقة الحل: (0,0), (0,6), (2,4), (3,0). عند (2,4): f = 3(2)+2(4)=6+8=14. عند (3,0): f=9. عند (0,6): f=12. القيمة العظمى هي 14 عند (2,4).",
+        "explanation_en": "Vertices: (0,0), (0,6), (2,4), (3,0). At (2,4): f=3(2)+2(4)=14. At (3,0): f=9. At (0,6): f=12. The maximum is 14 at (2,4).",
+        "difficulty": "hard"
+    },
+    {
+        "id": "m64",
+        "subject": "رياضيات | Math",
+        "topic": "Functions",
+        "question_ar": "إذا كانت \\\\(f(x) = 2x^2 - 3x + 1\\\\)، فما قيمة \\\\(f(f(1))\\\\)؟",
+        "question_en": "If \\\\(f(x) = 2x^2 - 3x + 1\\\\), find \\\\(f(f(1))\\\\)?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "0"},
+            {"label": "B", "text": "1"},
+            {"label": "C", "text": "2"},
+            {"label": "D", "text": "3"}
+        ],
+        "correct": "B",
+        "explanation_ar": "f(1) = 2(1)² - 3(1) + 1 = 2 - 3 + 1 = 0. ثم f(f(1)) = f(0) = 2(0)² - 3(0) + 1 = 1.",
+        "explanation_en": "f(1) = 2(1)² - 3(1) + 1 = 2 - 3 + 1 = 0. Then f(f(1)) = f(0) = 2(0)² - 3(0) + 1 = 1.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m65",
+        "subject": "رياضيات | Math",
+        "topic": "Functions",
+        "question_ar": "ما مدى (Range) الدالة \\\\(f(x) = \\\\sqrt{4 - x^2}\\\\)؟",
+        "question_en": "What is the range of the function \\\\(f(x) = \\\\sqrt{4 - x^2}\\\\)?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "[0, ∞)"},
+            {"label": "B", "text": "[0, 2]"},
+            {"label": "C", "text": "[-2, 2]"},
+            {"label": "D", "text": "[0, 4]"}
+        ],
+        "correct": "B",
+        "explanation_ar": "المجال: x² ≤ 4 → -2 ≤ x ≤ 2. عندما x=0، f(0)=2. عندما x=±2، f(±2)=0. الدالة المستمرة تأخذ جميع القيم بين 0 و 2، لذا المدى [0, 2].",
+        "explanation_en": "Domain: x² ≤ 4 → -2 ≤ x ≤ 2. At x=0, f(0)=2. At x=±2, f(±2)=0. The continuous function takes all values between 0 and 2, so range is [0, 2].",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m66",
+        "subject": "رياضيات | Math",
+        "topic": "Functions",
+        "question_ar": "حل المعادلة الأسية: \\\\(3^{2x-1} = 27\\\\)",
+        "question_en": "Solve the exponential equation: \\\\(3^{2x-1} = 27\\\\)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "x = 1"},
+            {"label": "B", "text": "x = 2"},
+            {"label": "C", "text": "x = 3"},
+            {"label": "D", "text": "x = 1.5"}
+        ],
+        "correct": "B",
+        "explanation_ar": "27 = 3³، إذن 3^(2x-1) = 3³ → 2x - 1 = 3 → 2x = 4 → x = 2.",
+        "explanation_en": "27 = 3³, so 3^(2x-1) = 3³ → 2x - 1 = 3 → 2x = 4 → x = 2.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "m67",
+        "subject": "رياضيات | Math",
+        "topic": "Functions",
+        "question_ar": "إذا كانت \\\\(f(x) = \\\\frac{2x + 3}{x - 1}\\\\) و \\\\(x \\\\neq 1\\\\)، فما قيمة \\\\(f^{-1}(5)\\\\)؟",
+        "question_en": "If \\\\(f(x) = \\\\frac{2x + 3}{x - 1}\\\\) and \\\\(x \\\\neq 1\\\\), find \\\\(f^{-1}(5)\\\\).",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "3"},
+            {"label": "B", "text": "4"},
+            {"label": "C", "text": "8/3"},
+            {"label": "D", "text": "2"}
+        ],
+        "correct": "C",
+        "explanation_ar": "y = (2x+3)/(x-1) → y(x-1) = 2x+3 → yx - y = 2x+3 → yx - 2x = y+3 → x(y-2) = y+3 → x = (y+3)/(y-2). إذن f⁻¹(5) = (5+3)/(5-2) = 8/3.",
+        "explanation_en": "y = (2x+3)/(x-1) → y(x-1) = 2x+3 → yx - y = 2x+3 → yx - 2x = y+3 → x(y-2) = y+3 → x = (y+3)/(y-2). So f⁻¹(5) = (5+3)/(5-2) = 8/3.",
+        "difficulty": "hard"
+    },
+    {
+        "id": "m68",
+        "subject": "رياضيات | Math",
+        "topic": "Functions",
+        "question_ar": "دالة \\\\(f(x) = x^2 - 4x + 3\\\\). التحويل الذي ينقل رأس القطع المكافئ إلى نقطة الأصل هو: (该函数 \\\\(f(x) = x^2 - 4x + 3\\\\)，将抛物线顶点平移到原点的变换是：)",
+        "question_en": "Function \\\\(f(x) = x^2 - 4x + 3\\\\). The transformation that moves the vertex of the parabola to the origin is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "إزاحة 2 وحدة لليسار و 1 لأعلى | Shift left 2, up 1"},
+            {"label": "B", "text": "إزاحة 2 وحدة لليمين و 1 لأسفل | Shift right 2, down 1"},
+            {"label": "C", "text": "إزاحة 2 وحدة لليسار و 1 لأسفل | Shift left 2, down 1"},
+            {"label": "D", "text": "إزاحة 2 وحدة لليمين و 1 لأعلى | Shift right 2, up 1"}
+        ],
+        "correct": "B",
+        "explanation_ar": "f(x) = x² - 4x + 3 = (x-2)² - 1. الرأس عند (2, -1). لإزاحته إلى (0,0): إزاحة 2 لليمين و 1 لأسفل.",
+        "explanation_en": "f(x) = x² - 4x + 3 = (x-2)² - 1. Vertex at (2, -1). To move to (0,0): shift right 2, down 1.",
+        "difficulty": "hard"
+    },
+    {
+        "id": "m69",
+        "subject": "رياضيات | Math",
+        "topic": "Geometry",
+        "question_ar": "مستقيمان: \\\\(L_1: y = -\\\\frac{1}{2}x + 3\\\\) و \\\\(L_2: 2y + x = 5\\\\)، العلاقة بينهما هي: (两条直线 \\\\(L_1: y = -\\\\frac{1}{2}x + 3\\\\) 和 \\\\(L_2: 2y + x = 5\\\\) 的关系是：)",
+        "question_en": "Two lines: \\\\(L_1: y = -\\\\frac{1}{2}x + 3\\\\) and \\\\(L_2: 2y + x = 5\\\\), what is their relationship?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "متوازيان | Parallel"},
+            {"label": "B", "text": "متعامدان | Perpendicular"},
+            {"label": "C", "text": "منطبقان | Coincident"},
+            {"label": "D", "text": "متقاطعان وغير متعامدين | Intersecting, not perpendicular"}
+        ],
+        "correct": "A",
+        "explanation_ar": "L₂: 2y + x = 5 → y = -½x + 5/2. ميل L₁ = -½، ميل L₂ = -½. المستقيمان متوازيان (نفس الميل، تقاطع y مختلف).",
+        "explanation_en": "L₂: 2y + x = 5 → y = -½x + 5/2. Slope of L₁ = -½, slope of L₂ = -½. They are parallel (same slope, different y-intercept).",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m70",
+        "subject": "رياضيات | Math",
+        "topic": "Geometry",
+        "question_ar": "القطع المكافئ \\\\(y = x^2 - 6x + 11\\\\) له رأس عند:",
+        "question_en": "The parabola \\\\(y = x^2 - 6x + 11\\\\) has its vertex at:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "(3, 2)"},
+            {"label": "B", "text": "(-3, 2)"},
+            {"label": "C", "text": "(3, 20)"},
+            {"label": "D", "text": "(0, 11)"}
+        ],
+        "correct": "A",
+        "explanation_ar": "y = x² - 6x + 11 = (x-3)² - 9 + 11 = (x-3)² + 2. الرأس عند (3, 2).",
+        "explanation_en": "y = x² - 6x + 11 = (x-3)² - 9 + 11 = (x-3)² + 2. Vertex at (3, 2).",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m71",
+        "subject": "رياضيات | Math",
+        "topic": "Geometry",
+        "question_ar": "المسافة بين النقطتين \\\\(A(1, 5)\\\\) و \\\\(B(-3, 2)\\\\) هي:",
+        "question_en": "The distance between points \\\\(A(1, 5)\\\\) and \\\\(B(-3, 2)\\\\) is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "5"},
+            {"label": "B", "text": "√17"},
+            {"label": "C", "text": "25"},
+            {"label": "D", "text": "4"}
+        ],
+        "correct": "A",
+        "explanation_ar": "d = √[(x₂-x₁)² + (y₂-y₁)²] = √[(-3-1)² + (2-5)²] = √[(-4)² + (-3)²] = √(16+9) = √25 = 5.",
+        "explanation_en": "d = √[(x₂-x₁)² + (y₂-y₁)²] = √[(-3-1)² + (2-5)²] = √[(-4)² + (-3)²] = √(16+9) = √25 = 5.",
+        "difficulty": "easy"
+    },
+            {
+        "id": "m72",
+        "subject": "رياضيات | Math",
+        "topic": "Geometry",
+        "question_ar": "إذا كان \\( \\vec{u} = (3, -1) \\) و \\( \\vec{v} = (2, 4) \\)، فما قيمة \\( \\vec{u} \\cdot \\vec{v} \\)؟ (如果 \\( \\vec{u} = (3, -1) \\)，\\( \\vec{v} = (2, 4) \\)，求点积)",
+        "question_en": "If \\( \\vec{u} = (3, -1) \\) and \\( \\vec{v} = (2, 4) \\), find \\( \\vec{u} \\cdot \\vec{v} \\).",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "10"},
+            {"label": "B", "text": "2"},
+            {"label": "C", "text": "-2"},
+            {"label": "D", "text": "14"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الضرب القياسي: u·v = 3(2) + (-1)(4) = 6 - 4 = 2.",
+        "explanation_en": "Dot product: u·v = 3(2) + (-1)(4) = 6 - 4 = 2.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m73",
+        "subject": "رياضيات | Math",
+        "topic": "Calculus",
+        "question_ar": "ما قيمة \\\\(\\\\lim_{x \\\\to 2} \\\\frac{x^2 - 4}{x - 2}\\\\)؟",
+        "question_en": "What is \\\\(\\\\lim_{x \\\\to 2} \\\\frac{x^2 - 4}{x - 2}\\\\)?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "0"},
+            {"label": "B", "text": "2"},
+            {"label": "C", "text": "4"},
+            {"label": "D", "text": "المقدار غير معرّف | Undefined"}
+        ],
+        "correct": "C",
+        "explanation_ar": "x² - 4 = (x-2)(x+2)، لذا (x²-4)/(x-2) = x+2 عندما x ≠ 2. إذن النهاية = 2+2 = 4.",
+        "explanation_en": "x² - 4 = (x-2)(x+2), so (x²-4)/(x-2) = x+2 when x ≠ 2. Thus the limit = 2+2 = 4.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m74",
+        "subject": "رياضيات | Math",
+        "topic": "Calculus",
+        "question_ar": "مشتقة الدالة \\\\(f(x) = x^3 \\\\cdot \\\\ln x\\\\) هي: (函数 \\\\(f(x) = x^3 \\\\cdot \\\\ln x\\\\) 的导数是：)",
+        "question_en": "The derivative of \\\\(f(x) = x^3 \\\\cdot \\\\ln x\\\\) is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "3x² · ln x + x²"},
+            {"label": "B", "text": "3x² · ln x + x³"},
+            {"label": "C", "text": "3x² · ln x"},
+            {"label": "D", "text": "x³/x + 3x²"}
+        ],
+        "correct": "A",
+        "explanation_ar": "باستخدام قاعدة الضرب: f'(x) = 3x²·ln x + x³·(1/x) = 3x²·ln x + x².",
+        "explanation_en": "Using the product rule: f'(x) = 3x²·ln x + x³·(1/x) = 3x²·ln x + x².",
+        "difficulty": "hard"
+    },
+    {
+        "id": "m75",
+        "subject": "رياضيات | Math",
+        "topic": "Calculus",
+        "question_ar": "ما قيمة \\\\(\\\\int_0^1 (3x^2 + 2x) \\\\, dx\\\\)؟",
+        "question_en": "What is the value of \\\\(\\\\int_0^1 (3x^2 + 2x) \\\\, dx\\\\)?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1"},
+            {"label": "B", "text": "2"},
+            {"label": "C", "text": "3"},
+            {"label": "D", "text": "4"}
+        ],
+        "correct": "B",
+        "explanation_ar": "∫₀¹ (3x² + 2x) dx = [x³ + x²]₀¹ = (1+1) - (0+0) = 2.",
+        "explanation_en": "∫₀¹ (3x² + 2x) dx = [x³ + x²]₀¹ = (1+1) - (0+0) = 2.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m76",
+        "subject": "رياضيات | Math",
+        "topic": "Calculus",
+        "question_ar": "معدل التغير اللحظي للدالة \\\\(f(x) = \\\\sqrt{x}\\\\) عند \\\\(x = 4\\\\) هو:",
+        "question_en": "The instantaneous rate of change of \\\\(f(x) = \\\\sqrt{x}\\\\) at \\\\(x = 4\\\\) is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1/4"},
+            {"label": "B", "text": "1/2"},
+            {"label": "C", "text": "2"},
+            {"label": "D", "text": "1/√4"}
+        ],
+        "correct": "A",
+        "explanation_ar": "f'(x) = 1/(2√x). عند x=4: f'(4) = 1/(2√4) = 1/(2×2) = 1/4.",
+        "explanation_en": "f'(x) = 1/(2√x). At x=4: f'(4) = 1/(2√4) = 1/(2×2) = 1/4.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m77",
+        "subject": "رياضيات | Math",
+        "topic": "Probability",
+        "question_ar": "صندوق يحتوي على 4 كرات حمراء و 6 كرات زرقاء. إذا سحبنا كرتين معاً (بدون إرجاع)، فما احتمال أن تكون كلتاهما زرقاوين؟",
+        "question_en": "A box contains 4 red balls and 6 blue balls. Two balls are drawn together (without replacement). What is the probability both are blue?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1/3"},
+            {"label": "B", "text": "3/5"},
+            {"label": "C", "text": "2/15"},
+            {"label": "D", "text": "1/2"}
+        ],
+        "correct": "A",
+        "explanation_ar": "العدد الإجمالي للطرق: C(10,2) = 45. عدد طرق اختيار كرتين زرقاوين: C(6,2) = 15. الاحتمال = 15/45 = 1/3.",
+        "explanation_en": "Total ways: C(10,2) = 45. Ways to choose 2 blue: C(6,2) = 15. Probability = 15/45 = 1/3.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m78",
+        "subject": "رياضيات | Math",
+        "topic": "Probability",
+        "question_ar": "يلقي أحمد حجري نرد متمايزين مرة واحدة. ما احتمال أن يكون مجموع الوجهين الظاهرين يساوي 7؟ (阿赫迈德掷两个不同的骰子一次，求两个骰子点数之和为7的概率)",
+        "question_en": "Ahmed rolls two distinct dice once. What is the probability the sum of the two faces equals 7?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1/6"},
+            {"label": "B", "text": "1/12"},
+            {"label": "C", "text": "5/36"},
+            {"label": "D", "text": "1/9"}
+        ],
+        "correct": "A",
+        "explanation_ar": "مجموع النتائج الممكنة = 6×6 = 36. النتائج التي مجموعها 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) ← 6 نتائج. الاحتمال = 6/36 = 1/6.",
+        "explanation_en": "Total possible outcomes = 6×6 = 36. Outcomes with sum 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) ← 6 outcomes. Probability = 6/36 = 1/6.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "m79",
+        "subject": "رياضيات | Math",
+        "topic": "Probability",
+        "question_ar": "متغير عشوائي X له التوزيع الاحتمالي التالي: P(X=0)=0.2, P(X=1)=0.3, P(X=2)=0.4, P(X=3)=0.1. ما قيمة التوقع الرياضي E(X)؟",
+        "question_en": "A random variable X has distribution: P(X=0)=0.2, P(X=1)=0.3, P(X=2)=0.4, P(X=3)=0.1. Find the expected value E(X).",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1.2"},
+            {"label": "B", "text": "1.4"},
+            {"label": "C", "text": "1.5"},
+            {"label": "D", "text": "0.9"}
+        ],
+        "correct": "B",
+        "explanation_ar": "E(X) = 0×0.2 + 1×0.3 + 2×0.4 + 3×0.1 = 0 + 0.3 + 0.8 + 0.3 = 1.4.",
+        "explanation_en": "E(X) = 0×0.2 + 1×0.3 + 2×0.4 + 3×0.1 = 0 + 0.3 + 0.8 + 0.3 = 1.4.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "m80",
+        "subject": "رياضيات | Math",
+        "topic": "Probability",
+        "question_ar": "درجات 5 طلاب في اختبار الرياضيات: 70, 85, 90, 75, 80. ما الانحراف المعياري للدرجات؟ (5名学生的数学考试成绩为：70, 85, 90, 75, 80，求标准差)",
+        "question_en": "Scores of 5 students in a math test: 70, 85, 90, 75, 80. What is the standard deviation of the scores?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "7.07"},
+            {"label": "B", "text": "7.91"},
+            {"label": "C", "text": "50"},
+            {"label": "D", "text": "8.66"}
+        ],
+        "correct": "A",
+        "explanation_ar": "المتوسط = (70+85+90+75+80)/5 = 400/5 = 80. الفروق: 100, 25, 100, 25, 0. التباين = (100+25+100+25+0)/5 = 250/5 = 50. الانحراف المعياري = √50 ≈ 7.07.",
+        "explanation_en": "Mean = (70+85+90+75+80)/5 = 400/5 = 80. Squared deviations: 100, 25, 100, 25, 0. Variance = (100+25+100+25+0)/5 = 250/5 = 50. Standard deviation = √50 ≈ 7.07.",
+        "difficulty": "hard"
+    },
+    {
+        "id": "c25",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Basic Concepts",
+        "question_ar": "عدد أفوجادرو (N_A) يساوي:",
+        "question_en": "Avogadro's number (N_A) equals:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "6.022 × 10²³"},
+            {"label": "B", "text": "3.141 × 10²³"},
+            {"label": "C", "text": "1.602 × 10⁻¹⁹"},
+            {"label": "D", "text": "2.998 × 10⁸"}
+        ],
+        "correct": "A",
+        "explanation_ar": "عدد أفوجادرو هو 6.022 × 10²³، ويمثل عدد الذرات أو الجزيئات في مول واحد من المادة.",
+        "explanation_en": "Avogadro's number is 6.022 × 10²³, representing the number of atoms or molecules in one mole of a substance.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "c26",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Basic Concepts",
+        "question_ar": "كتلة 3 مولات من ذرات الكالسيوم (Ca = 40 g/mol) هي:",
+        "question_en": "The mass of 3 moles of calcium atoms (Ca = 40 g/mol) is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "40 g"},
+            {"label": "B", "text": "80 g"},
+            {"label": "C", "text": "120 g"},
+            {"label": "D", "text": "160 g"}
+        ],
+        "correct": "C",
+        "explanation_ar": "الكتلة = عدد المولات × الكتلة المولية = 3 × 40 = 120 g.",
+        "explanation_en": "Mass = number of moles × molar mass = 3 × 40 = 120 g.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "c27",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Basic Concepts",
+        "question_ar": "كتلة 1.5 مول من غاز ثاني أكسيد الكربون (CO₂) بوحدة الجرام؟ (C=12, O=16)",
+        "question_en": "Mass of 1.5 moles of CO₂ gas in grams? (C=12, O=16)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "44 g"},
+            {"label": "B", "text": "66 g"},
+            {"label": "C", "text": "88 g"},
+            {"label": "D", "text": "132 g"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الكتلة المولية لـ CO₂ = 12 + 2×16 = 44 g/mol. الكتلة = 1.5 × 44 = 66 g.",
+        "explanation_en": "Molar mass of CO₂ = 12 + 2×16 = 44 g/mol. Mass = 1.5 × 44 = 66 g.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "c28",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Basic Concepts",
+        "question_ar": "كم عدد الذرات في 0.5 مول من الحديد (Fe)؟ (N_A = 6.022 × 10²³)",
+        "question_en": "How many atoms are in 0.5 mole of iron (Fe)? (N_A = 6.022 × 10²³)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "3.011 × 10²³"},
+            {"label": "B", "text": "6.022 × 10²³"},
+            {"label": "C", "text": "1.204 × 10²⁴"},
+            {"label": "D", "text": "9.033 × 10²³"}
+        ],
+        "correct": "A",
+        "explanation_ar": "عدد الذرات = عدد المولات × N_A = 0.5 × 6.022 × 10²³ = 3.011 × 10²³ ذرة.",
+        "explanation_en": "Number of atoms = moles × N_A = 0.5 × 6.022 × 10²³ = 3.011 × 10²³ atoms.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "c29",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Inorganic",
+        "question_ar": "أي العناصر التالية يقع في الدورة الثالثة والمجموعة 16 (VIA)؟",
+        "question_en": "Which element is in the third period and group 16 (VIA)?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "Oxygen (O)"},
+            {"label": "B", "text": "Sulfur (S)"},
+            {"label": "C", "text": "Selenium (Se)"},
+            {"label": "D", "text": "Chlorine (Cl)"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الكبريت (S) يقع في الدورة الثالثة والمجموعة 16. الأكسجين في الدورة الثانية، والسيلينيوم في الدورة الرابعة.",
+        "explanation_en": "Sulfur (S) is in period 3, group 16. Oxygen is in period 2, selenium in period 4.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "c30",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Inorganic",
+        "question_ar": "أي من العناصر التالية له أعلى طاقة تأين أولى؟",
+        "question_en": "Which of the following elements has the highest first ionization energy?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "Na"},
+            {"label": "B", "text": "Mg"},
+            {"label": "C", "text": "Al"},
+            {"label": "D", "text": "Si"}
+        ],
+        "correct": "B",
+        "explanation_ar": "المغنيسيوم (Mg) له طاقة تأين أولى أعلى من Na و Al و Si بسبب امتلاء مدار 3s.",
+        "explanation_en": "Magnesium (Mg) has the highest first ionization energy among Na, Al, and Si due to its filled 3s orbital.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c31",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Inorganic",
+        "question_ar": "ما نوع الرابطة في مركب NaCl؟",
+        "question_en": "What type of bond is present in NaCl?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "تساهمية قطبية | Polar covalent"},
+            {"label": "B", "text": "تساهمية غير قطبية | Nonpolar covalent"},
+            {"label": "C", "text": "أيونية | Ionic"},
+            {"label": "D", "text": "فلزية | Metallic"}
+        ],
+        "correct": "C",
+        "explanation_ar": "NaCl مركب أيوني يتكون من انتقال إلكترون من الصوديوم إلى الكلور، مكوناً أيونات Na⁺ و Cl⁻ مرتبطة بتجاذب كهروستاتيكي.",
+        "explanation_en": "NaCl is an ionic compound formed by electron transfer from Na to Cl, creating Na⁺ and Cl⁻ ions held by electrostatic attraction.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "c32",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Inorganic",
+        "question_ar": "لون لهب مركب البوتاسيوم (K) هو:",
+        "question_en": "The flame color of a potassium (K) compound is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "أصفر | Yellow"},
+            {"label": "B", "text": "أحمر قرمزي | Crimson red"},
+            {"label": "C", "text": "أخضر | Green"},
+            {"label": "D", "text": "بنفسجي فاتح | Lilac"}
+        ],
+        "correct": "D",
+        "explanation_ar": "مركبات البوتاسيوم تعطي لهباً بنفسجياً فاتحاً (ليلكي) في اختبار اللهب.",
+        "explanation_en": "Potassium compounds give a lilac (light purple) flame in the flame test.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c33",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Inorganic",
+        "question_ar": "أي من المركبات التالية يكون راسباً (precipitate) عند إضافة محلول نترات الفضة (AgNO₃) إليه؟",
+        "question_en": "Which compound forms a precipitate when silver nitrate (AgNO₃) solution is added?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "NaNO₃"},
+            {"label": "B", "text": "KCl"},
+            {"label": "C", "text": "CH₃COOH"},
+            {"label": "D", "text": "C₂H₅OH"}
+        ],
+        "correct": "B",
+        "explanation_ar": "KCl يحتوي على أيون الكلوريد Cl⁻ الذي يتفاعل مع Ag⁺ ليكون راسب AgCl الأبيض.",
+        "explanation_en": "KCl contains chloride ions Cl⁻ that react with Ag⁺ to form a white AgCl precipitate.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c34",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Organic",
+        "question_ar": "الصيغة الجزيئية للإيثان هي:",
+        "question_en": "The molecular formula of ethane is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "CH₄"},
+            {"label": "B", "text": "C₂H₆"},
+            {"label": "C", "text": "C₂H₄"},
+            {"label": "D", "text": "C₂H₂"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الإيثان هو ألكان مكون من ذرتي كربون، صيغته C₂H₆. CH₄ هو الميثان، C₂H₄ هو الإيثيلين، C₂H₂ هو الأسيتيلين.",
+        "explanation_en": "Ethane is an alkane with two carbon atoms, formula C₂H₆. CH₄ is methane, C₂H₄ is ethylene, C₂H₂ is acetylene.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "c35",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Organic",
+        "question_ar": "أي من المركبات التالية يحتوي على مجموعة كربونيل (C=O)؟",
+        "question_en": "Which of the following compounds contains a carbonyl group (C=O)?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "الميثانول | Methanol"},
+            {"label": "B", "text": "حمض الإيثانويك | Ethanoic acid"},
+            {"label": "C", "text": "الإيثان | Ethane"},
+            {"label": "D", "text": "الإيثيلين | Ethylene"}
+        ],
+        "correct": "B",
+        "explanation_ar": "حمض الإيثانويك (CH₃COOH) يحتوي على مجموعة كربونيل C=O في مجموعة الكربوكسيل. الميثانول يحتوي على OH، الإيثان والإيثيلين لا يحتويان على كربونيل.",
+        "explanation_en": "Ethanoic acid (CH₃COOH) contains a carbonyl group C=O in the carboxyl group. Methanol has OH, ethane and ethylene have no carbonyl.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c36",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Organic",
+        "question_ar": "عدد الأيزومرات البنائية (structural isomers) للهكسان C₆H₁₄ هو:",
+        "question_en": "The number of structural isomers of hexane C₆H₁₄ is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "3"},
+            {"label": "B", "text": "4"},
+            {"label": "C", "text": "5"},
+            {"label": "D", "text": "6"}
+        ],
+        "correct": "C",
+        "explanation_ar": "للهكسان C₆H₁₄ خمسة أيزومرات بنائية: n-hexane, 2-methylpentane, 3-methylpentane, 2,2-dimethylbutane, 2,3-dimethylbutane.",
+        "explanation_en": "Hexane C₆H₁₄ has five structural isomers: n-hexane, 2-methylpentane, 3-methylpentane, 2,2-dimethylbutane, 2,3-dimethylbutane.",
+        "difficulty": "hard"
+    },
+    {
+        "id": "c37",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Organic",
+        "question_ar": "تفاعل إضافة البروم (Br₂) إلى الإيثيلين (C₂H₄) ينتج:",
+        "question_en": "The addition reaction of bromine (Br₂) to ethylene (C₂H₄) produces:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "C₂H₅Br"},
+            {"label": "B", "text": "C₂H₄Br₂"},
+            {"label": "C", "text": "C₂H₃Br₃"},
+            {"label": "D", "text": "C₂H₆"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الإيثيلين (C₂H₄) يضيف جزيء Br₂ عبر الرابطة المزدوجة ليتكون 1,2-ثنائي برومو الإيثان (C₂H₄Br₂). اختفاء اللون البني للبروم دليل على عدم التشبع.",
+        "explanation_en": "Ethylene (C₂H₄) adds Br₂ across the double bond to form 1,2-dibromoethane (C₂H₄Br₂). The brown color of bromine disappears, indicating unsaturation.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c38",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Organic",
+        "question_ar": "ناتج أكسدة الإيثانول (C₂H₅OH) بعامل مؤكسد قوي مثل K₂Cr₂O₇/H⁺ هو:",
+        "question_en": "The product of oxidizing ethanol (C₂H₅OH) with a strong oxidizing agent like K₂Cr₂O₇/H⁺ is:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "الإيثانال | Ethanal"},
+            {"label": "B", "text": "حمض الإيثانويك | Ethanoic acid"},
+            {"label": "C", "text": "الإيثيلين | Ethylene"},
+            {"label": "D", "text": "ثنائي إيثيل الإيثر | Diethyl ether"}
+        ],
+        "correct": "B",
+        "explanation_ar": "الأكسدة القوية للإيثانول تنتج أولاً الإيثانال (ألدهيد)، ثم تؤكسده إلى حمض الإيثانويك (حمض كربوكسيلي).",
+        "explanation_en": "Strong oxidation of ethanol first produces ethanal (aldehyde), then further oxidizes it to ethanoic acid (carboxylic acid).",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c39",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Physical",
+        "question_ar": "في التفاعل A(g) + 2B(g) ⇌ C(g)، ثابت الاتزان Kc = 4. إذا كان [A] = 0.5 M و [B] = 0.5 M فما تركيز C عند الاتزان؟",
+        "question_en": "For A(g) + 2B(g) ⇌ C(g), Kc = 4. If [A] = 0.5 M and [B] = 0.5 M at equilibrium, what is [C]?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "0.5 M"},
+            {"label": "B", "text": "1.0 M"},
+            {"label": "C", "text": "2.0 M"},
+            {"label": "D", "text": "4.0 M"}
+        ],
+        "correct": "A",
+        "explanation_ar": "Kc = [C]/([A][B]²) = 4. إذاً [C] = Kc × [A] × [B]² = 4 × 0.5 × (0.5)² = 4 × 0.5 × 0.25 = 0.5 M.",
+        "explanation_en": "Kc = [C]/([A][B]²) = 4. So [C] = Kc × [A] × [B]² = 4 × 0.5 × (0.5)² = 4 × 0.5 × 0.25 = 0.5 M.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c40",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Physical",
+        "question_ar": "ما قيمة pH لمحلول NaOH تركيزه 0.001 M عند 25°C؟ (Kw = 1×10⁻¹⁴)",
+        "question_en": "What is the pH of a 0.001 M NaOH solution at 25°C? (Kw = 1×10⁻¹⁴)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "3"},
+            {"label": "B", "text": "7"},
+            {"label": "C", "text": "11"},
+            {"label": "D", "text": "14"}
+        ],
+        "correct": "C",
+        "explanation_ar": "NaOH قاعدة قوية، [OH⁻] = 0.001 = 10⁻³ M. pOH = -log[OH⁻] = 3. pH = 14 - pOH = 14 - 3 = 11.",
+        "explanation_en": "NaOH is a strong base, [OH⁻] = 0.001 = 10⁻³ M. pOH = -log[OH⁻] = 3. pH = 14 - pOH = 14 - 3 = 11.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c41",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Physical",
+        "question_ar": "إذا تضاعف تركيز المتفاعل A في تفاعل من الرتبة الأولى، فإن سرعة التفاعل:",
+        "question_en": "If the concentration of reactant A in a first-order reaction is doubled, the reaction rate:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "تتضاعف | Doubles"},
+            {"label": "B", "text": "تربع | Quadruples"},
+            {"label": "C", "text": "تصبح النصف | Halves"},
+            {"label": "D", "text": "لا تتغير | Remains unchanged"}
+        ],
+        "correct": "A",
+        "explanation_ar": "لتفاعل من الرتبة الأولى: rate = k[A]. إذا تضاعف [A]، فإن السرعة تتضاعف مباشرة.",
+        "explanation_en": "For a first-order reaction: rate = k[A]. If [A] doubles, the rate doubles directly.",
+        "difficulty": "easy"
+    },
+    {
+        "id": "c42",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Physical",
+        "question_ar": "عمر النصف (t₁/₂) لتفاعل من الرتبة الأولى هو 100 ثانية. كم من الزمن يلزم حتى يتبقى 12.5% من المادة الأصلية؟",
+        "question_en": "The half-life (t₁/₂) of a first-order reaction is 100 s. How long does it take for only 12.5% of the original material to remain?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "100 s"},
+            {"label": "B", "text": "200 s"},
+            {"label": "C", "text": "300 s"},
+            {"label": "D", "text": "400 s"}
+        ],
+        "correct": "C",
+        "explanation_ar": "بعد 100 ثانية: 50% متبقي. بعد 200 ثانية: 25% متبقي. بعد 300 ثانية: 12.5% متبقي. إذاً الزمن = 3 × 100 = 300 ثانية.",
+        "explanation_en": "After 100 s: 50% remains. After 200 s: 25% remains. After 300 s: 12.5% remains. So time = 3 × 100 = 300 s.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c43",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Physical",
+        "question_ar": "حساب التغير في الإنثالبي للتفاعل: 2H₂(g) + O₂(g) → 2H₂O(l) علماً أن ΔH_f° للماء السائل = -286 kJ/mol:",
+        "question_en": "Calculate ΔH for: 2H₂(g) + O₂(g) → 2H₂O(l), given ΔH_f° of liquid water = -286 kJ/mol:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "-286 kJ"},
+            {"label": "B", "text": "-572 kJ"},
+            {"label": "C", "text": "+286 kJ"},
+            {"label": "D", "text": "-143 kJ"}
+        ],
+        "correct": "B",
+        "explanation_ar": "ΔH_rxn = ΣnΔH_f°(products) - ΣnΔH_f°(reactants) = 2 × (-286) - 0 = -572 kJ. التفاعل طارد للحرارة.",
+        "explanation_en": "ΔH_rxn = ΣnΔH_f°(products) - ΣnΔH_f°(reactants) = 2 × (-286) - 0 = -572 kJ. The reaction is exothermic.",
+        "difficulty": "medium"
+    },
+    {
+        "id": "c44",
+        "subject": "كيمياء | Chemistry",
+        "topic": "Physical",
+        "question_ar": "في خلية غلفانية قياسية، أي من العبارات التالية صحيحة؟",
+        "question_en": "In a standard galvanic cell, which statement is correct?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "تحدث الأكسدة عند الكاثود | Oxidation occurs at the cathode"},
+            {"label": "B", "text": "تحدث الاختزال عند الآنود | Reduction occurs at the anode"},
+            {"label": "C", "text": "تتدفق الإلكترونات من الآنود إلى الكاثود عبر السلك | Electrons flow from anode to cathode through the wire"},
+            {"label": "D", "text": "جهد الخلية E°cell = E°anode + E°cathode"}
+        ],
+        "correct": "C",
+        "explanation_ar": "في الخلية الغلفانية، الأكسدة عند الآنود (قطب سالب)، والاختزال عند الكاثود (قطب موجب). الإلكترونات تتدفق من الآنود إلى الكاثود عبر السلك الخارجي.",
+        "explanation_en": "In a galvanic cell, oxidation occurs at the anode (negative), reduction at the cathode (positive). Electrons flow from anode to cathode via the external wire.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 61,
+        "subject": "فيزياء | Physics",
+        "topic": "Mechanics",
+        "question_ar": "قُذف جسم بزاوية 30° وبسرعة ابتدائية 20 m/s. ما أقصى ارتفاع يصل إليه؟ (g = 10 m/s²)",
+        "question_en": "A projectile is launched at 30° with initial speed 20 m/s. What is the maximum height reached? (g = 10 m/s²)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "5 m"},
+            {"label": "B", "text": "10 m"},
+            {"label": "C", "text": "15 m"},
+            {"label": "D", "text": "20 m"}
+        ],
+        "correct": "A",
+        "explanation_ar": "أقصى ارتفاع: h_max = (v₀² sin²θ)/(2g) = (400 × 0.25)/(20) = 5 m",
+        "explanation_en": "Max height: h_max = (v₀² sin²θ)/(2g) = (400 × 0.25)/(20) = 5 m",
+        "difficulty": "medium"
+    },
+    {
+        "id": 62,
+        "subject": "فيزياء | Physics",
+        "topic": "Mechanics",
+        "question_ar": "كرة كتلتها 2 kg تتحرك بسرعة 3 m/s وتصطدم تصادماً مرناً بكرة ساكنة كتلتها 1 kg. بعد التصادم توقفت الكرة الأولى. ما سرعة الكرة الثانية؟",
+        "question_en": "A 2 kg ball moving at 3 m/s elastically collides with a stationary 1 kg ball. After collision, the 2 kg ball stops. What is the velocity of the 1 kg ball?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1.5 m/s"},
+            {"label": "B", "text": "3 m/s"},
+            {"label": "C", "text": "6 m/s"},
+            {"label": "D", "text": "2 m/s"}
+        ],
+        "correct": "C",
+        "explanation_ar": "بقاء كمية الحركة: m₁v₁ = m₁v₁' + m₂v₂' → 2×3 = 2×0 + 1×v₂' → v₂' = 6 m/s",
+        "explanation_en": "Conservation of momentum: m₁v₁ = m₁v₁' + m₂v₂' → 2×3 = 2×0 + 1×v₂' → v₂' = 6 m/s",
+        "difficulty": "medium"
+    },
+    {
+        "id": 63,
+        "subject": "فيزياء | Physics",
+        "topic": "Mechanics",
+        "question_ar": "جسم كتلته 0.5 kg يتحرك في مسار دائري نصف قطره 2 m بسرعة منتظمة 4 m/s. ما مقدار القوة المركزية؟",
+        "question_en": "A 0.5 kg object moves in a circle of radius 2 m at constant speed 4 m/s. What is the centripetal force?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1 N"},
+            {"label": "B", "text": "2 N"},
+            {"label": "C", "text": "4 N"},
+            {"label": "D", "text": "8 N"}
+        ],
+        "correct": "C",
+        "explanation_ar": "القوة المركزية: F_c = mv²/r = 0.5 × 16/2 = 4 N",
+        "explanation_en": "Centripetal force: F_c = mv²/r = 0.5 × 16/2 = 4 N",
+        "difficulty": "easy"
+    },
+    {
+        "id": 64,
+        "subject": "فيزياء | Physics",
+        "topic": "Mechanics",
+        "question_ar": "كتلة 2 kg تنزلق على سطح مائل أملس بزاوية 30°. ما تسارعها؟ (g = 10 m/s²)",
+        "question_en": "A 2 kg block slides down a frictionless incline of 30°. What is its acceleration? (g = 10 m/s²)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "10 m/s²"},
+            {"label": "B", "text": "5 m/s²"},
+            {"label": "C", "text": "8.66 m/s²"},
+            {"label": "D", "text": "2.5 m/s²"}
+        ],
+        "correct": "B",
+        "explanation_ar": "على سطح مائل أملس: a = g sin θ = 10 × sin(30°) = 10 × 0.5 = 5 m/s²",
+        "explanation_en": "On a frictionless incline: a = g sin θ = 10 × sin(30°) = 10 × 0.5 = 5 m/s²",
+        "difficulty": "easy"
+    },
+    {
+        "id": 65,
+        "subject": "فيزياء | Physics",
+        "topic": "Mechanics",
+        "question_ar": "قوة مقدارها 10 N تؤثر على جسم كتلته 2 kg ساكن لمسافة 5 m على سطح أملس. ما سرعته النهائية؟",
+        "question_en": "A 10 N force acts on a 2 kg object initially at rest over 5 m on a frictionless surface. What is the final velocity?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "5√2 m/s"},
+            {"label": "B", "text": "5 m/s"},
+            {"label": "C", "text": "10 m/s"},
+            {"label": "D", "text": "2.5 m/s"}
+        ],
+        "correct": "A",
+        "explanation_ar": "الشغل = Fd = 10×5 = 50 J. من نظرية الشغل-طاقة: ½mv² = 50 → v² = 50 → v = 5√2 m/s ≈ 7.07 m/s",
+        "explanation_en": "Work = Fd = 10×5 = 50 J. By work-energy theorem: ½mv² = 50 → v² = 50 → v = 5√2 m/s ≈ 7.07 m/s",
+        "difficulty": "medium"
+    },
+    {
+        "id": 66,
+        "subject": "فيزياء | Physics",
+        "topic": "Mechanics",
+        "question_ar": "كتلتان 5 kg و 10 kg تبعدان عن بعضهما 2 m. ما قوة الجاذبية بينهما؟ (G = 6.67×10⁻¹¹ N·m²/kg²)",
+        "question_en": "Two masses, 5 kg and 10 kg, are 2 m apart. What is the gravitational force between them? (G = 6.67×10⁻¹¹ N·m²/kg²)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "8.34 × 10⁻¹⁰ N"},
+            {"label": "B", "text": "1.67 × 10⁻⁹ N"},
+            {"label": "C", "text": "3.34 × 10⁻⁹ N"},
+            {"label": "D", "text": "6.67 × 10⁻¹¹ N"}
+        ],
+        "correct": "A",
+        "explanation_ar": "F = Gm₁m₂/r² = 6.67×10⁻¹¹ × 5 × 10 / 4 = 6.67×10⁻¹¹ × 12.5 = 8.34×10⁻¹⁰ N",
+        "explanation_en": "F = Gm₁m₂/r² = 6.67×10⁻¹¹ × 5 × 10 / 4 = 6.67×10⁻¹¹ × 12.5 = 8.34×10⁻¹⁰ N",
+        "difficulty": "hard"
+    },
+    {
+        "id": 67,
+        "subject": "فيزياء | Physics",
+        "topic": "Electricity",
+        "question_ar": "شحنتان +2 μC و +3 μC تفصل بينهما مسافة 0.1 m. ما القوة الكهروستاتيكية بينهما؟ (k = 9×10⁹ N·m²/C²)",
+        "question_en": "Two charges +2 μC and +3 μC are 0.1 m apart. What is the electrostatic force between them? (k = 9×10⁹ N·m²/C²)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "5.4 N"},
+            {"label": "B", "text": "0.54 N"},
+            {"label": "C", "text": "54 N"},
+            {"label": "D", "text": "0.054 N"}
+        ],
+        "correct": "A",
+        "explanation_ar": "F = kq₁q₂/r² = 9×10⁹ × (2×10⁻⁶)(3×10⁻⁶)/(0.1)² = 9×10⁹ × 6×10⁻¹²/0.01 = 5.4 N",
+        "explanation_en": "F = kq₁q₂/r² = 9×10⁹ × (2×10⁻⁶)(3×10⁻⁶)/(0.1)² = 9×10⁹ × 6×10⁻¹²/0.01 = 5.4 N",
+        "difficulty": "medium"
+    },
+    {
+        "id": 68,
+        "subject": "فيزياء | Physics",
+        "topic": "Electricity",
+        "question_ar": "في دائرة: بطارية 12 V موصولة بمقاومتين على التوالي 4 Ω و 2 Ω. ما فرق الجهد عبر المقاومة 4 Ω؟",
+        "question_en": "In a circuit: a 12 V battery is connected to two resistors in series: 4 Ω and 2 Ω. What is the voltage across the 4 Ω resistor?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "4 V"},
+            {"label": "B", "text": "6 V"},
+            {"label": "C", "text": "8 V"},
+            {"label": "D", "text": "12 V"}
+        ],
+        "correct": "C",
+        "explanation_ar": "R_eq = 4+2 = 6 Ω. I = V/R = 12/6 = 2 A. V₄ = IR = 2×4 = 8 V.",
+        "explanation_en": "R_eq = 4+2 = 6 Ω. I = V/R = 12/6 = 2 A. V₄ = IR = 2×4 = 8 V.",
+        "difficulty": "easy"
+    },
+    {
+        "id": 69,
+        "subject": "فيزياء | Physics",
+        "topic": "Electricity",
+        "question_ar": "إلكترون يتحرك بسرعة 2×10⁶ m/s عمودياً على مجال مغناطيسي شدته 0.5 T. ما القوة المغناطيسية المؤثرة عليه؟ (e = 1.6×10⁻¹⁹ C)",
+        "question_en": "An electron moves at 2×10⁶ m/s perpendicular to a 0.5 T magnetic field. What is the magnetic force on it? (e = 1.6×10⁻¹⁹ C)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1.6×10⁻¹³ N"},
+            {"label": "B", "text": "3.2×10⁻¹³ N"},
+            {"label": "C", "text": "1.6×10⁻¹⁴ N"},
+            {"label": "D", "text": "3.2×10⁻¹⁴ N"}
+        ],
+        "correct": "A",
+        "explanation_ar": "F = qvB = 1.6×10⁻¹⁹ × 2×10⁶ × 0.5 = 1.6×10⁻¹³ N",
+        "explanation_en": "F = qvB = 1.6×10⁻¹⁹ × 2×10⁶ × 0.5 = 1.6×10⁻¹³ N",
+        "difficulty": "medium"
+    },
+    {
+        "id": 70,
+        "subject": "فيزياء | Physics",
+        "topic": "Electricity",
+        "question_ar": "مكثف ذو لوحين متوازيين مساحة كل لوح 0.01 m² والمسافة بينهما 1 mm. ما سعته؟ (ε₀ = 8.85×10⁻¹² F/m)",
+        "question_en": "A parallel plate capacitor has plates of area 0.01 m² separated by 1 mm. What is its capacitance? (ε₀ = 8.85×10⁻¹² F/m)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "8.85×10⁻¹² F"},
+            {"label": "B", "text": "8.85×10⁻¹¹ F"},
+            {"label": "C", "text": "8.85×10⁻¹⁰ F"},
+            {"label": "D", "text": "8.85×10⁻¹³ F"}
+        ],
+        "correct": "B",
+        "explanation_ar": "C = ε₀A/d = 8.85×10⁻¹² × 0.01 / 0.001 = 8.85×10⁻¹² × 10 = 8.85×10⁻¹¹ F",
+        "explanation_en": "C = ε₀A/d = 8.85×10⁻¹² × 0.01 / 0.001 = 8.85×10⁻¹² × 10 = 8.85×10⁻¹¹ F",
+        "difficulty": "hard"
+    },
+    {
+        "id": 71,
+        "subject": "فيزياء | Physics",
+        "topic": "Electricity",
+        "question_ar": "ما شدة المجال الكهربائي على بعد 0.2 m من شحنة نقطية مقدارها 4×10⁻⁶ C؟ (k = 9×10⁹ N·m²/C²)",
+        "question_en": "What is the electric field at 0.2 m from a point charge of 4×10⁻⁶ C? (k = 9×10⁹ N·m²/C²)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "9×10⁵ N/C"},
+            {"label": "B", "text": "4.5×10⁵ N/C"},
+            {"label": "C", "text": "1.8×10⁶ N/C"},
+            {"label": "D", "text": "9×10⁴ N/C"}
+        ],
+        "correct": "A",
+        "explanation_ar": "E = kq/r² = 9×10⁹ × 4×10⁻⁶/0.04 = 36×10³/0.04 = 9×10⁵ N/C",
+        "explanation_en": "E = kq/r² = 9×10⁹ × 4×10⁻⁶/0.04 = 36×10³/0.04 = 9×10⁵ N/C",
+        "difficulty": "medium"
+    },
+    {
+        "id": 72,
+        "subject": "فيزياء | Physics",
+        "topic": "Waves",
+        "question_ar": "في تجربة يونغ للشق المزدوج، λ = 600 nm، d = 0.2 mm، L = 1 m. ما المسافة بين الأهداب المتجاورة؟",
+        "question_en": "In Young's double-slit experiment, λ = 600 nm, d = 0.2 mm, L = 1 m. What is the fringe spacing?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "1.2 mm"},
+            {"label": "B", "text": "3 mm"},
+            {"label": "C", "text": "6 mm"},
+            {"label": "D", "text": "0.3 mm"}
+        ],
+        "correct": "B",
+        "explanation_ar": "المسافة بين الأهداب: Δy = λL/d = (600×10⁻⁹ × 1)/(0.2×10⁻³) = 6×10⁻⁷/2×10⁻⁴ = 3×10⁻³ m = 3 mm",
+        "explanation_en": "Fringe spacing: Δy = λL/d = (600×10⁻⁹ × 1)/(0.2×10⁻³) = 6×10⁻⁷/2×10⁻⁴ = 3×10⁻³ m = 3 mm",
+        "difficulty": "hard"
+    },
+    {
+        "id": 73,
+        "subject": "فيزياء | Physics",
+        "topic": "Waves",
+        "question_ar": "مصدر صوت تردده 400 Hz يتحرك نحو مراقب ساكن بسرعة 34 m/s. ما التردد الذي يسمعه المراقب؟ (سرعة الصوت = 340 m/s)",
+        "question_en": "A 400 Hz sound source moves toward a stationary observer at 34 m/s. What frequency does the observer hear? (v_sound = 340 m/s)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "444 Hz"},
+            {"label": "B", "text": "400 Hz"},
+            {"label": "C", "text": "360 Hz"},
+            {"label": "D", "text": "500 Hz"}
+        ],
+        "correct": "A",
+        "explanation_ar": "تأثير دوبلر (مصدر يقترب): f' = f × v/(v-v_s) = 400 × 340/(340-34) = 400 × 340/306 = 400 × 1.111 = 444 Hz",
+        "explanation_en": "Doppler effect (source approaching): f' = f × v/(v-v_s) = 400 × 340/306 ≈ 444 Hz",
+        "difficulty": "medium"
+    },
+    {
+        "id": 74,
+        "subject": "فيزياء | Physics",
+        "topic": "Waves",
+        "question_ar": "الزاوية الحرجة للانعكاس الكلي الداخلي عند انتقال الضوء من الزجاج (n=1.5) إلى الهواء (n=1) تساوي تقريباً:",
+        "question_en": "The critical angle for total internal reflection from glass (n=1.5) to air (n=1) is approximately:",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "30°"},
+            {"label": "B", "text": "42°"},
+            {"label": "C", "text": "52°"},
+            {"label": "D", "text": "60°"}
+        ],
+        "correct": "B",
+        "explanation_ar": "sin θ_c = n₂/n₁ = 1/1.5 = 2/3 ≈ 0.667. θ_c = sin⁻¹(0.667) ≈ 41.8° ≈ 42°",
+        "explanation_en": "sin θ_c = n₂/n₁ = 1/1.5 = 2/3 ≈ 0.667. θ_c = sin⁻¹(0.667) ≈ 41.8° ≈ 42°",
+        "difficulty": "medium"
+    },
+    {
+        "id": 75,
+        "subject": "فيزياء | Physics",
+        "topic": "Thermodynamics",
+        "question_ar": "3 مولات من غاز مثالي عند 27°C وضغط 2 atm. ما حجمه؟ (R = 0.082 L·atm/mol·K)",
+        "question_en": "3 moles of an ideal gas at 27°C and 2 atm pressure. What is the volume? (R = 0.082 L·atm/mol·K)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "24.6 L"},
+            {"label": "B", "text": "36.9 L"},
+            {"label": "C", "text": "49.2 L"},
+            {"label": "D", "text": "12.3 L"}
+        ],
+        "correct": "B",
+        "explanation_ar": "PV = nRT → V = nRT/P = 3 × 0.082 × 300 / 2 = 73.8/2 = 36.9 L",
+        "explanation_en": "PV = nRT → V = nRT/P = 3 × 0.082 × 300 / 2 = 73.8/2 = 36.9 L",
+        "difficulty": "medium"
+    },
+    {
+        "id": 76,
+        "subject": "فيزياء | Physics",
+        "topic": "Thermodynamics",
+        "question_ar": "غاز يمتص 500 J من الحرارة ويبذل 300 J شغلاً على المحيط. ما التغير في طاقته الداخلية؟",
+        "question_en": "A gas absorbs 500 J of heat and does 300 J of work on its surroundings. What is the change in internal energy?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "800 J"},
+            {"label": "B", "text": "200 J"},
+            {"label": "C", "text": "-200 J"},
+            {"label": "D", "text": "-800 J"}
+        ],
+        "correct": "B",
+        "explanation_ar": "من القانون الأول للديناميكا الحرارية: ΔU = Q - W = 500 - 300 = 200 J",
+        "explanation_en": "First law of thermodynamics: ΔU = Q - W = 500 - 300 = 200 J",
+        "difficulty": "easy"
+    },
+    {
+        "id": 77,
+        "subject": "فيزياء | Physics",
+        "topic": "Thermodynamics",
+        "question_ar": "ما كمية الحرارة اللازمة لرفع درجة حرارة 200 g من الماء من 20°C إلى 50°C؟ (c_water = 4200 J/kg·°C)",
+        "question_en": "How much heat is needed to raise the temperature of 200 g of water from 20°C to 50°C? (c_water = 4200 J/kg·°C)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "8400 J"},
+            {"label": "B", "text": "25200 J"},
+            {"label": "C", "text": "2520 J"},
+            {"label": "D", "text": "42000 J"}
+        ],
+        "correct": "B",
+        "explanation_ar": "Q = mcΔT = 0.2 × 4200 × 30 = 0.2 × 126000 = 25200 J",
+        "explanation_en": "Q = mcΔT = 0.2 × 4200 × 30 = 0.2 × 126000 = 25200 J",
+        "difficulty": "easy"
+    },
+    {
+        "id": 78,
+        "subject": "فيزياء | Physics",
+        "topic": "Modern Physics",
+        "question_ar": "دالة شغل معدن 2.0 eV. سقط عليه ضوء طوله الموجي 400 nm. ما أقصى طاقة حركية للإلكترونات المنبعثة؟ (h = 4.14×10⁻¹⁵ eV·s, c = 3×10⁸ m/s)",
+        "question_en": "A metal has work function 2.0 eV. Light of wavelength 400 nm shines on it. What is the max kinetic energy of emitted electrons? (h = 4.14×10⁻¹⁵ eV·s, c = 3×10⁸ m/s)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "0.5 eV"},
+            {"label": "B", "text": "1.1 eV"},
+            {"label": "C", "text": "2.0 eV"},
+            {"label": "D", "text": "3.1 eV"}
+        ],
+        "correct": "B",
+        "explanation_ar": "طاقة الفوتون: E = hc/λ = (4.14×10⁻¹⁵ × 3×10⁸)/(4×10⁻⁷) = 1240/400 = 3.1 eV. KE = E - φ = 3.1 - 2.0 = 1.1 eV",
+        "explanation_en": "Photon energy: E = hc/λ = 1240/400 = 3.1 eV. KE = E - φ = 3.1 - 2.0 = 1.1 eV",
+        "difficulty": "hard"
+    },
+    {
+        "id": 79,
+        "subject": "فيزياء | Physics",
+        "topic": "Modern Physics",
+        "question_ar": "عينة مشعة عمر النصف لها 10 أيام. إذا بدأنا بـ 80 g، فما الكتلة المتبقية بعد 30 يوماً؟",
+        "question_en": "A radioactive sample has a half-life of 10 days. Starting with 80 g, how much remains after 30 days?",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "40 g"},
+            {"label": "B", "text": "20 g"},
+            {"label": "C", "text": "10 g"},
+            {"label": "D", "text": "5 g"}
+        ],
+        "correct": "C",
+        "explanation_ar": "بعد 3 فترات عمر نصف (30/10 = 3): المتبقي = 80 × (½)³ = 80/8 = 10 g",
+        "explanation_en": "After 3 half-lives (30/10 = 3): remaining = 80 × (½)³ = 80/8 = 10 g",
+        "difficulty": "easy"
+    },
+    {
+        "id": 80,
+        "subject": "فيزياء | Physics",
+        "topic": "Modern Physics",
+        "question_ar": "ما الطول الموجي لدي برولي لإلكترون يتحرك بسرعة 2×10⁶ m/s؟ (h = 6.63×10⁻³⁴ J·s, m_e = 9.11×10⁻³¹ kg)",
+        "question_en": "What is the de Broglie wavelength of an electron moving at 2×10⁶ m/s? (h = 6.63×10⁻³⁴ J·s, m_e = 9.11×10⁻³¹ kg)",
+        "exam_date": "April 2026",
+        "source": "CSCA Past Paper Style",
+        "options": [
+            {"label": "A", "text": "3.64×10⁻¹⁰ m"},
+            {"label": "B", "text": "1.82×10⁻¹⁰ m"},
+            {"label": "C", "text": "7.28×10⁻¹⁰ m"},
+            {"label": "D", "text": "9.11×10⁻¹⁰ m"}
+        ],
+        "correct": "A",
+        "explanation_ar": "λ = h/p = h/(mv) = 6.63×10⁻³⁴/(9.11×10⁻³¹ × 2×10⁶) = 6.63×10⁻³⁴/(1.822×10⁻²⁴) = 3.64×10⁻¹⁰ m",
+        "explanation_en": "λ = h/p = h/(mv) = 6.63×10⁻³⁴/(9.11×10⁻³¹ × 2×10⁶) = 6.63×10⁻³⁴/(1.822×10⁻²⁴) = 3.64×10⁻¹⁰ m",
+        "difficulty": "hard"
     }
 ]

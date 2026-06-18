@@ -4,61 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماستر كلاس: التفاضل والتكامل | Masterclass: Calculus</title>
+    <title>ماستر كلاس: التفاضل والتكامل والمتتاليات | Masterclass: Calculus & Sequences</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        .bilingual-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .ara-content {
-            text-align: right;
-            border-right: 4px solid var(--primary);
-            padding-right: 20px;
-        }
-
-        .eng-content {
-            text-align: left;
-            direction: ltr;
-            border-left: 3px solid var(--secondary);
-            padding-left: 20px;
-            font-size: 1rem;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
-
-        .rule-box {
-            background: rgba(76, 201, 240, 0.08);
-            border: 2px solid var(--primary);
-            padding: 30px;
-            border-radius: 20px;
-            margin: 40px 0;
-        }
-
-        .logic-card {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-radius: 12px;
-            margin: 15px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        @media (max-width: 900px) {
-            .bilingual-row {
-                grid-template-columns: 1fr;
-            }
-        }
+        .bilingual-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+        .ara-content { text-align: right; border-right: 4px solid var(--primary); padding-right: 20px; }
+        .eng-content { text-align: left; direction: ltr; border-left: 4px solid var(--secondary); padding-left: 20px; font-size: 1rem; color: #e2e8f0; line-height: 1.6; }
+        .rule-box { background: rgba(76, 201, 240, 0.08); border: 2px solid var(--primary); padding: 30px; border-radius: 20px; margin: 40px 0; }
+        .step-list { list-style: none; padding: 0; }
+        .step-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+        .step-num { background: var(--primary); color: #000; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .logic-card { background: rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 12px; margin: 15px 0; border: 1px solid rgba(255, 255, 255, 0.1); }
+        h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+        .module-badge { display: inline-block; background: var(--accent); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; }
+        @media (max-width: 900px) { .bilingual-row { grid-template-columns: 1fr; } }
     </style>
 </head>
 
@@ -66,153 +27,530 @@
     <header class="main-nav">
         <div class="container">
             <a href="../index.html">الرئيسية | Home</a>
-            <a href="#" class="active">التكامل | Calculus Masterclass</a>
+            <a href="#" class="active">التفاضل والتكامل | Calculus Masterclass</a>
             <a href="../questions.html">بنك الأسئلة | Question Bank</a>
         </div>
     </header>
 
     <main class="container" style="padding: 80px 20px;">
-        <h1 class="section-title">التفاضل والتكامل: محرك التغيير <br> <span
-                style="font-size: 0.6em; opacity: 0.8;">Calculus: The Engine of Change</span></h1>
+        <h1 class="section-title">التفاضل والتكامل والمتتاليات: محرك التغيير <br> <span style="font-size: 0.6em; opacity: 0.8;">Calculus, Derivatives, Integrals & Sequences: The Engine of Change</span></h1>
 
-        <!-- INTRODUCTION -->
-        <section class="master-teacher-box"
-            style="background: linear-gradient(45deg, rgba(76, 201, 240, 0.1), transparent);">
+        <!-- SYLLABUS MODULE -->
+        <section class="rule-box" style="border-color: var(--accent);">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>جوهر الرياضيات المتقدمة:</h3>
-                    <p>أهلاً بك يا بطل. التفاضل يدور حول "مدى سرعة التغيير" (الميل)، بينما التكامل يدور حول "تراكم
-                        الكميات" (المساحة). في هذا الدرس، ستتعلم كيف تشتق وتكامل الدوال الأساسية التي ستواجهها في اختبار
-                        CSCA.</p>
+                    <h3>📋 هيكل الوحدة حسب منهج CSCA الرسمي</h3>
+                    <ul>
+                        <li><strong>الوحدة 1: المتتاليات الحسابية</strong> - تعريفها، الحد العام، مجموع \\(n\\) حداً</li>
+                        <li><strong>الوحدة 2: المتتاليات الهندسية</strong> - تعريفها، الحد العام، مجموع \\(n\\) حداً والمجموع اللانهائي</li>
+                        <li><strong>الوحدة 3: نهايات المتتاليات</strong> - تقارب وتباعد المتتاليات</li>
+                        <li><strong>الوحدة 4: قواعد الاشتقاق</strong> - قاعدة القوة، الجداء، خارج القسمة، السلسلة</li>
+                        <li><strong>الوحدة 5: مشتقات الدوال المثلثية والأسية</strong> - مشتقات \\(\\sin, \\cos, e^x, \\ln x\\)</li>
+                        <li><strong>الوحدة 6: تطبيقات المشتقات</strong> - المماس والعمودي، القيم القصوى، الرتابة</li>
+                        <li><strong>الوحدة 7: التكامل غير المحدود</strong> - قاعدة التكامل الأساسية، تكامل الدوال الأساسية</li>
+                        <li><strong>الوحدة 8: التكامل المحدود</strong> - نظرية التفاضل والتكامل الأساسية، المساحة تحت المنحنى</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong>الوزن في الاختبار:</strong> جزء من 35% (دوال) + جزء مستقل</p>
                 </div>
                 <div class="eng-content">
-                    <h3>The Core of Advanced Math:</h3>
-                    <p>Welcome, hero. Differentiation is about "how fast something changes" (slope), while Integration
-                        is about "accumulation" (area). You'll learn the essential derivatives and integrals for the
-                        CSCA.</p>
+                    <h3>📋 Official CSCA Syllabus Module Structure</h3>
+                    <ul>
+                        <li><strong>Module 1: Arithmetic Sequences</strong> - Definition, general term, sum of \\(n\\) terms</li>
+                        <li><strong>Module 2: Geometric Sequences</strong> - Definition, general term, sum of \\(n\\) terms and infinite sum</li>
+                        <li><strong>Module 3: Limits of Sequences</strong> - Convergence and divergence of sequences</li>
+                        <li><strong>Module 4: Differentiation Rules</strong> - Power, product, quotient, chain rules</li>
+                        <li><strong>Module 5: Trig & Exponential Derivatives</strong> - Derivatives of \\(\\sin, \\cos, e^x, \\ln x\\)</li>
+                        <li><strong>Module 6: Applications of Derivatives</strong> - Tangent/normal, extrema, monotonicity</li>
+                        <li><strong>Module 7: Indefinite Integration</strong> - Basic integration rules, integrals of basic functions</li>
+                        <li><strong>Module 8: Definite Integration</strong> - Fundamental Theorem of Calculus, area under curve</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong>Exam Weight:</strong> Part of 35% (Functions) + Independent portion</p>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 1: DERIVATIVES -->
+        <!-- POINT 1: ARITHMETIC SEQUENCES -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 1: قواعد الاشتقاق (Differentiation Rules)</h3>
-                    <p>لأي دالة \( x^n \)، نضرب في الأس ونطرح منه واحد.</p>
-                    <div class="logic-card">\( \frac{d}{dx}(x^n) = n x^{n-1} \) | \( \frac{d}{dx}(\sin x) = \cos x \)
-                    </div>
+                    <span class="module-badge">الوحدة 1</span>
+                    <h3>القاعدة 1: المتتاليات الحسابية (Arithmetic Sequences)</h3>
+                    <p>المتتالية الحسابية: الفرق بين حدين متتاليين ثابت (\\(d\\)). مثال: \\(2, 5, 8, 11, \\dots\\) والفرق \\(d=3\\).</p>
+                    <div class="logic-card">القوانين الأساسية:<br>
+                    <strong>الحد العام:</strong> \\( a_n = a_1 + (n-1)d \\)<br>
+                    <strong>مجموع \\(n\\) حداً:</strong> \\( S_n = \\frac{n}{2}(2a_1 + (n-1)d) \\)<br>
+                    <strong>أو:</strong> \\( S_n = \\frac{n}{2}(a_1 + a_n) \\)<br>
+                    حيث \\(a_1\\) = الحد الأول، \\(d\\) = الفرق المشترك.</div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 1: Differentiation Rules</h3>
-                    <p>For any function \( x^n \), power comes to the front and decreases by 1.</p>
-                    <div class="logic-card">\( \frac{d}{dx}(x^n) = n x^{n-1} \) | \( \frac{d}{dx}(\sin x) = \cos x \)
-                    </div>
+                    <span class="module-badge">Module 1</span>
+                    <h3>Rule 1: Arithmetic Sequences</h3>
+                    <p>Arithmetic sequence: difference between consecutive terms is constant (\\(d\\)). E.g.: \\(2, 5, 8, 11, \\dots\\), diff \\(d=3\\).</p>
+                    <div class="logic-card">Key Formulas:<br>
+                    <strong>General Term:</strong> \\( a_n = a_1 + (n-1)d \\)<br>
+                    <strong>Sum of \\(n\\) terms:</strong> \\( S_n = \\frac{n}{2}(2a_1 + (n-1)d) \\)<br>
+                    <strong>Or:</strong> \\( S_n = \\frac{n}{2}(a_1 + a_n) \\)<br>
+                    where \\(a_1\\) = first term, \\(d\\) = common difference.</div>
                 </div>
             </div>
 
             <div class="example-card">
                 <div class="bilingual-row">
                     <div class="ara-content">
-                        <h4>📌 مثال عملي (Example):</h4>
-                        <p>أوجد مشتقة الدالة \( f(x) = 3x^2 + 5x \).</p>
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>في متتالية حسابية: \\( a_1 = 3, d = 4 \\). أوجد \\(a_{10}\\) ومجموع أول 10 حدود.</p>
                         <p><strong>الحل:</strong><br>
-                            1. مشتقة \( 3x^2 \) هي \( 2 \times 3x = 6x \). <br>
-                            2. مشتقة \( 5x \) هي \( 5 \). <br>
-                            <strong>النتيجة:</strong> \( f'(x) = 6x + 5 \).
-                        </p>
+                        1. \\( a_{10} = 3 + (10-1) \\times 4 = 3 + 36 = 39 \\).<br>
+                        2. \\( S_{10} = \\frac{10}{2}(2\\times3 + (10-1)\\times4) = 5(6 + 36) = 5 \\times 42 = 210 \\).<br>
+                        <strong>النتيجة:</strong> \\( a_{10} = 39 \\)، \\( S_{10} = 210 \\).</p>
                     </div>
                     <div class="eng-content">
-                        <h4>📌 Practical Example:</h4>
-                        <p>Find the derivative of \( f(x) = 3x^2 + 5x \).</p>
+                        <h4>📌 Application Example:</h4>
+                        <p>Arithmetic sequence: \\( a_1 = 3, d = 4 \\). Find \\(a_{10}\\) and sum of first 10 terms.</p>
                         <p><strong>Solution:</strong><br>
-                            1. Power rule for \( 3x^2 \) yields \( 6x \). <br>
-                            2. Linear derivative for \( 5x \) is \( 5 \). <br>
-                            <strong>Result:</strong> \( 6x + 5 \).
-                        </p>
+                        1. \\( a_{10} = 3 + 9 \\times 4 = 39 \\).<br>
+                        2. \\( S_{10} = \\frac{10}{2}(6 + 36) = 5 \\times 42 = 210 \\).<br>
+                        <strong>Result:</strong> \\( a_{10} = 39 \\), \\( S_{10} = 210 \\).</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 2: INTEGRATION -->
+        <!-- POINT 2: GEOMETRIC SEQUENCES -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 2: التكامل غير المحدود</h3>
-                    <p>التكامل هو عكس التفاضل؛ نزيد الأس واحداً ونقسم عليه، ولا ننسى ثابت التكامل (\(C\)).</p>
-                    <div class="logic-card">\( \int x^n dx = \frac{x^{n+1}}{n+1} + C \)</div>
+                    <span class="module-badge">الوحدة 2</span>
+                    <h3>القاعدة 2: المتتاليات الهندسية (Geometric Sequences)</h3>
+                    <p>المتتالية الهندسية: النسبة بين حدين متتاليين ثابتة (\\(r\\)). مثال: \\(2, 6, 18, 54, \\dots\\) والنسبة \\(r=3\\).</p>
+                    <div class="logic-card">القوانين الأساسية:<br>
+                    <strong>الحد العام:</strong> \\( a_n = a_1 \\cdot r^{n-1} \\)<br>
+                    <strong>مجموع \\(n\\) حداً:</strong> \\( S_n = a_1 \\frac{1 - r^n}{1 - r} \\) (إذا \\(r \\neq 1\\))<br>
+                    <strong>المجموع اللانهائي:</strong> \\( S_\\infty = \\frac{a_1}{1 - r} \\) إذا \\(|r| < 1\\)<br>
+                    ملاحظة: إذا \\(|r| \\geq 1\\)، المجموع اللانهائي غير موجود (يتباعد).</div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 2: Indefinite Integration</h3>
-                    <p>Antiderivative: Add 1 to the power, divide by the new power. Always add the constant (\(C\)).</p>
-                    <div class="logic-card">\( \int x^n dx = \frac{x^{n+1}}{n+1} + C \)</div>
+                    <span class="module-badge">Module 2</span>
+                    <h3>Rule 2: Geometric Sequences</h3>
+                    <p>Geometric sequence: ratio between consecutive terms is constant (\\(r\\)). E.g.: \\(2, 6, 18, 54, \\dots\\), ratio \\(r=3\\).</p>
+                    <div class="logic-card">Key Formulas:<br>
+                    <strong>General Term:</strong> \\( a_n = a_1 \\cdot r^{n-1} \\)<br>
+                    <strong>Sum of \\(n\\) terms:</strong> \\( S_n = a_1 \\frac{1 - r^n}{1 - r} \\) (if \\(r \\neq 1\\))<br>
+                    <strong>Infinite Sum:</strong> \\( S_\\infty = \\frac{a_1}{1 - r} \\) if \\(|r| < 1\\)<br>
+                    Note: If \\(|r| \\geq 1\\), the infinite sum diverges (does not exist).</div>
                 </div>
             </div>
 
             <div class="example-card">
                 <div class="bilingual-row">
                     <div class="ara-content">
-                        <h4>📌 مثال عملي (Example):</h4>
-                        <p>احسب \( \int (2x + 3) dx \).</p>
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>أوجد مجموع المتتالية الهندسية اللانهائية: \\( 10 + 5 + 2.5 + 1.25 + \\dots \\)</p>
                         <p><strong>الحل:</strong><br>
-                            1. تكامل \( 2x \) هو \( 2 \frac{x^2}{2} = x^2 \). <br>
-                            2. تكامل \( 3 \) هو \( 3x \). <br>
-                            <strong>النتيجة:</strong> \( x^2 + 3x + C \).
-                        </p>
+                        1. \\( a_1 = 10, r = \\frac{5}{10} = 0.5 \\).<br>
+                        2. \\( |0.5| < 1 \\) ⟹ نطبق قانون المجموع اللانهائي.<br>
+                        3. \\( S_\\infty = \\frac{10}{1 - 0.5} = \\frac{10}{0.5} = 20 \\).<br>
+                        <strong>النتيجة:</strong> المجموع اللانهائي = 20.</p>
                     </div>
                     <div class="eng-content">
-                        <h4>📌 Practical Example:</h4>
-                        <p>Calculate \( \int (2x + 3) dx \).</p>
+                        <h4>📌 Application Example:</h4>
+                        <p>Find the infinite sum: \\( 10 + 5 + 2.5 + 1.25 + \\dots \\)</p>
                         <p><strong>Solution:</strong><br>
-                            1. Integrate \( 2x \) to get \( x^2 \). <br>
-                            2. Integrate constant \( 3 \) to get \( 3x \). <br>
-                            <strong>Result:</strong> \( x^2 + 3x + C \).
-                        </p>
+                        1. \\( a_1 = 10, r = 0.5 \\).<br>
+                        2. \\( |0.5| < 1 \\) ⟹ use infinite sum formula.<br>
+                        3. \\( S_\\infty = \\frac{10}{1 - 0.5} = 20 \\).<br>
+                        <strong>Result:</strong> Infinite sum = 20.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: LIMITS OF SEQUENCES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <span class="module-badge">الوحدة 3</span>
+                    <h3>القاعدة 3: نهايات المتتاليات (Limits of Sequences)</h3>
+                    <p>نقول أن المتتالية \\(\\{a_n\\}\\) تتقارب إلى \\(L\\) إذا كانت \\(\\lim_{n\\to\\infty} a_n = L\\). إذا لم توجد النهاية، المتتالية تتباعد.</p>
+                    <div class="logic-card">طرق حساب نهايات المتتاليات:<br>
+                    <strong>1. القسمة على أعلى قوة:</strong> للكسور التي تحتوي على \\(n\\) في البسط والمقام.<br>
+                    <strong>2. قاعدة الحصر (Squeeze Theorem):</strong> إذا \\(b_n \\leq a_n \\leq c_n\\) وكلاهما يتقارب إلى \\(L\\)، فإن \\(a_n\\) يتقارب إلى \\(L\\).<br>
+                    <strong>3. النهايات المعروفة:</strong> \\( \\lim_{n\\to\\infty} \\frac{1}{n} = 0 \\)، \\( \\lim_{n\\to\\infty} r^n = 0 \\) إذا \\(|r| < 1\\).</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 3</span>
+                    <h3>Rule 3: Limits of Sequences</h3>
+                    <p>Sequence \\(\\{a_n\\}\\) converges to \\(L\\) if \\(\\lim_{n\\to\\infty} a_n = L\\). If no limit exists, the sequence diverges.</p>
+                    <div class="logic-card">Methods for Sequence Limits:<br>
+                    <strong>1. Divide by highest power:</strong> For fractions with \\(n\\) in numerator and denominator.<br>
+                    <strong>2. Squeeze Theorem:</strong> If \\(b_n \\leq a_n \\leq c_n\\) both converge to \\(L\\), then \\(a_n\\) converges to \\(L\\).<br>
+                    <strong>3. Known limits:</strong> \\( \\lim_{n\\to\\infty} \\frac{1}{n} = 0 \\), \\( \\lim_{n\\to\\infty} r^n = 0 \\) if \\(|r| < 1\\).</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>احسب نهاية المتتالية: \\( a_n = \\frac{3n^2 + 2}{2n^2 - n + 1} \\) عندما \\( n \\to \\infty \\).</p>
+                        <p><strong>الحل:</strong><br>
+                        1. نقسم البسط والمقام على \\(n^2\\) (أعلى قوة).<br>
+                        2. \\( a_n = \\frac{3 + \\frac{2}{n^2}}{2 - \\frac{1}{n} + \\frac{1}{n^2}} \\).<br>
+                        3. عندما \\(n\\to\\infty\\)، \\(\\frac{1}{n} \\to 0\\)، \\(\\frac{1}{n^2} \\to 0\\).<br>
+                        <strong>النتيجة:</strong> \\( \\lim_{n\\to\\infty} a_n = \\frac{3}{2} \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Find the limit of: \\( a_n = \\frac{3n^2 + 2}{2n^2 - n + 1} \\) as \\( n \\to \\infty \\).</p>
+                        <p><strong>Solution:</strong><br>
+                        1. Divide num and denom by \\(n^2\\) (highest power).<br>
+                        2. \\( a_n = \\frac{3 + \\frac{2}{n^2}}{2 - \\frac{1}{n} + \\frac{1}{n^2}} \\).<br>
+                        3. As \\(n\\to\\infty\\), \\(\\frac{1}{n} \\to 0\\), \\(\\frac{1}{n^2} \\to 0\\).<br>
+                        <strong>Result:</strong> \\( \\lim_{n\\to\\infty} a_n = \\frac{3}{2} \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 4: DIFFERENTIATION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <span class="module-badge">الوحدة 4-5</span>
+                    <h3>القاعدة 4: قواعد الاشتقاق (Differentiation Rules)</h3>
+                    <p>المشتقة \\(f'(x)\\) تمثل ميل المماس عند النقطة \\(x\\).</p>
+                    <div class="logic-card">جدول المشتقات الأساسية:<br>
+                    \\( \\frac{d}{dx}(c) = 0 \\) &nbsp; | &nbsp; \\( \\frac{d}{dx}(x^n) = nx^{n-1} \\)<br>
+                    \\( \\frac{d}{dx}(e^x) = e^x \\) &nbsp; | &nbsp; \\( \\frac{d}{dx}(\\ln x) = \\frac{1}{x} \\)<br>
+                    \\( \\frac{d}{dx}(\\sin x) = \\cos x \\) &nbsp; | &nbsp; \\( \\frac{d}{dx}(\\cos x) = -\\sin x \\)<br>
+                    \\( \\frac{d}{dx}(\\tan x) = \\sec^2 x \\) &nbsp; | &nbsp; \\( \\frac{d}{dx}(a^x) = a^x \\ln a \\)<br><br>
+                    القواعد:<br>
+                    <strong>قاعدة الجداء:</strong> \\( (fg)' = f'g + fg' \\)<br>
+                    <strong>قاعدة خارج القسمة:</strong> \\( (\\frac{f}{g})' = \\frac{f'g - fg'}{g^2} \\)<br>
+                    <strong>قاعدة السلسلة:</strong> \\( (f(g(x)))' = f'(g(x)) \\cdot g'(x) \\)</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 4-5</span>
+                    <h3>Rule 4: Differentiation Rules</h3>
+                    <p>Derivative \\(f'(x)\\) represents the slope of the tangent at point \\(x\\).</p>
+                    <div class="logic-card">Table of Derivatives:<br>
+                    \\( \\frac{d}{dx}(c) = 0 \\) &nbsp; | &nbsp; \\( \\frac{d}{dx}(x^n) = nx^{n-1} \\)<br>
+                    \\( \\frac{d}{dx}(e^x) = e^x \\) &nbsp; | &nbsp; \\( \\frac{d}{dx}(\\ln x) = \\frac{1}{x} \\)<br>
+                    \\( \\frac{d}{dx}(\\sin x) = \\cos x \\) &nbsp; | &nbsp; \\( \\frac{d}{dx}(\\cos x) = -\\sin x \\)<br>
+                    \\( \\frac{d}{dx}(\\tan x) = \\sec^2 x \\) &nbsp; | &nbsp; \\( \\frac{d}{dx}(a^x) = a^x \\ln a \\)<br><br>
+                    Rules:<br>
+                    <strong>Product Rule:</strong> \\( (fg)' = f'g + fg' \\)<br>
+                    <strong>Quotient Rule:</strong> \\( (\\frac{f}{g})' = \\frac{f'g - fg'}{g^2} \\)<br>
+                    <strong>Chain Rule:</strong> \\( (f(g(x)))' = f'(g(x)) \\cdot g'(x) \\)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>أوجد مشتقة \\( f(x) = 3x^5 - 2x^3 + 7x - 4 \\).</p>
+                        <p><strong>الحل بقاعدة القوة:</strong><br>
+                        1. مشتقة \\(3x^5 = 15x^4\\).<br>
+                        2. مشتقة \\(-2x^3 = -6x^2\\).<br>
+                        3. مشتقة \\(7x = 7\\).<br>
+                        4. مشتقة \\(-4 = 0\\).<br>
+                        <strong>النتيجة:</strong> \\( f'(x) = 15x^4 - 6x^2 + 7 \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Find derivative of \\( f(x) = 3x^5 - 2x^3 + 7x - 4 \\).</p>
+                        <p><strong>Solution by Power Rule:</strong><br>
+                        1. Derivative of \\(3x^5 = 15x^4\\).<br>
+                        2. Derivative of \\(-2x^3 = -6x^2\\).<br>
+                        3. Derivative of \\(7x = 7\\).<br>
+                        4. Derivative of \\(-4 = 0\\).<br>
+                        <strong>Result:</strong> \\( f'(x) = 15x^4 - 6x^2 + 7 \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: APPLICATIONS OF DERIVATIVES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <span class="module-badge">الوحدة 6</span>
+                    <h3>القاعدة 5: تطبيقات المشتقات (Applications of Derivatives)</h3>
+                    <p>تستخدم المشتقة لإيجاد ميل المماس، القيم القصوى، وتحليل الرتابة.</p>
+                    <div class="logic-card">التطبيقات الرئيسية:<br>
+                    <strong>1. معادلة المماس:</strong> \\( y - y_0 = m(x - x_0) \\) حيث \\(m = f'(x_0)\\)<br>
+                    <strong>2. معادلة العمودي:</strong> \\( y - y_0 = -\\frac{1}{m}(x - x_0) \\)<br>
+                    <strong>3. القيم القصوى المحلية:</strong> <br>
+                    - \\(f'(x) = 0\\) عند النقاط الحرجة.<br>
+                    - إذا \\(f''(x) > 0\\) ⟹ قيمة صغرى محلية.<br>
+                    - إذا \\(f''(x) < 0\\) ⟹ قيمة كبرى محلية.<br>
+                    <strong>4. الرتابة:</strong> \\(f'(x) > 0\\) ⟹ تزايد، \\(f'(x) < 0\\) ⟹ تناقص.<br>
+                    <strong>5. نقطة الانعطاف:</strong> \\(f''(x) = 0\\) وتتغير الإشارة.</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 6</span>
+                    <h3>Rule 5: Applications of Derivatives</h3>
+                    <p>Derivatives are used to find tangent slopes, extrema, and monotonicity analysis.</p>
+                    <div class="logic-card">Key Applications:<br>
+                    <strong>1. Tangent Line:</strong> \\( y - y_0 = m(x - x_0) \\) where \\(m = f'(x_0)\\)<br>
+                    <strong>2. Normal Line:</strong> \\( y - y_0 = -\\frac{1}{m}(x - x_0) \\)<br>
+                    <strong>3. Local Extrema:</strong> <br>
+                    - \\(f'(x) = 0\\) at critical points.<br>
+                    - If \\(f''(x) > 0\\) ⟹ local minimum.<br>
+                    - If \\(f''(x) < 0\\) ⟹ local maximum.<br>
+                    <strong>4. Monotonicity:</strong> \\(f'(x) > 0\\) ⟹ increasing, \\(f'(x) < 0\\) ⟹ decreasing.<br>
+                    <strong>5. Inflection Point:</strong> \\(f''(x) = 0\\) and changes sign.</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>جد معادلة المماس لمنحنى \\( f(x) = x^2 \\) عند \\(x=3\\).</p>
+                        <p><strong>الحل:</strong><br>
+                        1. المشتقة: \\( f'(x) = 2x \\).<br>
+                        2. الميل عند \\(x=3\\): \\( m = f'(3) = 6 \\).<br>
+                        3. النقطة: \\( y_0 = f(3) = 9 ⟹ (3, 9) \\).<br>
+                        4. معادلة المماس: \\( y - 9 = 6(x - 3) ⟹ y = 6x - 9 \\).<br>
+                        <strong>النتيجة:</strong> \\( y = 6x - 9 \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Find equation of tangent to \\( f(x) = x^2 \\) at \\(x=3\\).</p>
+                        <p><strong>Solution:</strong><br>
+                        1. Derivative: \\( f'(x) = 2x \\).<br>
+                        2. Slope at \\(x=3\\): \\( m = 6 \\).<br>
+                        3. Point: \\( (3, 9) \\).<br>
+                        4. Tangent: \\( y - 9 = 6(x - 3) ⟹ y = 6x - 9 \\).<br>
+                        <strong>Result:</strong> \\( y = 6x - 9 \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 6: INDEFINITE INTEGRATION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <span class="module-badge">الوحدة 7</span>
+                    <h3>القاعدة 6: التكامل غير المحدود (Indefinite Integration)</h3>
+                    <p>التكامل هو عكس الاشتقاق. إيجاد الدالة الأصلية \\(F(x)\\) بحيث \\(F'(x) = f(x)\\).</p>
+                    <div class="logic-card">جدول التكاملات الأساسية:<br>
+                    \\( \\int x^n dx = \\frac{x^{n+1}}{n+1} + C, n \\neq -1 \\)<br>
+                    \\( \\int \\frac{1}{x} dx = \\ln|x| + C \\)<br>
+                    \\( \\int e^x dx = e^x + C \\)<br>
+                    \\( \\int \\sin x dx = -\\cos x + C \\)<br>
+                    \\( \\int \\cos x dx = \\sin x + C \\)<br>
+                    \\( \\int \\sec^2 x dx = \\tan x + C \\)<br>
+                    \\( \\int a^x dx = \\frac{a^x}{\\ln a} + C \\)<br><br>
+                    خواص: \\( \\int cf(x) dx = c\\int f(x) dx \\)، \\( \\int (f\\pm g) dx = \\int f \\pm \\int g \\)</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 7</span>
+                    <h3>Rule 6: Indefinite Integration</h3>
+                    <p>Integration is the reverse of differentiation. Find the antiderivative \\(F(x)\\) such that \\(F'(x) = f(x)\\).</p>
+                    <div class="logic-card">Basic Integration Table:<br>
+                    \\( \\int x^n dx = \\frac{x^{n+1}}{n+1} + C, n \\neq -1 \\)<br>
+                    \\( \\int \\frac{1}{x} dx = \\ln|x| + C \\)<br>
+                    \\( \\int e^x dx = e^x + C \\)<br>
+                    \\( \\int \\sin x dx = -\\cos x + C \\)<br>
+                    \\( \\int \\cos x dx = \\sin x + C \\)<br>
+                    \\( \\int \\sec^2 x dx = \\tan x + C \\)<br>
+                    \\( \\int a^x dx = \\frac{a^x}{\\ln a} + C \\)<br><br>
+                    Properties: \\( \\int cf(x) dx = c\\int f(x) dx \\), \\( \\int (f\\pm g) dx = \\int f \\pm \\int g \\)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>احسب \\( \\int (3x^2 - 2x + 5) dx \\).</p>
+                        <p><strong>الحل:</strong><br>
+                        1. \\( \\int 3x^2 dx = 3 \\cdot \\frac{x^3}{3} = x^3 \\).<br>
+                        2. \\( \\int -2x dx = -2 \\cdot \\frac{x^2}{2} = -x^2 \\).<br>
+                        3. \\( \\int 5 dx = 5x \\).<br>
+                        <strong>النتيجة:</strong> \\( x^3 - x^2 + 5x + C \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Calculate \\( \\int (3x^2 - 2x + 5) dx \\).</p>
+                        <p><strong>Solution:</strong><br>
+                        1. \\( \\int 3x^2 dx = x^3 \\).<br>
+                        2. \\( \\int -2x dx = -x^2 \\).<br>
+                        3. \\( \\int 5 dx = 5x \\).<br>
+                        <strong>Result:</strong> \\( x^3 - x^2 + 5x + C \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 7: DEFINITE INTEGRATION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <span class="module-badge">الوحدة 8</span>
+                    <h3>القاعدة 7: التكامل المحدود (Definite Integration)</h3>
+                    <p>التكامل المحدود \\(\\int_a^b f(x) dx\\) يعطي المساحة تحت المنحنى بين \\(x=a\\) و \\(x=b\\).</p>
+                    <div class="logic-card">نظرية التفاضل والتكامل الأساسية:<br>
+                    إذا كانت \\(F(x)\\) دالة أصلية لـ \\(f(x)\\)، فإن:<br>
+                    \\( \\int_a^b f(x) dx = F(b) - F(a) \\)<br><br>
+                    خواص التكامل المحدود:<br>
+                    \\( \\int_a^b f(x) dx = -\\int_b^a f(x) dx \\)<br>
+                    \\( \\int_a^b cf(x) dx = c\\int_a^b f(x) dx \\)<br>
+                    \\( \\int_a^b [f(x) \\pm g(x)] dx = \\int_a^b f \\pm \\int_a^b g \\)<br>
+                    \\( \\int_a^b f(x) dx = \\int_a^c f(x) dx + \\int_c^b f(x) dx \\)</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 8</span>
+                    <h3>Rule 7: Definite Integration</h3>
+                    <p>The definite integral \\(\\int_a^b f(x) dx\\) gives the area under the curve between \\(x=a\\) and \\(x=b\\).</p>
+                    <div class="logic-card">Fundamental Theorem of Calculus:<br>
+                    If \\(F(x)\\) is an antiderivative of \\(f(x)\\), then:<br>
+                    \\( \\int_a^b f(x) dx = F(b) - F(a) \\)<br><br>
+                    Properties:<br>
+                    \\( \\int_a^b f(x) dx = -\\int_b^a f(x) dx \\)<br>
+                    \\( \\int_a^b cf(x) dx = c\\int_a^b f(x) dx \\)<br>
+                    \\( \\int_a^b [f(x) \\pm g(x)] dx = \\int_a^b f \\pm \\int_a^b g \\)<br>
+                    \\( \\int_a^b f(x) dx = \\int_a^c f(x) dx + \\int_c^b f(x) dx \\)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>احسب \\( \\int_0^2 (x^2 + 1) dx \\).</p>
+                        <p><strong>الحل:</strong><br>
+                        1. التكامل غير المحدود: \\( \\int (x^2+1) dx = \\frac{x^3}{3} + x + C \\).<br>
+                        2. نطبق النظرية الأساسية: \\( [\\frac{x^3}{3} + x]_0^2 \\).<br>
+                        3. \\( (\\frac{8}{3} + 2) - (0 + 0) = \\frac{8}{3} + \\frac{6}{3} = \\frac{14}{3} \\).<br>
+                        <strong>النتيجة:</strong> \\( \\frac{14}{3} \\approx 4.667 \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Calculate \\( \\int_0^2 (x^2 + 1) dx \\).</p>
+                        <p><strong>Solution:</strong><br>
+                        1. Indefinite integral: \\( \\int (x^2+1) dx = \\frac{x^3}{3} + x + C \\).<br>
+                        2. Apply FTC: \\( [\\frac{x^3}{3} + x]_0^2 \\).<br>
+                        3. \\( (\\frac{8}{3} + 2) - 0 = \\frac{14}{3} \\).<br>
+                        <strong>Result:</strong> \\( \\frac{14}{3} \\approx 4.667 \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXAM TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.08);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🎯 نصيحة CSCA</h3>
+                    <ul>
+                        <li>في المتتاليات الحسابية، احسب الفرق \\(d\\) أولاً قبل أي شيء.</li>
+                        <li>المجموع اللانهائي موجود فقط إذا \\(|r| < 1\\). لا تنس هذا الشرط!</li>
+                        <li>في نهايات المتتاليات، القسمة على أعلى قوة هي أسرع طريقة.</li>
+                        <li>قاعدة السلسلة هي أكثر قاعدة اشتقاق تظهر في الاختبار — تدرب عليها كثيراً.</li>
+                        <li>لا تنس ثابت التكامل \\(C\\) في التكامل غير المحدود — يخصم عليك درجات إذا نسيته.</li>
+                        <li>في التكامل المحدود، \\(\\int_a^b f(x) dx\\) يمكن أن يكون سالباً إذا كانت المساحة تحت المحور السيني.</li>
+                        <li>لإيجاد المساحة الكلية بين منحنٍ ومحور \\(x\\)، أوجد النقاط التي \\(f(x)=0\\) وقسم التكامل.</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🎯 CSCA Exam Tips</h3>
+                    <ul>
+                        <li>In arithmetic sequences, find \\(d\\) first before anything else.</li>
+                        <li>Infinite sums exist only if \\(|r| < 1\\). Don't forget this condition!</li>
+                        <li>For sequence limits, dividing by highest power is the fastest method.</li>
+                        <li>The Chain Rule is the most tested differentiation rule — practice it heavily.</li>
+                        <li>Don't forget the integration constant \\(C\\) in indefinite integrals — you'll lose marks.</li>
+                        <li>In definite integrals, \\(\\int_a^b f(x) dx\\) can be negative if area is below the x-axis.</li>
+                        <li>For total area between curve and x-axis, find where \\(f(x)=0\\) and split the integral.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- PRACTICE QUIZ -->
-        <section class="lesson-section"
-            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+        <section class="lesson-section" style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
             <h2 class="section-title" style="color: var(--primary);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة متوقعة (سؤالان لكل وحدة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per module)</p>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
-                <p><strong>Q1:</strong> ما هي مشتقة الدالة \( f(x) = \ln(x) \)\(؟\)</p>
-                <div style="margin: 10px 0;">
-                    A) \( e^x \) &nbsp; B) \( 1/x \) &nbsp; C) \( 1 \) &nbsp; D) \( x \)
-                </div>
+                <p><strong>Q1:</strong> في متتالية حسابية: \\( a_1 = 5, d = 3 \\). ما قيمة \\( a_7 \\)؟<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">Arithmetic: \\( a_1=5, d=3 \\), find \\( a_7 \\).</span></p>
+                <div style="margin: 10px 0;">A) 20 &nbsp; B) 23 &nbsp; C) 26 &nbsp; D) 18</div>
                 <details>
                     <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">مشتقة اللوغاريتم الطبيعي هي دائماً واحد على الحجة.</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( a_7 = 5 + (7-1)\\times3 = 5 + 18 = 23 \\).</p>
                 </details>
             </div>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
-                <p><strong>Q2:</strong> احسب قيمة التكامل المحدود \( \int_0^1 2x dx \).</p>
-                <div style="margin: 10px 0;">
-                    A) 0 &nbsp; B) 1 &nbsp; C) 2 &nbsp; D) 0.5
-                </div>
+                <p><strong>Q2:</strong> مجموع المتتالية الهندسية اللانهائية: \\( 1, \\frac{1}{3}, \\frac{1}{9}, \\dots \\) هو:<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">Infinite sum of \\( 1, \\frac{1}{3}, \\frac{1}{9}, \\dots \\)</span></p>
+                <div style="margin: 10px 0;">A) 1.5 &nbsp; B) 2 &nbsp; C) 3 &nbsp; D) 1.33</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( a=1, r=1/3 \\), \\( S = \\frac{1}{1-1/3} = \\frac{1}{2/3} = 1.5 \\).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q3:</strong> \\( \\lim_{n\\to\\infty} \\frac{2n+1}{n+3} = \\)؟<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">\\( \\lim_{n\\to\\infty} \\frac{2n+1}{n+3} = \\)?</span></p>
+                <div style="margin: 10px 0;">A) 0 &nbsp; B) 1 &nbsp; C) 2 &nbsp; D) ∞</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">نقسم على \\(n\\): \\( \\frac{2+1/n}{1+3/n} \\to \\frac{2}{1}=2 \\).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q4:</strong> مشتقة \\( f(x) = 5x^4 - 3x^2 \\) هي:<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">Derivative of \\( f(x) = 5x^4 - 3x^2 \\):</span></p>
+                <div style="margin: 10px 0;">A) \\( 20x^3 - 6x \\) &nbsp; B) \\( 20x^3 - 3x \\) &nbsp; C) \\( 10x^3 - 6x \\) &nbsp; D) \\( 5x^4 - 6x \\)</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">قاعدة القوة: \\( 5\\times4x^3 - 3\\times2x = 20x^3 - 6x \\).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q5:</strong> \\( \\int 6x^5 dx = \\)؟<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">\\( \\int 6x^5 dx = \\)?</span></p>
+                <div style="margin: 10px 0;">A) \\( x^6 + C \\) &nbsp; B) \\( 30x^4 + C \\) &nbsp; C) \\( 6x^6 + C \\) &nbsp; D) \\( \\frac{6x^6}{5} + C \\)</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( \\int 6x^5 dx = 6\\cdot\\frac{x^6}{6} + C = x^6 + C \\).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q6:</strong> قيمة \\( \\int_1^3 2x dx \\) هي:<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">\\( \\int_1^3 2x dx = \\)?</span></p>
+                <div style="margin: 10px 0;">A) 4 &nbsp; B) 8 &nbsp; C) 6 &nbsp; D) 10</div>
                 <details>
                     <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">\( [x^2]_0^1 = 1^2 - 0^2 = 1 \).</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( [x^2]_1^3 = 9 - 1 = 8 \\).</p>
                 </details>
             </div>
         </section>
 
-        <!-- SIGNATURE -->
         <section class="developer-sig" style="text-align: center; padding: 40px;">
             <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 أكاديمية عبد الحميد للرياضيات | المنهج الذهبي</p>
+        <p>&copy; 2026 أكاديمية عبد الحميد للرياضيات | المنهج الذهبي | The Golden Syllabus</p>
     </footer>
 </body>
-
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماستر كلاس الكيمياء: الاتزان والسرعة | Chemistry Masterclass: Equilibrium & Rates</title>
+    <title>ماستر كلاس الكيمياء: الاتزان الكيميائي والأحماض والقواعد | Chemistry Masterclass: Equilibrium & Acids/Bases</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -48,6 +48,20 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        .csca-tip {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05));
+            border: 2px solid #ffd700;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .csca-tip h4 {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
         h3 {
             color: #4ade80;
             margin-bottom: 15px;
@@ -72,76 +86,129 @@
     </header>
 
     <main class="container" style="padding: 80px 20px;">
-        <h1 class="section-title">سرعة التفاعل والاتزان: التوازن الديناميكي <br> <span
-                style="font-size: 0.6em; opacity: 0.8;">Rates & Equilibrium: The Dynamic Balance</span></h1>
+        <h1 class="section-title">الاتزان الكيميائي والأحماض والقواعد: توازن الطبيعة <br> <span style="font-size: 0.6em; opacity: 0.8;">Chemical Equilibrium & Acids/Bases: Nature's Balance</span></h1>
 
         <!-- INTRODUCTION -->
-        <section class="master-teacher-box"
-            style="background: linear-gradient(45deg, rgba(74, 222, 128, 0.1), transparent); border-color: #4ade80;">
+        <section class="master-teacher-box" style="background: linear-gradient(45deg, rgba(74, 222, 128, 0.1), transparent); border-color: #4ade80;">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>كيف تحدث التفاعلات؟</h3>
-                    <p>بعض التفاعلات تنفجر في ثوانٍ، وبعضها يحتاج لآلاف السنين. سنفهم هنا ما الذي "يسرع" التفاعلات، وكيف
-                        يتوقف التفاعل في حالة "اتزان" حيث تتساوى سرعة التفاعل الأمامي والعكسي.</p>
+                    <h3>كيف تتوازن التفاعلات الكيميائية؟</h3>
+                    <p>ليست كل التفاعلات تذهب للنواتج بنسبة 100%. معظم التفاعلات تصل إلى <strong>اتزان ديناميكي</strong> — حيث تتساوى سرعة التفاعل الأمامي والعكسي. في هذا الدرس، نفهم ثابت الاتزان \\( K_c \\)، قاعدة لوشاتيليه، الأحماض والقواعد (pH)، والمحاليل المنظمة (Buffers). هذه المواضيع أساسية لاختبار CSCA.</p>
                 </div>
                 <div class="eng-content">
-                    <h3>How Do Reactions Happen?</h3>
-                    <p>Some reactions explode in seconds; others take millennia. We'll understand what "speeds up"
-                        reactions and how they reach "Equilibrium"—where forward and reverse rate are identical.</p>
+                    <h3>How Do Reactions Reach Balance?</h3>
+                    <p>Not all reactions go to completion. Most reach a <strong>dynamic equilibrium</strong> — where the forward and reverse rates are equal. In this lesson, we'll master the equilibrium constant \\( K_c \\), Le Chatelier's principle, acids/bases (pH), and buffer solutions. These topics are essential for the CSCA exam.</p>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 1: REACTION RATES -->
+        <!-- POINT 1: REVERSIBLE REACTIONS -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 1: العوامل المؤثرة على السرعة</h3>
-                    <p>لكي يحدث تفاعل، يجب أن تصطدم الجزيئات بطاقة كافية (طاقة التنشيط) وفي اتجاه صحيح.</p>
-                    <div class="logic-card">العوامل: التركيز، درجة الحرارة، المحفزات (Catalysts)، ومساحة السطح.</div>
+                    <h3>النقطة 1: التفاعلات العكسية والاتزان الديناميكي</h3>
+                    <p>الاتزان الديناميكي هو حالة تتساوى فيها سرعة التفاعل الأمامي والعكسي، ويكون تركيز المواد المتفاعلة والناتجة ثابتاً (ليس بالضرورة متساوياً).</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ aA + bB \rightleftharpoons cC + dD \]
+                    </div>
+                    <p>خصائص الاتزان: (1) ثابت ديناميكي — التفاعل مستمر. (2) يحدث في نظام مغلق. (3) يمكن الوصول إليه من أي اتجاه. (4) لا يتأثر بوجود محفز (Catalyst doesn't affect position).</p>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 1: Factors Affecting Rates</h3>
-                    <p>For a reaction to occur, particles must collide with sufficient energy (Activation Energy) and
-                        proper orientation.</p>
-                    <div class="logic-card">Factors: Concentration, Temp, Catalysts, and Surface Area.</div>
+                    <h3>Point 1: Reversible Reactions & Dynamic Equilibrium</h3>
+                    <p>Dynamic equilibrium is a state where forward and reverse rates are equal, and concentrations of reactants and products are constant (not necessarily equal).</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ aA + bB \rightleftharpoons cC + dD \]
+                    </div>
+                    <p>Characteristics: (1) Dynamic — reaction still occurs. (2) In a closed system. (3) Can be reached from either direction. (4) Unaffected by catalysts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: EQUILIBRIUM CONSTANT -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: ثابت الاتزان \\( K_c \\) و \\( K_p \\)</h3>
+                    <p>ثابت الاتزان يعبر عن نسبة تركيز النواتج إلى المتفاعلات (كل مرفوع لأس معاملها):</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b} \]
+                    </div>
+                    <p>للتفاعلات الغازية: \\( K_p = K_c (RT)^{\\Delta n} \\) حيث \\( \\Delta n \\) = (مولات غاز النواتج - مولات غاز المتفاعلات).</p>
+                    <div class="logic-card">
+                        • \\( K \\gg 1 \\): التفاعل يفضل النواتج (يذهب لليمين).<br>
+                        • \\( K \\approx 1 \\): خليط متوازن من المتفاعلات والنواتج.<br>
+                        • \\( K \\ll 1 \\): التفاعل يفضل المتفاعلات (يبقى لليسار).
+                    </div>
+                    <p><strong>هام:</strong> ثابت الاتزان يتغير فقط بتغير درجة الحرارة!</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Equilibrium Constant \\( K_c \\) & \\( K_p \\)</h3>
+                    <p>The equilibrium constant is the ratio of product concentrations to reactant concentrations (each raised to its coefficient):</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b} \]
+                    </div>
+                    <p>For gas reactions: \\( K_p = K_c (RT)^{\\Delta n} \\) where \\( \\Delta n \\) = (gas moles products - gas moles reactants).</p>
+                    <div class="logic-card">
+                        • \\( K \\gg 1 \\): Reaction favors products (shifts right).<br>
+                        • \\( K \\approx 1 \\): Balanced mixture of reactants and products.<br>
+                        • \\( K \\ll 1 \\): Reaction favors reactants (stays left).
+                    </div>
+                    <p><strong>Important:</strong> \\( K \\) changes only with temperature!</p>
                 </div>
             </div>
 
             <div class="example-card">
                 <div class="bilingual-row">
                     <div class="ara-content">
-                        <h4>📌 مثال عملي (Example):</h4>
-                        <p>لماذا نستخدم المحفزات في عوادم السيارات؟</p>
+                        <h4>📌 مثال (Example):</h4>
+                        <p>للاتزان \\( N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g) \\)، إذا كانت التراكيز عند الاتزان: [N₂]=0.5 M, [H₂]=0.1 M, [NH₃]=0.2 M. احسب \\( K_c \\).</p>
                         <p><strong>الحل:</strong><br>
-                            لأنها توفر "مساراً بديلاً" للتفاعل بطاقة تنشيط **أقل**، مما يسرع التخلص من الغازات السامة.
-                        </p>
+                            \\( K_c = [NH_3]^2 / ([N_2][H_2]^3) = (0.2)^2 / (0.5 \\times 0.1^3) \\)<br>
+                            \\( = 0.04 / (0.5 \\times 0.001) = 0.04 / 0.0005 = 80 \\).</p>
                     </div>
                     <div class="eng-content">
-                        <h4>📌 Practical Example:</h4>
-                        <p>Why use catalysts in car exhausts?</p>
+                        <h4>📌 Example:</h4>
+                        <p>For \\( N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g) \\), at equilibrium: [N₂]=0.5 M, [H₂]=0.1 M, [NH₃]=0.2 M. Find \\( K_c \\).</p>
                         <p><strong>Solution:</strong><br>
-                            They provide an "alternative path" with **lower** activation energy, speeding up the
-                            neutralization of toxic gases.</p>
+                            \\( K_c = (0.2)^2 / (0.5 \\times 0.1^3) \\)<br>
+                            \\( = 0.04 / 0.0005 = 80 \\).</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 2: LE CHATELIER -->
+        <!-- POINT 3: LE CHATELIER -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 2: قاعدة لوشاتيليه (Le Chatelier's)</h3>
-                    <p>إذا أثرت "إجهاداً" على نظام متزن، سيعمل النظام على تقليص أثر هذا الإجهاد.</p>
-                    <div class="logic-card">زيادة التركيز \(\implies\) التوجيه للجهة المقابلة | زيادة الضغط \(\implies\)
-                        التوجيه للمولات الأقل غازاً.</div>
+                    <h3>النقطة 3: قاعدة لوشاتيليه (Le Chatelier's Principle)</h3>
+                    <p>إذا أثرت \"إجهاداً\" على نظام متزن، سيعمل النظام على تقليص أثر هذا الإجهاد.</p>
+                    <div class="logic-card">
+                        <strong>تأثير تغير التركيز:</strong><br>
+                        • زيادة تركيز مادة = يتحرك التفاعل بعيداً عنها (لتقليلها).<br>
+                        • نقصان تركيز مادة = يتحرك التفاعل نحوها (لتعويضها).<br><br>
+                        <strong>تأثير تغير الضغط (للغازات):</strong><br>
+                        • زيادة الضغط = يتحرك التفاعل للجهة ذات المولات الغازية الأقل.<br>
+                        • نقصان الضغط = يتحرك التفاعل للجهة ذات المولات الغازية الأكثر.<br><br>
+                        <strong>تأثير تغير درجة الحرارة:</strong><br>
+                        • رفع الحرارة = يتحرك في اتجاه التفاعل الماص للحرارة (Endothermic).<br>
+                        • خفض الحرارة = يتحرك في اتجاه التفاعل الطار للحرارة (Exothermic).
+                    </div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 2: Le Chatelier's Principle</h3>
+                    <h3>Point 3: Le Chatelier's Principle</h3>
                     <p>If you apply stress to a system in equilibrium, it shifts to counteract that stress.</p>
-                    <div class="logic-card">Add product \(\implies\) shift left | Increase Pressure \(\implies\) shift
-                        to side with fewer gas moles.</div>
+                    <div class="logic-card">
+                        <strong>Effect of concentration change:</strong><br>
+                        • Increase a substance = system shifts away from it.<br>
+                        • Decrease a substance = system shifts toward it.<br><br>
+                        <strong>Effect of pressure change (for gases):</strong><br>
+                        • Increase pressure = shift to side with fewer gas moles.<br>
+                        • Decrease pressure = shift to side with more gas moles.<br><br>
+                        <strong>Effect of temperature change:</strong><br>
+                        • Increase temperature = shift in endothermic direction.<br>
+                        • Decrease temperature = shift in exothermic direction.
+                    </div>
                 </div>
             </div>
 
@@ -149,51 +216,348 @@
                 <div class="bilingual-row">
                     <div class="ara-content">
                         <h4>📌 مثال تكتيكي (Tactical):</h4>
-                        <p>في تفاعل تكوين الأمونيا \( N_2 + 3H_2 \rightleftharpoons 2NH_3 \)، ماذا يحدث عند زيادة الضغط؟
-                        </p>
+                        <p>في تفاعل تكوين الأمونيا \\( N_2 + 3H_2 \\rightleftharpoons 2NH_3 \\), \\( \\Delta H = -92 \\, \\text{kJ} \\). ماذا يحدث عند: (أ) زيادة الضغط (ب) رفع الحرارة؟</p>
                         <p><strong>الحل:</strong><br>
-                            اليسار فيه 4 مولات غاز، واليمين 2 مول. بزيادة الضغط، يهرب التفاعل لليمين (جهة الأمونيا).</p>
+                            (أ) اليسار 4 مولات غاز، اليمين 2 مول → زيادة الضغط تدفع التفاعل لليمين (نحو الأمونيا).<br>
+                            (ب) التفاعل طار للحرارة → زيادة الحرارة تدفع التفاعل لليسار (تكسير الأمونيا).</p>
                     </div>
                     <div class="eng-content">
                         <h4>📌 Tactical Example:</h4>
-                        <p>In \( N_2 + 3H_2 \rightleftharpoons 2NH_3 \), what happens if pressure increases?</p>
+                        <p>For \\( N_2 + 3H_2 \\rightleftharpoons 2NH_3 \\), \\( \\Delta H = -92 \\, \\text{kJ} \\). What happens with: (a) increased pressure (b) increased temperature?</p>
                         <p><strong>Solution:</strong><br>
-                            Left has 4 gas moles, Right has 2. System shifts Right (towards ammonia) to reduce pressure.
-                        </p>
+                            (a) Left=4 gas moles, Right=2 → pressure ↑ shifts right (towards NH₃).<br>
+                            (b) Exothermic → temperature ↑ shifts left (decomposes NH₃).</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- POINT 4: REACTION QUOTIENT Q -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 4: خارج التفاعل (Reaction Quotient \\( Q \\))</h3>
+                    <p>Q يشبه \\( K \\) ولكن يحسب باستخدام التراكيز غير المتزنة — يخبرنا في أي اتجاه سيتحرك التفاعل.</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ Q = \frac{[C]^c [D]^d}{[A]^a [B]^b} \quad \text{(at any point)} \]
+                    </div>
+                    <div class="logic-card">
+                        • \\( Q < K \\): يتحرك التفاعل لليمين (نحو النواتج) للوصول للاتزان.<br>
+                        • \\( Q = K \\): النظام في حالة اتزان.<br>
+                        • \\( Q > K \\): يتحرك التفاعل لليسار (نحو المتفاعلات).
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 4: Reaction Quotient \\( Q \\)</h3>
+                    <p>Q is like \\( K \\) but uses non-equilibrium concentrations — it tells us which direction the reaction will shift.</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ Q = \frac{[C]^c [D]^d}{[A]^a [B]^b} \quad \text{(at any point)} \]
+                    </div>
+                    <div class="logic-card">
+                        • \\( Q < K \\): Shifts right (towards products).<br>
+                        • \\( Q = K \\): At equilibrium.<br>
+                        • \\( Q > K \\): Shifts left (towards reactants).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: ACIDS AND BASES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 5: الأحماض والقواعد (Acids & Bases)</h3>
+                    <p>هناك عدة نظريات لتعريف الأحماض والقواعد:</p>
+                    <div class="logic-card">
+                        <strong>أرينيوس (Arrhenius):</strong> حمض = يزيد \\( H^+ \\) في الماء. قاعدة = تزيد \\( OH^- \\).<br>
+                        <strong>برونستد-لوري (Brønsted-Lowry):</strong> حمض = مانح \\( H^+ \\) (Proton donor). قاعدة = مستقبل \\( H^+ \\) (Proton acceptor).<br>
+                        <strong>لويس (Lewis):</strong> حمض = مستقبل زوج إلكتروني. قاعدة = مانح زوج إلكتروني.
+                    </div>
+                    <p><strong>الأحماض والقواعد المترافقة (Conjugate pairs):</strong></p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ HA + H_2O \rightleftharpoons A^- + H_3O^+ \]<br>
+                        حمض 1 &emsp; قاعدة 2 &emsp; قاعدة 1 &emsp; حمض 2
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 5: Acids & Bases</h3>
+                    <p>Several theories define acids and bases:</p>
+                    <div class="logic-card">
+                        <strong>Arrhenius:</strong> Acid = increases \\( H^+ \\) in water. Base = increases \\( OH^- \\).<br>
+                        <strong>Brønsted-Lowry:</strong> Acid = \\( H^+ \\) donor. Base = \\( H^+ \\) acceptor.<br>
+                        <strong>Lewis:</strong> Acid = electron pair acceptor. Base = electron pair donor.
+                    </div>
+                    <p><strong>Conjugate Acid-Base Pairs:</strong></p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ HA + H_2O \rightleftharpoons A^- + H_3O^+ \]<br>
+                        Acid 1 &emsp; Base 2 &emsp; Base 1 &emsp; Acid 2
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 6: PH -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 6: مقياس pH وقوة الأحماض والقواعد</h3>
+                    <p>pH هو مقياس لتركيز أيونات الهيدروجين. كلما قل pH، زادت الحموضة.</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ pH = -\log[H_3O^+] \quad pOH = -\log[OH^-] \]<br>
+                        \[ pH + pOH = 14 \quad \text{(عند 25°C)} \]<br>
+                        \[ [H_3O^+][OH^-] = K_w = 1.0 \times 10^{-14} \]
+                    </div>
+                    <div class="logic-card">
+                        • pH = 7: متعادل (محايد).<br>
+                        • pH &lt; 7: حمضي. (كلما قل الرقم، زادت الحموضة).<br>
+                        • pH &gt; 7: قاعدي. (كلما كبر الرقم، زادت القلوية).
+                    </div>
+                    <p><strong>الأحماض القوية:</strong> HCl, H₂SO₄, HNO₃ — تتأين 100% (تفكك كامل).<br>
+                    <strong>الأحماض الضعيفة:</strong> CH₃COOH (خل), H₂CO₃ — تتأين جزئياً.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 6: pH Scale & Acid/Base Strength</h3>
+                    <p>pH measures hydrogen ion concentration. Lower pH = stronger acid.</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ pH = -\log[H_3O^+] \quad pOH = -\log[OH^-] \]<br>
+                        \[ pH + pOH = 14 \quad \text{(at 25°C)} \]<br>
+                        \[ [H_3O^+][OH^-] = K_w = 1.0 \times 10^{-14} \]
+                    </div>
+                    <div class="logic-card">
+                        • pH = 7: Neutral.<br>
+                        • pH &lt; 7: Acidic. (smaller number = more acidic).<br>
+                        • pH &gt; 7: Basic. (larger number = more basic).
+                    </div>
+                    <p><strong>Strong Acids:</strong> HCl, H₂SO₄, HNO₃ — 100% ionized (complete dissociation).<br>
+                    <strong>Weak Acids:</strong> CH₃COOH (vinegar), H₂CO₃ — partially ionized.</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال (Example):</h4>
+                        <p>احسب pH لمحلول \\( HCl \\) تركيزه 0.001 M.</p>
+                        <p><strong>الحل:</strong><br>
+                            HCl حمض قوي → [H₃O⁺] = 0.001 M = 10⁻³ M.<br>
+                            pH = -log(10⁻³) = 3.<br>
+                            \\( pOH = 14 - 3 = 11 \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Example:</h4>
+                        <p>Calculate pH of 0.001 M \\( HCl \\).</p>
+                        <p><strong>Solution:</strong><br>
+                            HCl is a strong acid → [H₃O⁺] = 0.001 M = 10⁻³ M.<br>
+                            pH = -log(10⁻³) = 3.<br>
+                            \\( pOH = 14 - 3 = 11 \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 7: Ka Kb -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 7: ثابت تفكك الحمض \\( K_a \\) والقاعدة \\( K_b \\)</h3>
+                    <p>للأحماض والقواعد الضعيفة، نستخدم ثوابت التفكك:</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ HA + H_2O \rightleftharpoons H_3O^+ + A^- \]<br>
+                        \[ K_a = \frac{[H_3O^+][A^-]}{[HA]} \]<br><br>
+                        \[ B + H_2O \rightleftharpoons BH^+ + OH^- \]<br>
+                        \[ K_b = \frac{[BH^+][OH^-]}{[B]} \]<br><br>
+                        \[ K_a \times K_b = K_w = 1.0 \times 10^{-14} \]<br>
+                        \[ pK_a = -\log K_a \quad pK_b = -\log K_b \]
+                    </div>
+                    <p>كلما صغر \\( pK_a \\) (أو كبر \\( K_a \\)) → حمض أقوى.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 7: Acid Dissociation \\( K_a \\) & Base \\( K_b \\)</h3>
+                    <p>For weak acids and bases, we use dissociation constants:</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ HA + H_2O \rightleftharpoons H_3O^+ + A^- \]<br>
+                        \[ K_a = \frac{[H_3O^+][A^-]}{[HA]} \]<br><br>
+                        \[ B + H_2O \rightleftharpoons BH^+ + OH^- \]<br>
+                        \[ K_b = \frac{[BH^+][OH^-]}{[B]} \]<br><br>
+                        \[ K_a \times K_b = K_w = 1.0 \times 10^{-14} \]<br>
+                        \[ pK_a = -\log K_a \quad pK_b = -\log K_b \]
+                    </div>
+                    <p>Smaller \\( pK_a \\) (or larger \\( K_a \\)) → stronger acid.</p>
+                </div>
+            </div>
+
+            <div class="csca-tip">
+                <h4>💡 نصيحة CSCA | CSCA Tip</h4>
+                <div class="bilingual-row" style="gap: 15px;">
+                    <div class="ara-content" style="border-right-color: #ffd700;">
+                        <p>في CSCA: احسب pH لحمض ضعيف باستخدام \\( [H^+] = \\sqrt{K_a \\times C_a} \\) (عندما \\( K_a \\) صغيرة و \\( C_a \\) كبيرة نسبياً). مثال: حمض الخل \\( K_a = 1.8 \\times 10^{-5} \\), تركيز 0.1 M → \\( [H^+] = \\sqrt{1.8 \\times 10^{-6}} \\approx 1.34 \\times 10^{-3} \\) → pH ≈ 2.87.</p>
+                    </div>
+                    <div class="eng-content" style="border-left-color: #ffd700;">
+                        <p>CSCA: Calculate pH of weak acid with \\( [H^+] = \\sqrt{K_a \\times C_a} \\) (when \\( K_a \\) is small and \\( C_a \\) is large). Example: Acetic acid \\( K_a = 1.8 \\times 10^{-5} \\), 0.1 M → \\( [H^+] = \\sqrt{1.8 \\times 10^{-6}} \\approx 1.34 \\times 10^{-3} \\) → pH ≈ 2.87.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 8: BUFFERS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 8: المحاليل المنظمة (Buffers)</h3>
+                    <p>المحلول المنظم يقاوم التغير في pH عند إضافة حمض أو قاعدة. يتكون من حمض ضعيف + قاعدته المترافقة (أو قاعدة ضعيفة + حمضها المترافق).</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        <strong>معادلة هندرسون-هاسلباخ (Henderson-Hasselbalch):</strong><br>
+                        \[ pH = pK_a + \log\left(\frac{[\text{Conjugate Base}]}{[\text{Weak Acid}]}\right) \]
+                    </div>
+                    <p><strong>طريقة عمله:</strong><br>
+                    • إضافة حمض: \\( H^+ \\) يتحد مع القاعدة المترافقة (A⁻) لتعطي HA — لا يتغير pH كثيراً.<br>
+                    • إضافة قاعدة: \\( OH^- \\) يتفاعل مع HA ليعطي A⁻ + H₂O — لا يتغير pH كثيراً.</p>
+                    <p><strong>أمثلة:</strong> الدم (نظام \\( H_2CO_3/HCO_3^- \\) يحافظ على pH ≈ 7.4)، محلول CH₃COOH/CH₃COONa.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 8: Buffer Solutions</h3>
+                    <p>A buffer resists pH change when small amounts of acid or base are added. It consists of a weak acid + its conjugate base (or weak base + its conjugate acid).</p>
+                    <div class="logic-card" style="text-align: center;">
+                        <strong>Henderson-Hasselbalch Equation:</strong><br>
+                        \[ pH = pK_a + \log\left(\frac{[\text{Conjugate Base}]}{[\text{Weak Acid}]}\right) \]
+                    </div>
+                    <p><strong>How it works:</strong><br>
+                    • Add acid: \\( H^+ \\) combines with conjugate base (A⁻) to form HA — pH barely changes.<br>
+                    • Add base: \\( OH^- \\) reacts with HA to form A⁻ + H₂O — pH barely changes.</p>
+                    <p><strong>Examples:</strong> Blood (\\( H_2CO_3/HCO_3^- \\) system maintains pH ≈ 7.4), CH₃COOH/CH₃COONa buffer.</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال (Example):</h4>
+                        <p>محلول منظم يحتوي 0.2 M CH₃COOH و 0.1 M CH₃COONa. \\( pK_a = 4.76 \\). احسب pH.</p>
+                        <p><strong>الحل:</strong><br>
+                            pH = \\( 4.76 + \\log(0.1/0.2) = 4.76 + \\log(0.5) \\)<br>
+                            pH = \\( 4.76 - 0.30 = 4.46 \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Example:</h4>
+                        <p>A buffer contains 0.2 M CH₃COOH and 0.1 M CH₃COONa. \\( pK_a = 4.76 \\). Find pH.</p>
+                        <p><strong>Solution:</strong><br>
+                            pH = \\( 4.76 + \\log(0.1/0.2) = 4.76 + \\log(0.5) \\)<br>
+                            pH = \\( 4.76 - 0.30 = 4.46 \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 9: TITRATION & INDICATORS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 9: المعايرة (Titration) والكاشفات (Indicators)</h3>
+                    <p>في المعايرة الحمضية-القاعدية، نضيف حمضاً أو قاعدة تدريجياً حتى نقطة التكافؤ.</p>
+                    <div class="logic-card">
+                        <strong>نقطة التكافؤ (Equivalence Point):</strong> حيث عدد مولات الحمض = عدد مولات القاعدة.<br>
+                        <strong>الكاشفات (Indicators):</strong> مواد يتغير لونها حسب pH.<br>
+                        • <strong>الفينولفثالين:</strong> عديم اللون (حمضي) → زهري (قاعدي)، مدى التحول pH 8.3-10.<br>
+                        • <strong>عباد الشمس:</strong> أحمر (حمضي) → أزرق (قاعدي).<br>
+                        • <strong>بروموثيمول الأزرق:</strong> أصفر (حمضي) → أزرق (قاعدي)، pH 6.0-7.6.
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 9: Titration & Indicators</h3>
+                    <p>In acid-base titration, we gradually add acid or base until the equivalence point.</p>
+                    <div class="logic-card">
+                        <strong>Equivalence Point:</strong> Moles of acid = moles of base.<br>
+                        <strong>Indicators:</strong> Substances that change color with pH.<br>
+                        • <strong>Phenolphthalein:</strong> Colorless (acidic) → Pink (basic), range pH 8.3-10.<br>
+                        • <strong>Litmus:</strong> Red (acidic) → Blue (basic).<br>
+                        • <strong>Bromothymol Blue:</strong> Yellow (acidic) → Blue (basic), pH 6.0-7.6.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSCA TIPS SUMMARY -->
+        <section class="csca-tip" style="margin: 50px 0;">
+            <h4>🏆 نصيحة CSCA شاملة | Comprehensive CSCA Tips</h4>
+            <div class="bilingual-row" style="gap: 15px;">
+                <div class="ara-content" style="border-right-color: #ffd700;">
+                    <p><strong>1. \\( K_c \\):</strong> احذف المواد الصلبة والسائلة النقية من عبارة \\( K_c \\) — فقط الغازات والمحاليل المائية.<br>
+                    <strong>2. Le Chatelier:</strong> المحفز لا يغير مكان الاتزن — فقط يسرع الوصول إليه. \\( K \\) لا يتغير بالمحفز.<br>
+                    <strong>3. pH من \\( K_a \\):</strong> استخدم \\( [H^+] = \\sqrt{K_a \\times C_a} \\) للحمض الضعيف.<br>
+                    <strong>4. المحلول المنظم:</strong> أفضل كفاءة عندما تكون [قاعدة]/[حمض] ≈ 1 (pH ≈ pK_a).<br>
+                    <strong>5. اختيار الكاشف:</strong> اختر كاشفاً يتغير لونه ضمن مدى pH عند نقطة التكافؤ.</p>
+                </div>
+                <div class="eng-content" style="border-left-color: #ffd700;">
+                    <p><strong>1. \\( K_c \\):</strong> Omit pure solids and liquids from \\( K_c \\) expression — only gases and aqueous solutions.<br>
+                    <strong>2. Le Chatelier:</strong> Catalyst doesn't shift equilibrium — only speeds up reaching it. \\( K \\) is unchanged.<br>
+                    <strong>3. pH from \\( K_a \\):</strong> Use \\( [H^+] = \\sqrt{K_a \\times C_a} \\) for weak acid.<br>
+                    <strong>4. Buffer:</strong> Most effective when [Base]/[Acid] ≈ 1 (pH ≈ pK_a).<br>
+                    <strong>5. Indicator selection:</strong> Choose an indicator whose color change range includes the equivalence point pH.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- PRACTICE QUIZ -->
-        <section class="lesson-section"
-            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+        <section class="lesson-section" style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
             <h2 class="section-title" style="color: #4ade80;">📝 اختبر معلوماتك | Practice Quiz</h2>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
                 <p><strong>Q1:</strong> المحفز (Catalyst) يؤثر على:</p>
                 <div style="margin: 10px 0;">
-                    A) مكان الاتزان &nbsp; B) ثابت الاتزان \(K_{eq}\) &nbsp; C) سرعة الوصول للاتزان &nbsp; D) كمية
-                    النواتج القصوى
+                    A) مكان الاتزان &nbsp; B) ثابت الاتزان \\(K_{eq}\\) &nbsp; C) سرعة الوصول للاتزان &nbsp; D) كمية النواتج القصوى
                 </div>
                 <details>
                     <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">المحفز يزيد السرعة في كلا الاتجاهين بنفس الدرجة، فلا يغير
-                        الكميات ولكنه يسرع الوقت فقط.</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">المحفز يزيد السرعة في كلا الاتجاهين بنفس الدرجة، فلا يغير الكميات ولكنه يسرع الوقت فقط.</p>
                 </details>
             </div>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
-                <p><strong>Q2:</strong> ثابت الاتزان \(K_{eq}\) يتغير حصراً بتغير:</p>
+                <p><strong>Q2:</strong> ثابت الاتزان \\(K_{eq}\\) يتغير حصراً بتغير:</p>
                 <div style="margin: 10px 0;">
                     A) الضغط &nbsp; B) التركيز &nbsp; C) درجة الحرارة (Temperature) &nbsp; D) الحجم
                 </div>
                 <details>
                     <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">قيمة الثابت \(K\) هي دالة في الحرارة فقط؛ العوامل الأخرى
-                        تغير الموقع ولا تغير الثابت.</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">قيمة الثابت \\(K\\) هي دالة في الحرارة فقط؛ العوامل الأخرى تغير الموقع ولا تغير الثابت.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q3:</strong> محلول \\( pH = 5 \\)، ما تركيز أيونات \\( H^+ \\)؟</p>
+                <div style="margin: 10px 0;">
+                    A) \\( 10^{-5} \\, \\text{M} \\) &nbsp; B) \\( 10^{-9} \\, \\text{M} \\) &nbsp; C) \\( 5 \\, \\text{M} \\) &nbsp; D) \\( 10^{-7} \\, \\text{M} \\)
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">pH = -log[H⁺] → [H⁺] = 10⁻⁵ M. هذا محلول حمضي (pH &lt; 7).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q4:</strong> أي من هذه الأزواج يشكل محلو لا منظم (Buffer)؟</p>
+                <div style="margin: 10px 0;">
+                    A) HCl + NaCl &nbsp; B) CH₃COOH + CH₃COONa &nbsp; C) NaOH + NaCl &nbsp; D) HNO₃ + NaNO₃
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">المحلول المنظم يتطلب حمض ضعيف وقاعدته المترافقة. CH₃COOH حمض ضعيف و CH₃COONa يوفر القاعدة المترافقة CH₃COO⁻.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q5:</strong> في تفاعل \\( N_2(g) + O_2(g) \\rightleftharpoons 2NO(g) \\)، ماذا يحدث إذا زاد الضغط؟</p>
+                <div style="margin: 10px 0;">
+                    A) يتحرك لليمين &nbsp; B) يتحرك لليسار &nbsp; C) لا يتأثر &nbsp; D) يتوقف التفاعل
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">عدد مولات الغاز في اليسار = 2، وفي اليمين = 2. لا فرق في عدد المولات → تغير الضغط لا يؤثر على موقع الاتزان.</p>
                 </details>
             </div>
         </section>

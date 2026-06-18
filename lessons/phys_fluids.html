@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماستر كلاس: ميكانيكا الموائع | Masterclass: Fluids</title>
+    <title>ماستر كلاس: الموائع والديناميكا الحرارية | Masterclass: Fluids & Thermodynamics</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -40,6 +40,31 @@
             margin: 40px 0;
         }
 
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--accent);
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
         .logic-card {
             background: rgba(0, 0, 0, 0.3);
             padding: 20px;
@@ -66,46 +91,42 @@
     <header class="main-nav">
         <div class="container">
             <a href="../index.html">الرئيسية | Home</a>
-            <a href="#" class="active">الموائع | Fluids Masterclass</a>
+            <a href="#" class="active">الموائع والحرارة | Fluids & Thermo Masterclass</a>
             <a href="../questions.html">بنك الأسئلة | Question Bank</a>
         </div>
     </header>
 
     <main class="container" style="padding: 80px 20px;">
-        <h1 class="section-title">ميكانيكا الموائع: لغة الضغط والجريان <br> <span
-                style="font-size: 0.6em; opacity: 0.8;">Fluid Mechanics: The Language of Pressure & Flow</span></h1>
+        <h1 class="section-title">الموائع والديناميكا الحرارية: لغة الضغط والطاقة <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Fluids & Thermodynamics: The Language of Pressure & Energy</span></h1>
 
         <!-- INTRODUCTION -->
         <section class="master-teacher-box"
             style="background: linear-gradient(45deg, rgba(247, 37, 133, 0.1), transparent); border-color: var(--accent);">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>علم الماء والهواء:</h3>
-                    <p>أهلاً بك يا بطل. الموائع هي السوائل والغازات. هندسة الموائع تفسر كيف تطفو السفن وكيف تطير
-                        الطائرات. سنشرح هنا أهم قوانينها التي تأتي في اختبار CSCA.</p>
+                    <h3>علم السوائل والغازات والطاقة:</h3>
+                    <p>أهلاً بك يا بطل. الموائع (السوائل والغازات) والديناميكا الحرارية يشرحان كيف تطفو السفن، كيف تطير الطائرات، وكيف تعمل المحركات. هذا الدرس يجمع أهم قوانين الموائع وقوانين الغاز والحرارة لاختبار CSCA. سنشرح كل قاعدة بالتفصيل مع أمثلة تطبيقية.</p>
                 </div>
                 <div class="eng-content">
-                    <h3>Science of Water & Air:</h3>
-                    <p>Welcome, hero. Fluids are liquids and gases. Fluid mechanics explains how ships float and planes
-                        fly. We explain the core rules for the CSCA here.</p>
+                    <h3>Science of Fluids, Gases & Energy:</h3>
+                    <p>Welcome, hero. Fluids (liquids & gases) and Thermodynamics explain how ships float, how planes fly, and how engines work. This lesson combines the core fluid laws, gas laws, and heat laws for the CSCA exam. We explain each rule in detail with practical examples.</p>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 1: PRESSURE -->
+        <!-- POINT 1: FLUID STATICS -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 1: الضغط في الموائع (Fluid Pressure)</h3>
-                    <p>الضغط داخل السائل يعتمد فقط على الكثافة والعمق والجاذبية.</p>
-                    <div class="logic-card">\( P = \rho g h \) | حيث \( \rho \): الكثافة، \( g \): الجاذبية، \( h \):
-                        العمق.</div>
+                    <h3>النقطة 1: سكون الموائع وضغط السوائل (Fluid Statics)</h3>
+                    <p>الضغط داخل سائل ساكن يعتمد على العمق والكثافة والجاذبية فقط. لا يعتمد على شكل الوعاء.</p>
+                    <div class="logic-card">\\( P = P_0 + \\rho g h \\) | \\( P_0 \\): الضغط على السطح، \\( \\rho \\): الكثافة، \\( g \\): الجاذبية، \\( h \\): العمق.</div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 1: Fluid Pressure</h3>
-                    <p>Pressure within a fluid depends solely on density, depth, and gravity.</p>
-                    <div class="logic-card">\( P = \rho g h \) | \( \rho \): density, \( g \): gravity, \( h \): depth.
-                    </div>
+                    <h3>Point 1: Fluid Statics & Pressure</h3>
+                    <p>Pressure inside a stationary fluid depends only on depth, density, and gravity — NOT on container shape.</p>
+                    <div class="logic-card">\\( P = P_0 + \\rho g h \\) | \\( P_0 \\): surface pressure, \\( \\rho \\): density, \\( g \\): gravity, \\( h \\): depth.</div>
                 </div>
             </div>
 
@@ -113,89 +134,516 @@
                 <div class="bilingual-row">
                     <div class="ara-content">
                         <h4>📌 تطبيق عملي (Application):</h4>
-                        <p>احسب ضغط الماء (\( \rho = 1000 \, kg/m^3 \)) على عمق 10 أمتار (\( g = 10 \)).</p>
-                        <p><strong>الحل:</strong><br>
-                            1. التعويض: \( P = 1000 \times 10 \times 10 \). <br>
-                            2. الحساب: \( 100,000 \, Pa = 1 \, atm \). <br> <strong>النتيجة:</strong> الضغط هو 100 ألف
-                            باسكال.</p>
+                        <p>احسب الضغط الكلي عند عمق 20 متراً في ماء البحر (\\( \\rho = 1025 \\, kg/m^3 \\)) حيث الضغط الجوي \\( 1.01 \\times 10^5 \\, Pa \\) و \\( g = 9.8 \\).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. \\( P = P_0 + \\rho g h \\). <br>
+                            2. \\( P = 1.01 \\times 10^5 + 1025 \\times 9.8 \\times 20 \\). <br>
+                            3. \\( P = 1.01 \\times 10^5 + 200,900 = 3.019 \\times 10^5 \\, Pa \\). <br>
+                            <strong>النتيجة:</strong> الضغط الكلي ≈ 3 أضعاف الضغط الجوي.</p>
                     </div>
                     <div class="eng-content">
                         <h4>📌 Practical Application:</h4>
-                        <p>Calculate water pressure (\( \rho = 1000 \)) at 10m depth (\( g = 10 \)).</p>
+                        <p>Find total pressure at 20m depth in seawater (\\( \\rho = 1025 \\, kg/m^3 \\), \\( P_0 = 1.01 \\times 10^5 \\, Pa \\), \\( g = 9.8 \\)).</p>
                         <p><strong>Solution:</strong><br>
-                            1. Substitute: \( P = 1000 \times 10 \times 10 \). <br>
-                            2. Calculation: \( 100,000 \, Pa = 1 \, atm \). <br> <strong>Result:</strong> 100,000
-                            Pascals.</p>
+                            1. \\( P = P_0 + \\rho g h \\). <br>
+                            2. \\( P = 1.01 \\times 10^5 + 1025 \\times 9.8 \\times 20 \\). <br>
+                            3. \\( P = 1.01 \\times 10^5 + 200,900 = 3.019 \\times 10^5 \\, Pa \\). <br>
+                            <strong>Result:</strong> Total pressure ≈ 3× atmospheric pressure.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 2: ARCHIMEDES -->
+        <!-- POINT 2: PASCAL'S PRINCIPLE -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 2: قاعدة أرخميدس (Archimedes' Principle)</h3>
-                    <p>قوة الطفو تساوي وزن المائع المزاح.</p>
-                    <div class="logic-card">\( F_b = \rho_{fluid} V_{submerged} g \)</div>
+                    <h3>النقطة 2: مبدأ باسكال (Pascal's Principle)</h3>
+                    <p>الضغط المطبق على سائل محصور ينتقل بالتساوي في جميع الاتجاهات. هذا المبدأ هو أساس المكابس الهيدروليكية.</p>
+                    <div class="logic-card">\\( \\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\) | القوة مقسومة على المساحة ثابتة في النظام المغلق.</div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 2: Archimedes' Principle</h3>
-                    <p>Buoyancy force equals the weight of the displaced fluid.</p>
-                    <div class="logic-card">\( F_b = \rho_{fluid} V_{submerged} g \)</div>
+                    <h3>Point 2: Pascal's Principle</h3>
+                    <p>Pressure applied to an enclosed fluid is transmitted equally in all directions. This is the basis of hydraulic lifts.</p>
+                    <div class="logic-card">\\( \\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\) | Force per unit area is constant in a closed system.</div>
                 </div>
             </div>
 
             <div class="example-card">
                 <div class="bilingual-row">
                     <div class="ara-content">
-                        <h4>📌 مثال تكتيكي (Tactical Example):</h4>
-                        <p>هل يغرق جسم كتلته 2 كجم وحجمه 3 لترات إذا وضع في الماء؟ (\( \rho = 1 \)).</p>
-                        <p><strong>الحل:</strong><br>
-                            1. كثافة الجسم: \( \rho_{obj} = 2 / 3 < 1 \). <br>
-                                2. بما أن كثافة الجسم أقل من كثافة الماء، فإنه سيطفو. <br> <strong>النتيجة:</strong> لن
-                                يغرق الجسم.</p>
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>مكبس هيدروليكي: المساحة الصغرى \\( A_1 = 0.01 \\, m^2 \\)، الكبرى \\( A_2 = 0.5 \\, m^2 \\). إذا طبقنا قوة \\( 100 \\, N \\) على المكبس الصغير، ما القوة الناتجة على المكبس الكبير؟</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. \\( \\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\). <br>
+                            2. \\( F_2 = F_1 \\times \\frac{A_2}{A_1} = 100 \\times \\frac{0.5}{0.01} \\). <br>
+                            3. \\( F_2 = 100 \\times 50 = 5,000 \\, N \\). <br>
+                            <strong>النتيجة:</strong> تضخيم القوة 50 ضعفاً!</p>
                     </div>
                     <div class="eng-content">
-                        <h4>📌 Tactical Example:</h4>
-                        <p>Will a 2kg object with 3L volume sink in water (\( \rho = 1 \))?</p>
+                        <h4>📌 Master Example:</h4>
+                        <p>Hydraulic press: \\( A_1 = 0.01 \\, m^2 \\), \\( A_2 = 0.5 \\, m^2 \\). Input force \\( 100 \\, N \\). Find output force.</p>
                         <p><strong>Solution:</strong><br>
-                            1. Density of object: \( \rho_{obj} = 2 / 3 < 1 \). <br>
-                                2. Since object density is less than water's, it floats. <br> <strong>Result:</strong>
-                                The object will NOT sink.</p>
+                            1. \\( \\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\). <br>
+                            2. \\( F_2 = 100 \\times \\frac{0.5}{0.01} \\). <br>
+                            3. \\( F_2 = 100 \\times 50 = 5,000 \\, N \\). <br>
+                            <strong>Result:</strong> Force multiplied 50×!</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PRACTICE QUIZ -->
+        <!-- POINT 3: ARCHIMEDES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: قاعدة أرخميدس (Archimedes' Principle)</h3>
+                    <p>قوة الطفو تساوي وزن المائع المزاح. يطفو الجسم إذا كانت كثافته أقل من كثافة المائع.</p>
+                    <div class="logic-card">\\( F_b = \\rho_{fluid} \\times V_{submerged} \\times g \\) | \\( \\rho_{obj} < \\rho_{fluid} \\) → يطفو.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 3: Archimedes' Principle</h3>
+                    <p>Buoyant force equals the weight of displaced fluid. An object floats if its density is less than the fluid's density.</p>
+                    <div class="logic-card">\\( F_b = \\rho_{fluid} \\times V_{submerged} \\times g \\) | \\( \\rho_{obj} < \\rho_{fluid} \\) → floats.</div>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 نصيحة CSCA (Exam Tip):</h4>
+                        <p>في اختبار CSCA، اسأل نفسك: هل الجسم يطفو أم يغوص؟ قارن بين كثافة الجسم والمانع. إذا كان حجم الجسم المغمور مساوياً لحجم الجسم الكلي فهو غاطس تماماً. إذا كان أقل، فهو طافٍ وجزء منه فوق السطح.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 CSCA Exam Tip:</h4>
+                        <p>In the CSCA, ask: Does the object float or sink? Compare the density of the object to the fluid. If submerged volume equals total volume, it's fully submerged. If less, it floats with part above surface.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>مكعب خشب (\\( \\rho = 600 \\, kg/m^3 \\)، حجمه \\( 0.001 \\, m^3 \\)) يوضع في الماء (\\( \\rho = 1000 \\, kg/m^3 \\)). ما حجم الجزء المغمور؟</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. الوزن = \\( \\rho_{obj} V g = 600 \\times 0.001 \\times 9.8 = 5.88 \\, N \\). <br>
+                            2. الطفو = \\( \\rho_{water} V_{sub} g = 1000 \\times V_{sub} \\times 9.8 \\). <br>
+                            3. بالتوازن: \\( 5.88 = 9800 \\times V_{sub} \\implies V_{sub} = 0.0006 \\, m^3 \\). <br>
+                            <strong>النتيجة:</strong> 60% من حجم الخشب مغمور، 40% فوق السطح.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>A wooden cube (\\( \\rho = 600 \\, kg/m^3 \\), volume \\( 0.001 \\, m^3 \\)) in water (\\( \\rho = 1000 \\)). Find submerged volume.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Weight = \\( 600 \\times 0.001 \\times 9.8 = 5.88 \\, N \\). <br>
+                            2. Buoyancy = \\( 1000 \\times V_{sub} \\times 9.8 \\). <br>
+                            3. Equilibrium: \\( 5.88 = 9800 \\times V_{sub} \\implies V_{sub} = 0.0006 \\, m^3 \\). <br>
+                            <strong>Result:</strong> 60% submerged, 40% above surface.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 4: BERNOULLI -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 4: معادلة برنولي (Bernoulli's Equation)</h3>
+                    <p>في المائع المثالي (غير قابل للانضغاط، عديم اللزوجة)، مجموع الضغط + طاقة الحركة + طاقة الوضع ثابت على طول خط الانسياب.</p>
+                    <div class="logic-card">\\( P + \\frac{1}{2} \\rho v^2 + \\rho g h = \\text{ثابت} \\) | حيث \\( P \\): الضغط، \\( v \\): السرعة، \\( h \\): الارتفاع.</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 4: Bernoulli's Equation</h3>
+                    <p>For an ideal fluid (incompressible, inviscid), the sum of pressure, kinetic energy density, and potential energy density is constant along a streamline.</p>
+                    <div class="logic-card">\\( P + \\frac{1}{2} \\rho v^2 + \\rho g h = \\text{constant} \\) | \\( P \\): pressure, \\( v \\): velocity, \\( h \\): height.</div>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 نصيحة CSCA (Exam Tip):</h4>
+                        <p>أهم تطبيق لبرنولي في CSCA هو تفسير رفع الطائرة: الهواء يمر فوق الجناح بشكل أسرع (سرعة أعلى) فيكون ضغطه أقل من الهواء تحت الجناح، مما يولد قوة رفع للأعلى. تذكر: سرعة أعلى = ضغط أقل!</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 CSCA Exam Tip:</h4>
+                        <p>The most important Bernoulli application in CSCA is airplane lift: air passes faster over the wing (higher speed), creating lower pressure than below the wing — generating upward lift. Remember: Higher speed = Lower pressure!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>ماء يتدفق في أنبوب: عند النقطة 1 السرعة \\( 2 \\, m/s \\) والضغط \\( 200,000 \\, Pa \\). عند النقطة 2 السرعة \\( 5 \\, m/s \\) والارتفاع هو نفسه. أهمل اللزوجة (\\( \\rho_{water} = 1000 \\, kg/m^3 \\)). أوجد الضغط عند النقطة 2.</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. برنولي (\\( h_1 = h_2 \\)): \\( P_1 + \\frac{1}{2} \\rho v_1^2 = P_2 + \\frac{1}{2} \\rho v_2^2 \\). <br>
+                            2. \\( P_2 = P_1 + \\frac{1}{2} \\rho (v_1^2 - v_2^2) \\). <br>
+                            3. \\( P_2 = 200,000 + 0.5 \\times 1000 \\times (4 - 25) \\). <br>
+                            4. \\( P_2 = 200,000 - 10,500 = 189,500 \\, Pa \\). <br>
+                            <strong>النتيجة:</strong> الضغط قل لأن السرعة زادت.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>Water flows in a pipe: at point 1, \\( v_1 = 2 \\, m/s \\), \\( P_1 = 200,000 \\, Pa \\). At point 2, \\( v_2 = 5 \\, m/s \\), same height. Find \\( P_2 \\). (\\( \\rho = 1000 \\, kg/m^3 \\)).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Bernoulli: \\( P_1 + \\frac{1}{2} \\rho v_1^2 = P_2 + \\frac{1}{2} \\rho v_2^2 \\). <br>
+                            2. \\( P_2 = P_1 + \\frac{1}{2} \\rho (v_1^2 - v_2^2) \\). <br>
+                            3. \\( P_2 = 200,000 + 500 \\times (4 - 25) \\). <br>
+                            4. \\( P_2 = 200,000 - 10,500 = 189,500 \\, Pa \\). <br>
+                            <strong>Result:</strong> Pressure decreases as speed increases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: IDEAL GAS LAW -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 5: قوانين الغاز المثالي (Ideal Gas Laws)</h3>
+                    <p>الغاز المثالي يتبع علاقة بين الضغط (\\(P\\)) والحجم (\\(V\\)) ودرجة الحرارة (\\(T\\)) بالكلفن وعدد المولات (\\(n\\)).</p>
+                    <div class="logic-card">
+                        <strong>قانون بويل:</strong> \\( P_1 V_1 = P_2 V_2 \\) (حرارة ثابتة) <br>
+                        <strong>قانون شارل:</strong> \\( \\frac{V_1}{T_1} = \\frac{V_2}{T_2} \\) (ضغط ثابت) <br>
+                        <strong>القانون العام:</strong> \\( \\frac{P_1 V_1}{T_1} = \\frac{P_2 V_2}{T_2} \\) <br>
+                        <strong>معادلة الحالة:</strong> \\( PV = nRT \\) | \\( R = 8.31 \\, J/(mol \\cdot K) \\)
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 5: Ideal Gas Laws</h3>
+                    <p>An ideal gas follows a relationship between pressure (\\(P\\)), volume (\\(V\\)), temperature in Kelvin (\\(T\\)), and number of moles (\\(n\\)).</p>
+                    <div class="logic-card">
+                        <strong>Boyle's Law:</strong> \\( P_1 V_1 = P_2 V_2 \\) (constant T) <br>
+                        <strong>Charles' Law:</strong> \\( \\frac{V_1}{T_1} = \\frac{V_2}{T_2} \\) (constant P) <br>
+                        <strong>Combined:</strong> \\( \\frac{P_1 V_1}{T_1} = \\frac{P_2 V_2}{T_2} \\) <br>
+                        <strong>State Eq:</strong> \\( PV = nRT \\) | \\( R = 8.31 \\, J/(mol \\cdot K) \\)
+                    </div>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 نصيحة CSCA (Exam Tip):</h4>
+                        <p>دائماً حول درجة الحرارة إلى كلفن قبل استخدام أي قانون غازات: \\( K = C + 273 \\). إذا نسيت هذه الخطوة، كل حساباتك ستكون خاطئة. هذا خطأ شائع جداً في CSCA!</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 CSCA Exam Tip:</h4>
+                        <p>ALWAYS convert temperature to Kelvin before using any gas law: \\( K = C + 273 \\). If you forget this step, all your calculations will be wrong. This is a very common CSCA mistake!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>غاز حجمه \\( 5 \\, L \\) عند درجة حرارة \\( 27^\\circ C \\) وضغط \\( 2 \\, atm \\). إذا ارتفعت الحرارة إلى \\( 127^\\circ C \\) مع ثبوت الحجم، ما الضغط الجديد؟</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. حول إلى كلفن: \\( T_1 = 27 + 273 = 300 \\, K \\), \\( T_2 = 127 + 273 = 400 \\, K \\). <br>
+                            2. قانون: \\( \\frac{P_1}{T_1} = \\frac{P_2}{T_2} \\) (حجم ثابت). <br>
+                            3. \\( P_2 = P_1 \\times \\frac{T_2}{T_1} = 2 \\times \\frac{400}{300} \\). <br>
+                            4. \\( P_2 = 2 \\times 1.333 = 2.667 \\, atm \\). <br>
+                            <strong>النتيجة:</strong> الضغط زاد من 2 إلى 2.67 atm.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>Gas at \\( 5 \\, L \\), \\( 27^\\circ C \\), \\( 2 \\, atm \\). If temperature rises to \\( 127^\\circ C \\) at constant volume, find new pressure.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. Kelvin: \\( T_1 = 27 + 273 = 300 \\, K \\), \\( T_2 = 127 + 273 = 400 \\, K \\). <br>
+                            2. Law: \\( \\frac{P_1}{T_1} = \\frac{P_2}{T_2} \\) (constant V). <br>
+                            3. \\( P_2 = 2 \\times \\frac{400}{300} \\). <br>
+                            4. \\( P_2 = 2 \\times 1.333 = 2.667 \\, atm \\). <br>
+                            <strong>Result:</strong> Pressure increased from 2 to 2.67 atm.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 6: HEAT & CALORIMETRY -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 6: السعة الحرارية والمسعر (Heat & Calorimetry)</h3>
+                    <p>كمية الحرارة اللازمة لرفع درجة حرارة جسم ما تعتمد على كتلته وحرارته النوعية وفرق درجة الحرارة.</p>
+                    <div class="logic-card">\\( Q = mc\\Delta T \\) | \\( Q \\): الحرارة (J)، \\( m \\): الكتلة (kg)، \\( c \\): الحرارة النوعية (J/kg·K)، \\( \\Delta T \\): فرق الحرارة (K).</div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 6: Heat & Calorimetry</h3>
+                    <p>The heat required to change a body's temperature depends on its mass, specific heat capacity, and temperature difference.</p>
+                    <div class="logic-card">\\( Q = mc\\Delta T \\) | \\( Q \\): heat (J), \\( m \\): mass (kg), \\( c \\): specific heat (J/kg·K), \\( \\Delta T \\): temp difference (K).</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>ما كمية الحرارة اللازمة لرفع درجة حرارة 2 كجم من الماء من \\( 20^\\circ C \\) إلى \\( 80^\\circ C \\)؟ (\\( c_{water} = 4186 \\, J/kg \\cdot K \\)).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. \\( \\Delta T = 80 - 20 = 60^\\circ C = 60 \\, K \\). <br>
+                            2. \\( Q = mc\\Delta T = 2 \\times 4186 \\times 60 \\). <br>
+                            3. \\( Q = 502,320 \\, J \\approx 502 \\, kJ \\). <br>
+                            <strong>النتيجة:</strong> نحتاج 502 كيلو جول من الحرارة.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>How much heat is needed to raise 2 kg of water from \\( 20^\\circ C \\) to \\( 80^\\circ C \\)? (\\( c_{water} = 4186 \\, J/kg \\cdot K \\)).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. \\( \\Delta T = 80 - 20 = 60 \\, K \\). <br>
+                            2. \\( Q = 2 \\times 4186 \\times 60 \\). <br>
+                            3. \\( Q = 502,320 \\, J \\approx 502 \\, kJ \\). <br>
+                            <strong>Result:</strong> 502 kJ of heat is needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 7: 1ST LAW OF THERMODYNAMICS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 7: القانون الأول للديناميكا الحرارية (1st Law)</h3>
+                    <p>الطاقة محفوظة. التغير في الطاقة الداخلية (\\( \\Delta U \\)) للنظام يساوي الحرارة المضافة (\\(Q\\)) مطروحاً منها الشغل الذي يبذله النظام (\\(W\\)).</p>
+                    <div class="logic-card">\\( \\Delta U = Q - W \\)</div>
+                    <p><strong>اتفاقية الإشارات:</strong><br>
+                        - \\( Q > 0 \\): حرارة داخلة للنظام.<br>
+                        - \\( Q < 0 \\): حرارة خارجة من النظام.<br>
+                        - \\( W > 0 \\): النظام بذل شغلاً (تمدّد).<br>
+                        - \\( W < 0 \\): شغل بُذل على النظام (انضغاط).</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 7: First Law of Thermodynamics</h3>
+                    <p>Energy is conserved. The change in internal energy (\\( \\Delta U \\)) equals heat added (\\(Q\\)) minus work done by the system (\\(W\\)).</p>
+                    <div class="logic-card">\\( \\Delta U = Q - W \\)</div>
+                    <p><strong>Sign Convention:</strong><br>
+                        - \\( Q > 0 \\): Heat enters the system.<br>
+                        - \\( Q < 0 \\): Heat leaves the system.<br>
+                        - \\( W > 0 \\): Work done BY the system (expansion).<br>
+                        - \\( W < 0 \\): Work done ON the system (compression).</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>نظام حرري أضيفت له \\( 800 \\, J \\) من الحرارة. في نفس الوقت، بُذل على النظام شغل مقداره \\( 300 \\, J \\) (انضغاط). أوجد \\( \\Delta U \\).</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. \\( Q = +800 \\, J \\) (حرارة داخلة). <br>
+                            2. \\( W = -300 \\, J \\) (شغل بُذل على النظام). <br>
+                            3. \\( \\Delta U = Q - W = 800 - (-300) = 800 + 300 \\). <br>
+                            4. \\( \\Delta U = 1,100 \\, J \\). <br>
+                            <strong>النتيجة:</strong> الطاقة الداخلية زادت بمقدار 1100 جول.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>A system receives \\( 800 \\, J \\) of heat. Meanwhile, \\( 300 \\, J \\) of work is done ON the system (compression). Find \\( \\Delta U \\).</p>
+                        <p><strong>Solution:</strong><br>
+                            1. \\( Q = +800 \\, J \\). <br>
+                            2. \\( W = -300 \\, J \\) (work ON system). <br>
+                            3. \\( \\Delta U = 800 - (-300) = 800 + 300 \\). <br>
+                            4. \\( \\Delta U = 1,100 \\, J \\). <br>
+                            <strong>Result:</strong> Internal energy increased by 1100 J.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 8: 2ND LAW -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 8: القانون الثاني للديناميكا الحرارية (2nd Law)</h3>
+                    <p>الإنتروبي (الفوضى) في نظام معزول لا يمكن أن تنخفض أبداً. العمليات التلقائية تزيد الإنتروبي الكلية للكون.</p>
+                    <div class="logic-card">\\( \\Delta S \\geq 0 \\) | الإنتروبي الكلية للكون تتزايد أو تبقى ثابتة (في العمليات العكوسية).</div>
+                    <p>تطبيقات مهمة:<br>
+                        - لا يمكن بناء آلة حرارية كفاءتها 100% (بعض الحرارة تضيع دائماً).<br>
+                        - الحرارة لا تنتقل تلقائياً من جسم بارد إلى جسم ساخن.<br>
+                        - كفاءة آلة كارنو المثالية: \\( \\eta = 1 - \\frac{T_c}{T_h} \\) (بالكلفن).</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 8: Second Law of Thermodynamics</h3>
+                    <p>Entropy (disorder) of an isolated system never decreases. Spontaneous processes increase the total entropy of the universe.</p>
+                    <div class="logic-card">\\( \\Delta S \\geq 0 \\) | Total entropy of the universe increases or stays constant (in reversible processes).</div>
+                    <p>Key applications:<br>
+                        - No heat engine can be 100% efficient (some heat is always wasted).<br>
+                        - Heat never flows spontaneously from cold to hot.<br>
+                        - Ideal Carnot efficiency: \\( \\eta = 1 - \\frac{T_c}{T_h} \\) (in Kelvin).</p>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 نصيحة CSCA (Exam Tip):</h4>
+                        <p>في أسئلة CSCA عن كفاءة الآلات الحرارية: دائماً استخدم درجات الحرارة بالكلفن! الكفاءة لا يمكن أن تكون 1 (100%) أبداً. الصيغة \\( \\eta = 1 - T_c/T_h \\) تعطيك أقصى كفاءة ممكنة (كارنو).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 CSCA Exam Tip:</h4>
+                        <p>In CSCA heat engine efficiency questions: ALWAYS use Kelvin temperatures! Efficiency can NEVER be 1 (100%). The formula \\( \\eta = 1 - T_c/T_h \\) gives you the maximum possible (Carnot) efficiency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>آلة حرارية تعمل بين خزان ساخن \\( 500 \\, K \\) وخزان بارد \\( 300 \\, K \\). احسب أقصى كفاءة ممكنة.</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. \\( \\eta_{max} = 1 - \\frac{T_c}{T_h} = 1 - \\frac{300}{500} \\). <br>
+                            2. \\( \\eta_{max} = 1 - 0.6 = 0.4 = 40\\% \\). <br>
+                            3. حتى مع أفضل آلة، لا يمكن تجاوز 40% كفاءة. <br>
+                            <strong>النتيجة:</strong> أقصى كفاءة هي 40%.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>A heat engine operates between \\( 500 \\, K \\) hot reservoir and \\( 300 \\, K \\) cold reservoir. Find the maximum possible efficiency.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. \\( \\eta_{max} = 1 - \\frac{T_c}{T_h} = 1 - \\frac{300}{500} \\). <br>
+                            2. \\( \\eta_{max} = 1 - 0.6 = 0.4 = 40\\% \\). <br>
+                            3. Even the perfect engine cannot exceed 40%. <br>
+                            <strong>Result:</strong> Maximum efficiency is 40%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURVIVAL TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757;">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🚨 نصائح المدرس (Survival Tips):</h3>
+                    <ul>
+                        <li>في مسائل برنولي، حدد أولاً: هل الارتفاع (\\(h\\)) ثابت؟ هل الأنبوب أفقي؟ إذا كان الجواب نعم، احذف حد \\(\\rho g h\\).</li>
+                        <li>قانون باسكال: إذا أعطاك مساحات وقوة على مكبس واحد، استخدم \\( F_2 = F_1 \\times A_2/A_1 \\). المساحة الكبيرة تعطي قوة كبيرة.</li>
+                        <li>في مسائل الطفو: الجسم يطفو عندما \\( \\rho_{object} < \\rho_{fluid} \\). إذا تساوت الكثافتان، يعلق الجسم في المائع.</li>
+                        <li>القانون الأول: \\( \\Delta U = Q - W \\). احفظ هذه العلامات جيداً؛ خطأ الإشارة يضيع درجتك!</li>
+                    </ul>
+                </div>
+                <div class="eng-content">
+                    <h3 style="color: #ff4757;">🚨 Teacher's Survival Tips:</h3>
+                    <ul>
+                        <li>In Bernoulli problems, first check: Is height (\\(h\\)) constant? Is the pipe horizontal? If yes, drop the \\(\\rho g h\\) term.</li>
+                        <li>Pascal's Law: Given areas and one force, use \\( F_2 = F_1 \\times A_2/A_1 \\). Larger area gives larger force.</li>
+                        <li>Buoyancy: An object floats when \\( \\rho_{object} < \\rho_{fluid} \\). If densities are equal, the object is neutrally buoyant.</li>
+                        <li>First Law: \\( \\Delta U = Q - W \\). Get the signs right! A sign error costs you the mark.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRACTICE QUIZ ================= -->
         <section class="lesson-section"
             style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
             <h2 class="section-title" style="color: var(--accent);">📝 اختبر معلوماتك | Practice Quiz</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
 
+            <!-- Q1 & Q2: Fluid Statics / Pascal -->
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
-                <p><strong>Q1:</strong> إذا كان الضغط عند عمق معادل لعمود من الزئبق هو 760 ملم زئبقي، هذا الضغط يسمى:
-                </p>
+                <p><strong>Q1:</strong> ضغط الماء عند عمق 10 أمتار (\\( \\rho=1000, g=10 \\)) هو: <br> <span style="font-size: 0.85em; opacity: 0.8;">Water pressure at 10m depth (\\(\\rho=1000, g=10\\)) is:</span></p>
                 <div style="margin: 10px 0;">
-                    A) ضغط الطفو &nbsp; B) الضغط الجوي (Atmospheric Pressure) &nbsp; C) الضغط الديناميكي &nbsp; D) صفر
+                    A) 10,000 Pa &nbsp; B) 100,000 Pa &nbsp; C) 1,000 Pa &nbsp; D) 1,000,000 Pa
                 </div>
                 <details>
                     <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">الضغط الجوي القياسي يعادل ضغط عمود 76 سم من الزئبق.</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( P = \\rho g h = 1000 \\times 10 \\times 10 = 100,000 \\, Pa \\).</p>
                 </details>
             </div>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
-                <p><strong>Q2:</strong> وفقاً لمعادلة برنولي، عندما تزداد سرعة المائع، فإن ضغطه:</p>
+                <p><strong>Q2:</strong> في مكبس هيدروليكي، إذا كانت \\( A_2 = 10 \\times A_1 \\)، فإن القوة الناتجة: <br> <span style="font-size: 0.85em; opacity: 0.8;">In a hydraulic press, if \\( A_2 = 10 \\times A_1 \\), output force:</span></p>
                 <div style="margin: 10px 0;">
-                    A) يزداد &nbsp; B) يقل (Decreases) &nbsp; C) يثبت &nbsp; D) يصبح سالباً
+                    A) تساوي المدخلة &nbsp; B) 10 أضعاف (10×) &nbsp; C) عشر المدخلة &nbsp; D) 100 ضعف
                 </div>
                 <details>
                     <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">هذا هو المبدأ الفيزيائي الذي يفسر طيران الطائرات: سرعة
-                        أعلى تعني ضغطاً أقل.</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( F_2/F_1 = A_2/A_1 = 10 \\)، لذا القوة الناتجة 10 أضعاف.</p>
+                </details>
+            </div>
+
+            <!-- Q3 & Q4: Archimedes / Bernoulli -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q3:</strong> جسم كثافته \\( 800 \\, kg/m^3 \\) يوضع في الماء (\\( \\rho = 1000 \\)). أي العبارات صحيحة؟ <br> <span style="font-size: 0.85em; opacity: 0.8;">Object with \\( \\rho=800 \\) in water. Which is true?</span></p>
+                <div style="margin: 10px 0;">
+                    A) يغرق &nbsp; B) يطفو وجزء منه فوق السطح &nbsp; C) يعلق &nbsp; D) ينكمش
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">بما أن \\( \\rho_{obj} < \\rho_{water} \\)، يطفو الجسم. نسبة الغمر = 800/1000 = 80%.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q4:</strong> وفقاً لبرنولي، إذا زادت سرعة المائع فإن ضغطه: <br> <span style="font-size: 0.85em; opacity: 0.8;">According to Bernoulli, if fluid speed increases, pressure:</span></p>
+                <div style="margin: 10px 0;">
+                    A) يزداد &nbsp; B) يقل (Decreases) &nbsp; C) يثبت &nbsp; D) ينعدم
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">هذا يفسر رفع الطائرة: سرعة أعلى → ضغط أقل → قوة رفع للأعلى.</p>
+                </details>
+            </div>
+
+            <!-- Q5 & Q6: Gas Laws -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q5:</strong> غاز حجمه \\( 2 \\, L \\) عند \\( 27^\\circ C \\). إذا سخن إلى \\( 327^\\circ C \\) بضغط ثابت، يصبح حجمه: <br> <span style="font-size: 0.85em; opacity: 0.8;">Gas at 2L, 27°C, heated to 327°C at constant P. New volume?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 2 L &nbsp; B) 4 L &nbsp; C) 6 L &nbsp; D) 24 L
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( T_1=300K, T_2=600K \\). \\( V_2 = V_1 \\times T_2/T_1 = 2 \\times 600/300 = 4 \\, L \\).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q6:</strong> قيمة \\( R \\) في معادلة \\( PV = nRT \\) هي: <br> <span style="font-size: 0.85em; opacity: 0.8;">The value of \\( R \\) in \\( PV = nRT \\) is:</span></p>
+                <div style="margin: 10px 0;">
+                    A) 8.31 J/(mol·K) &nbsp; B) 1.38 × 10⁻²³ J/K &nbsp; C) 6.02 × 10²³ &nbsp; D) 3 × 10⁸ m/s
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">ثابت الغاز العام \\( R = 8.31 \\, J/(mol \\cdot K) \\).</p>
+                </details>
+            </div>
+
+            <!-- Q7 & Q8: 1st Law / Heat -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q7:</strong> في القانون الأول \\( \\Delta U = Q - W \\)، إذا كان \\( Q = 0 \\) و \\( W > 0 \\) (تمدد): <br> <span style="font-size: 0.85em; opacity: 0.8;">If \\( Q = 0 \\) and \\( W > 0 \\) (expansion):</span></p>
+                <div style="margin: 10px 0;">
+                    A) \\( \\Delta U > 0 \\) &nbsp; B) \\( \\Delta U = 0 \\) &nbsp; C) \\( \\Delta U < 0 \\) &nbsp; D) غير محدد
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( \\Delta U = 0 - W = -W \\)، سالبة. النظام يبرد لأنه يبذل شغلاً دون تعويض حراري.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q8:</strong> كفاءة آلة كارنو بين \\( 400K \\) و \\( 200K \\): <br> <span style="font-size: 0.85em; opacity: 0.8;">Carnot efficiency between 400K and 200K:</span></p>
+                <div style="margin: 10px 0;">
+                    A) 25% &nbsp; B) 50% &nbsp; C) 75% &nbsp; D) 100%
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( \\eta = 1 - 200/400 = 1 - 0.5 = 0.5 = 50\\% \\).</p>
                 </details>
             </div>
         </section>
@@ -207,7 +655,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 أكاديمية عبد الحميد للفيزياء | المنهج الذهبي</p>
+        <p>&copy; 2026 أكاديمية عبد الحميد للفيزياء | المنهج الذهبي | The Golden Syllabus Fluids & Thermo</p>
     </footer>
 </body>
 

@@ -48,6 +48,20 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        .csca-tip {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05));
+            border: 2px solid #ffd700;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .csca-tip h4 {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
         h3 {
             color: #4ade80;
             margin-bottom: 15px;
@@ -72,23 +86,18 @@
     </header>
 
     <main class="container" style="padding: 80px 20px;">
-        <h1 class="section-title">الكيمياء العضوية: كيمياء الحياة <br> <span
-                style="font-size: 0.6em; opacity: 0.8;">Organic Chemistry: The Chemistry of Life</span></h1>
+        <h1 class="section-title">الكيمياء العضوية: كيمياء الحياة <br> <span style="font-size: 0.6em; opacity: 0.8;">Organic Chemistry: The Chemistry of Life</span></h1>
 
         <!-- INTRODUCTION -->
-        <section class="master-teacher-box"
-            style="background: linear-gradient(45deg, rgba(74, 222, 128, 0.1), transparent); border-color: #4ade80;">
+        <section class="master-teacher-box" style="background: linear-gradient(45deg, rgba(74, 222, 128, 0.1), transparent); border-color: #4ade80;">
             <div class="bilingual-row">
                 <div class="ara-content">
                     <h3>كيمياء الكربون:</h3>
-                    <p>أهلاً بك يا بطل. الكيمياء العضوية هي العلم الذي يدرس مركبات الكربون. من الميثان الذي نطبخ به إلى
-                        البروتينات في أجسامنا. سنركز هنا على الألكانات، الألكينات، والمجموعات الوظيفية الأساسية لاختبار
-                        CSCA.</p>
+                    <p>الكيمياء العضوية هي العلم الذي يدرس مركبات الكربون — من الميثان الذي نطبخ به إلى البروتينات في أجسامنا. الكربون فريد لأنه يستطيع تكوين 4 روابط تساهمية مع نفسه ومع عناصر أخرى (خاصة H، O، N، الهالوجينات)، مكوناً ملايين المركبات المختلفة. سنركز هنا على الألكانات، الألكينات، المجموعات الوظيفية الأساسية، الأيزومرات، وأنواع التفاعلات لاختبار CSCA.</p>
                 </div>
                 <div class="eng-content">
                     <h3>Chemistry of Carbon:</h3>
-                    <p>Welcome, hero. Organic chemistry studies carbon compounds—from methane in our stoves to proteins
-                        in our bodies. We'll master alkanes, alkenes, and functional groups here.</p>
+                    <p>Organic chemistry studies carbon compounds — from methane in our stoves to proteins in our bodies. Carbon is unique because it can form 4 covalent bonds with itself and other elements (especially H, O, N, halogens), creating millions of different compounds. We'll focus on alkanes, alkenes, functional groups, isomers, and reaction types for the CSCA exam.</p>
                 </div>
             </div>
         </section>
@@ -98,53 +107,125 @@
             <div class="bilingual-row">
                 <div class="ara-content">
                     <h3>النقطة 1: الهيدروكربونات (Hydrocarbons)</h3>
-                    <p>هي مركبات تحتوي كربون وهيدروجين فقط. تُصنف حسب نوع الروابط.</p>
-                    <div class="logic-card">ألكانات (روابط أحادية \( C_nH_{2n+2} \)) | ألكينات (رابطة مزدوجة \(
-                        C_nH_{2n} \)).</div>
+                    <p>هي مركبات تحتوي كربون وهيدروجين فقط. تُصنف حسب نوع الروابط بين ذرات الكربون:</p>
+                    <div class="logic-card">
+                        <strong>الألكانات (Alkanes):</strong> روابط أحادية \\( C_nH_{2n+2} \\) — مشبعة بالهيدروجين.<br>
+                        <strong>الألكينات (Alkenes):</strong> رابطة مزدوجة واحدة على الأقل \\( C_nH_{2n} \\).<br>
+                        <strong>الألكاينات (Alkynes):</strong> رابطة ثلاثية واحدة على الأقل \\( C_nH_{2n-2} \\).<br>
+                        <strong>الأرينات (Arenes):</strong> مركبات عطرية (مثل البنزين \\( C_6H_6 \\)).
+                    </div>
                 </div>
                 <div class="eng-content">
                     <h3>Point 1: Hydrocarbons</h3>
-                    <p>Compounds with only Hydrogen and Carbon. Classified by bond types.</p>
-                    <div class="logic-card">Alkanes (Single bonds \( C_nH_{2n+2} \)) | Alkenes (Double bond \( C_nH_{2n}
-                        \)).</div>
+                    <p>Compounds containing only Carbon and Hydrogen. Classified by the type of bonds between carbon atoms:</p>
+                    <div class="logic-card">
+                        <strong>Alkanes:</strong> Single bonds \\( C_nH_{2n+2} \\) — saturated.<br>
+                        <strong>Alkenes:</strong> At least one double bond \\( C_nH_{2n} \\).<br>
+                        <strong>Alkynes:</strong> At least one triple bond \\( C_nH_{2n-2} \\).<br>
+                        <strong>Arenes:</strong> Aromatic compounds (e.g., Benzene \\( C_6H_6 \\)).
+                    </div>
                 </div>
             </div>
 
             <div class="example-card">
                 <div class="bilingual-row">
                     <div class="ara-content">
-                        <h4>📌 مثال عملي (Naming):</h4>
-                        <p>عنصر \( C_3H_8 \) ما هو اسمه؟</p>
+                        <h4>📌 مثال (Naming):</h4>
+                        <p>عنصر \\( C_3H_8 \\) ما هو اسمه؟</p>
                         <p><strong>الحل:</strong><br>
-                            1. عدد ذرات الكربون هو 3 (\(Prop-\)). <br>
-                            2. الهيدروجين يتبع صيغة \( 2n+2 \) (\( 2 \times 3 + 2 = 8 \)). <br>
-                            <strong>النتيجة:</strong> اسمه **بروبان**.</p>
+                            1. عدد ذرات الكربون هو 3 (Prop-).<br>
+                            2. الهيدروجين يتبع صيغة \\( 2n+2 \\) (\\( 2 \\times 3 + 2 = 8 \\)).<br>
+                            <strong>النتيجة:</strong> اسمه <strong>بروبان (Propane)</strong>.</p>
                     </div>
                     <div class="eng-content">
-                        <h4>📌 Practical Example (Naming):</h4>
-                        <p>What is the name of \( C_3H_8 \)?</p>
+                        <h4>📌 Example (Naming):</h4>
+                        <p>What is the name of \\( C_3H_8 \\)?</p>
                         <p><strong>Solution:</strong><br>
-                            1. Number of Carbons is 3 (\(Prop-\)). <br>
-                            2. Hydrogen follows \( 2n+2 \) formula. <br> <strong>Result:</strong> Its name is
-                            **Propane**.</p>
+                            1. Number of Carbons is 3 (Prop-).<br>
+                            2. Hydrogen follows \\( 2n+2 \\) formula.<br>
+                            <strong>Result:</strong> Its name is <strong>Propane</strong>.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 2: FUNCTIONAL GROUPS -->
+        <!-- POINT 2: IUPAC NAMING -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 2: المجموعات الوظيفية</h3>
-                    <p>هي ذرات إضافية تغير سلوك المركب تماماً.</p>
-                    <div class="logic-card">\( -OH \): كحول (Alcohols) | \( -COOH \): حمض كربوكسيلي | \( -NH_2 \):
-                        أمينات.</div>
+                    <h3>النقطة 2: التسمية النظامية IUPAC</h3>
+                    <p>لتسمية المركبات العضوية، نتبع هذه الخطوات:</p>
+                    <div class="logic-card">
+                        1. حدد أطول سلسلة كربون مستمرة (السلسلة الأم).<br>
+                        2. رقّم السلسلة من أقرب طرف للمجموعة الوظيفية أو الفرع.<br>
+                        3. سمّ المجموعات الفرعية (مثل ميثيل، إيثيل) مع موقعها.<br>
+                        4. استخدم اللواحق: -ان (ألكان)، -ين (ألكين)، -انول (كحول)، -انوات (إستر)، ...<br>
+                        <strong>مثال:</strong> CH₃-CH₂-CH₂-OH = بروبان-1-ول (Propan-1-ol).
+                    </div>
+                    <p><strong>البادئات العددية:</strong> 1=ميث, 2=إيث, 3=بروب, 4=بوت, 5=بنت, 6=هكس, 7=هبت, 8=أوكت, 9=نون, 10=ديك.</p>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 2: Functional Groups</h3>
-                    <p>Specific atoms that change the entire behavior of the compound.</p>
-                    <div class="logic-card">\( -OH \): Alcohols | \( -COOH \): Carboxylic Acids | \( -NH_2 \): Amines.
+                    <h3>Point 2: IUPAC Naming System</h3>
+                    <p>To name organic compounds, follow these steps:</p>
+                    <div class="logic-card">
+                        1. Find the longest continuous carbon chain (parent chain).<br>
+                        2. Number the chain from the end nearest the functional group or branch.<br>
+                        3. Name substituent groups (e.g., methyl, ethyl) with their positions.<br>
+                        4. Use suffixes: -ane (alkane), -ene (alkene), -anol (alcohol), -anoate (ester), ...<br>
+                        <strong>Example:</strong> CH₃-CH₂-CH₂-OH = Propan-1-ol.
+                    </div>
+                    <p><strong>Number prefixes:</strong> 1=meth, 2=eth, 3=prop, 4=but, 5=pent, 6=hex, 7=hept, 8=oct, 9=non, 10=dec.</p>
+                </div>
+            </div>
+
+            <div class="csca-tip">
+                <h4>💡 نصيحة CSCA | CSCA Tip</h4>
+                <div class="bilingual-row" style="gap: 15px;">
+                    <div class="ara-content" style="border-right-color: #ffd700;">
+                        <p>في CSCA: قد يُعطيك رسماً ويطلب الاسم — ابدأ من أقرب طرف للمجموعة الوظيفية. وإذا أعطاك الاسم ويطلب الرسم — ابدأ بالسلسلة الأم ثم أضف الفروع والمجموعات الوظيفية. انتبه: الرابطة المزدوجة لها أولوية في الترقيم على الفروع.</p>
+                    </div>
+                    <div class="eng-content" style="border-left-color: #ffd700;">
+                        <p>CSCA: If given a drawing and asked for the name — start numbering from the end nearest the functional group. If given the name and asked for the drawing — start with the parent chain, then add substituents and functional groups. Note: double bonds take higher priority in numbering than branches.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: FUNCTIONAL GROUPS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: المجموعات الوظيفية (Functional Groups)</h3>
+                    <p>هي ذرات إضافية تغير سلوك المركب تماماً — تعطيه خواصه الكيميائية المميزة.</p>
+                    <div class="logic-card">
+                        <table style="width:100%; border-collapse: collapse;" border="1">
+                            <tr><th>المجموعة</th><th>الرمز</th><th>اللاحقة</th><th>مثال</th></tr>
+                            <tr><td>كحول</td><td>\\( -OH \\)</td><td>-انول</td><td>إيثانول (C₂H₅OH)</td></tr>
+                            <tr><td>إيثر</td><td>\\( -O- \\)</td><td>-وكسي</td><td>داي إيثيل إيثر</td></tr>
+                            <tr><td>ألدهيد</td><td>\\( -CHO \\)</td><td>-انال</td><td>ميثانال (فورمالدهيد)</td></tr>
+                            <tr><td>كيتون</td><td>\\( -CO- \\)</td><td>-انون</td><td>بروبانون (أسيتون)</td></tr>
+                            <tr><td>حمض كربوكسيلي</td><td>\\( -COOH \\)</td><td>-انويك</td><td>حمض الإيثانويك (خل)</td></tr>
+                            <tr><td>إستر</td><td>\\( -COO- \\)</td><td>-انوات</td><td>إيثيل إيثانوات</td></tr>
+                            <tr><td>أمين</td><td>\\( -NH_2 \\)</td><td>-أمين</td><td>ميثيل أمين (CH₃NH₂)</td></tr>
+                            <tr><td>هالوجين</td><td>\\( -X \\)</td><td>هالو-</td><td>كلورو ميثان (CH₃Cl)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 3: Functional Groups</h3>
+                    <p>Specific groups of atoms that determine the chemical properties of organic compounds.</p>
+                    <div class="logic-card">
+                        <table style="width:100%; border-collapse: collapse;" border="1">
+                            <tr><th>Group</th><th>Formula</th><th>Suffix</th><th>Example</th></tr>
+                            <tr><td>Alcohol</td><td>\\( -OH \\)</td><td>-anol</td><td>Ethanol (C₂H₅OH)</td></tr>
+                            <tr><td>Ether</td><td>\\( -O- \\)</td><td>-oxy</td><td>Diethyl ether</td></tr>
+                            <tr><td>Aldehyde</td><td>\\( -CHO \\)</td><td>-anal</td><td>Methanal (Formaldehyde)</td></tr>
+                            <tr><td>Ketone</td><td>\\( -CO- \\)</td><td>-anone</td><td>Propanone (Acetone)</td></tr>
+                            <tr><td>Carboxylic acid</td><td>\\( -COOH \\)</td><td>-anoic acid</td><td>Ethanoic acid (Vinegar)</td></tr>
+                            <tr><td>Ester</td><td>\\( -COO- \\)</td><td>-anoate</td><td>Ethyl ethanoate</td></tr>
+                            <tr><td>Amine</td><td>\\( -NH_2 \\)</td><td>-amine</td><td>Methylamine (CH₃NH₂)</td></tr>
+                            <tr><td>Halogen</td><td>\\( -X \\)</td><td>halo-</td><td>Chloromethane (CH₃Cl)</td></tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -153,45 +234,261 @@
                 <div class="bilingual-row">
                     <div class="ara-content">
                         <h4>📌 معلومة ذهبية (Gold Tip):</h4>
-                        <p>الأحماض العضوية هي أحماض ضعيفة دائماً (\( weak \)) مقارنة بالأحماض المعدنية مثل \( HCl \).
-                        </p>
+                        <p>الأحماض العضوية هي أحماض ضعيفة دائماً (\\( weak \\)) مقارنة بالأحماض المعدنية مثل \\( HCl \\). كلما زاد طول السلسلة الكربونية، قلّت حموضة الحمض.</p>
                     </div>
                     <div class="eng-content">
                         <h4>📌 Gold Tip:</h4>
-                        <p>Organic acids are typically weak acids compared to mineral acids like \( HCl \).</p>
+                        <p>Organic acids are typically weak acids compared to mineral acids like \\( HCl \\). The longer the carbon chain, the weaker the acid.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- POINT 4: ISOMERS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 4: الأيزومرات (Isomers)</h3>
+                    <p>الأيزومرات هي مركبات لها نفس الصيغة الجزيئية ولكن ترتيب ذرات مختلف — مما يعطي خواصاً مختلفة.</p>
+                    <div class="logic-card">
+                        <strong>أ. أيزومرات تركيبية (Structural Isomers):</strong><br>
+                        • سلسلة (Chain): C₄H₁₀ = بيوتان (مستقيم) و 2-ميثيل بروبان (متفرع).<br>
+                        • موقع (Positional): C₃H₇OH = بروبان-1-ول و بروبان-2-ول.<br>
+                        • مجموعة وظيفية (Functional group): C₂H₆O = إيثانول (كحول) وداي ميثيل إيثر (إيثر).<br><br>
+                        <strong>ب. أيزومرات فراغية (Stereoisomers):</strong><br>
+                        • هندسية (Geometric / Cis-Trans): في الألكينات — نفس الذرات ولكن ترتيب مختلف حول الرابطة المزدوجة.<br>
+                        • بصرية (Optical): جزيئات صور مرآة غير متطابقة (Enantiomers).
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 4: Isomers</h3>
+                    <p>Isomers are compounds with the same molecular formula but different arrangement — leading to different properties.</p>
+                    <div class="logic-card">
+                        <strong>A. Structural Isomers:</strong><br>
+                        • Chain: C₄H₁₀ = butane (straight) and 2-methylpropane (branched).<br>
+                        • Positional: C₃H₇OH = propan-1-ol and propan-2-ol.<br>
+                        • Functional group: C₂H₆O = ethanol (alcohol) and dimethyl ether (ether).<br><br>
+                        <strong>B. Stereoisomers:</strong><br>
+                        • Geometric (Cis-Trans): In alkenes — same atoms, different arrangement around double bond.<br>
+                        • Optical: Non-superimposable mirror images (Enantiomers).
+                    </div>
+                </div>
+            </div>
+
+            <div class="csca-tip">
+                <h4>💡 نصيحة CSCA | CSCA Tip</h4>
+                <div class="bilingual-row" style="gap: 15px;">
+                    <div class="ara-content" style="border-right-color: #ffd700;">
+                        <p>للأيزومرات الهندسية: Cis = نفس الجهة (Z-)، Trans = جهتين مختلفتين (E-). الشرط: وجود رابطة مزدوجة + ذرتين مختلفتين على كل كربون. مثال: 2-بيوتين له أيزومرين: cis و trans.</p>
+                    </div>
+                    <div class="eng-content" style="border-left-color: #ffd700;">
+                        <p>For geometric isomers: Cis = same side (Z-), Trans = opposite sides (E-). Condition: double bond + two different groups on each carbon. Example: 2-butene has cis and trans isomers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: REACTION TYPES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 5: أنواع التفاعلات العضوية الرئيسية</h3>
+                    <div class="logic-card">
+                        <strong>1. الاحتراق (Combustion):</strong> ألكان + O₂ → CO₂ + H₂O + طاقة. (تفاعل أكسدة كامل).<br>
+                        <strong>2. الإضافة (Addition):</strong> للألكينات — كسر الرابطة π وإضافة ذرات. مثال: C₂H₄ + HCl → C₂H₅Cl.<br>
+                        <strong>3. الاستبدال (Substitution):</strong> للألكانات — استبدال H بذرة أخرى. مثال: CH₄ + Cl₂ (ضوء) → CH₃Cl + HCl.<br>
+                        <strong>4. الإزالة (Elimination):</strong> عكس الإضافة — إزالة ذرات لتكوين رابطة مزدوجة.<br>
+                        <strong>5. البلمرة (Polymerization):</strong> اتحاد جزيئات صغيرة (مونومرات) لتكوين بوليمر ضخم.
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 5: Main Organic Reaction Types</h3>
+                    <div class="logic-card">
+                        <strong>1. Combustion:</strong> Alkane + O₂ → CO₂ + H₂O + energy. (Complete oxidation).<br>
+                        <strong>2. Addition:</strong> For alkenes — breaking π bond, adding atoms. Example: C₂H₄ + HCl → C₂H₅Cl.<br>
+                        <strong>3. Substitution:</strong> For alkanes — replacing H with another atom. Example: CH₄ + Cl₂ (light) → CH₃Cl + HCl.<br>
+                        <strong>4. Elimination:</strong> Reverse of addition — removing atoms to form a double bond.<br>
+                        <strong>5. Polymerization:</strong> Joining small molecules (monomers) to form a large polymer.
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال (Example):</h4>
+                        <p>تفاعل الإضافة: ماذا ينتج من تفاعل الإيثيلين مع البروم؟</p>
+                        <p><strong>الحل:</strong><br>
+                            \\( C_2H_4 + Br_2 \\rightarrow CH_2Br-CH_2Br \\)<br>
+                            ينتج <strong>1،2-ثنائي برومو إيثان</strong>. لون البروم الأحمر يختفي — هذا اختبار للرابطة المزدوجة!</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Example:</h4>
+                        <p>Addition reaction: What is produced when ethene reacts with bromine?</p>
+                        <p><strong>Solution:</strong><br>
+                            \\( C_2H_4 + Br_2 \\rightarrow CH_2Br-CH_2Br \\)<br>
+                            Produces <strong>1,2-dibromoethane</strong>. The red bromine color disappears — this is a test for the double bond!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 6: CRUDE OIL & FRACTIONAL DISTILLATION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 6: النفط الخام والتقطير التجزيئي</h3>
+                    <p>النفط الخام هو خليط معقد من الهيدروكربونات. يتم فصله بالتقطير التجزيئي حسب درجة الغليان:</p>
+                    <div class="logic-card">
+                        • <strong>غاز البترول المسال (C₁-C₄):</strong> وقود للتدفئة والطبخ.<br>
+                        • <strong>البنزين/جازولين (C₅-C₁₀):</strong> وقود السيارات.<br>
+                        • <strong>الكيروسين (C₁₁-C₁₅):</strong> وقود الطائرات.<br>
+                        • <strong>الديزل (C₁₆-C₂₀):</strong> وقود الشاحنات ومحركات الديزل.<br>
+                        • <strong>القار/الأسفلت (C₂₀+):</strong> رصف الطرق.
+                    </div>
+                    <p>كلما زاد طول السلسلة: زادت درجة الغليان، زادت اللزوجة، قلت القابلية للاشتعال.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 6: Crude Oil & Fractional Distillation</h3>
+                    <p>Crude oil is a complex mixture of hydrocarbons. It is separated by fractional distillation based on boiling points:</p>
+                    <div class="logic-card">
+                        • <strong>LPG (C₁-C₄):</strong> Heating and cooking fuel.<br>
+                        • <strong>Gasoline/Petrol (C₅-C₁₀):</strong> Car fuel.<br>
+                        • <strong>Kerosene (C₁₁-C₁₅):</strong> Jet fuel.<br>
+                        • <strong>Diesel (C₁₆-C₂₀):</strong> Truck and diesel engine fuel.<br>
+                        • <strong>Bitumen/Asphalt (C₂₀+):</strong> Road surfacing.
+                    </div>
+                    <p>Longer chain length: higher boiling point, higher viscosity, lower flammability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 7: CRACKING -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 7: التكسير (Cracking)</h3>
+                    <p>عملية تكسير الهيدروكربونات الطويلة (غير المرغوبة) إلى جزيئات أقصر (أكثر طلباً كالبنزين). نوعان:</p>
+                    <div class="logic-card">
+                        <strong>التكسير الحراري (Thermal):</strong> حرارة عالية + ضغط — ينتج ألكينات.<br>
+                        <strong>التكسير الحفزي (Catalytic):</strong> حرارة متوسطة + محفز (زيوليت) — ينتج ألكانات وألكينات وجزيئات متفرعة.<br>
+                        <strong>أهمية التكسير:</strong> يزيد إنتاج البنزين ويحسن رقم الأوكتان.
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 7: Cracking</h3>
+                    <p>Process of breaking long-chain hydrocarbons (less in demand) into shorter, more useful ones (like gasoline). Two types:</p>
+                    <div class="logic-card">
+                        <strong>Thermal Cracking:</strong> High temperature + pressure — produces alkenes.<br>
+                        <strong>Catalytic Cracking:</strong> Moderate heat + catalyst (zeolite) — produces alkanes, alkenes, and branched molecules.<br>
+                        <strong>Importance:</strong> Increases gasoline yield and improves octane rating.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 8: POLYMERS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 8: البوليمرات (Polymers)</h3>
+                    <p>البوليمرات هي جزيئات ضخمة مكونة من وحدات متكررة تسمى مونومرات.</p>
+                    <div class="logic-card">
+                        <strong>بلمرة إضافة (Addition Polymerization):</strong> مونومرات غير مشبعة (مثل الإيثيلين) تتحد دون فقدان ذرات. مثال: بولي إيثيلين (PE) — من \\( CH_2=CH_2 \\).<br>
+                        <strong>بلمرة تكثف (Condensation Polymerization):</strong> مونومرين مختلفين يتحدان مع فقدان جزيء صغير (مثل الماء). مثال: نايلون، بولي إستر.
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 8: Polymers</h3>
+                    <p>Polymers are large molecules made of repeating units called monomers.</p>
+                    <div class="logic-card">
+                        <strong>Addition Polymerization:</strong> Unsaturated monomers join without losing atoms. Example: Polyethylene (PE) — from \\( CH_2=CH_2 \\).<br>
+                        <strong>Condensation Polymerization:</strong> Two different monomers join with loss of a small molecule (e.g., water). Examples: Nylon, Polyester.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSCA TIPS SUMMARY -->
+        <section class="csca-tip" style="margin: 50px 0;">
+            <h4>🏆 نصيحة CSCA شاملة | Comprehensive CSCA Tips</h4>
+            <div class="bilingual-row" style="gap: 15px;">
+                <div class="ara-content" style="border-right-color: #ffd700;">
+                    <p><strong>1. التمييز بين الألكان والألكين:</strong> ألكان → تفاعل استبدال، ألكين → تفاعل إضافة. اختبار البروم: يزيل لون Br₂ الأحمر مع الألكين.<br>
+                    <strong>2. الأيزومرات:</strong> C₄H₁₀ له أيزومران، C₅H₁₂ له 3 أيزومرات. احفظ عدد الأيزومرات للسلسلات الأولى.<br>
+                    <strong>3. الأولوية في التسمية:</strong> حمض كربوكسيلي > ألدهيد > كيتون > كحول > هالوجين > ألكان.<br>
+                    <strong>4. المجموعات الوظيفية:</strong> احفظ اللواحق جيداً — هي مفتاح التسمية النظامية.</p>
+                </div>
+                <div class="eng-content" style="border-left-color: #ffd700;">
+                    <p><strong>1. Alkane vs Alkene:</strong> Alkane → substitution, Alkene → addition. Bromine test: decolorizes Br₂ with alkene.<br>
+                    <strong>2. Isomers:</strong> C₄H₁₀ has 2 isomers, C₅H₁₂ has 3 isomers. Memorize isomers for first few chains.<br>
+                    <strong>3. Naming priority:</strong> Carboxylic acid > Aldehyde > Ketone > Alcohol > Halogen > Alkane.<br>
+                    <strong>4. Functional groups:</strong> Memorize suffixes — they're the key to IUPAC naming.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- PRACTICE QUIZ -->
-        <section class="lesson-section"
-            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+        <section class="lesson-section" style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
             <h2 class="section-title" style="color: #4ade80;">📝 اختبر معلوماتك | Practice Quiz</h2>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
                 <p><strong>Q1:</strong> ما هي الصيغة العامة للألكانات؟</p>
                 <div style="margin: 10px 0;">
-                    A) \( C_nH_n \) &nbsp; B) \( C_nH_{2n} \) &nbsp; C) \( C_nH_{2n+2} \) &nbsp; D) \( C_nH_{2n-2} \)
+                    A) \\( C_nH_n \\) &nbsp; B) \\( C_nH_{2n} \\) &nbsp; C) \\( C_nH_{2n+2} \\) &nbsp; D) \\( C_nH_{2n-2} \\)
                 </div>
                 <details>
                     <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">الألكانات مشبعة بالهيدروجين، وصيغتها الضعف زائد اثنين.
-                    </p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الألكانات مشبعة بالهيدروجين، وصيغتها \\( C_nH_{2n+2} \\).</p>
                 </details>
             </div>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
                 <p><strong>Q2:</strong> جزيء (Ethanol) يحتوي على المجموعة الوظيفية:</p>
                 <div style="margin: 10px 0;">
-                    A) الهيدروكسيل (\( -OH \)) &nbsp; B) الكربوكسيل &nbsp; C) الأمين &nbsp; D) الإيثر
+                    A) الهيدروكسيل (\\( -OH \\)) &nbsp; B) الكربوكسيل &nbsp; C) الأمين &nbsp; D) الإيثر
                 </div>
                 <details>
                     <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">اللاحقة "-ol" تشير دائماً للكحولات، والتي تتميز بمجموعة
-                        الهيدروكسيل.</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">اللاحقة \"-ol\" تشير دائماً للكحولات (-OH).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q3:</strong> أي من هذه المركبات له أيزومرات هندسية (Cis/Trans)؟</p>
+                <div style="margin: 10px 0;">
+                    A) الإيثان &nbsp; B) الإيثين &nbsp; C) 2-بيوتين &nbsp; D) البروبان
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">2-بيوتين (CH₃-CH=CH-CH₃) له مجموعتان مختلفتان على كل كربون في الرابطة المزدوجة — يمكن أن تكون cis أو trans.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q4:</strong> تفاعل الميثان مع الكلور في وجود الضوء هو تفاعل:</p>
+                <div style="margin: 10px 0;">
+                    A) إضافة &nbsp; B) استبدال &nbsp; C) إزالة &nbsp; D) بلمرة
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">يُستبدل ذرة H بذرة Cl → CH₃Cl. هذا تفاعل استبدال جذري (Free Radical Substitution).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q5:</strong> أي من المجموعات الوظيفية التالية تجعل المركب حمضياً؟</p>
+                <div style="margin: 10px 0;">
+                    A) \\( -OH \\) &nbsp; B) \\( -COOH \\) &nbsp; C) \\( -NH_2 \\) &nbsp; D) \\( -O- \\)
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">مجموعة الكربوكسيل (-COOH) تطلق أيون H⁺ وتجعل المحلول حمضياً. الكحولات (-OH) متعادلة تقريباً.</p>
                 </details>
             </div>
         </section>

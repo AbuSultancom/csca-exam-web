@@ -251,6 +251,134 @@
             </div>
         </section>
 
+        <!-- POINT 4: EM INDUCTION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 4: الحث الكهرومغناطيسي (EM Induction)</h3>
+                    <p>إذا تغير التدفق المغناطيسي (\\(\\Phi_B\\)) عبر ملف، يتولد فيه قوة دافعة كهربائية (EMF) مستحثة. هذا مبدأ عمل المولدات الكهربائية والمحولات.</p>
+                    <div class="logic-card">
+                        <strong>قانون فاراداي:</strong> \\( \\mathcal{E} = -N \\frac{\\Delta \\Phi_B}{\\Delta t} \\) <br>
+                        <strong>قانون لينز:</strong> التيار المستحث يعاكس التغير في التدفق المسبب له.
+                    </div>
+                    <p>التدفق المغناطيسي: \\( \\Phi_B = B \\cdot A \\cdot \\cos(\\theta) \\) حيث \\(B\\) المجال، \\(A\\) المساحة، \\(\\theta\\) الزاوية بين B والعمودي على السطح.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 4: Electromagnetic Induction</h3>
+                    <p>When the magnetic flux (\\(\\Phi_B\\)) through a coil changes, an induced EMF is generated. This is the principle behind generators and transformers.</p>
+                    <div class="logic-card">
+                        <strong>Faraday's Law:</strong> \\( \\mathcal{E} = -N \\frac{\\Delta \\Phi_B}{\\Delta t} \\) <br>
+                        <strong>Lenz's Law:</strong> The induced current opposes the change in flux that caused it.
+                    </div>
+                    <p>Magnetic flux: \\( \\Phi_B = B \\cdot A \\cdot \\cos(\\theta) \\) where \\(B\\) is field, \\(A\\) is area, \\(\\theta\\) is angle between B and surface normal.</p>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 نصيحة CSCA (Exam Tip):</h4>
+                        <p>قانون لينز يحدد **اتجاه** التيار المستحث. قاعدة بسيطة: إذا زاد التدفق، يتولد تيار يعاكسه (يقلله). إذا قل التدفق، يتولد تيار يعززه. الإشارة السالبة في قانون فاراداي تمثل هذا المبدأ.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 CSCA Exam Tip:</h4>
+                        <p>Lenz's Law determines the **direction** of induced current. Simple rule: If flux increases, induced current opposes it (reduces it). If flux decreases, induced current supports it. The negative sign in Faraday's Law represents this principle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>ملف عدد لفاته \\( N = 100 \\)، يتغير التدفق المغناطيسي خلاله من \\( 0.05 \\, Wb \\) إلى \\( 0.01 \\, Wb \\) في زمن \\( 0.2 \\, s \\). أوجد القوة الدافعة الكهربائية المستحثة.</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. \\( \\Delta \\Phi_B = 0.01 - 0.05 = -0.04 \\, Wb \\). <br>
+                            2. \\( \\mathcal{E} = -N \\frac{\\Delta \\Phi}{\\Delta t} = -100 \\times \\frac{-0.04}{0.2} \\). <br>
+                            3. \\( \\mathcal{E} = -100 \\times (-0.2) = 20 \\, V \\). <br>
+                            <strong>النتيجة:</strong> EMF المستحثة = 20 فولت. الإشارة الموجبة تعني أن التيار المستحث يعاكس نقصان التدفق.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>A coil with \\( N = 100 \\) turns, flux changes from \\( 0.05 \\, Wb \\) to \\( 0.01 \\, Wb \\) in \\( 0.2 \\, s \\). Find the induced EMF.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. \\( \\Delta \\Phi_B = 0.01 - 0.05 = -0.04 \\, Wb \\). <br>
+                            2. \\( \\mathcal{E} = -100 \\times \\frac{-0.04}{0.2} \\). <br>
+                            3. \\( \\mathcal{E} = -100 \\times (-0.2) = 20 \\, V \\). <br>
+                            <strong>Result:</strong> Induced EMF = 20 V. Positive sign means induced current opposes the decreasing flux.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: AC CIRCUITS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>القاعدة 5: دوائر التيار المتردد (AC Circuits)</h3>
+                    <p>التيار المتردد (AC) يغير اتجاهه بشكل دوري. يستخدم في شبكات الكهرباء المنزلية لأنه يمكن رفع وخفض جهده بسهولة باستخدام المحولات.</p>
+                    <div class="logic-card">
+                        <strong>القيمة الفعالة (RMS):</strong> \\( V_{rms} = \\frac{V_0}{\\sqrt{2}} \\), \\( I_{rms} = \\frac{I_0}{\\sqrt{2}} \\) <br>
+                        <strong>المفاعلة السعوية:</strong> \\( X_C = \\frac{1}{2\\pi f C} \\) <br>
+                        <strong>المفاعلة الحثية:</strong> \\( X_L = 2\\pi f L \\) <br>
+                        <strong>الممانعة (Impedance):</strong> \\( Z = \\sqrt{R^2 + (X_L - X_C)^2} \\)
+                    </div>
+                    <p><strong>المحولات (Transformers):</strong> \\( \\frac{V_s}{V_p} = \\frac{N_s}{N_p} \\) | الجهد يتناسب مع عدد اللفات. في المحول المثالي: \\( V_p I_p = V_s I_s \\).</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Rule 5: AC Circuits</h3>
+                    <p>Alternating Current (AC) changes direction periodically. It's used in household power grids because voltage can be easily stepped up/down using transformers.</p>
+                    <div class="logic-card">
+                        <strong>RMS Values:</strong> \\( V_{rms} = \\frac{V_0}{\\sqrt{2}} \\), \\( I_{rms} = \\frac{I_0}{\\sqrt{2}} \\) <br>
+                        <strong>Capacitive Reactance:</strong> \\( X_C = \\frac{1}{2\\pi f C} \\) <br>
+                        <strong>Inductive Reactance:</strong> \\( X_L = 2\\pi f L \\) <br>
+                        <strong>Impedance:</strong> \\( Z = \\sqrt{R^2 + (X_L - X_C)^2} \\)
+                    </div>
+                    <p><strong>Transformers:</strong> \\( \\frac{V_s}{V_p} = \\frac{N_s}{N_p} \\) | Voltage ∝ turns ratio. In an ideal transformer: \\( V_p I_p = V_s I_s \\).</p>
+                </div>
+            </div>
+
+            <div class="master-teacher-box"
+                style="border: 1px dashed var(--accent); background: rgba(255,255,255,0.03);">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>🚀 نصيحة CSCA (Exam Tip):</h4>
+                        <p>في أسئلة المحولات: محول رافع (Step-up) يزيد الجهد ويقلل التيار (\\( N_s > N_p \\)). محول خافض (Step-down) يقلل الجهد ويزيد التيار (\\( N_s < N_p \\)). القدرة محفوظة: \\( P_{in} = P_{out} \\) في المحول المثالي.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>🚀 CSCA Exam Tip:</h4>
+                        <p>In transformer questions: Step-up transformer increases voltage and decreases current (\\( N_s > N_p \\)). Step-down decreases voltage and increases current (\\( N_s < N_p \\)). Power is conserved: \\( P_{in} = P_{out} \\) in an ideal transformer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال شامل (Master Example):</h4>
+                        <p>محول مثالي: ملفه الابتدائي \\( 200 \\) لفة، والثانوي \\( 50 \\) لفة. جهد الدخل \\( 240 \\, V_{rms} \\). أوجد جهد الخرج. إذا كان تيار الدخل \\( 2 \\, A \\)، فما تيار الخرج؟</p>
+                        <p><strong>الحل التكتيكي:</strong><br>
+                            1. \\( \\frac{V_s}{V_p} = \\frac{N_s}{N_p} \\implies V_s = 240 \\times \\frac{50}{200} \\). <br>
+                            2. \\( V_s = 240 \\times 0.25 = 60 \\, V \\) (محول خافض). <br>
+                            3. المحول المثالي: \\( V_p I_p = V_s I_s \\). <br>
+                            4. \\( I_s = \\frac{V_p I_p}{V_s} = \\frac{240 \\times 2}{60} = 8 \\, A \\). <br>
+                            <strong>النتيجة:</strong> جهد 60V، تيار 8A. الجهد قل للربع، والتيار زاد 4 مرات.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Master Example:</h4>
+                        <p>Ideal transformer: primary \\( 200 \\) turns, secondary \\( 50 \\) turns. Input \\( 240 \\, V_{rms} \\), \\( 2 \\, A \\). Find output voltage and current.</p>
+                        <p><strong>Solution:</strong><br>
+                            1. \\( \\frac{V_s}{V_p} = \\frac{N_s}{N_p} \\implies V_s = 240 \\times \\frac{50}{200} \\). <br>
+                            2. \\( V_s = 240 \\times 0.25 = 60 \\, V \\) (Step-down). <br>
+                            3. Ideal: \\( V_p I_p = V_s I_s \\). <br>
+                            4. \\( I_s = \\frac{240 \\times 2}{60} = 8 \\, A \\). <br>
+                            <strong>Result:</strong> 60V, 8A. Voltage quartered, current quadrupled.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- SURVIVAL TIPS -->
         <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.05);">
             <div class="bilingual-row">
@@ -261,6 +389,8 @@
                             اليمنى (استخدم كف اليد اليسار أو اعكس النتيجة النهائية).</li>
                         <li>في مسائل التوازي، النتيجة النهائية لـ \(R\) يجب أن تكون **أصغر** من أصغر مقاومة في الدائرة.
                         </li>
+                        <li>EMF المستحثة تعتمد على **معدل تغير** التدفق المغناطيسي، وليس على قيمة التدفق نفسها. حركة أسرع = EMF أكبر.</li>
+                        <li>محول رافع يقلل التيار (حفظاً للطاقة)، لذلك يستخدم في خطوط النقل لتقليل الفقد الحراري \(P = I^2 R\).</li>
                     </ul>
                 </div>
                 <div class="eng-content">
@@ -270,6 +400,8 @@
                             Rule palm.</li>
                         <li>In Parallel circuits, final \(R\) MUST be **smaller** than the smallest resistor in the
                             setup.</li>
+                        <li>EM Induction: The induced EMF depends on the **rate of change** of flux, not the flux value itself. Faster magnet motion = larger EMF.</li>
+                        <li>Transformers: A step-up transformer reduces current (to conserve power), which is why they're used in transmission lines to reduce \(P = I^2 R\) losses.</li>
                     </ul>
                 </div>
             </div>
@@ -370,6 +502,60 @@
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
                     <p style="font-size: 0.9em; opacity: 0.8;">بما أن \( v = 0 \)، فإن قانون \( F = qvB \sin \theta \)
                         يعطي صفر.</p>
+                </details>
+            </div>
+
+            <!-- Q7 & Q8: EM Induction -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q7:</strong> في قانون فاراداي، العامل الذي يحدد مقدار EMF المستحثة هو: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">In Faraday's Law, the induced EMF depends on:</span></p>
+                <div style="margin: 10px 0;">
+                    A) قيمة التدفق &nbsp; B) معدل تغير التدفق (Rate of change of flux) &nbsp; C) اتجاه المجال &nbsp; D) مقاومة الملف
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">قانون فاراداي: \( \mathcal{E} = -N \frac{\Delta \Phi_B}{\Delta t} \). التغير في التدفق لكل وحدة زمن هو ما يولد EMF.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q8:</strong> وفقاً لقانون لينز، اتجاه التيار المستحث يكون بحيث: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">According to Lenz's Law, induced current direction:</span></p>
+                <div style="margin: 10px 0;">
+                    A) يعزز التغير في التدفق &nbsp; B) يعاكس التغير في التدفق (Opposes the change) &nbsp; C) مستقل عن التدفق &nbsp; D) يعاكس الجهد
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">قانون لينز هو مبدأ حفظ الطاقة: التيار المستحث يعاكس التغير المسبب له.</p>
+                </details>
+            </div>
+
+            <!-- Q9 & Q10: AC Circuits -->
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q9:</strong> محول مثالي عدد لفات ملفه الابتدائي 100 وعدد لفات الثانوي 200. إذا كان جهد الدخل 110V، فجهد الخرج: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Ideal transformer: Np=100, Ns=200, Vin=110V. Vout?</span></p>
+                <div style="margin: 10px 0;">
+                    A) 55V &nbsp; B) 110V &nbsp; C) 220V &nbsp; D) 330V
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( V_s/V_p = N_s/N_p = 200/100 = 2 \). \( V_s = 110 \times 2 = 220V \).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--accent);">
+                <p><strong>Q10:</strong> العلاقة بين القيمة الفعالة (RMS) والقيمة العظمى للجهد المتردد هي: <br> <span
+                        style="font-size: 0.85em; opacity: 0.8;">Relationship between RMS and peak AC voltage:</span></p>
+                <div style="margin: 10px 0;">
+                    A) \( V_{rms} = V_0 \) &nbsp; B) \( V_{rms} = V_0 / \sqrt{2} \) &nbsp; C) \( V_{rms} = V_0 \times \sqrt{2} \) &nbsp; D) \( V_{rms} = V_0 / 2 \)
+                </div>
+                <details>
+                    <summary style="color: var(--accent); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\( V_{rms} = V_0 / \sqrt{2} \). القيمة الفعالة تمثل جهد التيار المستمر المكافئ.</p>
                 </details>
             </div>
         </section>

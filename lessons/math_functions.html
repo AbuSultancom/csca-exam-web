@@ -4,86 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماستر كلاس: الدوال والمتتاليات | Masterclass: Functions & Sequences</title>
+    <title>ماستر كلاس: الدوال | Masterclass: Functions</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        .bilingual-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .ara-content {
-            text-align: right;
-            border-right: 4px solid var(--primary);
-            padding-right: 20px;
-        }
-
-        .eng-content {
-            text-align: left;
-            direction: ltr;
-            border-left: 3px solid var(--secondary);
-            padding-left: 20px;
-            font-size: 1rem;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
-
-        .rule-box {
-            background: rgba(76, 201, 240, 0.08);
-            border: 2px solid var(--primary);
-            padding: 30px;
-            border-radius: 20px;
-            margin: 40px 0;
-        }
-
-        .step-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .step-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .step-num {
-            background: var(--primary);
-            color: #000;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .logic-card {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-radius: 12px;
-            margin: 15px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        @media (max-width: 900px) {
-            .bilingual-row {
-                grid-template-columns: 1fr;
-            }
-        }
+        .bilingual-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+        .ara-content { text-align: right; border-right: 4px solid var(--primary); padding-right: 20px; }
+        .eng-content { text-align: left; direction: ltr; border-left: 4px solid var(--secondary); padding-left: 20px; font-size: 1rem; color: #e2e8f0; line-height: 1.6; }
+        .rule-box { background: rgba(76, 201, 240, 0.08); border: 2px solid var(--primary); padding: 30px; border-radius: 20px; margin: 40px 0; }
+        .step-list { list-style: none; padding: 0; }
+        .step-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+        .step-num { background: var(--primary); color: #000; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .logic-card { background: rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 12px; margin: 15px 0; border: 1px solid rgba(255, 255, 255, 0.1); }
+        h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+        .module-badge { display: inline-block; background: var(--accent); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; }
+        @media (max-width: 900px) { .bilingual-row { grid-template-columns: 1fr; } }
     </style>
 </head>
 
@@ -97,46 +33,64 @@
     </header>
 
     <main class="container" style="padding: 80px 20px;">
-        <h1 class="section-title">الدوال والمتتاليات: أسرار السلوك الرياضي <br> <span
-                style="font-size: 0.6em; opacity: 0.8;">Functions & Sequences: Mathematical Behavior Secrets</span></h1>
+        <h1 class="section-title">الدوال: المرجع الشامل (الوزن 35%) <br> <span style="font-size: 0.6em; opacity: 0.8;">Functions: The Comprehensive Reference (35% Weight — HIGHEST)</span></h1>
 
-        <!-- INTRODUCTION -->
-        <section class="master-teacher-box"
-            style="background: linear-gradient(45deg, rgba(76, 201, 240, 0.1), transparent);">
+        <!-- SYLLABUS MODULE -->
+        <section class="rule-box" style="border-color: var(--accent);">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>لماذا ندرس الدوال؟:</h3>
-                    <p>أهلاً بك يا بطل. الدوال هي حجر الأساس للتفاضل والتكامل وكل الهندسة الحديثة. في هذا الدرس، ستتعلم
-                        كيف تقرأ سلوك الدالة، وكيف تحسب مجالها، وكيف تتعامل مع الأسس واللوغاريتمات. سنشرح كل نقطة، نضع
-                        قاعدتها، ثم نحلها بمثال شامل.</p>
+                    <h3>📋 هيكل الوحدة حسب منهج CSCA الرسمي</h3>
+                    <ul>
+                        <li><strong>الوحدة 1: مفهوم الدالة</strong> - تعريف الدالة، اختبار الخط الرأسي، التمثيل البياني</li>
+                        <li><strong>الوحدة 2: المجال والمدى</strong> - إيجاد مجال الدوال الجبرية (جذور، مقامات، لوغاريتمات)</li>
+                        <li><strong>الوحدة 3: رتابة الدوال</strong> - الدوال المتزايدة، المتناقصة، الثابتة</li>
+                        <li><strong>الوحدة 4: الدوال العكسية</strong> - شرط وجود الدالة العكسية، إيجادها بيانياً وتحليلياً</li>
+                        <li><strong>الوحدة 5: الدوال الأسية واللوغاريتمية</strong> - تعريفها، خصائصها، حل المعادلات</li>
+                        <li><strong>الوحدة 6: الدوال المثلثية</strong> - الدوال المثلثية الأساسية، الدورة، التمثيل البياني</li>
+                        <li><strong>الوحدة 7: النهايات</strong> - حساب النهايات جبرياً، نهايات عند اللانهاية</li>
+                        <li><strong>الوحدة 8: المشتقات الأساسية</strong> - قاعدة القوة، قاعدة الجداء، قاعدة السلسلة</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong>الوزن في الاختبار:</strong> 35% (أعلى وزن، ما يقارب 18-20 سؤال)</p>
                 </div>
                 <div class="eng-content">
-                    <h3>Why Study Functions?:</h3>
-                    <p>Welcome, hero. Functions are the foundation of Calculus and modern Engineering. In this lesson,
-                        you will learn to read function behavior, calculate domains, and master exponents and
-                        logarithms. We explain each point, state the rule, and solve a comprehensive example.</p>
+                    <h3>📋 Official CSCA Syllabus Module Structure</h3>
+                    <ul>
+                        <li><strong>Module 1: Function Concept</strong> - Definition, vertical line test, graphical representation</li>
+                        <li><strong>Module 2: Domain & Range</strong> - Finding domains (roots, denominators, logarithms)</li>
+                        <li><strong>Module 3: Monotonicity</strong> - Increasing, decreasing, and constant functions</li>
+                        <li><strong>Module 4: Inverse Functions</strong> - Existence condition, finding inverse graphically and analytically</li>
+                        <li><strong>Module 5: Exponential & Logarithmic Functions</strong> - Definitions, properties, solving equations</li>
+                        <li><strong>Module 6: Trigonometric Functions</strong> - Basic trig functions, period, graphs</li>
+                        <li><strong>Module 7: Limits</strong> - Algebraic limit calculation, limits at infinity</li>
+                        <li><strong>Module 8: Basic Derivatives</strong> - Power rule, product rule, chain rule</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong>Exam Weight:</strong> 35% (HIGHEST — approx. 18-20 questions)</p>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 1: DOMAIN -->
+        <!-- POINT 1: DOMAIN & RANGE -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 1: المجال والمدى (Domain & Range)</h3>
-                    <p><strong>المجال:</strong> هو كل القيم المسموح بإدخالها للـ \(x\). <br>
-                        <strong>المدى:</strong> هو كل النتائج الممكنة للـ \(y\).
-                    </p>
-                    <div class="logic-card">القاعدة الذهبية: المقام لا يساوي صفراً، وما تحت الجذر الزوجي يجب أن يكون
-                        موجباً (\(\geq 0\)).</div>
+                    <span class="module-badge">الوحدة 1-2</span>
+                    <h3>القاعدة 1: المجال والمدى (Domain & Range)</h3>
+                    <p><strong>المجال:</strong> كل قيم \\(x\\) المسموح بها. <strong>المدى:</strong> كل قيم \\(y\\) الناتجة.</p>
+                    <div class="logic-card">القواعد الأساسية لإيجاد المجال:<br>
+                    <strong>المقام:</strong> \\( \\neq 0 \\)<br>
+                    <strong>الجذر الزوجي:</strong> ما بداخله \\( \\geq 0 \\)<br>
+                    <strong>اللوغاريتم:</strong> الحجة \\( > 0 \\)<br>
+                    <strong>اختبار الخط الرأسي:</strong> أي خط رأسي يقطع المنحنى مرة واحدة فقط.</div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 1: Domain & Range</h3>
-                    <p><strong>Domain:</strong> Every allowed \(x\)-input. <br>
-                        <strong>Range:</strong> Every possible \(y\)-output.
-                    </p>
-                    <div class="logic-card">Golden Rule: Denominator \(\neq 0\); Inner part of even roots must be
-                        non-negative (\(\geq 0\)).</div>
+                    <span class="module-badge">Module 1-2</span>
+                    <h3>Rule 1: Domain & Range</h3>
+                    <p><strong>Domain:</strong> All allowed \\(x\\)-inputs. <strong>Range:</strong> All possible \\(y\\)-outputs.</p>
+                    <div class="logic-card">Basic Rules for Domain:<br>
+                    <strong>Denominator:</strong> \\( \\neq 0 \\)<br>
+                    <strong>Even Root:</strong> Inner part \\( \\geq 0 \\)<br>
+                    <strong>Logarithm:</strong> Argument \\( > 0 \\)<br>
+                    <strong>Vertical Line Test:</strong> Any vertical line cuts the curve only once.</div>
                 </div>
             </div>
 
@@ -144,233 +98,450 @@
                 <div class="bilingual-row">
                     <div class="ara-content">
                         <h4>📌 مثال عملي (Practical Example):</h4>
-                        <p>أوجد مجال الدالة \( f(x) = \frac{1}{x - 3} + \sqrt{x - 1} \).</p>
+                        <p>أوجد مجال الدالة \\( f(x) = \\frac{1}{x-3} + \\sqrt{x-1} \\).</p>
                         <p><strong>الحل التكتيكي:</strong><br>
-                            1. للكسر: المقام \( x-3 \neq 0 \implies x \neq 3 \).<br>
-                            2. للجذر: ما بداخله \( x-1 \geq 0 \implies x \geq 1 \).<br>
-                            3. الدمج: كل الأرقام من 1 إلى مالانهاية باستثناء الرقم 3. <br> <strong>النتيجة:</strong> \(
-                            [1, 3) \cup (3, \infty) \).</p>
+                        1. للكسر: المقام \\( x-3 \\neq 0 \\implies x \\neq 3 \\).<br>
+                        2. للجذر: \\( x-1 \\geq 0 \\implies x \\geq 1 \\).<br>
+                        3. الدمج: كل الأرقام من 1 إلى ∞ باستثناء 3.<br>
+                        <strong>النتيجة:</strong> \\( [1, 3) \\cup (3, \\infty) \\).</p>
                     </div>
                     <div class="eng-content">
                         <h4>📌 Illustrative Example:</h4>
-                        <p>Find the domain of \( f(x) = \frac{1}{x - 3} + \sqrt{x - 1} \).</p>
+                        <p>Find the domain of \\( f(x) = \\frac{1}{x-3} + \\sqrt{x-1} \\).</p>
                         <p><strong>Tactical Solution:</strong><br>
-                            1. For the fraction: Denom \( x-3 \neq 0 \implies x \neq 3 \).<br>
-                            2. For the root: Inner \( x-1 \geq 0 \implies x \geq 1 \).<br>
-                            3. Merge: Everything from 1 to \(\infty\) except 3. <br> <strong>Result:</strong> \( [1, 3)
-                            \cup (3, \infty) \).</p>
+                        1. For fraction: \\( x-3 \\neq 0 \\implies x \\neq 3 \\).<br>
+                        2. For root: \\( x-1 \\geq 0 \\implies x \\geq 1 \\).<br>
+                        3. Merge: from 1 to ∞ except 3.<br>
+                        <strong>Result:</strong> \\( [1, 3) \\cup (3, \\infty) \\).</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 2: LOGARITHMS -->
+        <!-- POINT 2: MONOTONICITY -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 2: قوانين الأسس واللوغاريتمات</h3>
-                    <p>اللوغاريتم هو العملية العكسية لرفع الأس. قوانينها تسهل حساب الأرقام الكبيرة:</p>
-                    <div class="logic-card">
-                        \( \log(AB) = \log A + \log B \) <br>
-                        \( \log(A/B) = \log A - \log B \) <br>
-                        \( \log(A^n) = n \log A \)
-                    </div>
+                    <span class="module-badge">الوحدة 3</span>
+                    <h3>القاعدة 2: رتابة الدوال (Monotonicity)</h3>
+                    <p>الدالة \\(f(x)\\) تسمى <strong>متزايدة</strong> إذا كانت \\(x_1 < x_2 \\implies f(x_1) < f(x_2)\\).<br>
+                    وتسمى <strong>متناقصة</strong> إذا كانت \\(x_1 < x_2 \\implies f(x_1) > f(x_2)\\).</p>
+                    <div class="logic-card">لتحديد الرتابة باستخدام المشتقة:<br>
+                    \\( f'(x) > 0 \\) ⟹ الدالة متزايدة في تلك الفترة<br>
+                    \\( f'(x) < 0 \\) ⟹ الدالة متناقصة في تلك الفترة<br>
+                    \\( f'(x) = 0 \\) ⟹ نقطة حرجة (قيم قصوى أو انعطاف)</div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 2: Exponent & Logarithm Rules</h3>
-                    <p>Logarithms are the inverse of exponentiation. These rules simplify complex calculations:</p>
-                    <div class="logic-card">
-                        \( \log(AB) = \log A + \log B \) <br>
-                        \( \log(A/B) = \log A - \log B \) <br>
-                        \( \log(A^n) = n \log A \)
-                    </div>
+                    <span class="module-badge">Module 3</span>
+                    <h3>Rule 2: Monotonicity</h3>
+                    <p>\\(f(x)\\) is <strong>increasing</strong> if \\(x_1 < x_2 \\implies f(x_1) < f(x_2)\\).<br>
+                    <strong>Decreasing</strong> if \\(x_1 < x_2 \\implies f(x_1) > f(x_2)\\).</p>
+                    <div class="logic-card">Using derivative:<br>
+                    \\( f'(x) > 0 \\) ⟹ increasing in that interval<br>
+                    \\( f'(x) < 0 \\) ⟹ decreasing in that interval<br>
+                    \\( f'(x) = 0 \\) ⟹ critical point (extremum or inflection)</div>
                 </div>
             </div>
 
             <div class="example-card">
                 <div class="bilingual-row">
                     <div class="ara-content">
-                        <h4>📌 تطبيق عملي (Application):</h4>
-                        <p>حل المعادلة: \( \log_2(x) + \log_2(4) = 5 \).</p>
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>حدد فترات التزايد والتناقص للدالة \\( f(x) = x^2 - 4x + 3 \\).</p>
                         <p><strong>الحل:</strong><br>
-                            1. ندمج اللوغاريتمات: \( \log_2(4x) = 5 \).<br>
-                            2. نحول للصيغة الأسية: \( 4x = 2^5 \).<br>
-                            3. الحساب: \( 4x = 32 \implies x = 8 \).</p>
+                        1. المشتقة: \\( f'(x) = 2x - 4 \\).<br>
+                        2. النقطة الحرجة: \\( 2x - 4 = 0 \\implies x = 2 \\).<br>
+                        3. نختبر القيم: \\( x=0 \\) (قبل 2) ⟹ \\( f'(0) = -4 < 0 \\) ⟹ متناقصة.<br>
+                        4. \\( x=3 \\) (بعد 2) ⟹ \\( f'(3) = 2 > 0 \\) ⟹ متزايدة.<br>
+                        <strong>النتيجة:</strong> متناقصة على \\((-\\infty, 2)\\)، متزايدة على \\((2, \\infty)\\).</p>
                     </div>
                     <div class="eng-content">
-                        <h4>📌 Practical Application:</h4>
-                        <p>Solve: \( \log_2(x) + \log_2(4) = 5 \).</p>
+                        <h4>📌 Application Example:</h4>
+                        <p>Find the intervals of increase/decrease for \\( f(x) = x^2 - 4x + 3 \\).</p>
                         <p><strong>Solution:</strong><br>
-                            1. Merge Logs: \( \log_2(4x) = 5 \).<br>
-                            2. Exponential Form: \( 4x = 2^5 \).<br>
-                            3. Calculate: \( 4x = 32 \implies x = 8 \).</p>
+                        1. Derivative: \\( f'(x) = 2x - 4 \\).<br>
+                        2. Critical point: \\( x = 2 \\).<br>
+                        3. Test \\(x=0\\): \\( f'(0) = -4 < 0 \\) ⟹ decreasing.<br>
+                        4. Test \\(x=3\\): \\( f'(3) = 2 > 0 \\) ⟹ increasing.<br>
+                        <strong>Result:</strong> Decreasing on \\((-\\infty, 2)\\), increasing on \\((2, \\infty)\\).</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 3: GEOMETRIC SEQUENCES -->
+        <!-- POINT 3: INVERSE FUNCTIONS -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 3: المتتاليات الهندسية اللانهائية</h3>
-                    <p>تستطيع جمع أرقام لا تنتهي إذا كانت كل خطوة "تصغر" بنسبة ثابتة (\(r\)).</p>
-                    <div class="logic-card">\( S_\infty = \frac{a_1}{1 - r} \) بشرط أن يكون \( |r| < 1 \).</div>
+                    <span class="module-badge">الوحدة 4</span>
+                    <h3>القاعدة 3: الدوال العكسية (Inverse Functions)</h3>
+                    <p>الدالة العكسية \\(f^{-1}(x)\\) تعكس تأثير \\(f(x)\\). شرط الوجود: الدالة يجب أن تكون <strong>تقابلية</strong> (One-to-One) — أي تجتاز اختبار الخط الأفقي.</p>
+                    <div class="logic-card">خطوات إيجاد الدالة العكسية:<br>
+                    1. اكتب \\( y = f(x) \\).<br>
+                    2. بدل \\(x\\) و \\(y\\).<br>
+                    3. حل المعادلة الجديدة لـ \\(y\\).<br>
+                    4. الناتج هو \\( f^{-1}(x) \\).<br><br>
+                    بيانياً: \\(f^{-1}\\) هي انعكاس \\(f\\) حول الخط \\(y = x\\).</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 4</span>
+                    <h3>Rule 3: Inverse Functions</h3>
+                    <p>The inverse function \\(f^{-1}(x)\\) reverses \\(f(x)\\). Existence condition: \\(f\\) must be <strong>One-to-One</strong> (passes the Horizontal Line Test).</p>
+                    <div class="logic-card">Steps to find the inverse:<br>
+                    1. Write \\( y = f(x) \\).<br>
+                    2. Swap \\(x\\) and \\(y\\).<br>
+                    3. Solve the new equation for \\(y\\).<br>
+                    4. The result is \\( f^{-1}(x) \\).<br><br>
+                    Graphically: \\(f^{-1}\\) is the reflection of \\(f\\) about the line \\(y = x\\).</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>أجد الدالة العكسية لـ \\( f(x) = 2x + 3 \\).</p>
+                        <p><strong>الحل:</strong><br>
+                        1. \\( y = 2x + 3 \\).<br>
+                        2. نبدل: \\( x = 2y + 3 \\).<br>
+                        3. نحل: \\( 2y = x - 3 \\implies y = \\frac{x-3}{2} \\).<br>
+                        <strong>النتيجة:</strong> \\( f^{-1}(x) = \\frac{x-3}{2} \\).<br>
+                        تحقق: \\( f(f^{-1}(x)) = 2(\\frac{x-3}{2}) + 3 = x-3+3 = x \\). ✓</p>
                     </div>
                     <div class="eng-content">
-                        <h3>Point 3: Infinite Geometric Series</h3>
-                        <p>You can sum infinite numbers if each subsequent term shrinks by a fixed ratio (\(r\)).</p>
-                        <div class="logic-card">\( S_\infty = \frac{a_1}{1 - r} \) provided \( |r| < 1 \).</div>
-                        </div>
+                        <h4>📌 Application Example:</h4>
+                        <p>Find the inverse of \\( f(x) = 2x + 3 \\).</p>
+                        <p><strong>Solution:</strong><br>
+                        1. \\( y = 2x + 3 \\).<br>
+                        2. Swap: \\( x = 2y + 3 \\).<br>
+                        3. Solve: \\( 2y = x - 3 \\implies y = \\frac{x-3}{2} \\).<br>
+                        <strong>Result:</strong> \\( f^{-1}(x) = \\frac{x-3}{2} \\).<br>
+                        Check: \\( f(f^{-1}(x)) = 2(\\frac{x-3}{2}) + 3 = x \\). ✓</p>
                     </div>
-
-                    <div class="example-card">
-                        <div class="bilingual-row">
-                            <div class="ara-content">
-                                <h4>📌 مثال عملي (Practical Example):</h4>
-                                <p>أوجد مجموع المتتالية: \( 10 + 5 + 2.5 + 1.25 + \dots \)</p>
-                                <p><strong>الحل التكتيكي:</strong><br>
-                                    1. تحديد المعطيات: الحد الأول \( a_1 = 10 \)، النسبة \( r = 5/10 = 0.5 \).<br>
-                                    2. بما أن \( |0.5| < 1 \)، نطبق القانون: \( S_\infty=\frac{10}{1 - 0.5} \).<br>
-                                        3. الحساب: \( 10 / 0.5 = 20 \). <br> <strong>النتيجة:</strong> مجموعهم جميعاً
-                                        للأبد هو 20.</p>
-                            </div>
-                            <div class="eng-content">
-                                <h4>📌 Illustrative Example:</h4>
-                                <p>Find the sum of: \( 10 + 5 + 2.5 + 1.25 + \dots \)</p>
-                                <p><strong>Tactical Solution:</strong><br>
-                                    1. Identify Data: First term \( a_1 = 10 \), Ratio \( r = 5/10 = 0.5 \).<br>
-                                    2. Since \( |0.5| < 1 \), apply formula: \( S_\infty=\frac{10}{1 - 0.5} \).<br>
-                                        3. Calculate: \( 10 / 0.5 = 20 \). <br> <strong>Result:</strong> Their sum
-                                        forever is 20.</p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- SURVIVAL TIPS -->
-        <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.05);">
+        <!-- POINT 4: EXPONENTIAL & LOG FUNCTIONS -->
+        <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3 style="color: #ff4757;">🚨 نصائح المدرس لاختبار CSCA:</h3>
+                    <span class="module-badge">الوحدة 5</span>
+                    <h3>القاعدة 4: الدوال الأسية واللوغاريتمية</h3>
+                    <p><strong>الدالة الأسية:</strong> \\( f(x) = a^x \\) حيث \\(a > 0, a \\neq 1\\).<br>
+                    مجالها \\(\\mathbb{R}\\) ومداها \\((0, \\infty)\\).</p>
+                    <p><strong>الدالة اللوغاريتمية:</strong> \\( f(x) = \\log_a(x) \\) هي عكس الأسية.<br>
+                    مجالها \\((0, \\infty)\\) ومداها \\(\\mathbb{R}\\).</p>
+                    <div class="logic-card">قوانين اللوغاريتمات:<br>
+                    \\( \\log_a(MN) = \\log_a M + \\log_a N \\)<br>
+                    \\( \\log_a(M/N) = \\log_a M - \\log_a N \\)<br>
+                    \\( \\log_a(M^n) = n \\log_a M \\)<br>
+                    \\( \\log_a(a) = 1, \\quad \\log_a(1) = 0 \\)<br>
+                    \\( \\log_a x = \\frac{\\ln x}{\\ln a} \\) (تغيير الأساس)</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 5</span>
+                    <h3>Rule 4: Exponential & Logarithmic Functions</h3>
+                    <p><strong>Exponential:</strong> \\( f(x) = a^x \\) where \\(a > 0, a \\neq 1\\).<br>
+                    Domain \\(\\mathbb{R}\\), Range \\((0, \\infty)\\).</p>
+                    <p><strong>Logarithmic:</strong> \\( f(x) = \\log_a(x) \\) is inverse of exponential.<br>
+                    Domain \\((0, \\infty)\\), Range \\(\\mathbb{R}\\).</p>
+                    <div class="logic-card">Logarithm Rules:<br>
+                    \\( \\log_a(MN) = \\log_a M + \\log_a N \\)<br>
+                    \\( \\log_a(M/N) = \\log_a M - \\log_a N \\)<br>
+                    \\( \\log_a(M^n) = n \\log_a M \\)<br>
+                    \\( \\log_a(a) = 1, \\quad \\log_a(1) = 0 \\)<br>
+                    \\( \\log_a x = \\frac{\\ln x}{\\ln a} \\) (Change of Base)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>حل المعادلة: \\( \\log_2(x) + \\log_2(4) = 5 \\).</p>
+                        <p><strong>الحل:</strong><br>
+                        1. ندمج اللوغاريتمات: \\( \\log_2(4x) = 5 \\).<br>
+                        2. نحول للصيغة الأسية: \\( 4x = 2^5 \\).<br>
+                        3. الحساب: \\( 4x = 32 \\implies x = 8 \\).<br>
+                        التحقق: \\( \\log_2(8) + \\log_2(4) = 3 + 2 = 5 \\) ✓</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Solve: \\( \\log_2(x) + \\log_2(4) = 5 \\).</p>
+                        <p><strong>Solution:</strong><br>
+                        1. Merge Logs: \\( \\log_2(4x) = 5 \\).<br>
+                        2. Exponential form: \\( 4x = 2^5 \\).<br>
+                        3. Calculate: \\( 4x = 32 \\implies x = 8 \\).<br>
+                        Check: \\( \\log_2(8) + \\log_2(4) = 3 + 2 = 5 \\) ✓</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: TRIG FUNCTIONS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <span class="module-badge">الوحدة 6</span>
+                    <h3>القاعدة 5: الدوال المثلثية (Trigonometric Functions)</h3>
+                    <p>الدوال المثلثية الأساسية الست: \\(\\sin x, \\cos x, \\tan x, \\cot x, \\sec x, \\csc x\\).</p>
+                    <div class="logic-card">قيم شهيرة:<br>
+                    \\( \\sin 0 = 0, \\sin \\frac{\\pi}{2} = 1, \\sin \\pi = 0 \\)<br>
+                    \\( \\cos 0 = 1, \\cos \\frac{\\pi}{2} = 0, \\cos \\pi = -1 \\)<br>
+                    \\( \\tan x = \\frac{\\sin x}{\\cos x}, \\quad \\cot x = \\frac{\\cos x}{\\sin x} \\)<br><br>
+                    الدورة: \\(\\sin, \\cos, \\sec, \\csc\\) دورتها \\(2\\pi\\)، \\(\\tan, \\cot\\) دورتها \\(\\pi\\).</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 6</span>
+                    <h3>Rule 5: Trigonometric Functions</h3>
+                    <p>The six basic trig functions: \\(\\sin x, \\cos x, \\tan x, \\cot x, \\sec x, \\csc x\\).</p>
+                    <div class="logic-card">Notable Values:<br>
+                    \\( \\sin 0 = 0, \\sin \\frac{\\pi}{2} = 1, \\sin \\pi = 0 \\)<br>
+                    \\( \\cos 0 = 1, \\cos \\frac{\\pi}{2} = 0, \\cos \\pi = -1 \\)<br>
+                    \\( \\tan x = \\frac{\\sin x}{\\cos x}, \\quad \\cot x = \\frac{\\cos x}{\\sin x} \\)<br><br>
+                    Period: \\(\\sin, \\cos, \\sec, \\csc\\) have period \\(2\\pi\\), \\(\\tan, \\cot\\) have period \\(\\pi\\).</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>أوجد قيمة \\( \\sin(\\frac{\\pi}{6}) + \\cos(\\frac{\\pi}{3}) \\).</p>
+                        <p><strong>الحل:</strong><br>
+                        1. \\( \\sin(\\frac{\\pi}{6}) = \\frac{1}{2} \\).<br>
+                        2. \\( \\cos(\\frac{\\pi}{3}) = \\frac{1}{2} \\).<br>
+                        3. المجموع: \\( \\frac{1}{2} + \\frac{1}{2} = 1 \\).<br>
+                        <strong>النتيجة:</strong> 1.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Find \\( \\sin(\\frac{\\pi}{6}) + \\cos(\\frac{\\pi}{3}) \\).</p>
+                        <p><strong>Solution:</strong><br>
+                        1. \\( \\sin(\\frac{\\pi}{6}) = \\frac{1}{2} \\).<br>
+                        2. \\( \\cos(\\frac{\\pi}{3}) = \\frac{1}{2} \\).<br>
+                        3. Sum: \\( \\frac{1}{2} + \\frac{1}{2} = 1 \\).<br>
+                        <strong>Result:</strong> 1.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 6: LIMITS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <span class="module-badge">الوحدة 7</span>
+                    <h3>القاعدة 6: النهايات (Limits)</h3>
+                    <p>النهاية تصف سلوك الدالة عندما تقترب \\(x\\) من قيمة معينة. الرمز: \\( \\lim_{x \\to a} f(x) = L \\).</p>
+                    <div class="logic-card">قواعد أساسية:<br>
+                    \\( \\lim_{x \\to a} c = c \\) (نهاية الثابت)<br>
+                    \\( \\lim_{x \\to a} x^n = a^n \\)<br>
+                    \\( \\lim_{x \\to a} [f(x) \\pm g(x)] = \\lim f(x) \\pm \\lim g(x) \\)<br>
+                    \\( \\lim_{x \\to a} [f(x) \\cdot g(x)] = \\lim f(x) \\cdot \\lim g(x) \\)<br><br>
+                    نهايات شهيرة:<br>
+                    \\( \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1 \\)<br>
+                    \\( \\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1 \\)</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 7</span>
+                    <h3>Rule 6: Limits</h3>
+                    <p>A limit describes function behavior as \\(x\\) approaches a value. Notation: \\( \\lim_{x \\to a} f(x) = L \\).</p>
+                    <div class="logic-card">Basic Rules:<br>
+                    \\( \\lim_{x \\to a} c = c \\) (constant limit)<br>
+                    \\( \\lim_{x \\to a} x^n = a^n \\)<br>
+                    \\( \\lim_{x \\to a} [f(x) \\pm g(x)] = \\lim f(x) \\pm \\lim g(x) \\)<br>
+                    \\( \\lim_{x \\to a} [f(x) \\cdot g(x)] = \\lim f(x) \\cdot \\lim g(x) \\)<br><br>
+                    Famous Limits:<br>
+                    \\( \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1 \\)<br>
+                    \\( \\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1 \\)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>احسب \\( \\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2} \\).</p>
+                        <p><strong>الحل:</strong><br>
+                        1. عند التعويض المباشر: \\( \\frac{4-4}{2-2} = \\frac{0}{0} \\) (غير معين).<br>
+                        2. نحلل البسط: \\( \\frac{(x-2)(x+2)}{x-2} \\).<br>
+                        3. نختصر: \\( \\lim_{x \\to 2} (x+2) \\).<br>
+                        4. نعوض: \\( 2 + 2 = 4 \\).<br>
+                        <strong>النتيجة:</strong> 4.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Calculate \\( \\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2} \\).</p>
+                        <p><strong>Solution:</strong><br>
+                        1. Direct substitution: \\( \\frac{0}{0} \\) (indeterminate).<br>
+                        2. Factor numerator: \\( \\frac{(x-2)(x+2)}{x-2} \\).<br>
+                        3. Cancel: \\( \\lim_{x \\to 2} (x+2) \\).<br>
+                        4. Substitute: \\( 2 + 2 = 4 \\).<br>
+                        <strong>Result:</strong> 4.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 7: DERIVATIVES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <span class="module-badge">الوحدة 8</span>
+                    <h3>القاعدة 7: المشتقات (Derivatives)</h3>
+                    <p>المشتقة تقيس معدل التغير اللحظي. المشتقة الأولى \\(f'(x)\\) هي ميل المماس عند أي نقطة.</p>
+                    <div class="logic-card">قواعد الاشتقاق الأساسية:<br>
+                    <strong>قاعدة القوة:</strong> \\( \\frac{d}{dx}(x^n) = nx^{n-1} \\)<br>
+                    <strong>قاعدة الثابت:</strong> \\( \\frac{d}{dx}(c) = 0 \\)<br>
+                    <strong>قاعدة الجداء:</strong> \\( (fg)' = f'g + fg' \\)<br>
+                    <strong>قاعدة السلسلة:</strong> \\( (f(g(x)))' = f'(g(x)) \\cdot g'(x) \\)<br>
+                    <strong>مشتقة الأس:</strong> \\( \\frac{d}{dx}(e^x) = e^x \\)<br>
+                    <strong>مشتقة اللوغاريتم:</strong> \\( \\frac{d}{dx}(\\ln x) = \\frac{1}{x} \\)<br>
+                    <strong>مشتقة المثلثات:</strong> \\( \\frac{d}{dx}(\\sin x) = \\cos x, \\frac{d}{dx}(\\cos x) = -\\sin x \\)</div>
+                </div>
+                <div class="eng-content">
+                    <span class="module-badge">Module 8</span>
+                    <h3>Rule 7: Derivatives</h3>
+                    <p>The derivative measures the instantaneous rate of change. \\(f'(x)\\) is the slope of the tangent line at any point.</p>
+                    <div class="logic-card">Basic Differentiation Rules:<br>
+                    <strong>Power Rule:</strong> \\( \\frac{d}{dx}(x^n) = nx^{n-1} \\)<br>
+                    <strong>Constant Rule:</strong> \\( \\frac{d}{dx}(c) = 0 \\)<br>
+                    <strong>Product Rule:</strong> \\( (fg)' = f'g + fg' \\)<br>
+                    <strong>Chain Rule:</strong> \\( (f(g(x)))' = f'(g(x)) \\cdot g'(x) \\)<br>
+                    <strong>Exponential:</strong> \\( \\frac{d}{dx}(e^x) = e^x \\)<br>
+                    <strong>Logarithm:</strong> \\( \\frac{d}{dx}(\\ln x) = \\frac{1}{x} \\)<br>
+                    <strong>Trig:</strong> \\( \\frac{d}{dx}(\\sin x) = \\cos x, \\frac{d}{dx}(\\cos x) = -\\sin x \\)</div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال تطبيقي (Application):</h4>
+                        <p>أوجد مشتقة \\( f(x) = (2x+1)^3 \\) باستخدام قاعدة السلسلة.</p>
+                        <p><strong>الحل:</strong><br>
+                        1. الدالة الخارجية: \\( u^3 \\)، مشتقتها \\( 3u^2 \\).<br>
+                        2. الدالة الداخلية: \\( u=2x+1 \\)، مشتقتها \\( 2 \\).<br>
+                        3. قاعدة السلسلة: \\( f'(x) = 3(2x+1)^2 \\cdot 2 \\).<br>
+                        <strong>النتيجة:</strong> \\( f'(x) = 6(2x+1)^2 \\).<br>
+                        تحقق: نفك القوس: \\( (2x+1)^3 = 8x^3+12x^2+6x+1 \\)، مشتقتها \\( 24x^2+24x+6 = 6(4x^2+4x+1) = 6(2x+1)^2 \\). ✓</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Application Example:</h4>
+                        <p>Find derivative of \\( f(x) = (2x+1)^3 \\) using the Chain Rule.</p>
+                        <p><strong>Solution:</strong><br>
+                        1. Outer: \\( u^3 \\), derivative \\( 3u^2 \\).<br>
+                        2. Inner: \\( u=2x+1 \\), derivative \\( 2 \\).<br>
+                        3. Chain Rule: \\( f'(x) = 3(2x+1)^2 \\cdot 2 \\).<br>
+                        <strong>Result:</strong> \\( f'(x) = 6(2x+1)^2 \\).<br>
+                        Check: Expand \\( (2x+1)^3 \\), derivative is \\( 24x^2+24x+6 = 6(2x+1)^2 \\). ✓</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXAM TIPS -->
+        <section class="master-teacher-box" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.08);">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3 style="color: #ff4757;">🎯 نصيحة CSCA</h3>
                     <ul>
-                        <li>تذكر أن \( \log(0) \) و \( \log(\text{سالب}) \) غير معرفين تماماً.</li>
-                        <li>في المتتاليات، تأكد دائماً من قيمة (\(r\)). إذا كانت أكبر من 1، المجموع هو "مالانهائية" وليس
-                            له قانون.</li>
+                        <li>تذكر أن \\( \\log(0) \\) و \\( \\log(\\text{سالب}) \\) غير معرفين تماماً — يأتي هذا في أسئلة المجال.</li>
+                        <li>الدوال العكسية أكثرها طلباً في الاختبار هي \\(e^x\\) مع \\(\\ln x\\)، والدوال الخطية البسيطة.</li>
+                        <li>لا تنس قاعدة السلسلة! أكثر من نصف أسئلة المشتقات في CSCA تحتاجها.</li>
+                        <li>في النهايات، إذا واجهت \\(\\frac{0}{0}\\)، ابحث عن تحليل أو مرافق للجذور.</li>
+                        <li>لحفظ الدورة المثلثية: "All Students Take Calculus" — كل موجب في الربع الأول.</li>
+                        <li>في الرتابة، استخدم المشتقة الأولى دائماً ولا تنس فترات الاختبار.</li>
                     </ul>
                 </div>
                 <div class="eng-content">
-                    <h3 style="color: #ff4757;">🚨 Teacher's CSCA Tips:</h3>
+                    <h3 style="color: #ff4757;">🎯 CSCA Exam Tips</h3>
                     <ul>
-                        <li>Remember \( \log(0) \) and \( \log(\text{negative}) \) are completely undefined.</li>
-                        <li>In sequences, check (\(r\)) first. If \( |r| \geq 1 \), the sum is "Infinite"—no specific
-                            number.</li>
+                        <li>Remember \\( \\log(0) \\) and \\( \\log(\\text{negative}) \\) are undefined — they appear in domain questions.</li>
+                        <li>Most commonly tested inverse functions: \\(e^x\\) with \\(\\ln x\\), and simple linear functions.</li>
+                        <li>Don't forget the Chain Rule! Over half of derivative questions in CSCA require it.</li>
+                        <li>For limits with \\(\\frac{0}{0}\\), try factoring or rationalizing the numerator.</li>
+                        <li>Remember trig periods: "All Students Take Calculus" — positivity in each quadrant.</li>
+                        <li>For monotonicity, always use the first derivative and don't forget test intervals.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- ================= PRACTICE QUIZ ================= -->
-        <section class="lesson-section"
-            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+        <!-- PRACTICE QUIZ -->
+        <section class="lesson-section" style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
             <h2 class="section-title" style="color: var(--primary);">📝 اختبر معلوماتك | Practice Quiz</h2>
-            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة
-                متوقعة (سؤالان لكل نقطة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per point)</p>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 30px;">أسئلة من نماذج سابقة وأسئلة متوقعة (سؤالان لكل وحدة) <br> Previous Exam Questions & Predicted Patterns (2 Qs per module)</p>
 
-            <!-- Q1 & Q2: Domain -->
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
-                <p><strong>Q1:</strong> ما هو مجال الدالة \( f(x) = \frac{1}{\sqrt{x-2}} \)\(؟\) <br> <span
-                        style="font-size: 0.85em; opacity: 0.8;">Find the domain of \( f(x) = \frac{1}{\sqrt{x-2}}
-                        \).</span></p>
-                <div style="margin: 10px 0;">
-                    A) \( x \geq 2 \) &nbsp; B) \( x > 2 \) &nbsp; C) \( x < 2 \) &nbsp; D) \( \mathbb{R} \) </div>
-                        <details>
-                            <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
-                            <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                            <p style="font-size: 0.9em; opacity: 0.8;">ما تحت الجذر يحب أن يكون \( \geq 0 \)، ولكن لأنه
-                                في المقام، لا يمكن أن يساوي صفر. لذا \( x-2 > 0 \implies x > 2 \).</p>
-                        </details>
-                </div>
+                <p><strong>Q1:</strong> ما هو المجال الصحيح للدالة \\( f(x) = \\frac{1}{\\sqrt{x-2}} \\)؟<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">Domain of \\( f(x) = \\frac{1}{\\sqrt{x-2}} \\)?</span></p>
+                <div style="margin: 10px 0;">A) \\( x \\geq 2 \\) &nbsp; B) \\( x > 2 \\) &nbsp; C) \\( x < 2 \\) &nbsp; D) \\( \\mathbb{R} \\)</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الجذر يحتاج \\( \\geq 0 \\) لكن المقام يمنع الصفر، لذا \\( x-2 > 0 \\implies x > 2 \\).</p>
+                </details>
+            </div>
 
-                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
-                    <p><strong>Q2:</strong> مدى الدالة \( f(x) = x^2 + 5 \) هو: <br> <span
-                            style="font-size: 0.85em; opacity: 0.8;">The range of \( f(x) = x^2 + 5 \) is:</span></p>
-                    <div style="margin: 10px 0;">
-                        A) \( [0, \infty) \) &nbsp; B) \( [5, \infty) \) &nbsp; C) \( (-\infty, \infty) \) &nbsp; D) \(
-                        (5, \infty) \)
-                    </div>
-                    <details>
-                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
-                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                        <p style="font-size: 0.9em; opacity: 0.8;">بما أن \( x^2 \) دائماً \( \geq 0 \)، فإن أقل قيمة
-                            للدالة هي \( 0 + 5 = 5 \).</p>
-                    </details>
-                </div>
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q2:</strong> الدالة \\( f(x) = x^2 \\) هل لها دالة عكسية على \\(\\mathbb{R}\\)؟<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">Does \\( f(x) = x^2 \\) have an inverse on \\(\\mathbb{R}\\)?</span></p>
+                <div style="margin: 10px 0;">A) نعم &nbsp; B) لا، ليست تقابلية &nbsp; C) نعم، لأنها زوجية &nbsp; D) لا، لأن فردية</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">تفشل اختبار الخط الأفقي، لذا ليست One-to-One على \\(\\mathbb{R}\\). تحتاج لتحديد المجال.</p>
+                </details>
+            </div>
 
-                <!-- Q3 & Q4: Logs -->
-                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
-                    <p><strong>Q3:</strong> \( \log_{10}(5) + \log_{10}(2) \) يساوي: <br> <span
-                            style="font-size: 0.85em; opacity: 0.8;">\( \log_{10}(5) + \log_{10}(2) \) equals:</span>
-                    </p>
-                    <div style="margin: 10px 0;">
-                        A) \( \log_{10}(7) \) &nbsp; B) 1 &nbsp; C) 10 &nbsp; D) 0
-                    </div>
-                    <details>
-                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
-                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                        <p style="font-size: 0.9em; opacity: 0.8;">قاعدة الجمع تتحول لضرب داخل اللوغاريتم: \( \log(5
-                            \times 2) = \log(10) = 1 \).</p>
-                    </details>
-                </div>
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q3:</strong> \\( \\log_{10}(5) + \\log_{10}(2) \\) يساوي:<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">\\( \\log_{10}(5) + \\log_{10}(2) \\) equals:</span></p>
+                <div style="margin: 10px 0;">A) \\( \\log_{10}(7) \\) &nbsp; B) 1 &nbsp; C) 10 &nbsp; D) 0</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الجمع يتحول لضرب: \\( \\log(5 \\times 2) = \\log(10) = 1 \\).</p>
+                </details>
+            </div>
 
-                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
-                    <p><strong>Q4:</strong> إذا كان \( 3^x = 81 \)، فما قيمة \(x\)\(؟\) <br> <span
-                            style="font-size: 0.85em; opacity: 0.8;">If \( 3^x = 81 \), find x.</span></p>
-                    <div style="margin: 10px 0;">
-                        A) 2 &nbsp; B) 3 &nbsp; C) 4 &nbsp; D) 5
-                    </div>
-                    <details>
-                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
-                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
-                        <p style="font-size: 0.9em; opacity: 0.8;">\( 3 \times 3 \times 3 \times 3 = 81 \)، لذا \( x=4
-                            \). باللوغاريتمات: \( x = \log_3(81) = 4 \).</p>
-                    </details>
-                </div>
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q4:</strong> \\( \\lim_{x \\to 0} \\frac{\\sin(2x)}{x} = \\)؟<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">\\( \\lim_{x \\to 0} \\frac{\\sin(2x)}{x} = \\)?</span></p>
+                <div style="margin: 10px 0;">A) 1 &nbsp; B) 2 &nbsp; C) 0 &nbsp; D) ∞</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">نستخدم التعويض: \\( \\frac{\\sin(2x)}{x} = 2 \\cdot \\frac{\\sin(2x)}{2x} \\). النهاية = 2 × 1 = 2.</p>
+                </details>
+            </div>
 
-                <!-- Q5 & Q6: Series -->
-                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
-                    <p><strong>Q5:</strong> ما هو مجموع المتتالية الهندسية \( 1, 1/3, 1/9, \dots \) إلى مالانهاية؟ <br>
-                        <span style="font-size: 0.85em; opacity: 0.8;">Infinite sum of \( 1, 1/3, 1/9, \dots \)</span>
-                    </p>
-                    <div style="margin: 10px 0;">
-                        A) 1.5 &nbsp; B) 2 &nbsp; C) 3 &nbsp; D) 1.33
-                    </div>
-                    <details>
-                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
-                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
-                        <p style="font-size: 0.9em; opacity: 0.8;">\( S = a / (1-r) = 1 / (1 - 1/3) = 1 / (2/3) = 3/2 =
-                            1.5 \).</p>
-                    </details>
-                </div>
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q5:</strong> مشتقة \\( f(x) = x \\cdot e^x \\) هي:<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">Derivative of \\( f(x) = x \\cdot e^x \\):</span></p>
+                <div style="margin: 10px 0;">A) \\( e^x \\) &nbsp; B) \\( xe^x \\) &nbsp; C) \\( e^x(x+1) \\) &nbsp; D) \\( x \\cdot e^x \\)</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">قاعدة الجداء: \\( f' = (1)(e^x) + x(e^x) = e^x(1+x) \\).</p>
+                </details>
+            </div>
 
-                <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
-                    <p><strong>Q6:</strong> في المتتالية الهندسية التي حدها الأول 2 ونسبتها 3، ما هو الحد الرابع؟ <br>
-                        <span style="font-size: 0.85em; opacity: 0.8;">In a GP with \( a=2, r=3 \), find the 4th
-                            term.</span>
-                    </p>
-                    <div style="margin: 10px 0;">
-                        A) 54 &nbsp; B) 18 &nbsp; C) 162 &nbsp; D) 6
-                    </div>
-                    <details>
-                        <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
-                        <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
-                        <p style="font-size: 0.9em; opacity: 0.8;">القانون: \( a_n = a \times r^{n-1} = 2 \times 3^{4-1}
-                            = 2 \times 27 = 54 \).</p>
-                    </details>
-                </div>
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid var(--primary);">
+                <p><strong>Q6:</strong> فترات تزايد الدالة \\( f(x) = -x^2 + 4x \\) هي:<br>
+                    <span style="font-size: 0.85em; opacity: 0.8;">Intervals of increase for \\( f(x) = -x^2 + 4x \\):</span></p>
+                <div style="margin: 10px 0;">A) \\( (-\\infty, 2) \\) &nbsp; B) \\( (2, \\infty) \\) &nbsp; C) \\( (-\\infty, -2) \\) &nbsp; D) \\( (-\\infty, \\infty) \\)</div>
+                <details>
+                    <summary style="color: var(--primary); cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">\\( f'(x) = -2x + 4 = 0 \\implies x = 2 \\). \\( f'(x) > 0 \\) عندما \\( x < 2 \\).</p>
+                </details>
+            </div>
         </section>
 
-        <!-- SIGNATURE -->
         <section class="developer-sig" style="text-align: center; padding: 40px;">
             <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
         </section>
@@ -380,5 +551,4 @@
         <p>&copy; 2026 أكاديمية عبد الحميد للرياضيات | المنهج الذهبي | The Golden Syllabus</p>
     </footer>
 </body>
-
 </html>

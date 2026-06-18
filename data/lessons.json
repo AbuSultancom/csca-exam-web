@@ -28,6 +28,13 @@
         "summary": "نماذج الاحتمالات الكلاسيكية، المقاييس الإحصائية، والتوزيع الطبيعي."
     },
     {
+        "id": "math5",
+        "subject": "math",
+        "title": "التفاضل والتكامل | Calculus & Limits",
+        "path": "lessons/math_calculus.html",
+        "summary": "النهايات، قواعد التفاضل، التكامل غير المحدد والمحدد، وتطبيقاتهما."
+    },
+    {
         "id": "phys1",
         "subject": "physics",
         "title": "الميكانيكا | Mechanics",
@@ -61,5 +68,54 @@
         "title": "الفيزياء الحديثة | Modern Physics",
         "path": "lessons/phys_modern.html",
         "summary": "البنية الذرية، الفيزياء النووية، التأثير الكهروضوئي، ومبادئ النسبية."
+    },
+    {
+        "id": "phys6",
+        "subject": "physics",
+        "title": "ميكانيكا الموائع | Fluid Mechanics",
+        "path": "lessons/phys_fluids.html",
+        "summary": "ضغط السوائل، مبدأ باسكال، أرخميدس، معادلة برنولي، وتطبيقات الموائع."
+    },
+    {
+        "id": "chem1",
+        "subject": "chemistry",
+        "title": "البناء الذري | Atomic Structure",
+        "path": "lessons/chem_atomic.html",
+        "summary": "مكونات الذرة، الجدول الدوري، التوزيع الإلكتروني، أعداد الكم، والأطياف الذرية."
+    },
+    {
+        "id": "chem2",
+        "subject": "chemistry",
+        "title": "الروابط الكيميائية | Chemical Bonding",
+        "path": "lessons/chem_bonding.html",
+        "summary": "الروابط الأيونية والتساهمية والفلزية، نظرية VSEPR، الأشكال الهندسية، التهجين."
+    },
+    {
+        "id": "chem3",
+        "subject": "chemistry",
+        "title": "الكيمياء العضوية | Organic Chemistry",
+        "path": "lessons/chem_organic.html",
+        "summary": "الهيدروكربونات، المجموعات الوظيفية، التسمية النظامية، الأيزومرات، أنواع التفاعلات."
+    },
+    {
+        "id": "chem4",
+        "subject": "chemistry",
+        "title": "الاتزان الكيميائي والأحماض والقواعد | Chemical Equilibrium & Acids/Bases",
+        "path": "lessons/chem_equilibrium.html",
+        "summary": "ثابت الاتزان Kc، قاعدة لوشاتيليه، الأحماض والقواعد، pH، الأحماض الضعيفة، المحاليل المنظمة."
+    },
+    {
+        "id": "chem5",
+        "subject": "chemistry",
+        "title": "الحركية الكيميائية والترموديناميكا | Kinetics & Thermochemistry",
+        "path": "lessons/chem_kinetics.html",
+        "summary": "معدلات التفاعل، طاقة التنشيط، الإنثالبي، الإنتروبي، طاقة جيبس الحرة، المسعرية."
+    },
+    {
+        "id": "chem6",
+        "subject": "chemistry",
+        "title": "الحساب الكيميائي وتقنيات المختبر | Stoichiometry & Lab Methods",
+        "path": "lessons/chem_stoichiometry.html",
+        "summary": "المول، موازنة المعادلات، المادة المحددة، المردود المئوي، التركيز، المعايرة، قوانين الغازات."
     }
 ]

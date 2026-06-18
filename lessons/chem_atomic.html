@@ -48,6 +48,20 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        .csca-tip {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05));
+            border: 2px solid #ffd700;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .csca-tip h4 {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
         h3 {
             color: #4ade80;
             margin-bottom: 15px;
@@ -72,8 +86,7 @@
     </header>
 
     <main class="container" style="padding: 80px 20px;">
-        <h1 class="section-title">البناء الذري: قصة الجسيمات <br> <span style="font-size: 0.6em; opacity: 0.8;">Atomic
-                Structure: The Tale of Particles</span></h1>
+        <h1 class="section-title">البناء الذري: قصة الجسيمات <br> <span style="font-size: 0.6em; opacity: 0.8;">Atomic Structure: The Tale of Particles</span></h1>
 
         <!-- INTRODUCTION -->
         <section class="master-teacher-box"
@@ -81,13 +94,11 @@
             <div class="bilingual-row">
                 <div class="ara-content">
                     <h3>أبجدية المادة:</h3>
-                    <p>أهلاً بك يا عالم المستقبل. في الكيمياء، "الذرة" هي كل شيء. في هذا الدرس سنغوص في قلب النواة، نفهم
-                        البروتونات، الإلكترونات، وكيف يتوزعون في مدارات الطاقة وفقاً لقوانين الكم.</p>
+                    <p>أهلاً بك يا عالم المستقبل. في الكيمياء، \"الذرة\" هي كل شيء. في هذا الدرس سنغوص في قلب النواة، نفهم البروتونات، الإلكترونات، وكيف يتوزعون في مدارات الطاقة وفقاً لقوانين الكم. كل مادة في الكون — من الهواء إلى الذهب — تُفهم من خلال تركيبها الذري.</p>
                 </div>
                 <div class="eng-content">
                     <h3>The ABCs of Matter:</h3>
-                    <p>Welcome, future scientist. In chemistry, the "Atom" is everything. In this lesson, we dive into
-                        the nucleus, understanding protons, electrons, and their configuration in energy levels.</p>
+                    <p>Welcome, future scientist. In chemistry, the \"Atom\" is everything. In this lesson, we dive into the nucleus, understanding protons, electrons, and their configuration in energy levels governed by quantum laws. Every substance — from air to gold — is understood through its atomic structure.</p>
                 </div>
             </div>
         </section>
@@ -98,50 +109,141 @@
                 <div class="ara-content">
                     <h3>النقطة 1: مكونات الذرة (Subatomic Particles)</h3>
                     <p>الذرة تتكون من نواة (بروتونات + نيترونات) وسحابة من الإلكترونات.</p>
-                    <div class="logic-card">العدد الذري (\(Z\)) = عدد البروتونات | العدد الكتلي (\(A\)) = بروتونات +
-                        نيترونات.</div>
+                    <div class="logic-card">
+                        <strong>البروتون (Proton):</strong> شحنة +1، كتلة ≈ 1 amu — يوجد في النواة.<br>
+                        <strong>النيوترون (Neutron):</strong> شحنة 0، كتلة ≈ 1 amu — يوجد في النواة.<br>
+                        <strong>الإلكترون (Electron):</strong> شحنة -1، كتلة ≈ 1/1836 amu — يدور حول النواة.
+                    </div>
+                    <p><strong>العدد الذري (Z):</strong> عدد البروتونات — يحدد نوع العنصر.<br>
+                    <strong>العدد الكتلي (A):</strong> عدد البروتونات + النيوترونات.</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ \text{Atomic Symbol: } _{Z}^{A}X \]
+                    </div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 1: Atomic Components</h3>
-                    <p>An atom consists of a nucleus (protons + neutrons) and an electron cloud.</p>
-                    <div class="logic-card">Atomic Number (\(Z\)) = # of Protons | Mass Number (\(A\)) = Protons +
-                        Neutrons.</div>
+                    <h3>Point 1: Subatomic Particles</h3>
+                    <p>An atom consists of a nucleus (protons + neutrons) surrounded by an electron cloud.</p>
+                    <div class="logic-card">
+                        <strong>Proton:</strong> Charge +1, mass ≈ 1 amu — located in nucleus.<br>
+                        <strong>Neutron:</strong> Charge 0, mass ≈ 1 amu — located in nucleus.<br>
+                        <strong>Electron:</strong> Charge -1, mass ≈ 1/1836 amu — orbits the nucleus.
+                    </div>
+                    <p><strong>Atomic Number (Z):</strong> Number of protons — identifies the element.<br>
+                    <strong>Mass Number (A):</strong> Number of protons + neutrons.</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ \text{Atomic Symbol: } _{Z}^{A}X \]
+                    </div>
+                </div>
+            </div>
+
+            <div class="csca-tip">
+                <h4>💡 نصيحة CSCA | CSCA Tip</h4>
+                <div class="bilingual-row" style="gap: 15px;">
+                    <div class="ara-content" style="border-right-color: #ffd700;">
+                        <p>في اختبار CSCA: احفظ أن <strong>عدد النيوترونات = A - Z</strong>. إذا كان السؤال عن <strong>النظائر</strong> (Isotopes)، فهي ذرات لنفس العنصر (نفس Z) باختلاف A (أي اختلاف عدد النيوترونات). مثال: \\( ^{12}_{6}C \\) و \\( ^{14}_{6}C \\).</p>
+                    </div>
+                    <div class="eng-content" style="border-left-color: #ffd700;">
+                        <p>CSCA Exam: Remember <strong>Neutrons = A - Z</strong>. For <strong>Isotopes</strong>: same element (same Z), different A (different neutron count). Example: \\( ^{12}_{6}C \\) and \\( ^{14}_{6}C \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: ISOTOPES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: النظائر (Isotopes) والكتلة الذرية المتوسطة</h3>
+                    <p>النظائر هي ذرات لنفس العنصر تختلف في عدد النيوترونات. معظم العناصر في الطبيعة هي خليط من النظائر.</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ \text{Average Atomic Mass} = \sum (m_i \times \text{abundance}_i) \]
+                    </div>
+                    <p>حيث \\( m_i \\) كتلة النظير، و \\( \\text{abundance}_i \\) نسبته المئوية (ككسر عشري).</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Isotopes & Average Atomic Mass</h3>
+                    <p>Isotopes are atoms of the same element with different neutron numbers. Most elements occur as isotope mixtures.</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ \text{Average Atomic Mass} = \sum (m_i \times \text{abundance}_i) \]
+                    </div>
+                    <p>Where \\( m_i \\) is isotope mass and \\( \\text{abundance}_i \\) is its fractional abundance.</p>
                 </div>
             </div>
 
             <div class="example-card">
                 <div class="bilingual-row">
                     <div class="ara-content">
-                        <h4>📌 مثال للمحترفين (Pro Example):</h4>
-                        <p>عنصر الليثيوم \( {}^7_3\text{Li} \). أوجد مكوناته.</p>
+                        <h4>📌 مثال (Example):</h4>
+                        <p>الكلور الطبيعي: \\( ^{35}_{17}Cl \\) كتلته 34.969 amu وبنسبة 75.78%، و \\( ^{37}_{17}Cl \\) كتلته 36.966 amu وبنسبة 24.22%. احسب الكتلة الذرية المتوسطة.</p>
                         <p><strong>الحل:</strong><br>
-                            1. عدد البروتونات = العدد السفلي = 3. <br>
-                            2. عدد النيترونات = \( 7 - 3 = 4 \). <br> <strong>النتيجة:</strong> 3 بروتونات و 4 نيترونات.
-                        </p>
+                            \\( = (34.969 \\times 0.7578) + (36.966 \\times 0.2422) \\)<br>
+                            \\( = 26.50 + 8.95 = 35.45 \\, \\text{amu} \\).</p>
                     </div>
                     <div class="eng-content">
-                        <h4>📌 Pro Example:</h4>
-                        <p>Lithium \( {}^7_3\text{Li} \). Find its components.</p>
+                        <h4>📌 Example:</h4>
+                        <p>Natural chlorine: \\( ^{35}_{17}Cl \\) mass=34.969 amu at 75.78%, \\( ^{37}_{17}Cl \\) mass=36.966 amu at 24.22%. Find average atomic mass.</p>
                         <p><strong>Solution:</strong><br>
-                            1. Protons = Atomic core (Bottom) = 3. <br>
-                            2. Neutrons = \( 7 - 3 = 4 \). <br> <strong>Result:</strong> 3 protons and 4 neutrons.</p>
+                            \\( = (34.969 \\times 0.7578) + (36.966 \\times 0.2422) \\)<br>
+                            \\( = 26.50 + 8.95 = 35.45 \\, \\text{amu} \\).</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POINT 2: ELECTRON CONFIGURATION -->
+        <!-- POINT 3: PERIODIC TABLE -->
         <section class="rule-box">
             <div class="bilingual-row">
                 <div class="ara-content">
-                    <h3>النقطة 2: التوزيع الإلكتروني (Electron Config)</h3>
-                    <p>تتوزع الإلكترونات في مستويات الطاقة \( (1, 2, 3...) \) وتحت المستويات \( (s, p, d, f) \).</p>
-                    <div class="logic-card">قاعدة \( s, s, p, s, p, s \)... (1s 2s 2p 3s 3p).</div>
+                    <h3>النقطة 3: الجدول الدوري (Periodic Table)</h3>
+                    <p>الجدول الدوري يرتب العناصر حسب العدد الذري تصاعدياً. يُقسم إلى:</p>
+                    <div class="logic-card">
+                        <strong>الدورات (Periods):</strong> 7 صفوف أفقية — كل دورة تمثل غلاف طاقة رئيسياً.<br>
+                        <strong>المجموعات (Groups):</strong> 18 عموداً — العناصر في نفس المجموعة لها نفس عدد إلكترونات التكافؤ.<br>
+                        <strong>المناطق (Blocks):</strong> s-block (Gps 1-2), p-block (Gps 13-18), d-block (transition metals), f-block (lanthanides/actinides).
+                    </div>
+                    <p>اتجاهات (Trends) مهمة:</p>
+                    <div class="logic-card">
+                        • <strong>نصف القطر الذري:</strong> يزداد لأسفل المجموعة (لزيادة الأغلفة)، ويقل عبر الدورة (لزيادة الشحنة النووية).<br>
+                        • <strong>طاقة التأين:</strong> عكس نصف القطر — تقل للأسفل، تزيد عبر الدورة.<br>
+                        • <strong>الكهروسالبية:</strong> أكبر قيمة للفلور (F = 4.0)، تقل للأسفل وتزيد عبر الدورة.
+                    </div>
                 </div>
                 <div class="eng-content">
-                    <h3>Point 2: Electron Configuration</h3>
-                    <p>Electrons reside in shells (\( 1, 2, 3... \)) and subshells (\( s, p, d, f \)).</p>
-                    <div class="logic-card">Order: 1s, 2s, 2p, 3s, 3p, 4s...</div>
+                    <h3>Point 3: Periodic Table</h3>
+                    <p>The periodic table arranges elements by increasing atomic number. It is divided into:</p>
+                    <div class="logic-card">
+                        <strong>Periods:</strong> 7 horizontal rows — each = a main energy shell.<br>
+                        <strong>Groups:</strong> 18 vertical columns — same valence electron count.<br>
+                        <strong>Blocks:</strong> s-block (Gps 1-2), p-block (Gps 13-18), d-block (transition metals), f-block (lanthanides/actinides).
+                    </div>
+                    <p>Key Trends:</p>
+                    <div class="logic-card">
+                        • <strong>Atomic Radius:</strong> Increases down a group (more shells), decreases across a period (higher nuclear charge).<br>
+                        • <strong>Ionization Energy:</strong> Opposite to radius — decreases down, increases across.<br>
+                        • <strong>Electronegativity:</strong> Highest is Fluorine (F = 4.0), decreases down, increases across.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 4: ELECTRON CONFIGURATION -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 4: التوزيع الإلكتروني (Electron Configuration)</h3>
+                    <p>الإلكترونات تتوزع في أغلفة ومستويات فرعية وفق قواعد محددة. ترتيب التعبئة: حسب قاعدة <strong>أوفباو (Aufbau)</strong> — الأقل طاقة أولاً.</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ 1s \lt 2s \lt 2p \lt 3s \lt 3p \lt 4s \lt 3d \lt 4p \lt 5s \lt 4d \lt 5p \lt 6s \lt 4f \lt 5d \lt 6p \lt 7s... \]
+                    </div>
+                    <p><strong>سعة المستويات الفرعية:</strong> s = 2, p = 6, d = 10, f = 14 إلكترون.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 4: Electron Configuration</h3>
+                    <p>Electrons are distributed in shells and subshells following specific rules. Filling order: <strong>Aufbau Principle</strong> — lowest energy first.</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ 1s \lt 2s \lt 2p \lt 3s \lt 3p \lt 4s \lt 3d \lt 4p \lt 5s \lt 4d \lt 5p \lt 6s \lt 4f \lt 5d \lt 6p \lt 7s... \]
+                    </div>
+                    <p><strong>Subshell capacities:</strong> s = 2, p = 6, d = 10, f = 14 electrons.</p>
                 </div>
             </div>
 
@@ -149,18 +251,197 @@
                 <div class="bilingual-row">
                     <div class="ara-content">
                         <h4>📌 تدريب (Exercise):</h4>
-                        <p>ما هو التوزيع الإلكتروني للأكسجين (\( Z=8 \))؟</p>
+                        <p>ما هو التوزيع الإلكتروني للأكسجين (\\( Z=8 \\))؟</p>
                         <p><strong>الحل:</strong><br>
-                            نوزع الـ 8 إلكترونات: \( 1s^2, 2s^2, 2p^4 \). <br> <strong>النتيجة:</strong> المستوى الأخير
-                            (التكافؤ) يحتوي 6 إلكترونات.</p>
+                            نوزع الـ 8 إلكترونات: \\( 1s^2, 2s^2, 2p^4 \\). <br> <strong>النتيجة:</strong> المستوى الأخير (التكافؤ) يحتوي 6 إلكترونات.</p>
                     </div>
                     <div class="eng-content">
                         <h4>📌 Exercise:</h4>
-                        <p>What is the electron config of Oxygen (\( Z=8 \))?</p>
+                        <p>What is the electron config of Oxygen (\\( Z=8 \\))?</p>
                         <p><strong>Solution:</strong><br>
-                            Distribute 8 electrons: \( 1s^2, 2s^2, 2p^4 \). <br> <strong>Result:</strong> The outer
-                            shell has 6 valence electrons.</p>
+                            Distribute 8 electrons: \\( 1s^2, 2s^2, 2p^4 \\). <br> <strong>Result:</strong> The outer shell has 6 valence electrons.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: QUANTUM NUMBERS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 5: أعداد الكم (Quantum Numbers)</h3>
+                    <p>أعداد الكم الأربعة تصف حالة كل إلكترون في الذرة — لا يمكن لإلكترونين أن يملكوا نفس الأعداد الأربعة (مبدأ باولي).</p>
+                    <div class="logic-card">
+                        <strong>1. عدد الكم الرئيسي (n):</strong> مستوى الطاقة — n = 1, 2, 3, ...<br>
+                        <strong>2. عدد الكم الثانوي (ℓ):</strong> شكل المدار — ℓ = 0 (s), 1 (p), 2 (d), 3 (f)<br>
+                        <strong>3. عدد الكم المغناطيسي (mℓ):</strong> اتجاه المدار — -ℓ إلى +ℓ<br>
+                        <strong>4. عدد الكم المغزلي (ms):</strong> دوران الإلكترون — +½ أو -½
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 5: Quantum Numbers</h3>
+                    <p>Four quantum numbers describe every electron — no two electrons can share all four (Pauli Exclusion Principle).</p>
+                    <div class="logic-card">
+                        <strong>1. Principal (n):</strong> Energy level — n = 1, 2, 3, ...<br>
+                        <strong>2. Azimuthal (ℓ):</strong> Orbital shape — ℓ = 0 (s), 1 (p), 2 (d), 3 (f)<br>
+                        <strong>3. Magnetic (mℓ):</strong> Orbital orientation — -ℓ to +ℓ<br>
+                        <strong>4. Spin (ms):</strong> Electron spin — +½ or -½
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 تدريب (Exercise):</h4>
+                        <p>ما أعداد الكم الممكنة لإلكترون في المدار 2p؟</p>
+                        <p><strong>الحل:</strong><br>
+                            n = 2, ℓ = 1 (لأنه p). mℓ يمكن أن يكون -1, 0, +1. ms يمكن +½ أو -½.<br>
+                            مثال: (2, 1, 0, +½).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Exercise:</h4>
+                        <p>What are the possible quantum numbers for a 2p electron?</p>
+                        <p><strong>Solution:</strong><br>
+                            n = 2, ℓ = 1 (p orbital). mℓ can be -1, 0, +1. ms can be +½ or -½.<br>
+                            Example: (2, 1, 0, +½).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 6: HUND'S RULE -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 6: قاعدة هوند (Hund's Rule) ومبدأ باولي</h3>
+                    <p><strong>مبدأ باولي للاستبعاد:</strong> لا يمكن لإلكترونين في نفس الذرة أن يملكوا نفس الأعداد الكمية الأربعة. بمعنى: كل غرفة (أوربيتال) تتسع لإلكترونين كحد أقصى.</p>
+                    <p><strong>قاعدة هوند:</strong> عند توزيع الإلكترونات في مدارات فرعية متساوية الطاقة (مثل 2p)، تملأ المدارات أولاً بإلكترون واحد لكل مدار قبل البدء في الزوج. هذا يقلل التنافر.</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        مثال: النيتروجين (\\( Z = 7 \\)): \\( 1s^2 \\, 2s^2 \\, 2p_x^1 \\, 2p_y^1 \\, 2p_z^1 \\) — إلكترون في كل مدار p.
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 6: Hund's Rule & Pauli Principle</h3>
+                    <p><strong>Pauli Exclusion Principle:</strong> No two electrons can have the same four quantum numbers. Each orbital holds at most 2 electrons.</p>
+                    <p><strong>Hund's Rule:</strong> When filling degenerate orbitals (e.g., 2p), fill each with one electron first before pairing. This minimizes repulsion.</p>
+                    <div class="logic-card" style="text-align: center;">
+                        Example: Nitrogen (\\( Z = 7 \\)): \\( 1s^2 \\, 2s^2 \\, 2p_x^1 \\, 2p_y^1 \\, 2p_z^1 \\) — one electron in each p orbital.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 7: ELECTRON CONFIGURATION - ADVANCED -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 7: استثناءات التوزيع الإلكتروني</h3>
+                    <p>بعض العناصر لها توزيعات إلكترونية شاذة (مخالفة لأوفباو) لأنها تصل لاستقرار أكبر:</p>
+                    <div class="logic-card">
+                        <strong>الكروم (Cr, Z=24):</strong> متوقع: [Ar] 4s² 3d⁴، فعلياً: [Ar] 4s¹ 3d⁵ — نصف امتلاء d.<br>
+                        <strong>النحاس (Cu, Z=29):</strong> متوقع: [Ar] 4s² 3d⁹، فعلياً: [Ar] 4s¹ 3d¹⁰ — امتلاء كامل d.<br>
+                        <strong>السبب:</strong> المدارات نصف الممتلئة أو الممتلئة بالكامل أكثر استقراراً.
+                    </div>
+                    <p><strong>التوزيع المختصر (Noble Gas Notation):</strong> نستخدم أقرب غاز نبيل سابق. مثال: Na = [Ne] 3s¹.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 7: Electron Configuration Exceptions</h3>
+                    <p>Some elements have anomalous configurations because they achieve greater stability:</p>
+                    <div class="logic-card">
+                        <strong>Cr (Z=24):</strong> Expected: [Ar] 4s² 3d⁴, Actual: [Ar] 4s¹ 3d⁵ — half-filled d.<br>
+                        <strong>Cu (Z=29):</strong> Expected: [Ar] 4s² 3d⁹, Actual: [Ar] 4s¹ 3d¹⁰ — fully filled d.<br>
+                        <strong>Reason:</strong> Half-filled or completely filled orbitals are more stable.
+                    </div>
+                    <p><strong>Noble Gas Notation:</strong> Use the preceding noble gas. Example: Na = [Ne] 3s¹.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 8: IONS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 8: التوزيع الإلكتروني للأيونات</h3>
+                    <p>عند تكوين الأيونات، تفقد أو تكتسب إلكترونات في <strong>المستوى الخارجي (التكافؤ)</strong> أولاً.</p>
+                    <div class="logic-card">
+                        <strong>الأيونات الموجبة (Cations):</strong> تفقد إلكترونات التكافؤ. مثال: Na⁺ = [Ne] (تفقد 3s¹).<br>
+                        <strong>الأيونات السالبة (Anions):</strong> تكتسب إلكترونات لتكمل الثمانية. مثال: Cl⁻ = [Ar] (تكتسب إلكترون لـ 3p⁶).<br>
+                        <strong>ملاحظة:</strong> للعناصر الانتقالية، تفقد إلكترونات 4s قبل 3d. مثال: Fe²⁺ = [Ar] 3d⁶ (وليست 4s² 3d⁴).
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 8: Electron Configuration of Ions</h3>
+                    <p>When forming ions, atoms lose or gain electrons from their <strong>outermost shell (valence)</strong> first.</p>
+                    <div class="logic-card">
+                        <strong>Cations:</strong> Lose valence electrons. Example: Na⁺ = [Ne] (loses 3s¹).<br>
+                        <strong>Anions:</strong> Gain electrons to complete octet. Example: Cl⁻ = [Ar] (gains 3p⁶).<br>
+                        <strong>Note:</strong> For transition elements, 4s electrons are lost before 3d. Example: Fe²⁺ = [Ar] 3d⁶ (not 4s² 3d⁴).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 9: ATOMIC SPECTRA -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 9: الأطياف الذرية (Atomic Spectra)</h3>
+                    <p>عند تسخين العناصر أو تمرير تيار كهربائي خلالها، تبعث أضواء بألوان محددة. هذه الأطياف هي \"بصمة\" العنصر.</p>
+                    <div class="logic-card">
+                        <strong>آلية الانبعاث:</strong> الإلكترون يمتص طاقة ← ينتقل لمستوى أعلى (إثارة) ← يعود فيصدر طاقة بشكل ضوء.<br>
+                        <strong>طاقة الفوتون المنبعث:</strong> \[ \Delta E = E_f - E_i = h\nu = \frac{hc}{\lambda} \]<br>
+                        حيث h = 6.626 × 10⁻³⁴ J·s، c = 3 × 10⁸ m/s.
+                    </div>
+                    <p>طيف الهيدروجين له سلسلات مشهورة: ليمان (UV)، بالمير (مرئي)، باشن (تحت الحمراء).</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 9: Atomic Spectra</h3>
+                    <p>When elements are heated or electrically excited, they emit light of specific colors. These spectra are the element's \"fingerprint\".</p>
+                    <div class="logic-card">
+                        <strong>Emission mechanism:</strong> Electron absorbs energy → jumps to higher level (excitation) → returns, emitting light energy.<br>
+                        <strong>Photon energy:</strong> \[ \Delta E = E_f - E_i = h\nu = \frac{hc}{\lambda} \]<br>
+                        where h = 6.626 × 10⁻³⁴ J·s, c = 3 × 10⁸ m/s.
+                    </div>
+                    <p>Hydrogen spectrum series: Lyman (UV), Balmer (visible), Paschen (infrared).</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال (Example):</h4>
+                        <p>احسب طاقة فوتون طوله الموجي 486 nm (خط بالمير). (\\( h = 6.626 \\times 10^{-34} \\), \\( c = 3 \\times 10^8 \\))</p>
+                        <p><strong>الحل:</strong><br>
+                            \\( E = hc/\\lambda = (6.626 \\times 10^{-34} \\times 3 \\times 10^8) / (486 \\times 10^{-9}) \\)<br>
+                            \\( = 1.988 \\times 10^{-25} / 4.86 \\times 10^{-7} = 4.09 \\times 10^{-19} \\, \\text{J} \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Example:</h4>
+                        <p>Calculate photon energy with λ = 486 nm (Balmer line). (\\( h = 6.626 \\times 10^{-34} \\), \\( c = 3 \\times 10^8 \\))</p>
+                        <p><strong>Solution:</strong><br>
+                            \\( E = hc/\\lambda = (6.626 \\times 10^{-34} \\times 3 \\times 10^8) / (486 \\times 10^{-9}) \\)<br>
+                            \\( = 1.988 \\times 10^{-25} / 4.86 \\times 10^{-7} = 4.09 \\times 10^{-19} \\, \\text{J} \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSCA TIPS SUMMARY -->
+        <section class="csca-tip" style="margin: 50px 0;">
+            <h4>🏆 نصيحة CSCA شاملة | Comprehensive CSCA Tips</h4>
+            <div class="bilingual-row" style="gap: 15px;">
+                <div class="ara-content" style="border-right-color: #ffd700;">
+                    <p><strong>1. العدد الذري والكتلي:</strong> Z = عدد البروتونات = عدد الإلكترونات (للذرة المتعادلة). A = Z + N.<br>
+                    <strong>2. إلكترونات التكافؤ:</strong> للمجموعات الرئيسية = رقم المجموعة (للمجموعات 1، 2، 13-18). احفظ: المجموعة 17 (هالوجينات) = 7 إلكترونات تكافؤ.<br>
+                    <strong>3. طيف الهيدروجين:</strong> سلسلة بالمير (مرئي) هي الأكثر طلباً في الامتحان.<br>
+                    <strong>4. ترتيب التوزيع:</strong> اكتب 4s قبل 3d في التوزيع، ولكن تذكر أن 3d طاقته أعلى من 4s بعد التعبئة.</p>
+                </div>
+                <div class="eng-content" style="border-left-color: #ffd700;">
+                    <p><strong>1. Atomic & Mass Number:</strong> Z = protons = electrons (neutral atom). A = Z + N.<br>
+                    <strong>2. Valence electrons:</strong> For main groups = group number (Groups 1, 2, 13-18). Group 17 (Halogens) = 7 valence electrons.<br>
+                    <strong>3. Hydrogen spectrum:</strong> Balmer series (visible) is most tested.<br>
+                    <strong>4. Configuration order:</strong> Write 4s before 3d, but remember 3d is higher energy than 4s after filling.</p>
                 </div>
             </div>
         </section>
@@ -171,28 +452,62 @@
             <h2 class="section-title" style="color: #4ade80;">📝 اختبر معلوماتك | Practice Quiz</h2>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
-                <p><strong>Q1:</strong> ذرات لنفس العنصر تختلف في عدد النيترونات تسمى:</p>
+                <p><strong>Q1:</strong> ذرات لنفس العنصر تختلف في عدد النيوترونات تسمى:</p>
                 <div style="margin: 10px 0;">
                     A) أيونات &nbsp; B) نظائر (Isotopes) &nbsp; C) متشاكلات &nbsp; D) مركبات
                 </div>
                 <details>
                     <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">النظائر لها نفس عدد البروتونات (نفس العنصر) ولكن كتلة
-                        ذرية مختلفة بسبب النيترونات.</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">النظائر لها نفس عدد البروتونات (نفس العنصر) ولكن كتلة ذرية مختلفة بسبب النيوترونات.</p>
                 </details>
             </div>
 
             <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
-                <p><strong>Q2:</strong> وفقاً لمبدأ باولي، كم عدد الإلكترونات الأقصى في المستوى الفرعي \( p \)\(؟\)</p>
+                <p><strong>Q2:</strong> وفقاً لمبدأ باولي، كم عدد الإلكترونات الأقصى في المستوى الفرعي \\( p \\)؟</p>
                 <div style="margin: 10px 0;">
                     A) 2 &nbsp; B) 6 &nbsp; C) 10 &nbsp; D) 14
                 </div>
                 <details>
                     <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
                     <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
-                    <p style="font-size: 0.9em; opacity: 0.8;">المستوى الفرعي p يحتوي 3 غرف (أوربيتالات)، كل غرفة تتسع
-                        لإلكترونين كحد أقصى.</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">المستوى الفرعي p يحتوي 3 أوربيتالات، كل أوربيتال يتسع لإلكترونين = 6 إلكترونات.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q3:</strong> عنصر عدده الذري Z=17، ما توزيعه الإلكتروني؟</p>
+                <div style="margin: 10px 0;">
+                    A) 1s² 2s² 2p⁶ 3s² 3p⁵ &nbsp; B) 1s² 2s² 2p⁶ 3s² 3p⁶ &nbsp; C) 1s² 2s² 2p⁶ 3s¹ &nbsp; D) 1s² 2s² 2p⁶ 3s² 3p³
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: A</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">المجموع = 2+2+6+2+5 = 17. هذا هو الكلور (Cl).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q4:</strong> أي من أعداد الكم التالية غير ممكن لإلكترون في الذرة؟</p>
+                <div style="margin: 10px 0;">
+                    A) (3, 2, 0, +½) &nbsp; B) (2, 1, -1, -½) &nbsp; C) (4, 0, 0, +½) &nbsp; D) (2, 2, 0, +½)
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: D</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">عند n=2، ℓ يمكن أن يكون 0 (s) أو 1 (p) فقط، وليس 2 (d). لذلك (2, 2, 0, +½) مستحيل.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q5:</strong> التوزيع الإلكتروني [Ar] 4s¹ 3d⁵ يعود للعنصر:</p>
+                <div style="margin: 10px 0;">
+                    A) Fe (Z=26) &nbsp; B) Cr (Z=24) &nbsp; C) Mn (Z=25) &nbsp; D) V (Z=23)
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">Ar = 18 إلكترون + 1 (4s¹) + 5 (3d⁵) = 24 إلكترون = Cr. هذا أحد الاستثناءات الشهيرة.</p>
                 </details>
             </div>
         </section>

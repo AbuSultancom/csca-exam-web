@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر كلاس الكيمياء: الحركية والترموديناميكا | Chemistry Masterclass: Kinetics & Thermochemistry</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .bilingual-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ara-content {
+            text-align: right;
+            border-right: 4px solid #4ade80;
+            padding-right: 20px;
+        }
+
+        .eng-content {
+            text-align: left;
+            direction: ltr;
+            border-left: 3px solid #2ecc71;
+            padding-left: 20px;
+            font-size: 1rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .rule-box {
+            background: rgba(74, 222, 128, 0.08);
+            border: 2px solid #4ade80;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .logic-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .csca-tip {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05));
+            border: 2px solid #ffd700;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .csca-tip h4 {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #4ade80;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .bilingual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="container">
+            <a href="../index.html">الرئيسية | Home</a>
+            <a href="#" class="active">الكيمياء | Chemistry Masterclass</a>
+            <a href="../questions.html">بنك الأسئلة | Question Bank</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px;">
+        <h1 class="section-title">الحركية الكيميائية والترموديناميكا: سرعة التفاعل والطاقة <br> <span
+                style="font-size: 0.6em; opacity: 0.8;">Chemical Kinetics & Thermochemistry: Rate & Energy</span></h1>
+
+        <!-- INTRODUCTION -->
+        <section class="master-teacher-box"
+            style="background: linear-gradient(45deg, rgba(74, 222, 128, 0.1), transparent); border-color: #4ade80;">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>لماذا تتفاعل المواد؟</h3>
+                    <p>في هذا الدرس، سندمج مفهومين أساسيين: <strong>الحركية</strong> (السرعة التي يحدث بها التفاعل) و<strong>الترموديناميكا</strong> (الطاقة التي تحرك التفاعل). المعدل يخبرك "كم سرعة"، والإنثالبي يخبرك "كم حرارة"، والإنتروبي يخبرك "كم فوضى"، وطاقة جيبس الحرة تقول لك "هل سيحدث أصلاً؟".</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Why Do Reactions Happen?</h3>
+                    <p>We merge two core concepts: <strong>Kinetics</strong> (how fast a reaction proceeds) and <strong>Thermochemistry</strong> (the energy that drives it). Rate tells you "how fast", Enthalpy tells you "how much heat", Entropy tells you "how much disorder", and Gibbs free energy says "will it even happen?".</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 1: REACTION RATES -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 1: معدل التفاعل (Reaction Rate)</h3>
+                    <p>معدل التفاعل هو التغير في تركيز المادة المتفاعلة أو الناتجة لكل وحدة زمن. يُعطى بالعلاقة:</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ \text{Rate} = -\frac{\Delta[\text{Reactant}]}{\Delta t} = \frac{\Delta[\text{Product}]}{\Delta t} \]
+                    </div>
+                    <p>عادةً بوحدة \\( \text{mol} \cdot \text{L}^{-1} \cdot \text{s}^{-1} \\).</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 1: Reaction Rate</h3>
+                    <p>The reaction rate is the change in concentration of reactant or product per unit time:</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ \text{Rate} = -\frac{\Delta[\text{Reactant}]}{\Delta t} = \frac{\Delta[\text{Product}]}{\Delta t} \]
+                    </div>
+                    <p>Usually in units of \\( \text{mol} \cdot \text{L}^{-1} \cdot \text{s}^{-1} \\).</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال (Example):</h4>
+                        <p>إذا كان تركيز \\( A \\) يتناقص من 1.0 M إلى 0.4 M خلال 120 ثانية، فما معدل التفاعل؟</p>
+                        <p><strong>الحل:</strong><br>
+                            \\( \\text{Rate} = -\\frac{0.4 - 1.0}{120} = \\frac{0.6}{120} = 0.005 \\, \\text{M/s} \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Example:</h4>
+                        <p>If concentration of \\( A \\) decreases from 1.0 M to 0.4 M in 120 s, find the rate.</p>
+                        <p><strong>Solution:</strong><br>
+                            \\( \\text{Rate} = -\\frac{0.4 - 1.0}{120} = \\frac{0.6}{120} = 0.005 \\, \\text{M/s} \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 2: FACTORS AFFECTING RATE -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 2: العوامل المؤثرة على معدل التفاعل</h3>
+                    <p>هناك 5 عوامل رئيسية تتحكم في سرعة التفاعل الكيميائي:</p>
+                    <div class="logic-card">
+                        <strong>1. طبيعة المواد المتفاعلة:</strong> الأيونية أسرع من التساهمية.<br>
+                        <strong>2. التركيز:</strong> كلما زاد التركيز زادت الاصطدامات.<br>
+                        <strong>3. درجة الحرارة:</strong> كل 10°C زيادة قد تضاعف السرعة.<br>
+                        <strong>4. المحفزات (Catalysts):</strong> تقلل طاقة التنشيط.<br>
+                        <strong>5. مساحة السطح:</strong> المساحات الأكبر = تفاعل أسرع.
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 2: Factors Affecting Reaction Rate</h3>
+                    <p>Five main factors control chemical reaction speed:</p>
+                    <div class="logic-card">
+                        <strong>1. Nature of reactants:</strong> Ionic reactions are faster than covalent.<br>
+                        <strong>2. Concentration:</strong> Higher concentration → more collisions.<br>
+                        <strong>3. Temperature:</strong> Every 10°C rise may double the rate.<br>
+                        <strong>4. Catalysts:</strong> Lower activation energy.<br>
+                        <strong>5. Surface area:</strong> Larger area → faster reaction.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 3: ACTIVATION ENERGY -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 3: طاقة التنشيط (Activation Energy \\( E_a \\))</h3>
+                    <p>هي الحد الأدنى من الطاقة التي تحتاجها الجزيئات لبدء التفاعل. كلما قلت \\( E_a \\)، زادت سرعة التفاعل.</p>
+                    <p>معادلة أرينيوس الشهيرة:</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ k = A e^{-E_a / RT} \]
+                    </div>
+                    <p>حيث \\( k \\) ثابت السرعة، \\( A \\) عامل التردد، \\( R \\) ثابت الغازات (\\( 8.314 \\, \\text{J/mol·K} \\))، و \\( T \\) درجة الحرارة المطلقة.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 3: Activation Energy \\( E_a \\)</h3>
+                    <p>The minimum energy required for molecules to start reacting. Lower \\( E_a \\) means faster rate.</p>
+                    <p>The Arrhenius Equation:</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ k = A e^{-E_a / RT} \]
+                    </div>
+                    <p>Where \\( k \\) is rate constant, \\( A \\) is frequency factor, \\( R \\) is gas constant (\\( 8.314 \\, \\text{J/mol·K} \\)), and \\( T \\) is absolute temperature.</p>
+                </div>
+            </div>
+
+            <div class="csca-tip">
+                <h4>💡 نصيحة CSCA | CSCA Tip</h4>
+                <div class="bilingual-row" style="gap: 15px;">
+                    <div class="ara-content" style="border-right-color: #ffd700;">
+                        <p>في اختبار CSCA، قد يُطلب منك حساب \\( E_a \\) باستخدام الصورة اللوغاريتمية لمعادلة أرينيوس:<br>
+                        \\( \\ln(k_2/k_1) = -\\frac{E_a}{R} (1/T_2 - 1/T_1) \\).<br>
+                        تذكر أن درجة الحرارة يجب أن تكون <strong>بالكلفن (K)</strong>، ووحدة \\( E_a \\) هي <strong>J/mol</strong> (حوّلها إلى kJ/mol بالقسمة على 1000).</p>
+                    </div>
+                    <div class="eng-content" style="border-left-color: #ffd700;">
+                        <p>In the CSCA exam, you may be asked to calculate \\( E_a \\) using the log form of Arrhenius:<br>
+                        \\( \\ln(k_2/k_1) = -\\frac{E_a}{R} (1/T_2 - 1/T_1) \\).<br>
+                        Remember: temperature must be in <strong>Kelvin (K)</strong>, and \\( E_a \\) unit is <strong>J/mol</strong> (convert to kJ/mol by ÷1000).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 4: ENTHALPY -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 4: الإنثالبي (Enthalpy \\( H \\)) و التغير فيه (\\( \\Delta H \\))</h3>
+                    <p>الإنثالبي هو مقياس لمحتوى الحرارة في النظام عند ضغط ثابت. التغير في الإنثالبي (\\( \\Delta H \\)) يصف حرارة التفاعل:</p>
+                    <div class="logic-card">
+                        <strong>تفاعل طار للحرارة (Exothermic):</strong> \\( \\Delta H < 0 \\) — تتحرر الحرارة.<br>
+                        <strong>تفاعل ماص للحرارة (Endothermic):</strong> \\( \\Delta H > 0 \\) — تمتص الحرارة.
+                    </div>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ \Delta H_{\text{reaction}} = \Sigma H_{\text{products}} - \Sigma H_{\text{reactants}} \]
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 4: Enthalpy (\\( H \\)) and Change (\\( \\Delta H \\))</h3>
+                    <p>Enthalpy is a measure of heat content at constant pressure. The change (\\( \\Delta H \\)) describes heat of reaction:</p>
+                    <div class="logic-card">
+                        <strong>Exothermic:</strong> \\( \\Delta H < 0 \\) — heat is released.<br>
+                        <strong>Endothermic:</strong> \\( \\Delta H > 0 \\) — heat is absorbed.
+                    </div>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ \Delta H_{\text{reaction}} = \Sigma H_{\text{products}} - \Sigma H_{\text{reactants}} \]
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال (Example):</h4>
+                        <p>احتراق الميثان: \\( CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O \\), \\( \\Delta H = -890 \\, \\text{kJ/mol} \\). هل هو ماص أم طار للحرارة؟</p>
+                        <p><strong>الحل:</strong><br>
+                            \\( \\Delta H \\) سالب (−890 kJ/mol)، إذن التفاعل <strong>طار للحرارة (Exothermic)</strong> — تتحرر الحرارة ويستخدم للتدفئة.</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Example:</h4>
+                        <p>Methane combustion: \\( CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O \\), \\( \\Delta H = -890 \\, \\text{kJ/mol} \\). Exothermic or endothermic?</p>
+                        <p><strong>Solution:</strong><br>
+                            \\( \\Delta H \\) is negative (−890 kJ/mol), so it's <strong>Exothermic</strong> — heat is released, used for heating.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 5: HESS'S LAW -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 5: قانون هس (Hess's Law)</h3>
+                    <p>ينص قانون هس على أن \\( \\Delta H \\) الكلي للتفاعل لا يعتمد على المسار، بل فقط على الحالة الابتدائية والنهائية. بعبارة أخرى، يمكن جمع قيم \\( \\Delta H \\) للتفاعلات المتتالية.</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ \Delta H_{\text{total}} = \Delta H_1 + \Delta H_2 + \Delta H_3 + \dots \]
+                    </div>
+                    <p>مثال: تحويل الجرافيت إلى الماس — حساب \\( \\Delta H \\) عبر احتراق كل منهما.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 5: Hess's Law</h3>
+                    <p>Hess's Law states that the total \\( \\Delta H \\) of a reaction depends only on the initial and final states, not the path. You can add up \\( \\Delta H \\) values of sequential reactions.</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ \Delta H_{\text{total}} = \Delta H_1 + \Delta H_2 + \Delta H_3 + \dots \]
+                    </div>
+                    <p>Example: Converting graphite to diamond — find \\( \\Delta H \\) via combustion of each.</p>
+                </div>
+            </div>
+
+            <div class="csca-tip">
+                <h4>💡 نصيحة CSCA | CSCA Tip</h4>
+                <div class="bilingual-row" style="gap: 15px;">
+                    <div class="ara-content" style="border-right-color: #ffd700;">
+                        <p>في اختبار CSCA، إذا أُعطيت تفاعلين وكان المطلوب إيجاد \\( \\Delta H \\) لتفاعل ثالث — اقلب التفاعل (يعكس إشارة \\( \\Delta H \\)) واضرب في المعاملات (يضرب \\( \\Delta H \\) بنفس العامل).</p>
+                    </div>
+                    <div class="eng-content" style="border-left-color: #ffd700;">
+                        <p>In the CSCA exam, if given two reactions and asked for a third — reverse a reaction (flip \\( \\Delta H \\) sign) and multiply by coefficients (multiply \\( \\Delta H \\) by the same factor).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 6: ENTROPY -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 6: الإنتروبي (Entropy \\( S \\))</h3>
+                    <p>الإنتروبي هو مقياس لدرجة الفوضى أو العشوائية في النظام. القانون الثاني للديناميكا الحرارية يقول: في أي عملية تلقائية، الإنتروبي الكلي (نظام + محيط) يزداد دائماً.</p>
+                    <div class="logic-card">
+                        <strong>قواعد توقع إشارة \\( \\Delta S \\):</strong><br>
+                        • غاز ← سائل ← صلب: \\( \\Delta S \\) يقل (سالب).<br>
+                        • زيادة عدد مولات الغاز: \\( \\Delta S \\) يزداد (موجب).<br>
+                        • إذابة مادة صلبة: \\( \\Delta S \\) يزداد.
+                    </div>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ \Delta S_{\text{system}} = \frac{q_{\text{rev}}}{T} \]
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 6: Entropy (\\( S \\))</h3>
+                    <p>Entropy is a measure of disorder or randomness. The 2nd Law of Thermodynamics: total entropy (system + surroundings) always increases for spontaneous processes.</p>
+                    <div class="logic-card">
+                        <strong>Rules for predicting \\( \\Delta S \\) sign:</strong><br>
+                        • Gas → Liquid → Solid: \\( \\Delta S \\) decreases (negative).<br>
+                        • More gas moles produced: \\( \\Delta S \\) increases (positive).<br>
+                        • Dissolving a solid: \\( \\Delta S \\) increases.
+                    </div>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ \Delta S_{\text{system}} = \frac{q_{\text{rev}}}{T} \]
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال (Example):</h4>
+                        <p>هل \\( \\Delta S \\) موجب أم سالب للتفاعل: \\( 2H_2(g) + O_2(g) \\rightarrow 2H_2O(l) \\)؟</p>
+                        <p><strong>الحل:</strong><br>
+                            اليسار: 3 مولات غاز. اليمين: 2 مول سائل. عدد مولات الغاز يقل، والغاز يتحول لسائل → \\( \\Delta S \\) سالب (<strong>النظام يصبح أكثر نظاماً</strong>).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Example:</h4>
+                        <p>Is \\( \\Delta S \\) positive or negative for: \\( 2H_2(g) + O_2(g) \\rightarrow 2H_2O(l) \\)?</p>
+                        <p><strong>Solution:</strong><br>
+                            Left: 3 gas moles. Right: 2 liquid moles. Gas moles decrease, gas → liquid → \\( \\Delta S \\) negative (<strong>system becomes more ordered</strong>).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 7: GIBBS FREE ENERGY -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 7: طاقة جيبس الحرة (Gibbs Free Energy \\( \\Delta G \\))</h3>
+                    <p>طاقة جيبس الحرة تجمع بين الإنثالبي والإنتروبي وتحدد <strong>تلقائية</strong> التفاعل:</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ \Delta G = \Delta H - T \Delta S \]
+                    </div>
+                    <div class="logic-card">
+                        • \\( \\Delta G < 0 \\): تفاعل تلقائي (عفوي) — يحدث من تلقاء نفسه.<br>
+                        • \\( \\Delta G = 0 \\): في حالة اتزان.<br>
+                        • \\( \\Delta G > 0 \\): غير تلقائي — يحتاج طاقة خارجية.
+                    </div>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 7: Gibbs Free Energy (\\( \\Delta G \\))</h3>
+                    <p>Gibbs free energy combines enthalpy and entropy to determine <strong>spontaneity</strong>:</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ \Delta G = \Delta H - T \Delta S \]
+                    </div>
+                    <div class="logic-card">
+                        • \\( \\Delta G < 0 \\): Spontaneous — proceeds on its own.<br>
+                        • \\( \\Delta G = 0 \\): At equilibrium.<br>
+                        • \\( \\Delta G > 0 \\): Non-spontaneous — needs external energy.
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 جدول التلقائية (Spontaneity Table):</h4>
+                        <div class="logic-card">
+                            <table style="width:100%; border-collapse: collapse; text-align: center;" border="1">
+                                <tr><th>\\( \\Delta H \\)</th><th>\\( \\Delta S \\)</th><th>درجة الحرارة</th><th>\\( \\Delta G \\)</th><th>تلقائي؟</th></tr>
+                                <tr><td>-</td><td>+</td><td>أي</td><td>-</td><td style="color: #4ade80;">✅ نعم</td></tr>
+                                <tr><td>+</td><td>-</td><td>أي</td><td>+</td><td style="color: #ff6b6b;">❌ لا</td></tr>
+                                <tr><td>-</td><td>-</td><td>منخفضة</td><td>-</td><td style="color: #4ade80;">✅ نعم</td></tr>
+                                <tr><td>-</td><td>-</td><td>عالية</td><td>+</td><td style="color: #ff6b6b;">❌ لا</td></tr>
+                                <tr><td>+</td><td>+</td><td>عالية</td><td>-</td><td style="color: #4ade80;">✅ نعم</td></tr>
+                                <tr><td>+</td><td>+</td><td>منخفضة</td><td>+</td><td style="color: #ff6b6b;">❌ لا</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Spontaneity Table:</h4>
+                        <div class="logic-card">
+                            <table style="width:100%; border-collapse: collapse; text-align: center;" border="1">
+                                <tr><th>\\( \\Delta H \\)</th><th>\\( \\Delta S \\)</th><th>Temperature</th><th>\\( \\Delta G \\)</th><th>Spontaneous?</th></tr>
+                                <tr><td>-</td><td>+</td><td>Any</td><td>-</td><td style="color: #4ade80;">✅ Yes</td></tr>
+                                <tr><td>+</td><td>-</td><td>Any</td><td>+</td><td style="color: #ff6b6b;">❌ No</td></tr>
+                                <tr><td>-</td><td>-</td><td>Low</td><td>-</td><td style="color: #4ade80;">✅ Yes</td></tr>
+                                <tr><td>-</td><td>-</td><td>High</td><td>+</td><td style="color: #ff6b6b;">❌ No</td></tr>
+                                <tr><td>+</td><td>+</td><td>High</td><td>-</td><td style="color: #4ade80;">✅ Yes</td></tr>
+                                <tr><td>+</td><td>+</td><td>Low</td><td>+</td><td style="color: #ff6b6b;">❌ No</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 8: CALORIMETRY -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 8: المسعرية (Calorimetry)</h3>
+                    <p>المسعرية هي قياس كمية الحرارة الممتصة أو المنبعثة في تفاعل كيميائي. العلاقة الأساسية:</p>
+                    <div class="logic-card" style="text-align: center; direction: ltr;">
+                        \[ q = m \cdot c \cdot \Delta T \]
+                    </div>
+                    <p>حيث \\( q \\) الحرارة (J)، \\( m \\) الكتلة (g)، \\( c \\) الحرارة النوعية (\\( \\text{J/g·°C} \\))، \\( \\Delta T \\) التغير في درجة الحرارة.</p>
+                    <p>الحرارة النوعية للماء: \\( c_{\\text{water}} = 4.18 \\, \\text{J/g·°C} \\).</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 8: Calorimetry</h3>
+                    <p>Calorimetry measures the heat absorbed or released in a reaction. The key relationship:</p>
+                    <div class="logic-card" style="text-align: center;">
+                        \[ q = m \cdot c \cdot \Delta T \]
+                    </div>
+                    <p>Where \\( q \\) is heat (J), \\( m \\) is mass (g), \\( c \\) is specific heat capacity (\\( \\text{J/g·°C} \\)), \\( \\Delta T \\) is temperature change.</p>
+                    <p>Specific heat of water: \\( c_{\\text{water}} = 4.18 \\, \\text{J/g·°C} \\).</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="bilingual-row">
+                    <div class="ara-content">
+                        <h4>📌 مثال (Example):</h4>
+                        <p>سُخّن 200 g من الماء من 25°C إلى 75°C. ما كمية الحرارة الممتصة؟ (\\( c = 4.18 \\, \\text{J/g·°C} \\))</p>
+                        <p><strong>الحل:</strong><br>
+                            \\( q = 200 \\times 4.18 \\times (75 - 25) = 200 \\times 4.18 \\times 50 = 41,800 \\, \\text{J} = 41.8 \\, \\text{kJ} \\).</p>
+                    </div>
+                    <div class="eng-content">
+                        <h4>📌 Example:</h4>
+                        <p>200 g of water heated from 25°C to 75°C. Heat absorbed? (\\( c = 4.18 \\, \\text{J/g·°C} \\))</p>
+                        <p><strong>Solution:</strong><br>
+                            \\( q = 200 \\times 4.18 \\times (75 - 25) = 200 \\times 4.18 \\times 50 = 41,800 \\, \\text{J} = 41.8 \\, \\text{kJ} \\).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POINT 9: REACTION MECHANISMS -->
+        <section class="rule-box">
+            <div class="bilingual-row">
+                <div class="ara-content">
+                    <h3>النقطة 9: آليات التفاعل (Reaction Mechanisms)</h3>
+                    <p>معظم التفاعلات لا تحدث في خطوة واحدة بل عبر سلسلة من <strong>الخطوات الأولية (Elementary Steps)</strong>. كل خطوة أولية لها رتبة تتفاعل:</p>
+                    <div class="logic-card">
+                        • خطوة أحادية الجزيء (Unimolecular): \\( A \\rightarrow \\) — الرتبة 1.<br>
+                        • خطوة ثنائية الجزيء (Bimolecular): \\( A + B \\rightarrow \\) — الرتبة 2.<br>
+                        • <strong>خطوة تحديد السرعة (Rate-determining step)</strong>: أبطأ خطوة.
+                    </div>
+                    <p>قانون السرعة يُشتق من الخطوة المحددة، وليس من المعادلة الإجمالية.</p>
+                </div>
+                <div class="eng-content">
+                    <h3>Point 9: Reaction Mechanisms</h3>
+                    <p>Most reactions don't occur in a single step but through a series of <strong>Elementary Steps</strong>. Each step has a molecularity:</p>
+                    <div class="logic-card">
+                        • Unimolecular: \\( A \\rightarrow \\) — 1st order.<br>
+                        • Bimolecular: \\( A + B \\rightarrow \\) — 2nd order.<br>
+                        • <strong>Rate-determining step (RDS)</strong>: The slowest step.
+                    </div>
+                    <p>The rate law is derived from the RDS, not the overall equation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSCA TIPS SECTION -->
+        <section class="csca-tip" style="margin: 50px 0;">
+            <h4>🏆 نصيحة CSCA شاملة | Comprehensive CSCA Tips</h4>
+            <div class="bilingual-row" style="gap: 15px;">
+                <div class="ara-content" style="border-right-color: #ffd700;">
+                    <p><strong>1. حساب \\( \\Delta G \\):</strong> تأكد من الوحدات — \\( \\Delta H \\) عادة بـ kJ، و \\( T \\Delta S \\) بـ J، لذا حوّل إلى وحدة واحدة.<br>
+                    <strong>2. درجة حرارة التحول:</strong> عند \\( \\Delta G = 0 \\)، \\( T = \\Delta H / \\Delta S \\).<br>
+                    <strong>3. المحفزات:</strong> لا تؤثر على \\( \\Delta G, \\Delta H, \\Delta S \\) أو \\( K_{eq} \\) — فقط تقلل \\( E_a \\).<br>
+                    <strong>4. قانون أرينيوس:</strong> إذا أعطاك الرسم البياني (ln k vs 1/T)، الميل = \\( -E_a/R \\).</p>
+                </div>
+                <div class="eng-content" style="border-left-color: #ffd700;">
+                    <p><strong>1. \\( \\Delta G \\) calculation:</strong> Check units — \\( \\Delta H \\) in kJ, \\( T \\Delta S \\) in J, convert to same unit.<br>
+                    <strong>2. Transition temperature:</strong> At \\( \\Delta G = 0 \\), \\( T = \\Delta H / \\Delta S \\).<br>
+                    <strong>3. Catalysts:</strong> Don't affect \\( \\Delta G, \\Delta H, \\Delta S \\) or \\( K_{eq} \\) — only lower \\( E_a \\).<br>
+                    <strong>4. Arrhenius plot:</strong> If given (ln k vs 1/T), slope = \\( -E_a/R \\).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE QUIZ -->
+        <section class="lesson-section"
+            style="margin-top: 50px; border-top: 2px dashed rgba(255,255,255,0.1); padding-top: 40px;">
+            <h2 class="section-title" style="color: #4ade80;">📝 اختبر معلوماتك | Practice Quiz</h2>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q1:</strong> إذا كان \\( \\Delta H = -100 \\, \\text{kJ} \\) و \\( \\Delta S = +200 \\, \\text{J/K} \\)، عند أي درجة حرارة يصبح التفاعل غير تلقائي؟</p>
+                <div style="margin: 10px 0;">
+                    A) فوق 500 K &nbsp; B) تحت 500 K &nbsp; C) لا يصبح أبداً &nbsp; D) عند 0 K فقط
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">عندما \\( \\Delta H < 0 \\) و \\( \\Delta S > 0 \\)، \\( \\Delta G \\) سالب دائماً لأي درجة حرارة. التفاعل تلقائي دائماً.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q2:</strong> قانون السرعة للتفاعل \\( 2NO + O_2 \\rightarrow 2NO_2 \\) هو \\( Rate = k[NO]^2[O_2] \\). الرتبة الكلية للتفاعل هي:</p>
+                <div style="margin: 10px 0;">
+                    A) 1 &nbsp; B) 2 &nbsp; C) 3 &nbsp; D) 4
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">الرتبة الكلية = مجموع الأسس = 2 (لـ NO) + 1 (لـ O₂) = 3.</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q3:</strong> أي من العمليات التالية تزيد من الإنتروبي؟</p>
+                <div style="margin: 10px 0;">
+                    A) \\( H_2O(l) \\rightarrow H_2O(s) \\) &nbsp; B) \\( N_2(g) + 3H_2(g) \\rightarrow 2NH_3(g) \\) &nbsp; C) \\( CaCO_3(s) \\rightarrow CaO(s) + CO_2(g) \\) &nbsp; D) \\( 2H_2(g) + O_2(g) \\rightarrow 2H_2O(l) \\)
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: C</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">ينتج غاز (CO₂) من مادة صلبة → زيادة في العشوائية → \\( \\Delta S > 0 \\).</p>
+                </details>
+            </div>
+
+            <div class="card glass" style="margin-bottom: 25px; border-right: 4px solid #4ade80;">
+                <p><strong>Q4:</strong> التفاعل \\( A + B \\rightarrow C \\) له \\( E_a = 50 \\, \\text{kJ/mol} \\). عند إضافة محفز، \\( E_a \\) تصبح 30 kJ/mol. كم مرة أسرع أصبح التفاعل عند 300 K؟ (معاملات بسيطة)</p>
+                <div style="margin: 10px 0;">
+                    A) ~300 مرة &nbsp; B) ~3000 مرة &nbsp; C) ~3 مرات &nbsp; D) ~30,000 مرة
+                </div>
+                <details>
+                    <summary style="color: #4ade80; cursor: pointer;">عرض الحل | View Solution</summary>
+                    <p style="color: #4ade80; margin-top: 10px;">الإجابة الصحيحة: B</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">باستخدام \\( k_2/k_1 = e^{-(E_{a2} - E_{a1})/RT} = e^{(20,000)/(8.314 \\times 300)} = e^{8.02} \\approx 3040 \\) مرة.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SIGNATURE -->
+        <section class="developer-sig" style="text-align: center; padding: 40px;">
+            <h3 style="font-size: 2rem;">أتمنى لكم النجاح | Wishing you success</h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 أكاديمية عبد الحميد للكيمياء | المنهج الذهبي</p>
+    </footer>
+</body>
+
+</html>
