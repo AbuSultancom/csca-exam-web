@@ -1,98 +1,125 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بنك الأسئلة - أكاديمية CSCA</title>
+    <title>بنك الأسئلة - CSCA</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        .filter-container {
-            margin: 30px 0;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 8px 20px;
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            background: var(--card-bg);
-            color: #fff;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .filter-btn.active {
-            background: var(--primary);
-            border-color: var(--primary);
-        }
-
-        .question-card {
-            margin-bottom: 20px;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 2px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .tag-math {
-            background: var(--secondary);
-        }
-
-        .tag-phys {
-            background: var(--accent);
-        }
-
-        .tag-chem {
-            background: #4ade80;
-        }
-    </style>
 </head>
-
-<body>
-    <header class="main-nav">
-        <div class="container">
-            <a href="index.html">الرئيسية</a>
-            <a href="questions.html" class="active">بنك الأسئلة</a>
-            <a href="#about">حول الاختبار</a>
+<body lang="ar">
+    <!-- Language Selector -->
+    <div style="background: rgba(10,11,16,0.95); border-bottom: 1px solid var(--glass-border); padding: 8px 0;">
+        <div class="container" style="display:flex; justify-content:flex-start; align-items:center; gap:15px;">
+            <span style="color:var(--text-dim); font-size:0.85rem;">🌐</span>
+            <div id="lang-switcher" class="lang-switcher"></div>
         </div>
-    </header>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+                <a href="questions.html" class="active" data-i18n="nav.questions">بنك الأسئلة</a>
+            </div>
+            <div id="lang-switcher-nav"></div>
+        </div>
+    </nav>
 
     <main class="container">
-        <h1 class="section-title" style="margin-top: 40px;">بنك الأسئلة التدريبية</h1>
-        <p>تدرب على مجموعة متنوعة من الأسئلة المستوحاة من الاختبارات السابقة لرفع جاهزيتك.</p>
+        <h1 class="section-title" style="margin-top:40px;" data-i18n="questions_page.title">بنك الأسئلة التدريبية</h1>
+        <p id="questions-subtitle" data-i18n="questions_page.subtitle">تدرب على 327 سؤالاً بمستويات صعوبة مختلفة</p>
 
-        <div class="filter-container">
-            <button class="filter-btn active" onclick="filterQuestions('all')">الكل</button>
-            <button class="filter-btn" onclick="filterQuestions('رياضيات | Math')">رياضيات</button>
-            <button class="filter-btn" onclick="filterQuestions('فيزياء | Physics')">فيزياء</button>
-            <button class="filter-btn" onclick="filterQuestions('كيمياء | Chemistry')">كيمياء</button>
+        <!-- Subject Filter -->
+        <div class="filter-container" id="subject-filters">
+            <button class="filter-btn active" onclick="filterBySubject('all')" data-i18n="questions_page.all">الكل</button>
+            <button class="filter-btn" onclick="filterBySubject('رياضيات | Math')" data-i18n="subjects.math">📐 الرياضيات</button>
+            <button class="filter-btn" onclick="filterBySubject('فيزياء | Physics')" data-i18n="subjects.physics">⚡ الفيزياء</button>
+            <button class="filter-btn" onclick="filterBySubject('كيمياء | Chemistry')" data-i18n="subjects.chemistry">🧪 الكيمياء</button>
         </div>
 
-        <div id="questions-list">
-            <!-- سيتم تحميل الأسئلة هنا بواسطة JS -->
+        <!-- Difficulty Filter -->
+        <div class="filter-container" id="difficulty-filters">
+            <button class="filter-btn active" id="diff-all" onclick="filterByDifficulty('all')">الكل | All | 全部</button>
+            <button class="filter-btn" id="diff-easy" onclick="filterByDifficulty('easy')"><span class="diff-easy">●</span> سهل | Easy</button>
+            <button class="filter-btn" id="diff-med" onclick="filterByDifficulty('medium')"><span class="diff-medium">●</span> متوسط | Medium</button>
+            <button class="filter-btn" id="diff-hard" onclick="filterByDifficulty('hard')"><span class="diff-hard">●</span> صعب | Hard</button>
         </div>
+
+        <!-- Stats bar -->
+        <div style="display:flex; gap:15px; flex-wrap:wrap; margin:20px 0; color:var(--text-dim); font-size:0.9rem;" id="stats-bar">
+            <span id="total-count">0</span> أسئلة
+        </div>
+
+        <div id="questions-list"></div>
     </main>
 
+    <footer>
+        <p data-i18n="footer">© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
+    </footer>
+
+    <script src="app.js"></script>
     <script>
         let allQuestions = [];
 
-        async function loadQuestions() {
-            try {
-                const response = await fetch('data/questions.json');
-                allQuestions = await response.json();
-                displayQuestions(allQuestions);
-            } catch (e) {
-                console.error("Failed to load questions", e);
+        function getQuestionText(q) {
+            const key = currentLang === 'ar' ? 'question_ar' : currentLang === 'zh' ? 'question_zh' : 'question_en';
+            return q[key] || q.question_ar || q.question_en || q.question || '';
+        }
+
+        function getExplanation(q) {
+            const key = currentLang === 'ar' ? 'explanation_ar' : currentLang === 'zh' ? 'explanation_zh' : 'explanation_en';
+            return q[key] || q.explanation_ar || q.explanation_en || q.eng_explanation || '';
+        }
+
+        function getOptionText(opt) {
+            const key = currentLang === 'ar' ? 'text' : currentLang === 'zh' ? 'text_zh' : 'text';
+            return opt[key] || opt.text || opt.text_zh || '';
+        }
+
+        function getCorrectText(q) {
+            const opt = q.options.find(o => o.label === q.correct);
+            if (opt) {
+                return `${q.correct}. ${getOptionText(opt)}`;
+            }
+            return q.correct || '';
+        }
+
+        function getSubjectName(subject) {
+            if (currentLang === 'ar') {
+                return subject.split('|')[0].trim();
+            } else if (currentLang === 'zh') {
+                if (subject.includes('رياضيات')) return '数学';
+                if (subject.includes('فيزياء')) return '物理';
+                if (subject.includes('كيمياء')) return '化学';
+                return subject;
+            } else {
+                return subject.split('|')[1]?.trim() || subject;
+            }
+        }
+
+        function getDifficultyText(difficulty) {
+            const map = {
+                'easy': {ar: 'سهل', en: 'Easy', zh: '简单'},
+                'medium': {ar: 'متوسط', en: 'Medium', zh: '中等'},
+                'hard': {ar: 'صعب', en: 'Hard', zh: '困难'}
+            };
+            const m = map[difficulty];
+            return m ? m[currentLang] || m.en : difficulty;
+        }
+
+        function getTagClass(subject) {
+            if (subject.includes('رياضيات') || subject.includes('Math')) return 'tag-math';
+            if (subject.includes('فيزياء') || subject.includes('Physics')) return 'tag-phys';
+            if (subject.includes('كيمياء') || subject.includes('Chemistry')) return 'tag-chem';
+            return 'tag-math';
+        }
+
+        function showAnswer(questionId) {
+            const details = document.getElementById(`explanation-${questionId}`);
+            if (details) {
+                details.open = !details.open;
             }
         }
 
@@ -100,88 +127,128 @@
             const list = document.getElementById('questions-list');
             list.innerHTML = '';
 
-            questions.forEach(q => {
-                let tagClass = 'tag-math';
-                if (q.subject.includes('Physics')) tagClass = 'tag-phys';
-                if (q.subject.includes('Chemistry')) tagClass = 'tag-chem';
+            if (questions.length === 0) {
+                list.innerHTML = '<div class="card glass" style="text-align:center; padding:40px;"><p style="color:var(--text-dim);">📭 لا توجد أسئلة مطابقة</p></div>';
+                return;
+            }
 
-                // Get question text (works with both old and new format)
-                const questionText = q.question_ar || q.question || '';
-                const questionEn = q.question_en || '';
-                const optionsList = q.options || [];
-                // Normalize options: if they're objects {label, text}, convert to strings
-                const optLabels = optionsList.map(o => typeof o === 'string' ? o : `${o.label}. ${o.text}`);
-                // Find correct answer text
-                let correctText = '';
-                if (q.correct) {
-                    const correctOpt = optionsList.find(o => (o.label || '').trim() === q.correct.trim() || (typeof o === 'string' && o.startsWith(q.correct)));
-                    if (correctOpt) {
-                        correctText = typeof correctOpt === 'string' ? correctOpt : `${correctOpt.label}. ${correctOpt.text}`;
-                    } else {
-                        correctText = q.correct;
-                    }
-                } else if (q.answer !== undefined) {
-                    correctText = optLabels[q.answer] || '';
-                }
-                const explanationAr = q.explanation_ar || q.explanation || '';
-                const explanationEn = q.explanation_en || q.eng_explanation || '';
+            questions.forEach(q => {
+                const tagClass = getTagClass(q.subject);
+                const subjectName = getSubjectName(q.subject);
+                const questionText = getQuestionText(q);
+                const difficulty = getDifficultyText(q.difficulty);
+                const diffClass = `diff-${q.difficulty}`;
+                const options = q.options || [];
 
                 const card = document.createElement('div');
                 card.className = 'card glass question-card';
+                card.style.marginBottom = '20px';
                 card.innerHTML = `
-                    <span class="tag ${tagClass}">${q.subject}</span>
-                    <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>${questionText}</strong></p>
-                    ${questionEn ? `<p style="font-size: 0.9rem; color: #94a3b8; direction: ltr; text-align: left; margin-bottom: 15px;"><em>${questionEn}</em></p>` : ''}
-                    <div style="margin: 15px 0; padding-right: 20px;">
-                        ${optLabels.map((opt, i) => `
-                            <label style="display: block; margin: 10px 0; cursor: pointer;">
-                                <input type="radio" name="q${q.id}" style="margin-left: 10px;"> ${opt}
+                    <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px;">
+                        <span class="tag ${tagClass}">${subjectName}</span>
+                        <span class="card-difficulty ${diffClass}">${difficulty}</span>
+                    </div>
+                    <p class="question-text">${questionText}</p>
+                    ${currentLang === 'ar' || currentLang === 'zh' ? '' : `<p class="question-en"><em>${q.question_ar || ''}</em></p>`}
+                    <div style="margin: 15px 0;">
+                        ${options.map((opt, i) => `
+                            <label class="option-label" style="display:block; margin:8px 0; cursor:pointer;">
+                                <input type="radio" name="q${q.id}" class="option-input" onchange="showAnswer(${q.id})">
+                                ${opt.label}. ${getOptionText(opt)}
                             </label>
                         `).join('')}
                     </div>
-                    <details style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
-                        <summary style="color: var(--primary); cursor: pointer; font-weight: bold;">💡 عرض شرح الأستاذ | View Teacher's Explanation</summary>
-                        <div style="padding: 20px; background: rgba(0,0,0,0.2); margin-top: 15px; border-radius: 12px; border-right: 4px solid #4ade80;">
-                            <p style="color: #4ade80; font-weight: bold; margin-bottom: 10px;">الإجابة الصحيحة: ${correctText}</p>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                                <div style="text-align: right;">
-                                    <p style="font-size: 0.95rem; color: #fff;">${explanationAr}</p>
-                                </div>
-                                <div style="text-align: left; direction: ltr; color: #cbd5e1; font-size: 0.9rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 15px;">
-                                    <p>${explanationEn}</p>
-                                </div>
-                            </div>
+                    <details id="explanation-${q.id}">
+                        <summary style="color: var(--primary); cursor: pointer; font-weight: bold;">
+                            💡 ${t('questions_page.show_answer') || 'عرض شرح الأستاذ'}
+                        </summary>
+                        <div class="explanation-box">
+                            <p class="correct-answer">${t('questions_page.correct_answer') || 'الإجابة الصحيحة'}: ${getCorrectText(q)}</p>
+                            <p style="margin-top:10px;">${getExplanation(q)}</p>
                         </div>
                     </details>
                 `;
                 list.appendChild(card);
             });
-            if (window.MathJax) {
+
+            // Update stats
+            const totalSpan = document.getElementById('total-count');
+            if (totalSpan) totalSpan.textContent = questions.length;
+
+            // Re-render MathJax
+            if (window.MathJax && MathJax.typesetPromise) {
                 MathJax.typesetPromise();
             }
         }
 
-        function filterQuestions(subject) {
-            // Update active state of buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                const btnSubj = btn.innerText;
-                if (subject === 'all') {
-                    btn.classList.toggle('active', btnSubj === 'الكل');
-                } else {
-                    btn.classList.toggle('active', subject.includes(btnSubj));
-                }
-            });
+        let activeSubject = 'all';
+        let activeDifficulty = 'all';
 
-            if (subject === 'all') {
-                displayQuestions(allQuestions);
-            } else {
-                const filtered = allQuestions.filter(q => q.subject === subject);
-                displayQuestions(filtered);
+        function filterBySubject(subject) {
+            activeSubject = subject;
+            document.querySelectorAll('#subject-filters .filter-btn').forEach(btn => {
+                btn.classList.toggle('active', 
+                    btn === event.target || 
+                    (subject === 'all' && btn.textContent.includes(t('questions_page.all'))));
+            });
+            // Better way:
+            document.querySelectorAll('#subject-filters .filter-btn').forEach((btn, i) => {
+                if (subject === 'all' && i === 0) btn.classList.add('active');
+                else if (subject !== 'all' && btn.textContent.replace(/[📐⚡🧪]/g,'').trim().includes(subject.split('|')[0].trim())) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+            applyFilters();
+        }
+
+        function filterByDifficulty(difficulty) {
+            activeDifficulty = difficulty;
+            document.querySelectorAll('#difficulty-filters .filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const idMap = {'all': 'diff-all', 'easy': 'diff-easy', 'medium': 'diff-med', 'hard': 'diff-hard'};
+            const target = document.getElementById(idMap[difficulty]);
+            if (target) target.classList.add('active');
+            applyFilters();
+        }
+
+        function applyFilters() {
+            let filtered = [...allQuestions];
+
+            if (activeSubject !== 'all') {
+                filtered = filtered.filter(q => q.subject === activeSubject);
+            }
+
+            if (activeDifficulty !== 'all') {
+                filtered = filtered.filter(q => q.difficulty === activeDifficulty);
+            }
+
+            displayQuestions(filtered);
+        }
+
+        async function loadQuestions() {
+            try {
+                const res = await fetch('data/questions.json');
+                allQuestions = await res.json();
+                await loadTranslations();
+                applyFilters();
+            } catch(e) {
+                console.error('Failed to load questions:', e);
+                document.getElementById('questions-list').innerHTML = 
+                    '<div class="error-msg">❌ فشل تحميل الأسئلة. تأكد من اتصال الإنترنت.</div>';
             }
         }
 
-        window.onload = loadQuestions;
+        async function init() {
+            initLang();
+            renderLangSwitcher();
+            // Copy lang switcher to nav
+            const navSwitcher = document.getElementById('lang-switcher-nav');
+            if (navSwitcher) setTimeout(() => { navSwitcher.innerHTML = document.getElementById('lang-switcher').innerHTML; }, 100);
+            await loadQuestions();
+            applyTranslations();
+        }
+
+        init();
     </script>
 </body>
-
 </html>

@@ -1,0 +1,1109 @@
+[
+  {
+    "id": 1,
+    "topic": "mechanics",
+    "subject": "فيزياء | Physics",
+    "subject_en": "Physics",
+    "title_ar": "الميكانيكا الكلاسيكية",
+    "title_en": "Classical Mechanics",
+    "title_zh": "经典力学",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية",
+        "heading_en": "Basic Concepts",
+        "heading_zh": "基本概念",
+        "content_ar": "الميكانيكا الكلاسيكية تدرس حركة الأجسام والقوى المؤثرة عليها. تعتمد على قوانين نيوتن الثلاثة: القانون الأول (القصور الذاتي): الجسم الساكن يبقى ساكناً والمتحرك يبقى متحركاً بسرعة ثابتة ما لم تؤثر عليه قوة محصلة. القانون الثاني: F = ma - القوة المحصلة تساوي الكتلة مضروبة في التسارع. القانون الثالث: لكل فعل رد فعل مساوٍ له في المقدار ومعاكس في الاتجاه.",
+        "content_en": "Classical mechanics studies the motion of objects and the forces acting on them. It is based on Newton's three laws: First Law (Inertia): an object at rest stays at rest and one in motion stays in motion unless acted upon by a net force. Second Law: F = ma — net force equals mass times acceleration. Third Law: for every action, there is an equal and opposite reaction.",
+        "content_zh": "经典力学研究物体的运动及作用在其上的力。它以牛顿三定律为基础：第一定律（惯性定律）：静止物体保持静止，运动物体保持匀速直线运动，除非受到合外力作用。第二定律：F = ma — 合外力等于质量乘以加速度。第三定律：作用力与反作用力大小相等、方向相反。"
+      },
+      {
+        "heading_ar": "القوانين الأساسية في اختبار CSCA",
+        "heading_en": "Key Laws for the CSCA Exam",
+        "heading_zh": "CSCA考试的关键公式",
+        "content_ar": "القوانين المهمة: 1) معادلات الحركة بعجلة ثابتة: v = v₀ + at, s = v₀t + ½at², v² = v₀² + 2as. 2) قانون نيوتن الثاني: F = ma. 3) قانون الجذب العام: F = Gm₁m₂/r². 4) الطاقة الحركية: KE = ½mv². 5) طاقة الوضع: PE = mgh. 6) الشغل: W = Fd cos θ. 7) نظرية الشغل-طاقة: W = ΔKE. 8) كمية الحركة: p = mv. 9) الدفع: Ft = Δp. 10) القوة المركزية: F_c = mv²/r.",
+        "content_en": "Key formulas: 1) Constant acceleration: v = v₀ + at, s = v₀t + ½at², v² = v₀² + 2as. 2) Newton's Second Law: F = ma. 3) Universal Gravitation: F = Gm₁m₂/r². 4) Kinetic Energy: KE = ½mv². 5) Potential Energy: PE = mgh. 6) Work: W = Fd cos θ. 7) Work-Energy: W = ΔKE. 8) Momentum: p = mv. 9) Impulse: Ft = Δp. 10) Centripetal Force: F_c = mv²/r.",
+        "content_zh": "重要公式：1) 匀变速直线运动方程：v = v₀ + at, s = v₀t + ½at², v² = v₀² + 2as。2) 牛顿第二定律：F = ma。3) 万有引力定律：F = Gm₁m₂/r²。4) 动能：KE = ½mv²。5) 势能：PE = mgh。6) 功：W = Fd cos θ。7) 功能定理：W = ΔKE。8) 动量：p = mv。9) 冲量：Ft = Δp。10) 向心力：F_c = mv²/r。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة",
+        "heading_en": "Solved Examples",
+        "heading_zh": "例题解析",
+        "content_ar": "مثال 1: جسم كتلته 10 kg يسقط من ارتفاع 20 m. أ) ما سرعته قبل الاصطدام بالأرض؟ (g=10) الحل: v² = 2gh = 2×10×20 = 400 → v = 20 m/s. ب) ما طاقته الحركية قبل الاصطدام؟ KE = ½×10×400 = 2000 J. مثال 2: سيارة كتلتها 1500 kg تتسارع من 0 إلى 30 m/s في 15 s. ما القوة المحصلة؟ a = 30/15 = 2 m/s², F = 1500×2 = 3000 N.",
+        "content_en": "Example 1: A 10 kg object falls from 20 m. Find: a) velocity before impact: v² = 2gh = 400 → v = 20 m/s. b) Kinetic energy: KE = ½×10×400 = 2000 J. Example 2: A 1500 kg car accelerates from 0 to 30 m/s in 15 s. Find net force: a = 30/15 = 2 m/s², F = 1500×2 = 3000 N.",
+        "content_zh": "例1：一个10 kg的物体从20 m高处自由下落。求：a) 落地前的速度：v² = 2gh = 2×10×20 = 400 → v = 20 m/s。b) 落地前的动能：KE = ½×10×400 = 2000 J。例2：一辆1500 kg的汽车在15秒内从0加速到30 m/s。求合力：a = 30/15 = 2 m/s², F = 1500×2 = 3000 N。"
+      },
+      {
+        "heading_ar": "نصائح CSCA",
+        "heading_en": "CSCA Tips",
+        "heading_zh": "CSCA考试提示",
+        "content_ar": "1) احرص على تحويل جميع الوحدات إلى النظام الدولي (SI). 2) في مسائل المقذوفات، حلل الحركة إلى مركبتين: أفقية (سرعة ثابتة) ورأسية (بعجلة g). 3) تذكر أن الوزن = mg وليس الكتلة فقط. 4) في مسائل التصادم، كمية الحركة محفوظة دائماً، أما الطاقة الحركية فمحفوظة فقط في التصادم المرن. 5) القوة المركزية ليست قوة مستقلة بل ناتج قوى حقيقية.",
+        "content_en": "1) Always convert units to SI. 2) In projectile motion, analyze separately: horizontal (constant speed) and vertical (acceleration g). 3) Weight = mg, not just mass. 4) In collisions, momentum is always conserved; kinetic energy is conserved only in elastic collisions. 5) Centripetal force is the net result of real forces, not an independent force.",
+        "content_zh": "1) 始终将所有单位转换为国际单位制(SI)。2) 在抛体运动中，将运动分解为水平（匀速）和垂直（加速度g）两个分量。3) 记住重量 = mg，不仅仅是质量。4) 在碰撞问题中，动量始终守恒，动能只在弹性碰撞中守恒。5) 向心力是真实力的合力结果，而非独立力。"
+      },
+      {
+        "heading_ar": "أخطاء شائعة",
+        "heading_en": "Common Mistakes",
+        "heading_zh": "常见错误",
+        "content_ar": "1) الخلط بين الكتلة والوزن. 2) نسيان تحويل الوحدات (مثل km/h → m/s بالقسمة على 3.6). 3) استخدام قانون نيوتن الثاني بدون تحديد القوة المحصلة. 4) الاعتقاد أن قوة الفعل ورد الفعل تلغيان بعضهما (لا، لأنهما على جسمين مختلفين). 5) نسيان أن التسارع على السطح المائل = g sin θ وليس g.",
+        "content_en": "1) Confusing mass and weight. 2) Forgetting unit conversion (km/h to m/s: divide by 3.6). 3) Applying Newton's Second Law without finding net force. 4) Thinking action-reaction forces cancel (they don't — they act on different bodies). 5) Forgetting that acceleration on an incline = g sin θ, not g.",
+        "content_zh": "1) 混淆质量和重量。2) 忘记单位换算（如km/h → m/s需除以3.6）。3) 使用牛顿第二定律时未确定合外力。4) 认为作用力与反作用力相互抵消（它们作用在不同物体上）。5) 忘记斜面上的加速度 = g sin θ，而非g。"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "electricity",
+    "subject": "فيزياء | Physics",
+    "subject_en": "Physics",
+    "title_ar": "الكهرباء والمغناطيسية",
+    "title_en": "Electricity and Magnetism",
+    "title_zh": "电磁学",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية",
+        "heading_en": "Basic Concepts",
+        "heading_zh": "基本概念",
+        "content_ar": "الكهرباء تدرس الشحنات الكهربائية والتيار والجهد والمقاومة. التيار الكهربائي هو تدفق الشحنات: I = Q/t. فرق الجهد (الجهد) هو الطاقة لكل وحدة شحنة. المقاومة تعيق تدفق التيار. قانون أوم: V = IR. الدوائر الكهربائية: التوالي (تيار واحد، جهد يتوزع) والتوازي (جهد واحد، تيار يتوزع). المغناطيسية تدرس القوى الناتجة عن المغناطيسات والتيارات.",
+        "content_en": "Electricity studies charges, current, voltage, and resistance. Current is charge flow: I = Q/t. Voltage is energy per unit charge. Resistance opposes current flow. Ohm's Law: V = IR. Circuits: series (same current, voltage divides) and parallel (same voltage, current divides). Magnetism studies forces from magnets and currents.",
+        "content_zh": "电学研究电荷、电流、电压和电阻。电流是电荷的流动：I = Q/t。电压是单位电荷的能量。电阻阻碍电流流动。欧姆定律：V = IR。电路：串联（电流相同，电压分配）和并联（电压相同，电流分配）。磁学研究磁铁和电流产生的力。"
+      },
+      {
+        "heading_ar": "القوانين الأساسية في اختبار CSCA",
+        "heading_en": "Key Laws for CSCA Exam",
+        "heading_zh": "CSCA考试的关键公式",
+        "content_ar": "القوانين: 1) قانون أوم: V = IR. 2) المقاومة في التوالي: R_eq = R₁ + R₂ + ... 3) المقاومة في التوازي: 1/R_eq = 1/R₁ + 1/R₂ + ... 4) قانون كولوم: F = kq₁q₂/r². 5) المجال الكهربائي: E = F/q = kq/r². 6) الطاقة: E = I²Rt = V²t/R = VIt. 7) سعة المكثف: C = ε₀A/d. 8) القوة المغناطيسية: F = BIL (سلك) أو F = qvB (جسيم). 9) قانون كيرشوف للتيار: ΣI_in = ΣI_out. 10) قانون كيرشوف للجهد: ΣV = 0 في حلقة مغلقة.",
+        "content_en": "Key formulas: 1) Ohm's Law: V = IR. 2) Series: R_eq = R₁ + R₂ + ... 3) Parallel: 1/R_eq = 1/R₁ + 1/R₂ + ... 4) Coulomb's Law: F = kq₁q₂/r². 5) Electric field: E = kq/r². 6) Energy: E = I²Rt = V²t/R = VIt. 7) Capacitance: C = ε₀A/d. 8) Magnetic force: F = BIL (wire) or F = qvB (particle). 9) Kirchhoff's Current Law: ΣI_in = ΣI_out. 10) Kirchhoff's Voltage Law: ΣV = 0 in a closed loop.",
+        "content_zh": "公式：1) 欧姆定律：V = IR。2) 串联电阻：R_eq = R₁ + R₂ + ... 3) 并联电阻：1/R_eq = 1/R₁ + 1/R₂ + ... 4) 库仑定律：F = kq₁q₂/r²。5) 电场：E = F/q = kq/r²。6) 电能：E = I²Rt = V²t/R = VIt。7) 电容：C = ε₀A/d。8) 磁力：F = BIL（导线）或 F = qvB（粒子）。9) 基尔霍夫电流定律：ΣI_in = ΣI_out。10) 基尔霍夫电压定律：闭合回路中 ΣV = 0。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة",
+        "heading_en": "Solved Examples",
+        "heading_zh": "例题解析",
+        "content_ar": "مثال 1: دائرة توالي: بطارية 24 V ومقاومات 4 Ω و 8 Ω. احسب التيار وفرق الجهد على كل مقاومة. الحل: R_eq = 12 Ω, I = 24/12 = 2 A. V₄ = 2×4 = 8 V, V₈ = 2×8 = 16 V. مثال 2: شحنتان 5 μC و -3 μC تبعدان 0.3 m. F = 9×10⁹ × (5×10⁻⁶×3×10⁻⁶)/0.09 = 1.5 N (تجاذب).",
+        "content_en": "Example 1: Series circuit: 24 V battery, resistors 4 Ω and 8 Ω. Find current and voltage drops. R_eq = 12 Ω, I = 24/12 = 2 A. V₄ = 8 V, V₈ = 16 V. Example 2: Charges +5 μC and -3 μC, distance 0.3 m. F = kq₁q₂/r² = 1.5 N (attractive).",
+        "content_zh": "例1：串联电路：24 V电池，电阻4 Ω和8 Ω。求电流和各电阻上的电压。R_eq = 12 Ω, I = 24/12 = 2 A。V₄ = 2×4 = 8 V, V₈ = 2×8 = 16 V。例2：两个电荷+5 μC和-3 μC，距离0.3 m。F = kq₁q₂/r² = 1.5 N（引力）。"
+      },
+      {
+        "heading_ar": "نصائح CSCA",
+        "heading_en": "CSCA Tips",
+        "heading_zh": "CSCA考试提示",
+        "content_ar": "1) احسب المقاومة المكافئة أولاً دائماً. 2) في مسائل كولوم، حول μC إلى C: 1 μC = 10⁻⁶ C. 3) حدد نوع التوصيل: التوالي (نفس التيار) أو التوازي (نفس الجهد). 4) تذكر أن شدة المجال الكهربائي تتناسب عكسياً مع مربع المسافة. 5) استخدام قانون كيرشوف للتيار عند نقاط التفرع.",
+        "content_en": "1) Always find equivalent resistance first. 2) Convert μC to C: 1 μC = 10⁻⁶ C. 3) Identify connection type: series (same current) or parallel (same voltage). 4) Electric field is inversely proportional to r². 5) Use Kirchhoff's Current Law at junctions.",
+        "content_zh": "1) 始终先求等效电阻。2) 库仑问题中，将μC转换为C：1 μC = 10⁻⁶ C。3) 确定连接类型：串联（电流相同）或并联（电压相同）。4) 电场强度与距离的平方成反比。5) 在分支点使用基尔霍夫电流定律。"
+      },
+      {
+        "heading_ar": "أخطاء شائعة",
+        "heading_en": "Common Mistakes",
+        "heading_zh": "常见错误",
+        "content_zh": "1) 颠倒并联公式（写R_eq = 1/R₁ + 1/R₂而非1/R_eq = ...）。2) 忘记单位换算（mm → m, cm → m）。3) 混淆端电压(V)和电动势(ε)。4) 忽略电池内阻。5) 忘记磁力垂直于速度和磁场方向。",
+        "content_ar": "1) عكس صيغة التوازي (كتابة R_eq = ... بدلاً من 1/R_eq = ...). 2) نسيان تحويل الوحدات (mm → m, cm → m). 3) الخلط بين الجهد (V) والقوة الدافعة الكهربائية (ε). 4) عدم مراعاة المقاومة الداخلية للبطارية. 5) نسيان أن القوة المغناطيسية عمودية على كل من السرعة والمجال المغناطيسي.",
+        "content_en": "1) Inverting the parallel formula (writing R_eq = 1/R₁ + 1/R₂ instead of 1/R_eq = ...). 2) Forgetting unit conversion (mm → m, cm → m). 3) Confusing terminal voltage (V) with emf (ε). 4) Neglecting internal resistance. 5) Forgetting magnetic force is perpendicular to both velocity and magnetic field."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "waves",
+    "subject": "فيزياء | Physics",
+    "subject_en": "Physics",
+    "title_ar": "الموجات والصوت",
+    "title_en": "Waves and Sound",
+    "title_zh": "波与声学",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية",
+        "heading_en": "Basic Concepts",
+        "heading_zh": "基本概念",
+        "content_ar": "الموجة هي اضطراب ينتقل في الوسط (أو في الفراغ للموجات الكهرومغناطيسية). أنواع الموجات: طولية (تهتز جزيئاتها في اتجاه الانتشار - مثل الصوت) ومستعرضة (تهتز عمودياً - مثل الضوء). خصائص الموجة: الطول الموجي (λ)، التردد (f)، السرعة (v)، السعة (A). العلاقة الأساسية: v = fλ. الصوت يحتاج لوسط لينتشر، سرعته في الهواء ≈ 340 m/s.",
+        "content_en": "A wave is a disturbance that propagates through a medium (or vacuum for EM waves). Types: longitudinal (particles vibrate parallel to propagation — e.g., sound) and transverse (perpendicular — e.g., light). Wave properties: wavelength (λ), frequency (f), speed (v), amplitude (A). Fundamental relation: v = fλ. Sound requires a medium; speed in air ≈ 340 m/s.",
+        "content_zh": "波是在介质（电磁波可在真空中）中传播的扰动。类型：纵波（粒子振动方向与传播方向平行——如声波）和横波（垂直——如光波）。波的性质：波长(λ)、频率(f)、速度(v)、振幅(A)。基本关系：v = fλ。声波需要介质传播，在空气中速度 ≈ 340 m/s。"
+      },
+      {
+        "heading_ar": "القوانين الأساسية",
+        "heading_en": "Key Laws",
+        "heading_zh": "关键公式",
+        "content_ar": "القوانين: 1) v = fλ (السرعة = التردد × الطول الموجي). 2) T = 1/f (الدور = مقلوب التردد). 3) تأثير دوبلر: f' = f(v±vₒ)/(v∓v_s). 4) شدة الصوت: I = P/A (W/m²). 5) مستوى الشدة: β = 10 log(I/I₀) dB حيث I₀ = 10⁻¹² W/m². 6) تردد الوتر: f = (1/2L)√(T/μ). 7) الترددات التوافقية: f_n = nf₁. 8) تجربة يونغ: Δy = λL/d. 9) معامل الانكسار: n = c/v. 10) الحيود: λ ≈ a sin θ.",
+        "content_en": "Key formulas: 1) v = fλ. 2) T = 1/f. 3) Doppler effect: f' = f(v±vₒ)/(v∓v_s). 4) Sound intensity: I = P/A. 5) Intensity level: β = 10 log(I/I₀) dB. 6) String frequency: f = (1/2L)√(T/μ). 7) Harmonics: f_n = nf₁. 8) Young's experiment: Δy = λL/d. 9) Refractive index: n = c/v. 10) Diffraction: λ ≈ a sin θ.",
+        "content_zh": "公式：1) v = fλ（速度 = 频率 × 波长）。2) T = 1/f（周期 = 频率的倒数）。3) 多普勒效应：f' = f(v±vₒ)/(v∓v_s)。4) 声强：I = P/A (W/m²)。5) 声强级：β = 10 log(I/I₀) dB，其中 I₀ = 10⁻¹² W/m²。6) 弦线频率：f = (1/2L)√(T/μ)。7) 谐波：f_n = nf₁。8) 杨氏双缝实验：Δy = λL/d。9) 折射率：n = c/v。10) 衍射：λ ≈ a sin θ。"
+      },
+      {
+        "heading_ar": "نصائح CSCA والأخطاء الشائعة",
+        "heading_en": "CSCA Tips and Common Mistakes",
+        "heading_zh": "CSCA考试提示与常见错误",
+        "content_ar": "نصائح: 1) تحديد نوع الموجة واتجاه الاهتزاز. 2) في تأثير دوبلر، حدد إذا كان المصدر يقترب (تردد أعلى) أم يبتعد (تردد أقل). 3) في الأوتار، النمط الأساسي λ = 2L. 4) في الأنابيب المفتوحة λ = 2L، المغلقة λ = 4L. أخطاء شائعة: 1) عكس صيغة دوبلر. 2) الخلط بين الطول الموجي والتردد. 3) نسيان تحويل nm إلى m (1 nm = 10⁻⁹ m).",
+        "content_en": "Tips: 1) Identify wave type and vibration direction. 2) Doppler: source approaching = higher frequency, receding = lower. 3) String fundamental: λ = 2L. 4) Open pipe λ = 2L, closed pipe λ = 4L. Common mistakes: 1) Reversing Doppler formula. 2) Confusing wavelength and frequency. 3) Forgetting nm to m conversion (1 nm = 10⁻⁹ m).",
+        "content_zh": "提示：1) 确定波的类型和振动方向。2) 多普勒效应：声源靠近时频率升高，远离时频率降低。3) 弦线基频：λ = 2L。4) 开端管 λ = 2L，闭端管 λ = 4L。常见错误：1) 颠倒多普勒公式。2) 混淆波长和频率。3) 忘记nm到m的换算（1 nm = 10⁻⁹ m）。"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "optics",
+    "subject": "فيزياء | Physics",
+    "subject_en": "Physics",
+    "title_ar": "البصريات",
+    "title_en": "Optics",
+    "title_zh": "光学",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية",
+        "heading_en": "Basic Concepts",
+        "heading_zh": "基本概念",
+        "content_ar": "البصريات تدرس سلوك الضوء: الانعكاس، الانكسار، والتداخل. الانعكاس: زاوية السقوط = زاوية الانعكاس. الانكسار: تغير اتجاه الضوء عند انتقاله بين وسطَين. معامل الانكسار: n = c/v. قانون سنيل: n₁ sin θ₁ = n₂ sin θ₂. العدسات: محدبة (تجميع) ومقعرة (تفريق). قوة العدسة: P = 1/f (ديوبتر). المرايا: مستوية، مقعرة، محدبة.",
+        "content_en": "Optics studies light behavior: reflection, refraction, and interference. Reflection: angle of incidence = angle of reflection. Refraction: light changes direction between media. Refractive index: n = c/v. Snell's Law: n₁ sin θ₁ = n₂ sin θ₂. Lenses: convex (converging) and concave (diverging). Lens power: P = 1/f (diopters). Mirrors: plane, concave, convex.",
+        "content_zh": "光学研究光的行为：反射、折射和干涉。反射定律：入射角 = 反射角。折射：光在两种介质间传播时方向改变。折射率：n = c/v。斯涅尔定律：n₁ sin θ₁ = n₂ sin θ₂。透镜：凸透镜（会聚）和凹透镜（发散）。透镜光焦度：P = 1/f（屈光度）。反射镜：平面镜、凹面镜、凸面镜。"
+      },
+      {
+        "heading_ar": "القوانين الأساسية",
+        "heading_en": "Key Laws",
+        "heading_zh": "关键公式",
+        "content_ar": "القوانين: 1) قانون الانعكاس: θ_i = θ_r. 2) قانون سنيل: n₁ sin θ₁ = n₂ sin θ₂. 3) قانون العدسات: 1/f = 1/do + 1/di. 4) التكبير: m = -di/do = hi/ho. 5) قوة العدسة: P = 1/f. 6) الزاوية الحرجة: sin θ_c = n₂/n₁. 7) قانون المرايا: 1/f = 1/do + 1/di. 8) البعد البؤري للمرآة الكروية: f = R/2 (مقعرة: موجبة، محدبة: سالبة).",
+        "content_en": "Key formulas: 1) Reflection: θ_i = θ_r. 2) Snell's Law: n₁ sin θ₁ = n₂ sin θ₂. 3) Lens equation: 1/f = 1/do + 1/di. 4) Magnification: m = -di/do = hi/ho. 5) Lens power: P = 1/f. 6) Critical angle: sin θ_c = n₂/n₁. 7) Mirror equation: 1/f = 1/do + 1/di. 8) Focal length: f = R/2 (positive for concave, negative for convex).",
+        "content_zh": "公式：1) 反射定律：θ_i = θ_r。2) 斯涅尔定律：n₁ sin θ₁ = n₂ sin θ₂。3) 透镜方程：1/f = 1/do + 1/di。4) 放大率：m = -di/do = hi/ho。5) 透镜光焦度：P = 1/f。6) 临界角：sin θ_c = n₂/n₁。7) 反射镜方程：1/f = 1/do + 1/di。8) 球面镜焦距：f = R/2（凹面为正，凸面为负）。"
+      },
+      {
+        "heading_ar": "نصائح CSCA والأخطاء الشائعة",
+        "heading_en": "CSCA Tips and Common Mistakes",
+        "heading_zh": "CSCA考试提示与常见错误",
+        "content_ar": "نصائح: 1) إشارة f موجبة للعدسات المحدبة والمرايا المقعرة، سالبة للعكس. 2) di موجب للصورة الحقيقية، سالب للخيالية. 3) ارسم مخطط الأشعة لتحديد نوع الصورة. أخطاء شائعة: 1) الخلط بين أنواع العدسات والمرايا. 2) عدم الانتباه لإشارات f و di. 3) الخلط بين مقلوب البعد البؤري (القوة) والبعد البؤري نفسه.",
+        "content_en": "Tips: 1) f is positive for convex lenses and concave mirrors, negative otherwise. 2) Positive di = real image, negative = virtual image. 3) Draw ray diagrams to identify image type. Common mistakes: 1) Confusing lens/mirror types. 2) Ignoring sign conventions for f and di. 3) Confusing optical power (1/f) with focal length itself.",
+        "content_zh": "提示：1) f在凸透镜和凹面镜中为正，反之为负。2) di为正表示实像，为负表示虚像。3) 画光路图确定像的类型。常见错误：1) 混淆透镜和反射镜的类型。2) 忽略f和di的符号规则。3) 混淆光焦度（1/f）与焦距本身。"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "thermo",
+    "subject": "فيزياء | Physics",
+    "subject_en": "Physics",
+    "title_ar": "الديناميكا الحرارية",
+    "title_en": "Thermodynamics",
+    "title_zh": "热力学",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية",
+        "heading_en": "Basic Concepts",
+        "heading_zh": "基本概念",
+        "content_ar": "الديناميكا الحرارية تدرس الحرارة والشغل والطاقة الداخلية. درجة الحرارة تقاس بالكلفن (K) أو الدرجة المئوية (°C). التحويل: K = °C + 273.15. الحرارة النوعية (c): كمية الحرارة اللازمة لرفع درجة حرارة 1 kg بمقدار 1°C. حرارة كامنة (L): الحرارة اللازمة لتغير حالة المادة دون تغير درجة حرارتها. الغاز المثالي: PV = nRT.",
+        "content_en": "Thermodynamics studies heat, work, and internal energy. Temperature is measured in Kelvin (K) or Celsius (°C). Conversion: K = °C + 273. Specific heat (c): heat needed to raise 1 kg by 1°C. Latent heat (L): heat for phase change at constant temperature. Ideal Gas: PV = nRT.",
+        "content_zh": "热力学研究热量、功和内能。温度以开尔文(K)或摄氏度(°C)测量。换算：K = °C + 273.15。比热容(c)：将1 kg物质升高1°C所需的热量。潜热(L)：物质在恒定温度下发生相变所需的热量。理想气体状态方程：PV = nRT。"
+      },
+      {
+        "heading_ar": "القوانين الأساسية",
+        "heading_en": "Key Laws",
+        "heading_zh": "关键公式",
+        "content_ar": "القوانين: 1) قانون الغاز المثالي: PV = nRT. 2) القانون الأول: ΔU = Q - W. 3) كفاءة المحرك: η = W/Q_h = 1 - Q_c/Q_h. 4) كفاءة كارنو: η = 1 - T_c/T_h. 5) Q = mcΔT (حرارة). 6) Q = mL (حرارة كامنة). 7) قانون بويل: P₁V₁ = P₂V₂ (ثبات T). 8) قانون شارل: V₁/T₁ = V₂/T₂ (ثبات P). 9) قانون جاي-لوساك: P₁/T₁ = P₂/T₂ (ثبات V). 10) ثابت الغازات: R = 8.314 J/mol·K = 0.082 L·atm/mol·K.",
+        "content_en": "Key formulas: 1) Ideal Gas: PV = nRT. 2) First Law: ΔU = Q - W. 3) Engine efficiency: η = W/Q_h. 4) Carnot: η = 1 - T_c/T_h. 5) Q = mcΔT (sensible heat). 6) Q = mL (latent heat). 7) Boyle: P₁V₁ = P₂V₂ (constant T). 8) Charles: V₁/T₁ = V₂/T₂ (constant P). 9) Gay-Lussac: P₁/T₁ = P₂/T₂ (constant V). 10) Gas constant: R = 8.314 J/mol·K = 0.082 L·atm/mol·K.",
+        "content_zh": "公式：1) 理想气体状态方程：PV = nRT。2) 热力学第一定律：ΔU = Q - W。3) 热机效率：η = W/Q_h = 1 - Q_c/Q_h。4) 卡诺效率：η = 1 - T_c/T_h。5) Q = mcΔT（显热）。6) Q = mL（潜热）。7) 波义耳定律：P₁V₁ = P₂V₂（T恒定）。8) 查理定律：V₁/T₁ = V₂/T₂（P恒定）。9) 盖-吕萨克定律：P₁/T₁ = P₂/T₂（V恒定）。10) 气体常数：R = 8.314 J/mol·K = 0.082 L·atm/mol·K。"
+      },
+      {
+        "heading_ar": "نصائح CSCA",
+        "heading_en": "CSCA Tips",
+        "heading_zh": "CSCA考试提示",
+        "content_ar": "1) حول درجة الحرارة إلى كلفن في جميع حسابات الغاز المثالي. 2) انتبه لوحدات R (اختر R المناسب للوحدات المستخدمة). 3) في القانون الأول، W موجب إذا بذل الغاز شغلاً. 4) في مسائل تغير الحالة، احسب كل مرحلة منفصلة. 5) كفاءة كارنو هي أقصى كفاءة ممكنة وتستخدم كمرجع.",
+        "content_en": "1) Convert to Kelvin for all ideal gas calculations. 2) Choose appropriate R value (8.314 J/mol·K or 0.082 L·atm/mol·K). 3) W positive when gas does work. 4) Solve phase-change problems in separate stages. 5) Carnot efficiency is the maximum possible and serves as a reference.",
+        "content_zh": "1) 所有理想气体计算中，将温度转换为开尔文。2) 选择正确的R值（8.314 J/mol·K或0.082 L·atm/mol·K）。3) 气体对外做功时W为正。4) 相变问题分阶段求解。5) 卡诺效率是可能的最大效率，用作参考标准。"
+      },
+      {
+        "heading_ar": "أخطاء شائعة",
+        "heading_en": "Common Mistakes",
+        "content_en": "1) Using Celsius instead of Kelvin in gas laws. 2) Confusing Q (heat) and T (temperature). 3) Forgetting that ΔU = 0 for isothermal processes. 4) Mixing up the sign convention in the First Law (some textbooks use ΔU = Q + W). 5) Forgetting to convert mass units (g to kg) in Q = mcΔT.",
+        "content_zh": "1) 在气体定律中使用摄氏度而非开尔文。2) 混淆Q（热量）和T（温度）。3) 忘记等温过程中ΔU = 0。4) 混淆热力学第一定律的符号约定（有些教材使用ΔU = Q + W）。5) 在Q = mcΔT中忘记将质量单位从g转换为kg。",
+        "content_ar": "1) استخدام الدرجة المئوية بدلاً من كلفن في قوانين الغازات. 2) الخلط بين Q (حرارة) و T (درجة حرارة). 3) نسيان أن ΔU = 0 في العمليات الأيزوثيرمية. 4) الخلط في إشارة القانون الأول (بعض الكتب تستخدم ΔU = Q + W). 5) نسيان تحويل الكتلة من g إلى kg في Q = mcΔT.",
+        "heading_zh": "常见错误"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "modern",
+    "subject": "فيزياء | Physics",
+    "subject_en": "Physics",
+    "title_ar": "الفيزياء الحديثة",
+    "title_en": "Modern Physics",
+    "title_zh": "现代物理",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية",
+        "heading_en": "Basic Concepts",
+        "heading_zh": "基本概念",
+        "content_ar": "الفيزياء الحديثة تشمل الفيزياء الكمومية والنووية. ثابت بلانك: h = 6.63×10⁻³⁴ J·s. الفوتون: جسيم ضوئي له طاقة E = hf. التأثير الكهروضوئي: KE = hf - φ. ازدواجية الموجة-الجسيم: كل جسيم له طول موجي λ = h/p (فرضية دي برولي). النشاط الإشعاعي: تحلل النوى غير المستقرة بإطلاق جسيمات أو طاقة. أنواع الإشعاع: ألفا (α)، بيتا (β)، جاما (γ).",
+        "content_en": "Modern physics includes quantum and nuclear physics. Planck's constant: h = 6.63×10⁻³⁴ J·s. Photon: light particle with energy E = hf. Photoelectric effect: KE = hf - φ. Wave-particle duality: every particle has wavelength λ = h/p (de Broglie hypothesis). Radioactivity: unstable nuclei decay by emitting particles or energy. Radiation types: alpha (α), beta (β), gamma (γ).",
+        "content_zh": "现代物理学包括量子物理和核物理。普朗克常数：h = 6.63×10⁻³⁴ J·s。光子：具有能量E = hf的光粒子。光电效应：KE = hf - φ。波粒二象性：每个粒子都有波长λ = h/p（德布罗意假设）。放射性：不稳定的原子核通过发射粒子或能量而衰变。辐射类型：α（阿尔法）、β（贝塔）、γ（伽马）。"
+      },
+      {
+        "heading_ar": "القوانين الأساسية",
+        "heading_en": "Key Laws",
+        "heading_zh": "关键公式",
+        "content_ar": "القوانين: 1) طاقة الفوتون: E = hf = hc/λ. 2) التأثير الكهروضوئي: KE_max = hf - φ. 3) تكافؤ الكتلة-الطاقة: E = mc². 4) طول دي برولي: λ = h/p = h/(mv). 5) التحلل الإشعاعي: N = N₀e^(-λt). 6) عمر النصف: t₁/₂ = ln(2)/λ. 7) الطاقة النووية: ΔE = Δm·c². 8) ثابت بلانك بوحدة eV·s: h = 4.14×10⁻¹⁵ eV·s. 9) hc = 1240 eV·nm (ثابت مفيد للتحويل).",
+        "content_en": "Key formulas: 1) Photon energy: E = hf = hc/λ. 2) Photoelectric effect: KE_max = hf - φ. 3) Mass-energy: E = mc². 4) de Broglie: λ = h/p = h/(mv). 5) Radioactive decay: N = N₀e^(-λt). 6) Half-life: t₁/₂ = ln(2)/λ. 7) Nuclear energy: ΔE = Δm·c². 8) h = 4.14×10⁻¹⁵ eV·s. 9) hc = 1240 eV·nm (useful conversion constant).",
+        "content_zh": "公式：1) 光子能量：E = hf = hc/λ。2) 光电效应：KE_max = hf - φ。3) 质能等价：E = mc²。4) 德布罗意波长：λ = h/p = h/(mv)。5) 放射性衰变：N = N₀e^(-λt)。6) 半衰期：t₁/₂ = ln(2)/λ。7) 核能：ΔE = Δm·c²。8) h = 4.14×10⁻¹⁵ eV·s。9) hc = 1240 eV·nm（有用的换算常数）。"
+      },
+      {
+        "heading_ar": "نصائح CSCA",
+        "heading_en": "CSCA Tips",
+        "content_zh": "1) 光电效应中，如果hf < φ → 没有电子发射。2) 使用hc = 1240 eV·nm简化光子能量计算。3) 衰变：N = N₀ × (½)^n，其中n = 半衰期个数。4) α粒子（氦核）可被纸阻挡，β粒子（电子）可被铝阻挡，γ射线需要铅阻挡。5) 核聚变发生在太阳中，核裂变用于核反应堆。",
+        "content_ar": "1) في التأثير الكهروضوئي، إذا كانت hf < φ → لا تنبعث إلكترونات. 2) استخدام hc = 1240 eV·nm لتسهيل حسابات الطاقة. 3) في التحلل الإشعاعي، N₀ × (½)^n حيث n عدد فترات عمر النصف. 4) جسيمات ألفا (نواة He) توقفها الورقة، بيتا (إلكترون) يوقفه الألومنيوم، جاما تحتاج رصاصاً. 5) الاندماج النووي يحدث في الشمس، والانشطار في المفاعلات النووية.",
+        "content_en": "1) If hf < φ, no electrons are emitted. 2) Use hc = 1240 eV·nm for easy photon energy calculation. 3) Decay: N = N₀ × (½)^n where n = number of half-lives. 4) α (He nucleus) stopped by paper, β (electron) by aluminum, γ needs lead. 5) Fusion powers the Sun; fission is used in nuclear reactors.",
+        "heading_zh": "CSCA考试提示"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "fluids",
+    "subject": "فيزياء | Physics",
+    "subject_en": "Physics",
+    "title_ar": "ميكانيكا الموائع",
+    "title_en": "Fluid Mechanics",
+    "title_zh": "流体力学",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية",
+        "heading_en": "Basic Concepts",
+        "heading_zh": "基本概念",
+        "content_ar": "ميكانيكا الموائع تدرس سلوك السوائل والغازات (الموائع). الضغط: القوة العمودية على وحدة المساحة P = F/A. وحدة الضغط في SI: باسكال (Pa) = N/m². الكثافة: ρ = m/V. الضغط في السائل: P = ρgh (يزداد مع العمق). قوة الطفو: مبدأ أرخميدس — قوة الطفو = وزن المائع المزاح. الجريان: معادلة الاستمرارية A₁v₁ = A₂v₂ (حفظ الكتلة). معادلة برنولي تربط الضغط والسرعة والارتفاع.",
+        "content_en": "Fluid mechanics studies the behavior of liquids and gases (fluids). Pressure: force per unit area P = F/A. SI unit: Pascal (Pa) = N/m². Density: ρ = m/V. Pressure in a fluid: P = ρgh (increases with depth). Buoyancy: Archimedes' Principle — buoyant force = weight of displaced fluid. Flow: continuity equation A₁v₁ = A₂v₂ (mass conservation). Bernoulli's equation relates pressure, speed, and height.",
+        "content_zh": "流体力学研究液体和气体（流体）的行为。压强：单位面积上的垂直力 P = F/A。SI单位：帕斯卡(Pa) = N/m²。密度：ρ = m/V。液体中的压强：P = ρgh（随深度增加）。浮力：阿基米德原理 — 浮力 = 排开流体的重量。流动：连续性方程 A₁v₁ = A₂v₂（质量守恒）。伯努利方程联系了压强、速度和高度。"
+      },
+      {
+        "heading_ar": "القوانين الأساسية",
+        "heading_en": "Key Laws",
+        "heading_zh": "关键公式",
+        "content_ar": "القوانين: 1) الضغط: P = F/A. 2) الضغط في السائل: P = ρgh + P₀. 3) مبدأ أرخميدس: F_b = ρVg. 4) مبدأ باسكال: F₁/A₁ = F₂/A₂. 5) معادلة الاستمرارية: A₁v₁ = A₂v₂. 6) معادلة برنولي: P₁ + ½ρv₁² + ρgh₁ = P₂ + ½ρv₂² + ρgh₂. 7) قانون تورشيللي: v = √(2gh). 8) معامل اللزوجة: F/A = η(dv/dy). 9) التدفق: Q = Av. 10) التوتر السطحي: γ = F/L.",
+        "content_en": "Key formulas: 1) Pressure: P = F/A. 2) Fluid pressure: P = ρgh + P₀. 3) Archimedes: F_b = ρVg. 4) Pascal: F₁/A₁ = F₂/A₂. 5) Continuity: A₁v₁ = A₂v₂. 6) Bernoulli: P₁ + ½ρv₁² + ρgh₁ = P₂ + ½ρv₂² + ρgh₂. 7) Torricelli: v = √(2gh). 8) Viscosity: F/A = η(dv/dy). 9) Flow rate: Q = Av. 10) Surface tension: γ = F/L.",
+        "content_zh": "公式：1) 压强：P = F/A。2) 流体压强：P = ρgh + P₀。3) 阿基米德原理：F_b = ρVg。4) 帕斯卡定律：F₁/A₁ = F₂/A₂。5) 连续性方程：A₁v₁ = A₂v₂。6) 伯努利方程：P₁ + ½ρv₁² + ρgh₁ = P₂ + ½ρv₂² + ρgh₂。7) 托里拆利公式：v = √(2gh)。8) 粘性：F/A = η(dv/dy)。9) 流量：Q = Av。10) 表面张力：γ = F/L。"
+      },
+      {
+        "heading_ar": "نصائح CSCA",
+        "heading_en": "CSCA Tips",
+        "content_zh": "1) 大气压 = 101,325 Pa = 1 atm = 760 mm Hg。2) 水的密度 = 1000 kg/m³。3) 水平管道中，伯努利方程简化（h₁ = h₂）。4) 物体密度小于流体密度时浮起。5) 液压机：力的放大倍数 = 面积比。6) 理想流体流动中忽略粘性。",
+        "content_ar": "1) الضغط الجوي = 101,325 Pa = 1 atm = 760 mm Hg. 2) كثافة الماء = 1000 kg/m³. 3) في قانون برنولي، إذا كان الأنبوب أفقياً (h₁ = h₂)، تبسط المعادلة. 4) في مبدأ أرخميدس، الجسم يطفو إذا كانت كثافته أقل من كثافة المائع. 5) المكبس الهيدروليكي: مضاعفة القوة = نسبة المساحات. 6) في جريان الموائع المثالية، نهمل اللزوجة.",
+        "content_en": "1) Atmospheric pressure = 101,325 Pa = 1 atm = 760 mm Hg. 2) Water density = 1000 kg/m³. 3) For horizontal pipes, Bernoulli simplifies (h₁ = h₂). 4) Objects float when their density is less than the fluid density. 5) Hydraulic press: force multiplication = area ratio. 6) In ideal fluid flow, ignore viscosity.",
+        "heading_zh": "CSCA考试提示"
+      },
+      {
+        "heading_ar": "أخطاء شائعة",
+        "heading_en": "Common Mistakes",
+        "content_zh": "1) 计算总液体压强时忘记加上大气压P₀。2) 混淆密度(ρ)和质量(m)。3) 使用伯努利方程时未统一压强单位（帕斯卡）。4) 认为所有物体都会下沉（浮力取决于相对密度）。5) 在计算静水压强时忘记单位换算（cm → m）。",
+        "content_ar": "1) نسيان إضافة الضغط الجوي P₀ عند حساب الضغط الكلي في السائل. 2) الخلط بين الكثافة (ρ) والكتلة (m). 3) تطبيق قانون برنولي بدون مراعاة وحدة الضغط (باسكال). 4) الاعتقاد أن جميع الأجسام تغوص (الطفو يعتمد على الكثافة النسبية). 5) نسيان تحويل الوحدات (cm إلى m) عند حساب الضغط الهيدروستاتيكي.",
+        "content_en": "1) Forgetting to add atmospheric pressure P₀ when calculating total fluid pressure. 2) Confusing density (ρ) with mass (m). 3) Applying Bernoulli without consistent pressure units (Pascal). 4) Thinking all objects sink (buoyancy depends on relative density). 5) Forgetting unit conversion (cm to m) in hydrostatic pressure calculations.",
+        "heading_zh": "常见错误"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "statistics",
+    "subject": "رياضيات | Math",
+    "subject_en": "Math",
+    "title_ar": "الإحصاء (Statistics)",
+    "title_en": "Statistics",
+    "title_zh": "统计学",
+    "sections": [
+      {
+        "heading_ar": "مقاييس النزعة المركزية",
+        "heading_en": "Measures of Central Tendency",
+        "content_zh": "均值：数值之和 ÷ 个数。中位数：排序后的中间值。众数：出现最频繁的值。比较：均值受异常值影响，中位数不受影响，众数适用于分类数据。在右偏分布中，均值 ≥ 中位数 ≥ 众数。",
+        "content_ar": "الوسط الحسابي (Mean): مجموع القيم ÷ عددها. الوسيط (Median): القيمة الوسطى بعد الترتيب. المنوال (Mode): القيمة الأكثر تكراراً. مقارنة: الوسط يتأثر بالقيم المتطرفة، الوسيط لا يتأثر، المنوال مفيد للبيانات الفئوية. الوسط ≥ الوسيط ≥ المنوال في التوزيع الملتوي يميناً.",
+        "content_en": "Mean: sum of values ÷ count. Median: middle value when sorted. Mode: most frequent value. Comparison: mean is affected by outliers, median is not, mode is useful for categorical data. Mean ≥ Median ≥ Mode in right-skewed distribution.",
+        "heading_zh": "集中趋势度量"
+      },
+      {
+        "heading_ar": "مقاييس التشتت",
+        "heading_en": "Measures of Dispersion",
+        "content_zh": "极差：最大值 − 最小值。方差：σ² = Σ(xᵢ−μ)²/N（总体）或 S² = Σ(xᵢ−x̄)²/(n−1)（样本）。标准差：σ = √方差。四分位距（IQR）：Q3−Q1。变异系数：CV = σ/μ。",
+        "content_ar": "المدى (Range): أكبر قيمة − أصغر قيمة. التباين (Variance): σ² = Σ(xᵢ−μ)²/N (للمجتمع) أو S² = Σ(xᵢ−x̄)²/(n−1) (للعينة). الانحراف المعياري (Std Dev): σ = √Variance. المدى الربيعي (IQR): Q3−Q1. معامل الاختلاف: CV = σ/μ.",
+        "content_en": "Range: max−min. Variance: σ²=Σ(xᵢ−μ)²/N (population) or S²=Σ(xᵢ−x̄)²/(n−1) (sample). Standard Deviation: σ=√Variance. Interquartile Range (IQR): Q3−Q1. Coefficient of Variation: CV=σ/μ.",
+        "heading_zh": "离散程度度量"
+      },
+      {
+        "heading_ar": "الربيعيات والمئينات",
+        "heading_en": "Quartiles and Percentiles",
+        "content_zh": "四分位数将数据分为四个相等部分：Q1（25%），Q2 = 中位数（50%），Q3（75%）。第k百分位数：有k%数据低于该值的值。箱线图：显示Q1、Q2、Q3、极值和异常值。IQR = Q3−Q1用于检测异常值。",
+        "content_ar": "الربيعيات تقسم البيانات إلى أربعة أجزاء متساوية: Q1 (25%)، Q2 = الوسيط (50%)، Q3 (75%). المئين k: القيمة التي عندها k% من البيانات أقل منها. المخطط الصندوقي (Box Plot): يعرض Q1, Q2, Q3, القيم القصوى والشواذ. IQR = Q3−Q1 يستخدم لكشف القيم الشاذة.",
+        "content_en": "Quartiles divide data into four equal parts: Q1 (25%), Q2=Median (50%), Q3 (75%). Percentile k: value below which k% of data falls. Box plot: displays Q1, Q2, Q3, extremes and outliers. IQR=Q3−Q1 is used to detect outliers.",
+        "heading_zh": "四分位数与百分位数"
+      },
+      {
+        "heading_ar": "نصائح CSCA للإحصاء",
+        "heading_en": "CSCA Tips for Statistics",
+        "content_zh": "（1）在对称分布中均值=中位数。（2）样本方差使用(n−1)，而非n。（3）标准差 = √方差。（4）极差受异常值影响严重；IQR更好。（5）箱线图：Q1、Q2、Q3构成箱体。（6）记住：方差 = (标准差)²。",
+        "content_ar": "(1) الوسط الحسابي والوسيط قد يتساويان في التوزيع المتماثل. (2) تباين العينة يستخدم (n−1) وليس n. (3) الانحراف المعياري = جذر التباين دائماً. (4) المدى يتأثر بشدة بالقيم المتطرفة، IQR أفضل. (5) في مخطط الصندوق: Q1, Q2, Q3 ترسم المربع. (6) احفظ العلاقة: Variance = (Std Dev)².",
+        "content_en": "(1) Mean=Median in symmetric distributions. (2) Sample variance uses (n−1), not n. (3) Std Dev = √Variance always. (4) Range is heavily affected by outliers; IQR is better. (5) Box plot: Q1, Q2, Q3 form the box. (6) Remember: Variance = (Std Dev)².",
+        "heading_zh": "CSCA统计学提示"
+      }
+    ]
+  },
+  {
+    "id": "chem_atomic",
+    "topic": "atomic",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "البناء الذري",
+    "title_en": "Atomic Structure",
+    "title_zh": "原子结构",
+    "sections": [
+      {
+        "heading_ar": "مكونات الذرة",
+        "heading_en": "Components of the Atom",
+        "heading_zh": "原子的组成",
+        "content_ar": "تتكون الذرة من نواة تحتوي على بروتونات (شحنة موجبة) ونيوترونات (متعادلة)، وتدور حولها إلكترونات (شحنة سالبة). العدد الذري Z = عدد البروتونات. العدد الكتلي A = عدد البروتونات + عدد النيوترونات. النظائر هي ذرات لنفس العنصر تختلف في عدد النيوترونات.",
+        "content_en": "An atom consists of a nucleus containing protons (positive) and neutrons (neutral), surrounded by electrons (negative). Atomic number Z = number of protons. Mass number A = protons + neutrons. Isotopes are atoms of the same element with different numbers of neutrons.",
+        "content_zh": "原子由原子核（包含带正电的质子和中性的中子）和围绕核运动的电子（带负电）组成。原子序数Z = 质子数。质量数A = 质子数 + 中子数。同位素是同一元素具有不同中子数的原子。"
+      },
+      {
+        "heading_ar": "التوزيع الإلكتروني",
+        "heading_en": "Electron Configuration",
+        "heading_zh": "电子排布",
+        "content_ar": "تملأ الإلكترونات المدارات حسب مبدأ أوفباو (من الأقل طاقة للأعلى): 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s... قاعدة هوند: تملأ الإلكترونات المدارات المتكافئة بشكل منفرد أولاً. مبدأ باولي: لا يمكن لإلكترونين في الذرة أن يكون لهما نفس أعداد الكم الأربعة.",
+        "content_en": "Electrons fill orbitals according to the Aufbau principle (lowest energy first): 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s... Hund's rule: electrons occupy degenerate orbitals singly first. Pauli exclusion principle: no two electrons in an atom can have the same four quantum numbers.",
+        "content_zh": "电子按照构造原理（从低能级到高能级）填充轨道：1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s...洪特规则：电子先单独占据简并轨道。泡利不相容原理：原子中没有两个电子具有相同的四个量子数。"
+      },
+      {
+        "heading_ar": "أعداد الكم",
+        "heading_en": "Quantum Numbers",
+        "heading_zh": "量子数",
+        "content_ar": "أعداد الكم الأربعة تصف حالة الإلكترون: n (عدد كم رئيسي) يحدد مستوى الطاقة، l (عدد كم ثانوي) يحدد شكل المدار (0=s, 1=p, 2=d, 3=f)، m_l (عدد كم مغناطيسي) يحدد اتجاه المدار، m_s (عدد كم مغناطيسي مغزلي) يحدد اتجاه الدوران (+½ أو -½).",
+        "content_en": "Four quantum numbers describe an electron's state: n (principal) determines energy level, l (azimuthal) determines orbital shape (0=s, 1=p, 2=d, 3=f), m_l (magnetic) determines orbital orientation, m_s (spin) determines spin direction (+½ or -½).",
+        "content_zh": "四个量子数描述电子的状态：n（主量子数）决定能级，l（角量子数）决定轨道形状（0=s, 1=p, 2=d, 3=f），m_l（磁量子数）决定轨道方向，m_s（自旋量子数）决定自旋方向（+½或-½）。"
+      },
+      {
+        "heading_ar": "الجدول الدوري",
+        "heading_en": "Periodic Table",
+        "heading_zh": "元素周期表",
+        "content_ar": "الدورة = مستوى الطاقة الرئيسي. المجموعة = نفس عدد إلكترونات التكافؤ. الخواص الدورية تشمل: نصف القطر الذري (يكبر لأسفل ولليسار)، طاقة التأين (تكبر لأعلى ولليمين)، السالبية الكهربائية (تكبر لأعلى ولليمين)، الألفة الإلكترونية.",
+        "content_en": "Period = principal energy level. Group = same number of valence electrons. Periodic trends: atomic radius (increases down and left), ionization energy (increases up and right), electronegativity (increases up and right), electron affinity.",
+        "content_zh": "周期 = 主能级。族 = 相同价电子数。周期性趋势：原子半径（向下和向左增大），电离能（向上和向右增大），电负性（向上和向右增大），电子亲和能。"
+      }
+    ]
+  },
+  {
+    "id": "chem_bonding",
+    "topic": "bonding",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الروابط الكيميائية",
+    "title_en": "Chemical Bonding",
+    "title_zh": "化学键",
+    "sections": [
+      {
+        "heading_ar": "أنواع الروابط",
+        "heading_en": "Types of Bonds",
+        "heading_zh": "键的类型",
+        "content_ar": "الرابطة الأيونية: انتقال إلكترونات بين فلز ولا فلز (مثل NaCl). الرابطة التساهمية: مشاركة إلكترونات بين لا فلزات (مثل H₂). الرابطة الفلزية: إلكترونات متمركزة في شبكة فلزية. الرابطة الهيدروجينية: قوة جذب بين H مرتبط بذرة عالية السالبية (O, N, F) وذرة سالبة أخرى.",
+        "content_en": "Ionic bond: electron transfer between metal and nonmetal (e.g., NaCl). Covalent bond: electron sharing between nonmetals (e.g., H₂). Metallic bond: delocalized electrons in a metal lattice. Hydrogen bond: attraction between H bonded to electronegative atom (O, N, F) and another electronegative atom.",
+        "content_zh": "离子键：金属和非金属之间的电子转移（如NaCl）。共价键：非金属之间的电子共享（如H₂）。金属键：金属晶格中的离域电子。氢键：与电负性原子（O, N, F）结合的H与另一个电负性原子之间的吸引力。"
+      },
+      {
+        "heading_ar": "نظرية VSEPR والأشكال الهندسية",
+        "heading_en": "VSEPR Theory and Molecular Geometry",
+        "heading_zh": "VSEPR理论和分子几何形状",
+        "content_ar": "نظرية التنافر بين أزواج إلكترونات التكافؤ (VSEPR): تتباعد أزواج الإلكترونات حول الذرة المركزية بأقصى زاوية ممكنة. AX₂ خطي (180°)، AX₃ مثلث مستوي (120°)، AX₄ رباعي أوجه (109.5°)، AX₃E هرمي ثلاثي (107°)، AX₂E₂ منحني (104.5°).",
+        "content_en": "VSEPR theory: electron pairs around the central atom repel to maximize angles. AX₂ linear (180°), AX₃ trigonal planar (120°), AX₄ tetrahedral (109.5°), AX₃E trigonal pyramidal (107°), AX₂E₂ bent (104.5°).",
+        "content_zh": "价层电子对互斥理论（VSEPR）：中心原子周围的电子对尽可能以最大角度排斥。AX₂直线形（180°），AX₃平面三角形（120°），AX₄四面体形（109.5°），AX₃E三角锥形（107°），AX₂E₂角形（104.5°）。"
+      },
+      {
+        "heading_ar": "التهجين والقطبية",
+        "heading_en": "Hybridization and Polarity",
+        "heading_zh": "杂化和极性",
+        "content_ar": "التهجين: خلط مدارات ذرية لتكوين مدارات مهجنة. sp (خطي، 180°)، sp² (مثلث مستوي، 120°)، sp³ (رباعي أوجه، 109.5°)، sp³d (هرمي مزدوج ثلاثي)، sp³d² (ثماني أوجه). قطبية الجزيء تعتمد على فرق السالبية وشكل الجزيء.",
+        "content_en": "Hybridization: mixing atomic orbitals to form hybrid orbitals. sp (linear, 180°), sp² (trigonal planar, 120°), sp³ (tetrahedral, 109.5°), sp³d (trigonal bipyramidal), sp³d² (octahedral). Molecular polarity depends on electronegativity difference and molecular shape.",
+        "content_zh": "杂化：混合原子轨道形成杂化轨道。sp（直线形，180°），sp²（平面三角形，120°），sp³（四面体形，109.5°），sp³d（三角双锥形），sp³d²（八面体形）。分子极性取决于电负性差和分子形状。"
+      }
+    ]
+  },
+  {
+    "id": "chem_equilibrium",
+    "topic": "equilibrium",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الاتزان الكيميائي والأحماض والقواعد",
+    "title_en": "Chemical Equilibrium, Acids and Bases",
+    "title_zh": "化学平衡与酸碱",
+    "sections": [
+      {
+        "heading_ar": "ثابت الاتزان ومبدأ لوشاتيليه",
+        "heading_en": "Equilibrium Constant and Le Chatelier's Principle",
+        "heading_zh": "平衡常数和勒夏特列原理",
+        "content_ar": "للتفاعل aA + bB ⇌ cC + dD: Kc = [C]ᶜ[D]ᵈ/[A]ᵃ[B]ᵇ. Kc يتغير فقط مع درجة الحرارة. مبدأ لوشاتيليه: إذا أثر تغيير على نظام في حالة اتزان، يزيح النظام اتزانه ليعاكس هذا التغيير. عوامل: تغير التركيز، الضغط، الحرارة.",
+        "content_en": "For aA + bB ⇌ cC + dD: Kc = [C]ᶜ[D]ᵈ/[A]ᵃ[B]ᵇ. Kc changes only with temperature. Le Chatelier's principle: if a change affects a system at equilibrium, the system shifts to counteract the change. Factors: concentration, pressure, temperature changes.",
+        "content_zh": "对于反应 aA + bB ⇌ cC + dD：Kc = [C]ᶜ[D]ᵈ/[A]ᵃ[B]ᵇ。Kc仅随温度变化。勒夏特列原理：如果改变影响平衡系统的条件，系统将向减弱这种改变的方向移动。因素：浓度、压力、温度的变化。"
+      },
+      {
+        "heading_ar": "الأحماض والقواعد و pH",
+        "heading_en": "Acids, Bases and pH",
+        "heading_zh": "酸、碱和pH值",
+        "content_ar": "Arrhenius: حمض يعطي H⁺، قاعدة تعطي OH⁻. Brønsted-Lowry: حمض مانح بروتون، قاعدة مستقبلة بروتون. pH = -log[H⁺]. pOH = -log[OH⁻]. pH + pOH = 14 عند 25°C. حمض قوي: يتأين كلياً (HCl, H₂SO₄). حمض ضعيف: يتأين جزئياً (CH₃COOH).",
+        "content_en": "Arrhenius: acid gives H⁺, base gives OH⁻. Brønsted-Lowry: acid donates proton, base accepts proton. pH = -log[H⁺]. pOH = -log[OH⁻]. pH + pOH = 14 at 25°C. Strong acid: fully ionizes (HCl, H₂SO₄). Weak acid: partially ionizes (CH₃COOH).",
+        "content_zh": "Arrhenius：酸产生H⁺，碱产生OH⁻。Brønsted-Lowry：酸是质子给予体，碱是质子接受体。pH = -log[H⁺]。pOH = -log[OH⁻]。25°C时 pH + pOH = 14。强酸：完全电离（HCl, H₂SO₄）。弱酸：部分电离（CH₃COOH）。"
+      },
+      {
+        "heading_ar": "المحاليل المنظمة (Buffers)",
+        "heading_en": "Buffer Solutions",
+        "heading_zh": "缓冲溶液",
+        "content_ar": "المحلول المنظم يقاوم التغير في pH عند إضافة كميات صغيرة من حمض أو قاعدة. يتكون من حمض ضعيف وملحه (مثل CH₃COOH/CH₃COONa) أو قاعدة ضعيفة وملحها (مثل NH₃/NH₄Cl). معادلة هندر-هاسلباخ: pH = pKa + log([قاعدة]/[حمض]).",
+        "content_en": "A buffer resists pH change when small amounts of acid or base are added. It consists of a weak acid and its salt (e.g., CH₃COOH/CH₃COONa) or a weak base and its salt (e.g., NH₃/NH₄Cl). Henderson-Hasselbalch: pH = pKa + log([base]/[acid]).",
+        "content_zh": "缓冲溶液在加入少量酸或碱时能抵抗pH变化。由弱酸及其盐（如CH₃COOH/CH₃COONa）或弱碱及其盐（如NH₃/NH₄Cl）组成。亨德森-哈塞尔巴尔赫方程：pH = pKa + log([碱]/[酸])。"
+      },
+      {
+        "heading_ar": "منتجات الذوبان (Ksp)",
+        "heading_en": "Solubility Products (Ksp)",
+        "heading_zh": "溶度积",
+        "content_ar": "للمركب الشحيح الذوبان AₓBᵧ(s) ⇌ xAʸ⁺ + yBˣ⁻: Ksp = [Aʸ⁺]ˣ[Bˣ⁻]ʸ. قيمة Ksp صغيرة تعني ذائبية منخفضة. تأثير الأيون المشترك: إضافة أيون موجود في الاتزان تقلل الذائبية.",
+        "content_en": "For a sparingly soluble compound AₓBᵧ(s) ⇌ xAʸ⁺ + yBˣ⁻: Ksp = [Aʸ⁺]ˣ[Bˣ⁻]ʸ. A small Ksp means low solubility. Common ion effect: adding an ion already present in equilibrium reduces solubility.",
+        "content_zh": "对于微溶化合物 AₓBᵧ(s) ⇌ xAʸ⁺ + yBˣ⁻：Ksp = [Aʸ⁺]ˣ[Bˣ⁻]ʸ。小的Ksp值表示低溶解度。同离子效应：加入平衡中已有的离子会降低溶解度。"
+      }
+    ]
+  },
+  {
+    "id": "chem_kinetics",
+    "topic": "kinetics",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الحركية الكيميائية",
+    "title_en": "Chemical Kinetics",
+    "title_zh": "化学动力学",
+    "sections": [
+      {
+        "heading_ar": "معدل التفاعل وقانون السرعة",
+        "heading_en": "Reaction Rate and Rate Law",
+        "heading_zh": "反应速率和速率定律",
+        "content_ar": "معدل التفاعل = تغير التركيز ÷ الزمن (M/s). قانون السرعة: rate = k[A]ᵐ[B]ⁿ. m,n رتب التفاعل (تحدد تجريبياً). k ثابت السرعة يعتمد على درجة الحرارة. الرتبة الصفرية: معدل ثابت. الرتبة الأولى: ln[A] = -kt + ln[A]₀. الرتبة الثانية: 1/[A] = kt + 1/[A]₀.",
+        "content_en": "Reaction rate = change in concentration ÷ time (M/s). Rate law: rate = k[A]ᵐ[B]ⁿ. m,n are reaction orders (determined experimentally). k is the rate constant (depends on temperature). Zero order: constant rate. First order: ln[A] = -kt + ln[A]₀. Second order: 1/[A] = kt + 1/[A]₀.",
+        "content_zh": "反应速率 = 浓度变化 ÷ 时间（M/s）。速率定律：rate = k[A]ᵐ[B]ⁿ。m,n是反应级数（由实验确定）。k是速率常数（取决于温度）。零级：速率恒定。一级：ln[A] = -kt + ln[A]₀。二级：1/[A] = kt + 1/[A]₀。"
+      },
+      {
+        "heading_ar": "طاقة التنشيط ومعادلة أرهينيوس",
+        "heading_en": "Activation Energy and Arrhenius Equation",
+        "heading_zh": "活化能和阿伦尼乌斯方程",
+        "content_ar": "طاقة التنشيط Ea: الحد الأدنى من الطاقة اللازمة للتفاعل. معادلة أرهينيوس: k = A·exp(-Ea/RT). العامل المساعد يخفض Ea فيسرع التفاعل. كلما زادت Ea كان التفاعل أبطأ. عند رفع درجة الحرارة 10°C، تتضاعف سرعة التفاعل تقريباً.",
+        "content_en": "Activation energy Ea: minimum energy required for reaction. Arrhenius equation: k = A·exp(-Ea/RT). A catalyst lowers Ea, speeding up the reaction. Higher Ea means slower reaction. Raising temperature by 10°C roughly doubles the reaction rate.",
+        "content_zh": "活化能Ea：反应所需的最小能量。阿伦尼乌斯方程：k = A·exp(-Ea/RT)。催化剂降低Ea，从而加快反应。Ea越高，反应越慢。温度每升高10°C，反应速率大约翻倍。"
+      },
+      {
+        "heading_ar": "عمر النصف وآليات التفاعل",
+        "heading_en": "Half-Life and Reaction Mechanisms",
+        "heading_zh": "半衰期和反应机理",
+        "content_ar": "عمر النصف t₁/₂: الزمن اللازم لانخفاض التركيز إلى النصف. للرتبة الأولى: t₁/₂ = 0.693/k (لا يعتمد على التركيز). للرتبة الثانية: t₁/₂ = 1/(k[A]₀). آلية التفاعل: سلسلة من الخطوات الأولية. خطوة تحديد السرعة = أبطأ خطوة. الجزيئية: عدد الجزيئات المتفاعلة في الخطوة.",
+        "content_en": "Half-life t₁/₂: time for concentration to halve. First order: t₁/₂ = 0.693/k (concentration independent). Second order: t₁/₂ = 1/(k[A]₀). Reaction mechanism: series of elementary steps. Rate-determining step = slowest step. Molecularity: number of reacting molecules in a step.",
+        "content_zh": "半衰期t₁/₂：浓度减半所需时间。一级反应：t₁/₂ = 0.693/k（与浓度无关）。二级反应：t₁/₂ = 1/(k[A]₀)。反应机理：一系列基元步骤。速率决定步骤 = 最慢步骤。分子数：步骤中反应分子的数量。"
+      }
+    ]
+  },
+  {
+    "id": "chem_basic",
+    "topic": "basic",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "المفاهيم الأساسية في الكيمياء",
+    "title_en": "Basic Concepts in Chemistry",
+    "title_zh": "化学基本概念",
+    "sections": [
+      {
+        "heading_ar": "المول وعدد أفوجادرو",
+        "heading_en": "Mole and Avogadro's Number",
+        "heading_zh": "摩尔和阿伏伽德罗常数",
+        "content_ar": "المول: كتلة المادة التي تحتوي على عدد أفوجادرو (6.022×10²³) من الوحدات. الكتلة المولية = كتلة 1 مول بوحدة g/mol. عدد المولات n = الكتلة (g) / الكتلة المولية (g/mol). عدد الجسيمات = n × N_A.",
+        "content_en": "Mole: amount of substance containing Avogadro's number (6.022×10²³) of units. Molar mass = mass of 1 mole in g/mol. Number of moles n = mass (g) / molar mass (g/mol). Number of particles = n × N_A.",
+        "content_zh": "摩尔：含有阿伏伽德罗常数（6.022×10²³）个单元的物质质量。摩尔质量 = 1摩尔的质量（g/mol）。物质的量 n = 质量（g）/ 摩尔质量（g/mol）。粒子数 = n × N_A。"
+      },
+      {
+        "heading_ar": "الكتلة الذرية والجزيئية",
+        "heading_en": "Atomic and Molecular Mass",
+        "heading_zh": "原子质量和分子质量",
+        "content_ar": "الكتلة الذرية النسبية: متوسط كتلة ذرة العنصر مقارنة بـ 1/12 كتلة ذرة كربون-12. الكتلة الجزيئية: مجموع الكتل الذرية للذرات في الجزيء. وحدة الكتل الذرية (amu): 1/12 كتلة ذرة ¹²C = 1.66×10⁻²⁴ g.",
+        "content_en": "Relative atomic mass: average mass of an element's atoms relative to 1/12 mass of carbon-12. Molecular mass: sum of atomic masses in a molecule. Atomic mass unit (amu): 1/12 mass of ¹²C atom = 1.66×10⁻²⁴ g.",
+        "content_zh": "相对原子质量：元素原子的平均质量与碳-12原子质量的1/12之比。分子质量：分子中各原子质量之和。原子质量单位（amu）：¹²C原子质量的1/12 = 1.66×10⁻²⁴ g。"
+      },
+      {
+        "heading_ar": "قوانين الغازات",
+        "heading_en": "Gas Laws",
+        "heading_zh": "气体定律",
+        "content_ar": "قانون بويل: P₁V₁ = P₂V₂ (ثبات T). قانون شارل: V₁/T₁ = V₂/T₂ (ثبات P). قانون أفوجادرو: V₁/n₁ = V₂/n₂ (ثبات P,T). قانون الغاز المثالي: PV = nRT. R = 0.0821 L·atm/mol·K. عند STP (0°C, 1 atm): الحجم المولي = 22.4 L/mol.",
+        "content_en": "Boyle's law: P₁V₁ = P₂V₂ (constant T). Charles' law: V₁/T₁ = V₂/T₂ (constant P). Avogadro's law: V₁/n₁ = V₂/n₂ (constant P,T). Ideal gas law: PV = nRT. R = 0.0821 L·atm/mol·K. At STP (0°C, 1 atm): molar volume = 22.4 L/mol.",
+        "content_zh": "波义耳定律：P₁V₁ = P₂V₂（温度恒定）。查理定律：V₁/T₁ = V₂/T₂（压力恒定）。阿伏伽德罗定律：V₁/n₁ = V₂/n₂（压力、温度恒定）。理想气体状态方程：PV = nRT。R = 0.0821 L·atm/mol·K。STP（0°C, 1 atm）：摩尔体积 = 22.4 L/mol。"
+      }
+    ]
+  },
+  {
+    "id": "chem_inorganic",
+    "topic": "inorganic",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الكيمياء غير العضوية",
+    "title_en": "Inorganic Chemistry",
+    "title_zh": "无机化学",
+    "sections": [
+      {
+        "heading_ar": "تفاعلات الهالوجينات والفلزات القلوية",
+        "heading_en": "Halogen and Alkali Metal Reactions",
+        "heading_zh": "卤素和碱金属反应",
+        "content_ar": "الهالوجينات (F₂, Cl₂, Br₂, I₂): تزداد نصف القطر وتقل النشاطية الكيميائية عند النزول في المجموعة. Cl₂ غاز أصفر-أخضر، Br₂ سائل بني، I₂ صلب بنفسجي. الفلزات القلوية (Li, Na, K): تتفاعل بعنف مع الماء منتجة هيدروكسيد وهيدروجين.",
+        "content_en": "Halogens (F₂, Cl₂, Br₂, I₂): atomic radius increases and chemical activity decreases down the group. Cl₂ yellow-green gas, Br₂ brown liquid, I₂ violet solid. Alkali metals (Li, Na, K): react vigorously with water producing hydroxide and hydrogen.",
+        "content_zh": "卤素（F₂, Cl₂, Br₂, I₂）：原子半径增大，化学活性在族中向下减小。Cl₂黄绿色气体，Br₂棕色液体，I₂紫色固体。碱金属（Li, Na, K）：与水剧烈反应生成氢氧化物和氢气。"
+      },
+      {
+        "heading_ar": "التفاعلات في المحاليل المائية",
+        "heading_en": "Reactions in Aqueous Solutions",
+        "heading_zh": "水溶液中的反应",
+        "content_ar": "تفاعلات الترسيب: تكوين مادة صلبة غير ذائبة. قواعد الذائبية: جميع نترات (NO₃⁻) وأملاح الفلزات القلوية قابلة للذوبان. AgCl, PbCl₂, BaSO₄, CaCO₃ شحيحة الذوبان. تفاعلات تأكسد-اختزال: انتقال إلكترونات بين المتفاعلات. العامل المؤكسد: يختزل ويكسب إلكترونات. العامل المختزل: يتأكسد ويفقد إلكترونات.",
+        "content_en": "Precipitation reactions: formation of an insoluble solid. Solubility rules: all nitrates (NO₃⁻) and alkali metal salts are soluble. AgCl, PbCl₂, BaSO₄, CaCO₃ are sparingly soluble. Redox reactions: electron transfer between reactants. Oxidizing agent: reduced (gains electrons). Reducing agent: oxidized (loses electrons).",
+        "content_zh": "沉淀反应：形成不溶性固体。溶解度规则：所有硝酸盐（NO₃⁻）和碱金属盐都可溶。AgCl, PbCl₂, BaSO₄, CaCO₃微溶。氧化还原反应：反应物之间的电子转移。氧化剂：被还原（获得电子）。还原剂：被氧化（失去电子）。"
+      },
+      {
+        "heading_ar": "كيمياء العناصر الانتقالية",
+        "heading_en": "Transition Metal Chemistry",
+        "heading_zh": "过渡金属化学",
+        "content_ar": "العناصر الانتقالية: مدارات d غير ممتلئة جزئياً. خواصها: حالات تأكسد متعددة، أملاح ملونة، نشاط تحفيزي. المركبات المعقدة: أيون فلز مركزي محاط بليكاندات. العدد التناسقي: عدد الروابط مع الليكاندات. الأشكال الهندسية: رباعي أوجه (عدد تناسقي 4)، ثماني أوجه (عدد تناسقي 6).",
+        "content_en": "Transition elements: partially filled d orbitals. Properties: multiple oxidation states, colored salts, catalytic activity. Complex compounds: central metal ion surrounded by ligands. Coordination number: number of bonds to ligands. Geometries: tetrahedral (CN=4), octahedral (CN=6).",
+        "content_zh": "过渡元素：部分填充的d轨道。性质：多种氧化态、有色盐、催化活性。配合物：中心金属离子周围由配体围绕。配位数：与配体的键数。几何形状：四面体（配位数4）、八面体（配位数6）。"
+      }
+    ]
+  },
+  {
+    "id": "chem_organic",
+    "topic": "organic",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الكيمياء العضوية",
+    "title_en": "Organic Chemistry",
+    "title_zh": "有机化学",
+    "sections": [
+      {
+        "heading_ar": "الهيدروكربونات",
+        "heading_en": "Hydrocarbons",
+        "heading_zh": "碳氢化合物",
+        "content_ar": "الألكانات (CₙH₂ₙ₊₂): روابط أحادية فقط (مشبعة). الألكينات (CₙH₂ₙ): رابطة ثنائية واحدة. الألكاينات (CₙH₂ₙ₋₂): رابطة ثلاثية واحدة. الهيدروكربونات الأروماتية: مثل البنزين C₆H₆ (حلقة غير مشبعة ذات استقرار خاص بتأثير الرنين).",
+        "content_en": "Alkanes (CₙH₂ₙ₊₂): only single bonds (saturated). Alkenes (CₙH₂ₙ): one double bond. Alkynes (CₙH₂ₙ₋₂): one triple bond. Aromatic hydrocarbons: e.g., benzene C₆H₆ (unsaturated ring with special stability from resonance).",
+        "content_zh": "烷烃（CₙH₂ₙ₊₂）：只有单键（饱和）。烯烃（CₙH₂ₙ）：一个双键。炔烃（CₙH₂ₙ₋₂）：一个三键。芳香烃：如苯C₆H₆（具有共振稳定性的不饱和环）。"
+      },
+      {
+        "heading_ar": "المجموعات الوظيفية",
+        "heading_en": "Functional Groups",
+        "heading_zh": "官能团",
+        "content_ar": "الكحولات (-OH)، الألدهيدات (-CHO)، الكيتونات (-CO-)، الأحماض الكربوكسيلية (-COOH)، الإسترات (-COO-)، الأمينات (-NH₂)، الأميدات (-CONH₂)، الإيثرات (-O-). كل مجموعة وظيفية تعطي للمركب خواصاً كيميائية مميزة.",
+        "content_en": "Alcohols (-OH), aldehydes (-CHO), ketones (-CO-), carboxylic acids (-COOH), esters (-COO-), amines (-NH₂), amides (-CONH₂), ethers (-O-). Each functional group gives the compound characteristic chemical properties.",
+        "content_zh": "醇类（-OH）、醛类（-CHO）、酮类（-CO-）、羧酸类（-COOH）、酯类（-COO-）、胺类（-NH₂）、酰胺类（-CONH₂）、醚类（-O-）。每个官能团赋予化合物独特的化学性质。"
+      },
+      {
+        "heading_ar": "أنواع التفاعلات العضوية",
+        "heading_en": "Types of Organic Reactions",
+        "heading_zh": "有机反应类型",
+        "content_ar": "الإضافة: إضافة جزيء إلى رابطة ثنائية/ثلاثية (مثل إضافة Br₂ إلى الألكين). الاستبدال: استبدال ذرة أو مجموعة بأخرى (مثل هلجنة الألكان). الإزالة: حذف جزيء صغير لتكوين رابطة متعددة (مثل نزع الماء من الكحول لإنتاج الألكين). البلمرة: اتحاد وحدات صغيرة (مونومرات) لتكوين بوليمر.",
+        "content_en": "Addition: adding a molecule to a double/triple bond (e.g., Br₂ to alkene). Substitution: replacing an atom/group with another (e.g., alkane halogenation). Elimination: removing a small molecule to form a multiple bond (e.g., dehydration of alcohol to alkene). Polymerization: joining small units (monomers) to form a polymer.",
+        "content_zh": "加成：将分子添加到双键/三键上（如Br₂加至烯烃）。取代：用另一个原子/基团替换一个原子/基团（如烷烃卤化）。消除：移除一个小分子形成多重键（如醇脱水生成烯烃）。聚合：小单元（单体）结合形成聚合物。"
+      },
+      {
+        "heading_ar": "التسمية النظامية IUPAC",
+        "heading_en": "IUPAC Nomenclature",
+        "heading_zh": "IUPAC命名法",
+        "content_ar": "تحديد أطول سلسلة كربونية متصلة. ترقيم السلسلة من أقرب نهاية للمجموعة الوظيفية أو الاستبدال. تسمية الاستبدالات (مجموعات ألكيل: ميثيل، إيثيل...) بالترتيب الأبجدي. تحديد الرقم الدال على موقع الاستبدال أو الرابطة المتعددة.",
+        "content_en": "Identify the longest continuous carbon chain. Number the chain from the end nearest the functional group or substituent. Name substituents (alkyl groups: methyl, ethyl...) in alphabetical order. Specify position numbers for substituents or multiple bonds.",
+        "content_zh": "确定最长的连续碳链。从最靠近官能团或取代基的一端开始编号。按字母顺序命名取代基（烷基：甲基、乙基...）。指定取代基或多键的位置编号。"
+      }
+    ]
+  },
+  {
+    "id": "chem_organic_cn",
+    "topic": "organic_cn",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الكيمياء العضوية - التسمية الصينية",
+    "title_en": "Organic Chemistry - Chinese Nomenclature",
+    "title_zh": "有机化学 - 中文命名",
+    "sections": [
+      {
+        "heading_ar": "تسمية المركبات العضوية بالصينية",
+        "heading_en": "Naming Organic Compounds in Chinese",
+        "heading_zh": "有机化合物的中文命名",
+        "content_ar": "في نظام التسمية الصيني: يُستخدم ميثان (甲烷)، إيثان (乙烷)، بروبان (丙烷)، بيوتان (丁烷)، بنتان (戊烷)، هكسان (己烷). اللواحق: -ين (烯) للألكين، -اين (炔) للألكاين، -ول (醇) للكحول، -ال (醛) للألدهيد، -ون (酮) للكيتون، -حمض (酸) للحمض.",
+        "content_en": "In the Chinese naming system: methane (甲烷), ethane (乙烷), propane (丙烷), butane (丁烷), pentane (戊烷), hexane (己烷). Suffixes: -ene (烯) for alkene, -yne (炔) for alkyne, -ol (醇) for alcohol, -al (醛) for aldehyde, -one (酮) for ketone, -oic acid (酸) for acid.",
+        "content_zh": "中文命名系统：甲烷、乙烷、丙烷、丁烷、戊烷、己烷。后缀：烯（烯烃）、炔（炔烃）、醇（醇类）、醛（醛类）、酮（酮类）、酸（羧酸）。"
+      },
+      {
+        "heading_ar": "الأيزومرات في الكيمياء العضوية",
+        "heading_en": "Isomers in Organic Chemistry",
+        "heading_zh": "有机化学中的异构体",
+        "content_ar": "الأيزومرات البنائية: تختلف في ترتيب الذرات (سلسلة مختلفة أو موقع مجموعة وظيفية مختلف). الأيزومرات الفراغية: نفس الصيغة والترتيب لكن ترتيب فراغي مختلف. cis/trans: حول الرابطة الثنائية. الأيزومرات الضوئية (enantiomers): صور مرآة غير متطابقة.",
+        "content_en": "Structural isomers: differ in atom arrangement (different chain or functional group position). Stereoisomers: same formula but different spatial arrangement. cis/trans: around double bond. Optical isomers (enantiomers): non-superimposable mirror images.",
+        "content_zh": "构造异构体：原子排列不同（不同链或官能团位置）。立体异构体：相同分子式但空间排列不同。顺反异构：围绕双键。光学异构体（对映体）：不可重叠的镜像。"
+      },
+      {
+        "heading_ar": "التفاعلات المهمة في الامتحان الصيني",
+        "heading_en": "Important Reactions for Chinese Exam",
+        "heading_zh": "中国考试重要反应",
+        "content_ar": "تفاعل الأسترة: كحول + حمض كربوكسيلي ← إستر + ماء (بوجود H₂SO₄). التصبن: إستر + قاعدة ← كحول + ملح حمض دهني (صابون). البلمرة: إضافة متكررة لجزيئات الإيثيلين لتكوين البولي إيثيلين. نزع الماء من الكحول: كحول ← ألكين + ماء.",
+        "content_en": "Esterification: alcohol + carboxylic acid ← ester + water (with H₂SO₄). Saponification: ester + base ← alcohol + fatty acid salt (soap). Polymerization: repeated addition of ethylene to form polyethylene. Dehydration of alcohol: alcohol ← alkene + water.",
+        "content_zh": "酯化反应：醇 + 羧酸 ← 酯 + 水（有H₂SO₄存在）。皂化反应：酯 + 碱 ← 醇 + 脂肪酸盐（肥皂）。聚合反应：乙烯重复加成形成聚乙烯。醇脱水：醇 ← 烯烃 + 水。"
+      }
+    ]
+  },
+  {
+    "id": "chem_physical",
+    "topic": "physical",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الكيمياء الفيزيائية",
+    "title_en": "Physical Chemistry",
+    "title_zh": "物理化学",
+    "sections": [
+      {
+        "heading_ar": "الكيمياء الكهربائية",
+        "heading_en": "Electrochemistry",
+        "heading_zh": "电化学",
+        "content_ar": "الخلايا الكلفانية: تحول الطاقة الكيميائية إلى طاقة كهربائية. الأنود: يتأكسد (قطب سالب). الكاثود: يختزل (قطب موجب). جهد الخلية القياسي E°cell = E°(كاثود) - E°(أنود). معادلة نرنست: E = E° - (RT/nF) ln Q. التحليل الكهربائي: استخدام تيار كهربائي لتحليل مركب.",
+        "content_en": "Galvanic cells: convert chemical energy to electrical energy. Anode: oxidation (negative). Cathode: reduction (positive). Standard cell potential E°cell = E°(cathode) - E°(anode). Nernst equation: E = E° - (RT/nF) ln Q. Electrolysis: using electric current to decompose a compound.",
+        "content_zh": "原电池：将化学能转化为电能。阳极：氧化（负极）。阴极：还原（正极）。标准电池电势 E°cell = E°(阴极) - E°(阳极)。能斯特方程：E = E° - (RT/nF) ln Q。电解：使用电流分解化合物。"
+      },
+      {
+        "heading_ar": "المحاليل والخواص التجميعية",
+        "heading_en": "Solutions and Colligative Properties",
+        "heading_zh": "溶液和依数性质",
+        "content_ar": "الخواص التجميعية تعتمد على عدد جسيمات المذاب وليس نوعها: انخفاض ضغط البخار (قانون راؤول)، ارتفاع درجة الغليان ΔTb = Kb×m×i، انخفاض درجة التجمد ΔTf = Kf×m×i، الضغط الأسموزي π = iMRT. معامل فانت هوف i: عدد الأيونات الناتجة عن تفكك المذاب.",
+        "content_en": "Colligative properties depend on the number of solute particles, not their type: vapor pressure lowering (Raoult's law), boiling point elevation ΔTb = Kb×m×i, freezing point depression ΔTf = Kf×m×i, osmotic pressure π = iMRT. van't Hoff factor i: number of ions from solute dissociation.",
+        "content_zh": "依数性质取决于溶质粒子的数量而非类型：蒸气压降低（拉乌尔定律）、沸点升高 ΔTb = Kb×m×i、凝固点降低 ΔTf = Kf×m×i、渗透压 π = iMRT。范特霍夫因子i：溶质解离产生的离子数。"
+      },
+      {
+        "heading_ar": "قانونا الديناميكا الحرارية",
+        "heading_en": "Laws of Thermodynamics",
+        "heading_zh": "热力学定律",
+        "content_ar": "القانون الأول: ΔU = q + w (الطاقة لا تفنى ولا تُستحدث). المحتوى الحراري: H = U + PV, ΔH = q عند ضغط ثابت. القانون الثاني: الإنتروبي S يقيس الفوضى. للتغير التلقائي ΔS_الكون > 0. القانون الثالث: S = 0 عند 0 K للبلورة المثالية.",
+        "content_en": "First law: ΔU = q + w (energy is conserved). Enthalpy: H = U + PV, ΔH = q at constant pressure. Second law: entropy S measures disorder. For spontaneous change ΔS_universe > 0. Third law: S = 0 at 0 K for a perfect crystal.",
+        "content_zh": "第一定律：ΔU = q + w（能量守恒）。焓：H = U + PV, ΔH = q（恒压下）。第二定律：熵S衡量混乱度。自发变化 ΔS_宇宙 > 0。第三定律：完美晶体在0K时S = 0。"
+      },
+      {
+        "heading_ar": "طاقة جيبس الحرة والتلقائية",
+        "heading_en": "Gibbs Free Energy and Spontaneity",
+        "heading_zh": "吉布斯自由能和自发性",
+        "content_ar": "طاقة جيبس الحرة G = H - TS. ΔG = ΔH - TΔS. التفاعل تلقائي (مفضل) عندما ΔG < 0. ΔG = 0 عند الاتزان. ΔG > 0 غير تلقائي. ΔG° = -RT ln K (تربط الديناميكا الحرارية بالاتزان).",
+        "content_en": "Gibbs free energy G = H - TS. ΔG = ΔH - TΔS. Reaction is spontaneous (favored) when ΔG < 0. ΔG = 0 at equilibrium. ΔG > 0 is non-spontaneous. ΔG° = -RT ln K (links thermodynamics to equilibrium).",
+        "content_zh": "吉布斯自由能 G = H - TS。ΔG = ΔH - TΔS。反应自发（有利）当 ΔG < 0。ΔG = 0 时平衡。ΔG > 0 非自发。ΔG° = -RT ln K（将热力学与平衡联系起来）。"
+      }
+    ]
+  },
+  {
+    "id": "chem_stoichiometry",
+    "topic": "stoichiometry",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الحساب الكيميائي (الاستوكيومتريا)",
+    "title_en": "Stoichiometry",
+    "title_zh": "化学计量学",
+    "sections": [
+      {
+        "heading_ar": "موازنة المعادلات الكيميائية",
+        "heading_en": "Balancing Chemical Equations",
+        "heading_zh": "配平化学方程式",
+        "content_ar": "موازنة المعادلة: يجب أن يتساوى عدد ذرات كل عنصر في الطرفين. نستخدم معاملات عددية صحيحة. مثال: 2H₂ + O₂ → 2H₂O. هذه المعاملات تمثل النسب المولية بين المواد المتفاعلة والناتجة.",
+        "content_en": "Balancing an equation: the number of atoms of each element must be equal on both sides. Use integer coefficients. Example: 2H₂ + O₂ → 2H₂O. These coefficients represent mole ratios between reactants and products.",
+        "content_zh": "配平方程：每边每种元素的原子数必须相等。使用整数系数。例如：2H₂ + O₂ → 2H₂O。这些系数表示反应物和产物之间的摩尔比例。"
+      },
+      {
+        "heading_ar": "المادة المحددة والمردود",
+        "heading_en": "Limiting Reagent and Yield",
+        "heading_zh": "限量试剂和产率",
+        "content_ar": "المادة المحددة: المادة التي تستهلك أولاً وتحدد كمية الناتج. تحول جميع المواد إلى مولات، ثم استخدم النسبة المولية لمعرفة أيها محددة. المردود النظري: أقصى كمية ناتج. المردود الفعلي: الكمية المحصلة عملياً. النسبة المئوية للمردود = (فعلي/نظري)×100.",
+        "content_en": "Limiting reagent: substance consumed first, determining product amount. Convert all to moles, then use mole ratio to find which is limiting. Theoretical yield: maximum product possible. Actual yield: experimentally obtained. Percent yield = (actual/theoretical)×100.",
+        "content_zh": "限量试剂：首先消耗尽的物质，决定产物量。将所有物质转换为摩尔，然后用摩尔比找出哪一个是限制性的。理论产量：可能的最大产物量。实际产量：实验获得的量。产率百分比 = (实际/理论)×100。"
+      },
+      {
+        "heading_ar": "التركيزات الكيميائية",
+        "heading_en": "Chemical Concentrations",
+        "heading_zh": "化学浓度",
+        "content_ar": "المولارية M = mol/L. المولالية m = mol/kg مذيب. النسبة المئوية الوزنية (% w/w) = (كتلة المذاب/كتلة المحلول)×100. النسبة المئوية الحجمية (% v/v) = (حجم المذاب/حجم المحلول)×100. جزء في المليون (ppm) = (كتلة المذاب/كتلة المحلول)×10⁶.",
+        "content_en": "Molarity M = mol/L. Molality m = mol/kg solvent. Mass percent (% w/w) = (mass solute/mass solution)×100. Volume percent (% v/v) = (volume solute/volume solution)×100. Parts per million (ppm) = (mass solute/mass solution)×10⁶.",
+        "content_zh": "物质的量浓度 M = mol/L。质量摩尔浓度 m = mol/kg 溶剂。质量百分数 (% w/w) = (溶质质量/溶液质量)×100。体积百分数 (% v/v) = (溶质体积/溶液体积)×100。百万分比 (ppm) = (溶质质量/溶液质量)×10⁶。"
+      }
+    ]
+  },
+  {
+    "id": "chem_thermochemistry",
+    "topic": "thermochemistry",
+    "subject": "كيمياء | Chemistry",
+    "title_ar": "الكيمياء الحرارية",
+    "title_en": "Thermochemistry",
+    "title_zh": "热化学",
+    "sections": [
+      {
+        "heading_ar": "المحتوى الحراري وقانون هس",
+        "heading_en": "Enthalpy and Hess's Law",
+        "heading_zh": "焓和盖斯定律",
+        "content_ar": "التغير في المحتوى الحراري ΔH: حرارة التفاعل عند ضغط ثابت. ΔH > 0 ماص للحرارة، ΔH < 0 ناشر للحرارة. قانون هس: ΔH للتفاعل الكلي = مجموع ΔH للتفاعلات الجزئية. حرارة التكوين القياسية ΔH_f°: ΔH لتكوين 1 mol من مركب من عناصره.",
+        "content_en": "Enthalpy change ΔH: heat of reaction at constant pressure. ΔH > 0 endothermic, ΔH < 0 exothermic. Hess's law: ΔH for overall reaction = sum of ΔH for partial reactions. Standard enthalpy of formation ΔH_f°: ΔH for forming 1 mol compound from its elements.",
+        "content_zh": "焓变ΔH：恒压下的反应热。ΔH > 0 吸热，ΔH < 0 放热。盖斯定律：总反应的ΔH = 分步反应ΔH之和。标准生成焓ΔH_f°：由元素形成1摩尔化合物的ΔH。"
+      },
+      {
+        "heading_ar": "المسعرية والحرارة النوعية",
+        "heading_en": "Calorimetry and Specific Heat",
+        "heading_zh": "量热学和比热容",
+        "content_ar": "الحرارة النوعية c: كمية الحرارة اللازمة لرفع درجة حرارة 1 g من المادة 1°C. q = m×c×ΔT. المسعر: جهاز لقياس انتقال الحرارة. مسعر القنبلة: ضغط ثابت (q = ΔH). مسعر بسيط: حجم ثابت (q = ΔU).",
+        "content_en": "Specific heat c: heat to raise 1 g of substance by 1°C. q = m×c×ΔT. Calorimeter: device to measure heat transfer. Bomb calorimeter: constant volume (q = ΔU). Simple calorimeter: constant pressure (q = ΔH).",
+        "content_zh": "比热容c：将1g物质升高1°C所需的热量。q = m×c×ΔT。量热计：测量热量传递的装置。弹式量热计：恒容（q = ΔU）。简易量热计：恒压（q = ΔH）。"
+      },
+      {
+        "heading_ar": "الإنتروبي والتلقائية",
+        "heading_en": "Entropy and Spontaneity",
+        "heading_zh": "熵和自发性",
+        "content_ar": "الإنتروبي S: مقياس العشوائية أو الفوضى. ΔS > 0: زيادة في العشوائية (غازات أكثر، ذائبية...). ΔS < 0: نقصان في العشوائية. العوامل المؤثرة على ΔS: تغير الحالة (صلب < سائل < غاز)، تغير عدد الجسيمات، تغير درجة الحرارة. طاقة جيبس: ΔG = ΔH - TΔS. التلقائية تعتمد على إشارتي ΔH و ΔS ودرجة الحرارة.",
+        "content_en": "Entropy S: measure of randomness or disorder. ΔS > 0: increase in randomness (more gases, dissolution...). ΔS < 0: decrease in randomness. Factors affecting ΔS: state change (solid < liquid < gas), particle number change, temperature change. Gibbs energy: ΔG = ΔH - TΔS. Spontaneity depends on signs of ΔH, ΔS and temperature.",
+        "content_zh": "熵S：随机性或无序性的度量。ΔS > 0：随机性增加（更多气体、溶解...）。ΔS < 0：随机性减少。影响ΔS的因素：状态变化（固体 < 液体 < 气体）、粒子数变化、温度变化。吉布斯自由能：ΔG = ΔH - TΔS。自发性取决于ΔH、ΔS的符号和温度。"
+      }
+    ]
+  },
+  {
+    "id": "math_sets",
+    "subject": "رياضيات | Math",
+    "subject_en": "Math",
+    "topic": "sets",
+    "title_ar": "المجموعات",
+    "title_en": "Sets",
+    "title_zh": "集合",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية للمجموعات",
+        "heading_en": "Basic Concepts of Sets",
+        "heading_zh": "集合的基本概念",
+        "content_ar": "المجموعة هي تجميع لأشياء محددة جيداً تسمى عناصر. نكتب المجموعة بين { } مثل A = {1, 2, 3}. تنتمي: a ∈ A تعني a عنصر في المجموعة A. لا تنتمي: a ∉ A. المجموعة الخالية: ∅ = {} ليس فيها عناصر. مجموعة جزئية: A ⊆ B إذا كان كل عنصر في A موجود في B. مجموعة شاملة: U تحتوي كل العناصر الممكنة. عدد العناصر |A| أو n(A).",
+        "content_en": "A set is a well-defined collection of objects called elements. We write sets between { }, e.g., A = {1, 2, 3}. Belongs to: a ∈ A means a is an element of set A. Does not belong: a ∉ A. Empty set: ∅ = {} has no elements. Subset: A ⊆ B if every element of A is in B. Universal set: U contains all possible elements. Cardinality: |A| or n(A).",
+        "content_zh": "集合是明确定义的对象（称为元素）的汇集。我们用 { } 表示集合，例如 A = {1, 2, 3}。属于：a ∈ A 表示 a 是集合 A 的元素。不属于：a ∉ A。空集：∅ = {} 没有元素。子集：若 A 的每个元素都在 B 中，则 A ⊆ B。全集：U 包含所有可能的元素。基数：|A| 或 n(A)。"
+      },
+      {
+        "heading_ar": "عمليات المجموعات وقوانينها",
+        "heading_en": "Set Operations and Laws",
+        "heading_zh": "集合运算与定律",
+        "content_ar": "الاتحاد A ∪ B: عناصر تنتمي لـ A أو B أو كليهما. التقاطع A ∩ B: عناصر تنتمي لكل من A و B معاً. الفرق A − B: عناصر في A وليست في B. المتممة A' أو Aᶜ: عناصر في U وليست في A. قوانين ديمورجان: (A ∪ B)' = A' ∩ B' و (A ∩ B)' = A' ∪ B'. قوانين التوزيع: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) و A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C).",
+        "content_en": "Union A ∪ B: elements in A or B or both. Intersection A ∩ B: elements in both A and B. Difference A − B: elements in A but not in B. Complement A' or Aᶜ: elements in U not in A. De Morgan's laws: (A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'. Distributive laws: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) and A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C).",
+        "content_zh": "并集 A ∪ B：属于 A 或 B（或两者）的元素。交集 A ∩ B：同时属于 A 和 B 的元素。差集 A − B：属于 A 但不属于 B 的元素。补集 A′ 或 Aᶜ：属于 U 但不属于 A 的元素。德摩根定律：(A ∪ B)′ = A′ ∩ B′ 且 (A ∩ B)′ = A′ ∪ B′。分配律：A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) 且 A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)。"
+      },
+      {
+        "heading_ar": "المنتج الديكارتي ومبدأ العد",
+        "heading_en": "Cartesian Product and Counting Principle",
+        "heading_zh": "笛卡尔积与计数原理",
+        "content_ar": "المنتج الديكارتي A × B = {(a,b) | a ∈ A, b ∈ B} هو مجموعة كل الأزواج المرتبة. |A × B| = |A| × |B|. مبدأ العد الأساسي: إذا كان هناك n₁ طريقة للخطوة الأولى و n₂ للثانية، فعدد الطرق الكلي = n₁ × n₂. عدد المجموعات الجزئية لمجموعة عدد عناصرها n هو 2ⁿ. مبدأ برج الحمام (Pigeonhole): إذا وزعت n+1 عنصراً على n خانات، فخانة واحدة على الأقل تحوي عنصرين.",
+        "content_en": "Cartesian product A × B = {(a,b) | a ∈ A, b ∈ B} is the set of all ordered pairs. |A × B| = |A| × |B|. Fundamental counting principle: if there are n₁ ways for step 1 and n₂ for step 2, total ways = n₁ × n₂. Number of subsets of a set with n elements is 2ⁿ. Pigeonhole principle: if n+1 items are placed into n boxes, at least one box contains at least 2 items.",
+        "content_zh": "笛卡尔积 A × B：所有有序对 (a,b) 的集合，其中 a∈A 且 b∈B。|A × B| = |A| × |B|。容斥原理（两个集合）：|A ∪ B| = |A| + |B| − |A ∩ B|。容斥原理（三个集合）：|A∪B∪C| = |A|+|B|+|C| − |A∩B|−|A∩C|−|B∩C| + |A∩B∩C|。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة على المجموعات",
+        "heading_en": "Solved Examples on Sets",
+        "heading_zh": "幂集与文氏图",
+        "content_ar": "مثال 1: إذا كان A = {1,2,3,4}, B = {3,4,5,6}, U = {1,2,3,4,5,6,7,8}. جد: A ∪ B = {1,2,3,4,5,6}, A ∩ B = {3,4}, A − B = {1,2}, A' = {5,6,7,8}. مثال 2: في فصل 30 طالباً، 20 يدرسون رياضيات و 15 فيزياء و 10 يدرسون كليهما. كم طالباً لا يدرس أياً منهما؟ n(M∪P) = 20+15−10 = 25, إذن 30−25 = 5 طلاب لا يدرسون أياً منهما.",
+        "content_en": "Example 1: A = {1,2,3,4}, B = {3,4,5,6}, U = {1,2,3,4,5,6,7,8}. Find: A ∪ B = {1,2,3,4,5,6}, A ∩ B = {3,4}, A − B = {1,2}, A' = {5,6,7,8}. Example 2: In a class of 30, 20 study Math, 15 study Physics, 10 study both. How many study neither? n(M∪P) = 20+15−10 = 25, so 30−25 = 5 students study neither.",
+        "content_zh": "集合 A 的幂集 P(A) 是 A 的所有子集的集合。若 |A| = n，则 |P(A)| = 2ⁿ。幂集包含空集和集合本身。文氏图用圆形区域直观表示集合关系：重叠区域表示交集，整体区域表示并集。在 CSCA 中常见文氏图问题，利用容斥原理求解。"
+      },
+      {
+        "heading_ar": "نصائح CSCA للمجموعات",
+        "heading_en": "CSCA Tips for Sets",
+        "heading_zh": "CSCA集合提示",
+        "content_ar": "1) تذكر أن ∅ مجموعة جزئية من كل مجموعة. 2) لا تخلط بين ∈ (عنصر في) و ⊆ (مجموعة جزئية). 3) في مسائل الاتحاد والتقاطع، استخدم مبدأ العد: |A ∪ B| = |A| + |B| − |A ∩ B|. 4) ارسم مخطط فين (Venn diagram) للمسائل اللفظية. 5) للمجموعات الثلاث: |A ∪ B ∪ C| = |A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|.",
+        "content_en": "1) The empty set is a subset of every set. 2) Don't confuse ∈ (element of) with ⊆ (subset of). 3) Use counting: |A ∪ B| = |A| + |B| − |A ∩ B|. 4) Draw Venn diagrams for word problems. 5) For three sets: |A ∪ B ∪ C| = |A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|.",
+        "content_zh": "（1）记住容斥原理公式：两个集合 |A∪B| = |A|+|B|−|A∩B|；三个集合有更复杂的公式。（2）在文氏图问题中，从最内层交集开始填充。|A∩B∩C|已知时，可依次计算两两交集。（3）子集数量为 2ⁿ。（4）A ⊆ B 时，A ∪ B = B 且 A ∩ B = A。"
+      },
+      {
+        "heading_ar": "أخطاء شائعة في المجموعات",
+        "heading_en": "Common Mistakes in Sets",
+        "heading_zh": "常见错误",
+        "content_ar": "1) الخلط بين الرمز ∈ (ينتمي) و ⊆ (مجموعة جزئية). 2) نسيان أن المجموعة الخالية ∅ تختلف عن {0} (مجموعة تحوي الصفر). 3) عدم ترتيب الأقواس في المنتج الديكارتي للمجموعات الثلاث. 4) نسيان طرح التقاطع عند حساب |A ∪ B|. 5) الاعتقاد أن A − B = B − A (غير صحيح).",
+        "content_en": "1) Confusing ∈ (element of) with ⊆ (subset of). 2) Forgetting ∅ ≠ {0}. 3) Incorrect parentheses in Cartesian products with 3 sets. 4) Forgetting to subtract the intersection when computing |A ∪ B|. 5) Thinking A − B = B − A (false).",
+        "content_zh": "（1）混淆并集（∪）和交集（∩）符号。（2）补集计算错误，尤其当多个集合嵌套时。（3）忘记 A ∪ A′ = U 且 A ∩ A′ = ∅。（4）误认为 A ⊆ B 意味着 A = B。正确理解：子集可以相等也可以更小。"
+      }
+    ]
+  },
+  {
+    "id": "math_inequalities",
+    "subject": "رياضيات | Math",
+    "subject_en": "Math",
+    "topic": "inequalities",
+    "title_ar": "المتباينات",
+    "title_en": "Inequalities",
+    "title_zh": "不等式",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية للمتباينات",
+        "heading_en": "Basic Concepts of Inequalities",
+        "heading_zh": "不等式的基本概念",
+        "content_ar": "المتباينة هي عبارة رياضية تربط مقدارين باستخدام أحد الرموز: < (أصغر)، > (أكبر)، ≤ (أصغر أو يساوي)، ≥ (أكبر أو يساوي). تمثل المتباينات على خط الأعداد. المجال (Interval): [a,b] مغلق (a ≤ x ≤ b)، (a,b) مفتوح (a < x < b). خواص: إذا ضربنا طرفي متباينة في عدد سالب، تنعكس الإشارة.",
+        "content_en": "An inequality is a mathematical statement comparing two expressions using: < (less than), > (greater than), ≤ (less than or equal), ≥ (greater than or equal). Inequalities are represented on the number line. Interval: [a,b] closed (a ≤ x ≤ b), (a,b) open (a < x < b). Properties: multiplying both sides by a negative number reverses the inequality sign.",
+        "content_zh": "不等式是用以下符号比较两个表达式的数学语句：<（小于）、>（大于）、≤（小于或等于）、≥（大于或等于）。不等式在数轴上表示。区间：[a,b] 闭区间（a ≤ x ≤ b），(a,b) 开区间（a < x < b）。性质：不等式两边同乘以负数时，不等号方向反转。"
+      },
+      {
+        "heading_ar": "حل المتباينات الخطية والتربيعية",
+        "heading_en": "Solving Linear and Quadratic Inequalities",
+        "heading_zh": "一元一次和一元二次不等式的解法",
+        "content_ar": "المتباينات الخطية: تحل بعزل المتغير مثل المعادلات مع مراعاة عكس الإشارة عند الضرب أو القسمة على عدد سالب. مثال: 3x − 7 > 2 → 3x > 9 → x > 3. المتباينات التربيعية: ننقل كل الحدود لطرف واحد، نجد الجذور، نستخدم جدول الإشارات أو خط الأعداد لتحديد فترات الإشارة الموجبة والسالبة. مثال: x² − 5x + 6 > 0 → (x−2)(x−3) > 0 → x < 2 أو x > 3.",
+        "content_en": "Linear inequalities: isolate the variable like equations but reverse sign when multiplying/dividing by a negative number. Example: 3x − 7 > 2 → 3x > 9 → x > 3. Quadratic inequalities: move all terms to one side, find roots, use sign table or number line to determine positive/negative intervals. Example: x² − 5x + 6 > 0 → (x−2)(x−3) > 0 → x < 2 or x > 3.",
+        "content_zh": "线性不等式：像方程一样隔离变量，但注意乘以或除以负数时反转不等号。例：3x − 7 > 2 → 3x > 9 → x > 3。二次不等式：将所有项移到一边，求根，用符号表或数轴确定正负区间。例：x² − 5x + 6 > 0 → (x−2)(x−3) > 0 → x < 2 或 x > 3。"
+      },
+      {
+        "heading_ar": "المتباينات النسبية والمطلقة",
+        "heading_en": "Rational and Absolute Value Inequalities",
+        "heading_zh": "绝对值不等式",
+        "content_ar": "المتباينات النسبية: ننقل كل الحدود لطرف واحد ونوحد المقامات. نحدد النقاط الحرجة (جذور البسط والمقام). نستخدم جدول الإشارات مع مراعاة أن المقام ≠ صفر. المتباينات ذات القيمة المطلقة: |x| < a ⇔ −a < x < a. |x| > a ⇔ x < −a أو x > a. مثال: |2x−1| ≤ 3 → −3 ≤ 2x−1 ≤ 3 → −2 ≤ 2x ≤ 4 → −1 ≤ x ≤ 2.",
+        "content_en": "Rational inequalities: move all terms to one side and find a common denominator. Identify critical points (numerator and denominator roots). Use sign table, noting denominator ≠ 0. Absolute value inequalities: |x| < a ⇔ −a < x < a. |x| > a ⇔ x < −a or x > a. Example: |2x−1| ≤ 3 → −3 ≤ 2x−1 ≤ 3 → −2 ≤ 2x ≤ 4 → −1 ≤ x ≤ 2.",
+        "content_zh": "|u| < a（a > 0）意味着 −a < u < a。|u| > a 意味着 u < −a 或 u > a。|u| ≤ a 意味着 −a ≤ u ≤ a。|u| ≥ a 意味着 u ≤ −a 或 u ≥ a。例：|2x − 5| ≤ 3 → −3 ≤ 2x − 5 ≤ 3 → 2 ≤ 2x ≤ 8 → 1 ≤ x ≤ 4。含多个绝对值时需进行分段讨论。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة على المتباينات",
+        "heading_en": "Solved Examples on Inequalities",
+        "heading_zh": "分式不等式与高次不等式",
+        "content_ar": "مثال 1: حل المتباينة 3(2x−1) ≥ 5x+4. الحل: 6x−3 ≥ 5x+4 → 6x−5x ≥ 4+3 → x ≥ 7. مثال 2: حل x²−4 < 0. الحل: (x−2)(x+2) < 0. النقاط الحرجة: x = −2, x = 2. جدول الإشارات: موجب خارج [−2,2] وسالب داخله. إذن الحل: −2 < x < 2. مثال 3: حل (x−1)/(x+2) > 0. النقاط الحرجة: x=1, x=−2. الحل: x < −2 أو x > 1.",
+        "content_en": "Example 1: Solve 3(2x−1) ≥ 5x+4. Solution: 6x−3 ≥ 5x+4 → 6x−5x ≥ 4+3 → x ≥ 7. Example 2: Solve x²−4 < 0. Solution: (x−2)(x+2) < 0. Critical points: x = −2, x = 2. Sign table: positive outside [−2,2], negative inside. Solution: −2 < x < 2. Example 3: Solve (x−1)/(x+2) > 0. Critical points: x=1, x=−2. Solution: x < −2 or x > 1.",
+        "content_zh": "分式不等式：将所有项移到一边（通分），分子分母分别求零点，用符号表判断符号区间。注意分母零点必须排除。高次不等式：因式分解后求所有根，在数轴上标根，从右上方向左下方画波浪线，“奇穿偶不穿”判断符号。"
+      },
+      {
+        "heading_ar": "نصائح CSCA وأخطاء شائعة في المتباينات",
+        "heading_en": "CSCA Tips and Common Mistakes for Inequalities",
+        "heading_zh": "CSCA不等式提示",
+        "content_ar": "نصائح: 1) اكتب الحل على صورة مجال دائماً. 2) ارسم خط الأعداد لتجنب الأخطاء. 3) افصل بين النقاط الحرجة بوضوح في جدول الإشارات. 4) للمتباينات النسبية، استبعد النقاط التي تجعل المقام صفراً. أخطاء شائعة: 1) نسيان عكس الإشارة عند الضرب في عدد سالب. 2) ضرب طرفي متباينة نسبية في المقام بدون مراعاة إشارته. 3) نسيان أن |x| ≥ 0 دائماً.",
+        "content_en": "Tips: 1) Always write the solution as an interval. 2) Draw a number line to avoid errors. 3) Clearly separate critical points in the sign table. 4) For rational inequalities, exclude points where denominator = 0. Common mistakes: 1) Forgetting to reverse sign when multiplying by a negative. 2) Multiplying both sides of a rational inequality by the denominator without considering its sign. 3) Forgetting |x| ≥ 0 always.",
+        "content_zh": "（1）乘以或除以负数时务必反转不等号，这是最常见错误。（2）二次不等式先用判别式 Δ = b²−4ac 确定根的情况。（3）绝对值不等式转化为无绝对值的等价形式。（4）分式不等式不要直接去分母（符号未知）。"
+      }
+    ]
+  },
+  {
+    "id": "math_functions",
+    "subject": "رياضيات | Math",
+    "subject_en": "Math",
+    "topic": "functions",
+    "title_ar": "الدوال",
+    "title_en": "Functions",
+    "title_zh": "函数",
+    "sections": [
+      {
+        "heading_ar": "مفهوم الدالة وأنواعها",
+        "heading_en": "Concept and Types of Functions",
+        "heading_zh": "函数的概念与类型",
+        "content_ar": "الدالة f من المجموعة X إلى Y هي علاقة تربط كل عنصر x ∈ X بعنصر واحد فقط y ∈ Y. نكتب y = f(x). X مجال الدالة (Domain)، Y المدى (Codomain)، f(X) المدى الفعلي (Range). أنواع الدوال: دالة خطية f(x) = ax + b، دالة تربيعية f(x) = ax² + bx + c، دالة تكعيبية، دالة جذرية f(x) = √x، دالة نسبية f(x) = P(x)/Q(x).",
+        "content_en": "A function f from set X to Y is a relation that assigns each x ∈ X to exactly one y ∈ Y. Write y = f(x). X is the domain, Y is the codomain, f(X) is the range. Types: linear f(x) = ax + b, quadratic f(x) = ax² + bx + c, cubic, radical f(x) = √x, rational f(x) = P(x)/Q(x).",
+        "content_zh": "从集合 X 到 Y 的函数 f 是将每个 x ∈ X 分配到唯一一个 y ∈ Y 的关系。写作 y = f(x)。X 是定义域，Y 是陪域，f(X) 是值域。函数类型：线性函数 f(x) = ax + b，二次函数 f(x) = ax² + bx + c，三次函数，根式函数 f(x) = √x，有理函数 f(x) = P(x)/Q(x)。"
+      },
+      {
+        "heading_ar": "مجال الدالة ومداها",
+        "heading_en": "Domain and Range of Functions",
+        "heading_zh": "函数的定义域与值域",
+        "content_ar": "المجال: مجموعة قيم x التي تجعل الدالة معرفة (قيمة حقيقية). نستبعد: مقام = صفر، ما تحت الجذر الزوجي ≥ 0 (للأعداد الحقيقية). المدى: مجموعة قيم y الناتجة. مثال: f(x) = √(x−2). المجال: x ≥ 2. المدى: y ≥ 0. مثال: f(x) = 1/x. المجال: x ≠ 0. المدى: y ≠ 0. الدوال متعددة التعريف (Piecewise): دوال بقوانين مختلفة لمجالات فرعية مختلفة.",
+        "content_en": "Domain: set of x values for which the function is defined (real-valued). Exclude: denominator = 0, even root radicand ≥ 0 (for real numbers). Range: set of resulting y values. Example: f(x) = √(x−2). Domain: x ≥ 2. Range: y ≥ 0. Example: f(x) = 1/x. Domain: x ≠ 0. Range: y ≠ 0. Piecewise functions: different rules for different subdomains.",
+        "content_zh": "定义域：使函数有定义（实数值）的 x 值集合。排除：分母 = 0，偶次根号内 ≥ 0（实数范围内）。值域：所得 y 值的集合。例：f(x) = √(x−2)。定义域：x ≥ 2。值域：y ≥ 0。例：f(x) = 1/x。定义域：x ≠ 0。值域：y ≠ 0。分段函数：对不同子域有不同的规则。"
+      },
+      {
+        "heading_ar": "تركيب الدوال والدوال العكسية",
+        "heading_en": "Function Composition and Inverse Functions",
+        "heading_zh": "复合函数与反函数",
+        "content_ar": "تركيب الدوال: (f ∘ g)(x) = f(g(x)). الشرط: g(x) في مجال f. مثال: f(x) = x², g(x) = x+1 → f(g(x)) = (x+1)². الدالة العكسية f⁻¹: إذا كانت f(x) = y, فإن f⁻¹(y) = x. شرط وجود العكس: الدالة must be one-to-one (اختبار الخط الأفقي). لإيجاد العكس: نبدل x و y، ثم نحل لـ y. مثال: f(x) = 2x+3 → f⁻¹(x) = (x−3)/2.",
+        "content_en": "Function composition: (f ∘ g)(x) = f(g(x)). Condition: g(x) must be in the domain of f. Example: f(x) = x², g(x) = x+1 → f(g(x)) = (x+1)². Inverse function f⁻¹: if f(x) = y then f⁻¹(y) = x. Condition for existence: function must be one-to-one (horizontal line test). To find inverse: swap x and y, solve for y. Example: f(x) = 2x+3 → f⁻¹(x) = (x−3)/2.",
+        "content_zh": "复合函数：(f ∘ g)(x) = f(g(x))。先算内部 g(x)，再代入 f。反函数 f⁻¹：满足 f⁻¹(f(x)) = x 且 f(f⁻¹(x)) = x。求反函数步骤：(1) 令 y = f(x)。(2) 解出 x = f⁻¹(y)。(3) 交换 x 和 y。函数存在反函数的充要条件是函数为一一映射（单射）。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة على الدوال",
+        "heading_en": "Solved Examples on Functions",
+        "heading_zh": "函数的奇偶性与单调性",
+        "content_ar": "مثال 1: جد مجال f(x) = (x+1)/(x²−4). الحل: المقام x²−4 ≠ 0 → x² ≠ 4 → x ≠ ±2. المجال = ℝ − {−2, 2}. مثال 2: إذا كانت f(x) = 3x−5، جد f(2) و f(a+1). f(2)=3×2−5=1, f(a+1)=3(a+1)−5=3a−2. مثال 3: جد الدالة العكسية لـ f(x) = √(x−1), x ≥ 1. y = √(x−1) → y² = x−1 → x = y²+1 → f⁻¹(x) = x²+1, x ≥ 0.",
+        "content_en": "Example 1: Find domain of f(x) = (x+1)/(x²−4). Solution: denominator x²−4 ≠ 0 → x² ≠ 4 → x ≠ ±2. Domain = ℝ − {−2, 2}. Example 2: f(x) = 3x−5, find f(2) and f(a+1). f(2)=3×2−5=1, f(a+1)=3(a+1)−5=3a−2. Example 3: Find inverse of f(x) = √(x−1), x ≥ 1. y = √(x−1) → y² = x−1 → x = y²+1 → f⁻¹(x) = x²+1, x ≥ 0.",
+        "content_zh": "偶函数：f(−x) = f(x)，图像关于 y 轴对称。例：f(x) = x², cos(x)。奇函数：f(−x) = −f(x)，图像关于原点对称。例：f(x) = x³, sin(x)。单调性：若 x₁ < x₂ 时 f(x₁) ≤ f(x₂) 为增函数；f(x₁) ≥ f(x₂) 为减函数。导数符号判断单调性：f′ > 0 递增，f′ < 0 递减。"
+      },
+      {
+        "heading_ar": "نصائح CSCA وأخطاء شائعة في الدوال",
+        "heading_en": "CSCA Tips and Common Mistakes for Functions",
+        "heading_zh": "CSCA函数提示",
+        "content_ar": "نصائح: 1) حدد مجال الدالة أولاً قبل إجراء أي عمليات. 2) اختبر إذا كانت الدالة one-to-one قبل البحث عن العكس. 3) في تركيب الدوال، احسب g(x) أولاً ثم طبّق f. أخطاء شائعة: 1) الخلط بين (f∘g)(x) و (g∘f)(x). 2) نسيان أن f⁻¹(x) ≠ 1/f(x). 3) نسيان استبعاد قيم المقام الصفري عند إيجاد المجال. 4) عدم مراعاة مجال الدالة الداخلية في التركيب.",
+        "content_en": "Tips: 1) Determine the domain first before any operations. 2) Test one-to-one before finding the inverse. 3) In composition, compute g(x) first, then apply f. Common mistakes: 1) Confusing (f∘g)(x) with (g∘f)(x). 2) Forgetting f⁻¹(x) ≠ 1/f(x). 3) Forgetting to exclude zero-denominator values when finding domain. 4) Not considering the domain of the inner function in composition.",
+        "content_zh": "（1）复合函数从内到外逐层计算。（2）反函数验证：f(f⁻¹(x)) = x。（3）定义域注意排除分母为零、根号内为负的情况。（4）指数函数与对数函数互为反函数。（5）奇偶性可简化对称区间上的计算。"
+      }
+    ]
+  },
+  {
+    "id": "math_geometry",
+    "subject": "رياضيات | Math",
+    "subject_en": "Math",
+    "topic": "geometry",
+    "title_ar": "الهندسة",
+    "title_en": "Geometry",
+    "title_zh": "几何",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية في الهندسة",
+        "heading_en": "Basic Concepts in Geometry",
+        "heading_zh": "几何基本概念",
+        "content_ar": "الهندسة تدرس الأشكال والخواص المكانية. النقطة والخط والمستوى: مفاهيم أولية غير معرفة. الزاوية: تقاس بالدرجات أو الراديان. أنواع المثلثات: حسب الأضلاع (متساوي الأضلاع، متساوي الساقين، مختلف الأضلاع) وحسب الزوايا (حاد، قائم، منفرج). مجموع زوايا المثلث = 180°. المضلعات: أشكال مغلقة بأضلاع مستقيمة. مجموع الزوايا الداخلية لمضلع ذي n ضلع = (n−2)×180°.",
+        "content_en": "Geometry studies shapes and spatial properties. Point, line, and plane: undefined primitive concepts. Angle: measured in degrees or radians. Triangles: by sides (equilateral, isosceles, scalene) and by angles (acute, right, obtuse). Sum of angles in a triangle = 180°. Polygons: closed shapes with straight sides. Sum of interior angles of an n-gon = (n−2)×180°.",
+        "content_zh": "几何学研究形状和空间性质。点、线、面：未定义的原始概念。角：用度或弧度度量。三角形分类：按边（等边、等腰、不等边）和按角（锐角、直角、钝角）。三角形内角和 = 180°。多边形：由直线段围成的封闭图形。n 边形内角和 = (n−2)×180°。"
+      },
+      {
+        "heading_ar": "نظريات المثلثات وتطابقها وتشابهها",
+        "heading_en": "Triangle Theorems, Congruence and Similarity",
+        "heading_zh": "三角形定理、全等与相似",
+        "content_ar": "نظرية فيثاغورس: في المثلث القائم، a² + b² = c² (الوتر). تطابق المثلثات: SSS (ثلاثة أضلاع متساوية)، SAS (ضلعان والزاوية المحصورة)، ASA (زاويتان والضلع المحصور)، AAS (زاويتان وضلع غير محصور)، RHS (وتر وضلع في القائم). تشابه المثلثات: AAA (زوايا متساوية)، SAS (ضلعان متناسبان والزاوية المحصورة متساوية)، SSS (الأضلاع الثلاثة متناسبة).",
+        "content_en": "Pythagorean theorem: in a right triangle, a² + b² = c² (hypotenuse). Triangle congruence: SSS, SAS, ASA, AAS, RHS. Triangle similarity: AAA (equal angles), SAS (two proportional sides with equal included angle), SSS (all three sides proportional).",
+        "content_zh": "勾股定理：直角三角形中，a² + b² = c²（c为斜边）。三角形全等：SSS（三边相等）、SAS（两边及其夹角）、ASA（两角及其夹边）、AAS（两角及非夹边）、RHS（直角三角形的斜边和一直角边）。三角形相似：AAA（对应角相等）、SAS（两边成比例且夹角相等）、SSS（三边成比例）。"
+      },
+      {
+        "heading_ar": "المساحات والحجوم",
+        "heading_en": "Areas and Volumes",
+        "heading_zh": "面积与体积",
+        "content_ar": "مساحات المستويات: مربع s²، مستطيل L×W، مثلث ½×b×h، دائرة πr²، متوازي أضلاع b×h، شبه منحرف ½(a+b)×h. حجوم المجسمات: مكعب s³، متوازي مستطيلات L×W×H، كرة ⁴⁄₃πr³، أسطوانة πr²h، مخروط ⅓πr²h، هرم ⅓×مساحة القاعدة×الارتفاع. مساحة السطح: كرة 4πr²، أسطوانة 2πrh + 2πr²، مخروط πr l + πr² (حيث l = الارتفاع الجانبي).",
+        "content_en": "Plane areas: square s², rectangle L×W, triangle ½×b×h, circle πr², parallelogram b×h, trapezoid ½(a+b)×h. Solid volumes: cube s³, rectangular prism L×W×H, sphere ⁴⁄₃πr³, cylinder πr²h, cone ⅓πr²h, pyramid ⅓×base area×height. Surface area: sphere 4πr², cylinder 2πrh+2πr², cone πrl+πr² (l = slant height).",
+        "content_zh": "常见面积公式：三角形 A = ½×底×高；矩形 A = 长×宽；圆 A = πr²；梯形 A = ½×(上底+下底)×高。常见体积公式：球 V = ⁴⁄₃πr³；圆柱 V = πr²h；圆锥 V = ⅓πr²h；长方体 V = 长×宽×高。注意区分二维面积和三维体积公式。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة في الهندسة",
+        "heading_en": "Solved Examples in Geometry",
+        "heading_zh": "解析几何基础",
+        "content_ar": "مثال 1: مثلث قائم وتره 13 cm وأحد أضلاعه 5 cm. جد مساحته. الضلع الآخر = √(13²−5²) = √(169−25) = √144 = 12 cm. المساحة = ½×5×12 = 30 cm². مثال 2: كرة نصف قطرها 6 cm. جد حجمها ومساحة سطحها. الحجم = ⁴⁄₃π×216 = 288π ≈ 904.32 cm³. المساحة = 4π×36 = 144π ≈ 452.16 cm². مثال 3: جد قياس الزاوية الثالثة في مثلث زاويتاه 47° و 85°. 180° − 47° − 85° = 48°.",
+        "content_en": "Example 1: Right triangle with hypotenuse 13 cm and one leg 5 cm. Find area. Other leg = √(13²−5²) = 12 cm. Area = ½×5×12 = 30 cm². Example 2: Sphere of radius 6 cm. Find volume and surface area. Volume = ⁴⁄₃π×216 = 288π ≈ 904.32 cm³. Surface area = 4π×36 = 144π ≈ 452.16 cm². Example 3: Find the third angle of a triangle with angles 47° and 85°. 180° − 47° − 85° = 48°.",
+        "content_zh": "距离公式：d = √[(x₂−x₁)² + (y₂−y₁)²]。中点公式：M = ((x₁+x₂)/2, (y₁+y₂)/2)。直线斜率：m = (y₂−y₁)/(x₂−x₁)。直线方程：斜截式 y = mx + b；点斜式 y−y₁ = m(x−x₁)。垂直线的斜率互为负倒数：m₁×m₂ = −1。平行线的斜率相等。"
+      },
+      {
+        "heading_ar": "نصائح CSCA وأخطاء شائعة في الهندسة",
+        "heading_en": "CSCA Tips and Common Mistakes in Geometry",
+        "heading_zh": "CSCA几何提示",
+        "content_ar": "نصائح: 1) حفظ قوانين المساحات والحجوم الأساسية. 2) في المثلث القائم، الوتر هو أطول ضلع دائماً. 3) ارسم شكلاً توضيحياً دائماً. 4) انتبه لوحدات القياس. أخطاء شائعة: 1) الخلط بين قانون المساحة والحجم. 2) نسيان أن π = 3.14 أو 22/7 (لكن اتركها بصورة π إن أمكن). 3) الخلط بين نصف القطر والقطر. 4) نسيان تربيع نصف القطر في مساحة الدائرة.",
+        "content_en": "Tips: 1) Memorize basic area and volume formulas. 2) In a right triangle, the hypotenuse is always the longest side. 3) Always draw a diagram. 4) Watch your units. Common mistakes: 1) Confusing area and volume formulas. 2) Forgetting π ≈ 3.14 or 22/7. 3) Confusing radius and diameter. 4) Forgetting to square the radius in circle area.",
+        "content_zh": "（1）面积计算时勿忘乘以½（三角形）或除以2。（2）圆柱体积与面积公式易混淆：体积用r²，面积用r。（3）勾股定理仅适用于直角三角形。（4）解析几何中，牢记距离、中点、斜率公式。（5）圆的面积 = πr²，周长 = 2πr。"
+      }
+    ]
+  },
+  {
+    "id": "math_calculus",
+    "subject": "رياضيات | Math",
+    "subject_en": "Math",
+    "topic": "calculus",
+    "title_ar": "التفاضل والتكامل",
+    "title_en": "Calculus",
+    "title_zh": "微积分",
+    "sections": [
+      {
+        "heading_ar": "النهايات والاتصال",
+        "heading_en": "Limits and Continuity",
+        "heading_zh": "极限与连续性",
+        "content_ar": "النهاية: lim_{x→a} f(x) = L معناها أن f(x) تقترب من L كلما اقترب x من a. النهايات الأساسية: lim_{x→a} c = c, lim_{x→a} x = a, lim_{x→a} xⁿ = aⁿ (n عدد صحيح موجب). الاتصال: الدالة f متصلة عند x=a إذا: f(a) معرّفة، lim_{x→a} f(x) موجود، و lim_{x→a} f(x) = f(a). قوانين النهايات: lim(f±g) = lim f ± lim g, lim(f×g) = lim f × lim g, lim(f/g) = lim f / lim g (إذا كان lim g ≠ 0).",
+        "content_en": "Limit: lim_{x→a} f(x) = L means f(x) approaches L as x approaches a. Basic limits: lim_{x→a} c = c, lim_{x→a} x = a, lim_{x→a} xⁿ = aⁿ (positive integer n). Continuity: f is continuous at x=a if f(a) is defined, lim_{x→a} f(x) exists, and lim_{x→a} f(x) = f(a). Limit laws: lim(f±g) = lim f ± lim g, lim(f×g) = lim f × lim g, lim(f/g) = lim f / lim g (if lim g ≠ 0).",
+        "content_zh": "极限：lim_{x→a} f(x) = L 表示当 x 趋近 a 时 f(x) 趋近 L。基本极限：lim_{x→a} c = c，lim_{x→a} x = a，lim_{x→a} xⁿ = aⁿ（n为正整数）。连续性：f 在 x=a 处连续的条件：f(a) 有定义，lim_{x→a} f(x) 存在，且 lim_{x→a} f(x) = f(a)。极限运算法则：lim(f±g) = lim f ± lim g，lim(f×g) = lim f × lim g，lim(f/g) = lim f / lim g（若 lim g ≠ 0）。"
+      },
+      {
+        "heading_ar": "قواعد الاشتقاق الأساسية",
+        "heading_en": "Basic Differentiation Rules",
+        "heading_zh": "基本求导法则",
+        "content_ar": "المشتقة: f'(x) = dy/dx = lim_{h→0} (f(x+h)−f(x))/h. الاشتقاق يمثل معدل التغير أو ميل المماس. قواعد: 1) d/dx(c) = 0. 2) d/dx(xⁿ) = nxⁿ⁻¹. 3) d/dx(c·f) = c·f'. 4) قاعدة المجموع: (f±g)' = f'±g'. 5) قاعدة الضرب: (f·g)' = f'g + fg'. 6) قاعدة القسمة: (f/g)' = (f'g − fg')/g². 7) قاعدة السلسلة: (f∘g)' = f'(g(x))·g'(x). مثال: d/dx(sin(2x)) = cos(2x)·2 = 2cos(2x).",
+        "content_en": "Derivative: f'(x) = dy/dx = lim_{h→0} (f(x+h)−f(x))/h. The derivative represents the rate of change or slope of the tangent. Rules: 1) d/dx(c) = 0. 2) d/dx(xⁿ) = nxⁿ⁻¹. 3) d/dx(c·f) = c·f'. 4) Sum: (f±g)' = f'±g'. 5) Product: (f·g)' = f'g + fg'. 6) Quotient: (f/g)' = (f'g − fg')/g². 7) Chain rule: (f∘g)' = f'(g(x))·g'(x). Example: d/dx(sin(2x)) = cos(2x)·2 = 2cos(2x).",
+        "content_zh": "导数：f′(x) = dy/dx = lim_{h→0} (f(x+h)−f(x))/h。导数表示变化率或切线斜率。法则：1) d/dx(c) = 0。2) d/dx(xⁿ) = nxⁿ⁻¹。3) d/dx(c·f) = c·f′。4) 和差法则：(f±g)′ = f′±g′。5) 乘法法则：(f·g)′ = f′g + fg′。6) 除法法则：(f/g)′ = (f′g − fg′)/g²。7) 链式法则：(f∘g)′ = f′(g(x))·g′(x)。例：d/dx(sin(2x)) = cos(2x)·2 = 2cos(2x)。"
+      },
+      {
+        "heading_ar": "التكامل غير المحدد والمحدد",
+        "heading_en": "Indefinite and Definite Integration",
+        "heading_zh": "积分法",
+        "content_ar": "التكامل غير المحدد: ∫ f(x) dx = F(x) + C حيث F'(x) = f(x) و C ثابت التكامل. القواعد الأساسية: ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ −1). ∫ 1/x dx = ln|x| + C. ∫ eˣ dx = eˣ + C. ∫ sin x dx = −cos x + C. ∫ cos x dx = sin x + C. التكامل المحدد: ∫_a^b f(x) dx = F(b) − F(a) (النظرية الأساسية للتكامل). التكامل يعطي المساحة تحت المنحني.",
+        "content_en": "Indefinite integral: ∫ f(x) dx = F(x) + C where F'(x) = f(x) and C is the constant of integration. Basic rules: ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ −1). ∫ 1/x dx = ln|x| + C. ∫ eˣ dx = eˣ + C. ∫ sin x dx = −cos x + C. ∫ cos x dx = sin x + C. Definite integral: ∫_a^b f(x) dx = F(b) − F(a) (Fundamental Theorem of Calculus). The integral gives the area under the curve.",
+        "content_zh": "不定积分：∫ f(x) dx = F(x) + C，其中 F′(x) = f(x)。幂法则：∫ xⁿ dx = xⁿ⁺¹/(n+1) + C（n ≠ −1）。基本积分：∫ 1/x dx = ln|x| + C，∫ sin(x) dx = −cos(x) + C，∫ cos(x) dx = sin(x) + C，∫ eˣ dx = eˣ + C。定积分：∫ₐᵇ f(x) dx = F(b) − F(a)，表示曲线下方从 x=a 到 x=b 的面积。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة في التفاضل والتكامل",
+        "heading_en": "Solved Examples in Calculus",
+        "heading_zh": "导数的应用",
+        "content_ar": "مثال 1: جد مشتقة f(x) = 3x⁴ − 2x³ + 5x − 7. f'(x) = 12x³ − 6x² + 5. مثال 2: ∫ (6x² − 4x + 3) dx = 6x³/3 − 4x²/2 + 3x + C = 2x³ − 2x² + 3x + C. مثال 3: ∫_0^2 (x² + 1) dx = [x³/3 + x]_0^2 = (8/3 + 2) − (0 + 0) = 14/3. مثال 4: باستخدام قاعدة السلسلة، جد مشتقة h(x) = (2x² + 1)⁵. h'(x) = 5(2x²+1)⁴ × 4x = 20x(2x²+1)⁴.",
+        "content_en": "Example 1: Find derivative of f(x) = 3x⁴ − 2x³ + 5x − 7. f'(x) = 12x³ − 6x² + 5. Example 2: ∫ (6x² − 4x + 3) dx = 6x³/3 − 4x²/2 + 3x + C = 2x³ − 2x² + 3x + C. Example 3: ∫_0^2 (x² + 1) dx = [x³/3 + x]_0^2 = (8/3 + 2) − (0 + 0) = 14/3. Example 4: Using chain rule, find derivative of h(x) = (2x²+1)⁵. h'(x) = 5(2x²+1)⁴ × 4x = 20x(2x²+1)⁴.",
+        "content_zh": "切线方程：y − f(a) = f′(a)(x − a)。极值：f′(x) = 0 的点为驻点（临界点）。用二阶导数判断：f′′(x) > 0 为极小值，f′′(x) < 0 为极大值。函数单调性：f′(x) > 0 递增，f′(x) < 0 递减。拐点：f′′(x) = 0 且变号处。最优化问题：在实际问题中求最大值或最小值。"
+      },
+      {
+        "heading_ar": "نصائح CSCA وأخطاء شائعة في التفاضل والتكامل",
+        "heading_en": "CSCA Tips and Common Mistakes in Calculus",
+        "heading_zh": "CSCA微积分提示",
+        "content_ar": "نصائح: 1) احفظ قواعد الاشتقاق الأساسية جيداً. 2) استخدم قاعدة السلسلة عند اشتقاق الدوال المركبة. 3) لا تنسَ ثابت التكامل C في التكامل غير المحدد. 4) في التكامل المحدد، اطرح F(a) من F(b) (وليس العكس). أخطاء شائعة: 1) نسيان قاعدة السلسلة في الاشتقاق. 2) الخطأ في كتابة ∫ xⁿ = xⁿ⁺¹/(n+1) (تذكر n ≠ −1). 3) نسيان أن ∫ 1/x dx = ln|x| + C. 4) الخلط بين الاشتقاق والتكامل.",
+        "content_en": "Tips: 1) Memorize basic differentiation rules. 2) Use chain rule for composite functions. 3) Don't forget the constant C in indefinite integrals. 4) In definite integrals, subtract F(a) from F(b) (not the reverse). Common mistakes: 1) Forgetting the chain rule in differentiation. 2) Error in ∫ xⁿ = xⁿ⁺¹/(n+1) (remember n ≠ −1). 3) Forgetting ∫ 1/x dx = ln|x| + C. 4) Confusing differentiation and integration.",
+        "content_zh": "（1）记住基本求导公式：xⁿ、sin(x)、cos(x)、ln(x)、eˣ。（2）链式法则是复合函数求导的关键。（3）定积分等于原函数在上下限处的差值。（4）不要忘记积分常数 C。（5）极限中，当分子分母同时趋近 0 或 ∞ 时可用洛必达法则。"
+      }
+    ]
+  },
+  {
+    "id": "math_probability",
+    "subject": "رياضيات | Math",
+    "subject_en": "Math",
+    "topic": "probability",
+    "title_ar": "الاحتمالات",
+    "title_en": "Probability",
+    "title_zh": "概率",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية في الاحتمالات",
+        "heading_en": "Basic Concepts in Probability",
+        "heading_zh": "概率的基本概念",
+        "content_ar": "الاحتمال هو قياس إمكانية حدوث حدث ما. قيمته بين 0 (مستحيل) و 1 (مؤكد). فضاء العينة S: مجموعة جميع النتائج الممكنة. الحدث E: مجموعة جزئية من فضاء العينة. P(E) = عدد نتائج E ÷ عدد نتائج S (للاحتمال المنتظم). خواص: P(∅) = 0, P(S) = 1, 0 ≤ P(E) ≤ 1, P(E') = 1 − P(E).",
+        "content_en": "Probability is a measure of the likelihood of an event. Its value is between 0 (impossible) and 1 (certain). Sample space S: set of all possible outcomes. Event E: subset of the sample space. P(E) = number of outcomes in E ÷ number of outcomes in S (for uniform probability). Properties: P(∅) = 0, P(S) = 1, 0 ≤ P(E) ≤ 1, P(E') = 1 − P(E).",
+        "content_zh": "概率是衡量事件发生可能性的度量。其值介于 0（不可能）和 1（必然）之间。样本空间 S：所有可能结果的集合。事件 E：样本空间的子集。P(E) = E的结果数 ÷ S的结果数（等可能概率）。性质：P(∅) = 0，P(S) = 1，0 ≤ P(E) ≤ 1，P(E′) = 1 − P(E)。"
+      },
+      {
+        "heading_ar": "قوانين الاحتمالات الأساسية",
+        "heading_en": "Basic Probability Laws",
+        "heading_zh": "基本概率法则",
+        "content_ar": "قانون الجمع: P(A ∪ B) = P(A) + P(B) − P(A ∩ B). إذا كان A و B متنافيين (منفصلين)، P(A ∩ B) = 0 → P(A ∪ B) = P(A) + P(B). الاحتمال الشرطي: P(A|B) = P(A ∩ B)/P(B) حيث P(B) > 0. الحدثان المستقلان: A و B مستقلان إذا P(A ∩ B) = P(A)·P(B) أو P(A|B) = P(A). قاعدة الضرب: P(A ∩ B) = P(A)·P(B|A) = P(B)·P(A|B). قانون الاحتمال الكلي: P(B) = Σ P(Aᵢ)·P(B|Aᵢ).",
+        "content_en": "Addition rule: P(A ∪ B) = P(A) + P(B) − P(A ∩ B). If A and B are mutually exclusive, P(A ∩ B) = 0 → P(A ∪ B) = P(A) + P(B). Conditional probability: P(A|B) = P(A ∩ B)/P(B) where P(B) > 0. Independent events: A and B are independent if P(A ∩ B) = P(A)·P(B) or P(A|B) = P(A). Multiplication rule: P(A ∩ B) = P(A)·P(B|A) = P(B)·P(A|B). Law of total probability: P(B) = Σ P(Aᵢ)·P(B|Aᵢ).",
+        "content_zh": "加法法则：P(A ∪ B) = P(A) + P(B) − P(A ∩ B)。若 A 与 B 互斥，P(A ∩ B) = 0 → P(A ∪ B) = P(A) + P(B)。条件概率：P(A|B) = P(A ∩ B)/P(B)，其中 P(B) > 0。独立事件：A 和 B 独立当且仅当 P(A ∩ B) = P(A)·P(B) 或 P(A|B) = P(A)。乘法法则：P(A ∩ B) = P(A)·P(B|A) = P(B)·P(A|B)。全概率公式：P(B) = Σ P(Aᵢ)·P(B|Aᵢ)。"
+      },
+      {
+        "heading_ar": "التوزيعات الاحتمالية",
+        "heading_en": "Probability Distributions",
+        "heading_zh": "概率分布",
+        "content_ar": "المتغير العشوائي X: دالة من فضاء العينة إلى الأعداد الحقيقية. التوزيع الاحتمالي المنفصل: دالة كتلة الاحتمال PMF: P(X=x). التوزيع ذو الحدين (Binomial): X ~ B(n,p), P(X=k) = C(n,k) pᵏ(1−p)ⁿ⁻ᵏ, E(X)=np, Var(X)=np(1−p). توزيع بواسون: X ~ P(λ), P(X=k) = e⁻λ λᵏ/k!, E(X)=λ, Var(X)=λ. التوزيع الطبيعي (Gaussian): منحنى جرسي، X ~ N(μ,σ²), 68-95-99.7 قاعدة.",
+        "content_en": "Random variable X: function from sample space to real numbers. Discrete distribution: PMF P(X=x). Binomial: X ~ B(n,p), P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ, E(X)=np, Var(X)=np(1−p). Poisson: X~P(λ), P(X=k)=e⁻λλᵏ/k!, E(X)=λ, Var(X)=λ. Normal (Gaussian): bell curve, X~N(μ,σ²), 68-95-99.7 rule.",
+        "content_zh": "离散分布：二项分布 X ~ B(n,p)，P(X=k) = C(n,k)pᵗ(1−p)ⁿ⁻ᵗ。均值 = np，方差 = np(1−p)。泊松分布 X ~ P(λ)，P(X=k) = e⁻λ λᵗ/k!。连续分布：正态分布 X ~ N(μ,σ²)，钟形曲线，68-95-99.7 法则。标准正态分布 Z = (X−μ)/σ。贝叶斯定理：P(A|B) = P(B|A)P(A)/P(B)。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة في الاحتمالات",
+        "heading_en": "Solved Examples in Probability",
+        "heading_zh": "计数原理",
+        "content_ar": "مثال 1: رمي حجري نرد متجانسين. ما احتمال أن يكون مجموع الوجهين 7؟ نتائج النرد = 36. النتائج المواتية: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) ← 6 نتائج. P = 6/36 = 1/6. مثال 2: صندوق يحوي 5 كرات حمراء و 3 زرقاء. سحبت كرتان بدون إرجاع. ما احتمال أن تكونا حمراوين؟ P = (5/8)×(4/7) = 20/56 = 5/14. مثال 3: إذا كان P(A)=0.4, P(B)=0.5, P(A∩B)=0.2. هل A و B مستقلان؟ P(A∩B)=0.2, P(A)·P(B)=0.4×0.5=0.2 → مستقلان.",
+        "content_en": "Example 1: Two fair dice rolled. Probability of sum 7? Total outcomes = 36. Favorable: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) → 6 outcomes. P = 6/36 = 1/6. Example 2: Box with 5 red and 3 blue balls. Two drawn without replacement. Probability both red? P = (5/8)×(4/7)=20/56=5/14. Example 3: P(A)=0.4, P(B)=0.5, P(A∩B)=0.2. Are A and B independent? P(A∩B)=0.2, P(A)·P(B)=0.2 → independent.",
+        "content_zh": "乘法原理：若事件 A 有 m 种方式，事件 B 有 n 种方式，则 A 和 B 同时发生有 m×n 种方式。排列：从 n 个元素中选 k 个有序排列：P(n,k) = n!/(n−k)!。组合：从 n 个元素中选 k 个无序组合：C(n,k) = n!/(k!(n−k)!)。二项式系数性质：C(n,k) = C(n,n−k)。"
+      },
+      {
+        "heading_ar": "نصائح CSCA وأخطاء شائعة في الاحتمالات",
+        "heading_en": "CSCA Tips and Common Mistakes in Probability",
+        "heading_zh": "CSCA概率提示",
+        "content_ar": "نصائح: 1) حدد فضاء العينة بوضوح. 2) ميز بين السحب مع الإرجاع وبدون إرجاع. 3) استخدم الاحتمال المتمم عندما يكون الحل أسهل. 4) في مسائل ذي الحدين، تحقق من شروط التجربة: n محدد، استقلال، احتمال ثابت. أخطاء شائعة: 1) نسيان طرح التقاطع في قانون الجمع. 2) الخلط بين P(A|B) و P(B|A). 3) اعتبار حدثين مستقلين بالخطأ لأن P(A∩B) صغيرة. 4) نسيان أن P(A|B) = P(A∩B)/P(B) وليس P(A∩B)/P(A).",
+        "content_en": "Tips: 1) Clearly define the sample space. 2) Distinguish between with-replacement and without-replacement. 3) Use complement probability when it simplifies the solution. 4) In binomial problems, check conditions: fixed n, independence, constant probability. Common mistakes: 1) Forgetting to subtract intersection in addition rule. 2) Confusing P(A|B) and P(B|A). 3) Mistakenly considering events independent just because P(A∩B) is small. 4) Forgetting P(A|B) = P(A∩B)/P(B), not P(A∩B)/P(A).",
+        "content_zh": "（1）“和”（并集）用加法法则，“且”（交集）用乘法法则。（2）条件概率 P(A|B) 与 P(B|A) 含义不同。（3）独立事件和互斥事件不要混淆：独立指一个事件不影响另一个；互斥指两个事件不能同时发生。（4）二项分布用于固定次数、独立试验的场景。"
+      }
+    ]
+  },
+  {
+    "id": "math_sequences",
+    "subject": "رياضيات | Math",
+    "subject_en": "Math",
+    "topic": "sequences",
+    "title_ar": "المتتاليات",
+    "title_en": "Sequences",
+    "title_zh": "数列",
+    "sections": [
+      {
+        "heading_ar": "المفاهيم الأساسية للمتتاليات",
+        "heading_en": "Basic Concepts of Sequences",
+        "heading_zh": "数列的基本概念",
+        "content_ar": "المتتالية هي دالة مجالها الأعداد الطبيعية (أو مجموعة جزئية منها). نكتب المتتالية على الصورة {aₙ} أو a₁, a₂, a₃, ... حيث aₙ هو الحد العام. أنواع المتتاليات: 1) متتالية حسابية: الفرق بين حدين متتاليين ثابت (d = aₙ₊₁ − aₙ). 2) متتالية هندسية: النسبة بين حدين متتاليين ثابتة (r = aₙ₊₁/aₙ). 3) متتالية عودية: تُعرَّف بدلالة الحدود السابقة.",
+        "content_en": "A sequence is a function whose domain is the natural numbers (or a subset). We write a sequence as {aₙ} or a₁, a₂, a₃, ... where aₙ is the general term. Types: 1) Arithmetic sequence: constant difference between consecutive terms (d = aₙ₊₁ − aₙ). 2) Geometric sequence: constant ratio between consecutive terms (r = aₙ₊₁/aₙ). 3) Recursive sequence: defined in terms of previous terms.",
+        "content_zh": "数列是定义域为自然数（或其子集）的函数。数列写作 {aₙ} 或 a₁, a₂, a₃, ...，其中 aₙ 为通项。数列类型：1) 等差数列：相邻两项的差为常数（d = aₙ₊₁ − aₙ）。2) 等比数列：相邻两项的比为常数（r = aₙ₊₁/aₙ）。3) 递推数列：由前项定义的数列。"
+      },
+      {
+        "heading_ar": "المتتاليات الحسابية والهندسية",
+        "heading_en": "Arithmetic and Geometric Sequences",
+        "heading_zh": "等差数列与等比数列",
+        "content_ar": "المتتالية الحسابية: الحد العام aₙ = a₁ + (n−1)d. مجموع أول n حد: Sₙ = n/2 × (2a₁ + (n−1)d) = n/2 × (a₁ + aₙ). المتتالية الهندسية: الحد العام aₙ = a₁·rⁿ⁻¹. مجموع أول n حد: Sₙ = a₁(1−rⁿ)/(1−r) (إذا r ≠ 1). المتسلسلة الهندسية اللانهائية: إذا |r| < 1, S∞ = a₁/(1−r). الوسط الحسابي بين a و b: (a+b)/2. الوسط الهندسي بين a و b: √(ab) لـ a,b > 0.",
+        "content_en": "Arithmetic sequence: general term aₙ = a₁ + (n−1)d. Sum of first n terms: Sₙ = n/2 × (2a₁ + (n−1)d) = n/2 × (a₁ + aₙ). Geometric sequence: general term aₙ = a₁·rⁿ⁻¹. Sum of first n terms: Sₙ = a₁(1−rⁿ)/(1−r) (if r ≠ 1). Infinite geometric series: if |r| < 1, S∞ = a₁/(1−r). Arithmetic mean of a and b: (a+b)/2. Geometric mean of a and b: √(ab) for a,b > 0.",
+        "content_zh": "等差数列：通项 aₙ = a₁ + (n−1)d。前 n 项和：Sₙ = n/2 × (2a₁ + (n−1)d) = n/2 × (a₁ + aₙ)。等比数列：通项 aₙ = a₁·rⁿ⁻¹。前 n 项和：Sₙ = a₁(1−rⁿ)/(1−r)（若 r ≠ 1）。无穷等比级数：若 |r| < 1，S∞ = a₁/(1−r)。a 与 b 的等差中项：(a+b)/2。a 与 b 的等比中项：√(ab)（a,b > 0）。"
+      },
+      {
+        "heading_ar": "طرق إيجاد نهاية المتتاليات",
+        "heading_en": "Finding Limits of Sequences",
+        "heading_zh": "数学归纳法",
+        "content_ar": "نهاية المتتالية: lim_{n→∞} aₙ = L إذا تقاربت قيم aₙ من L كلما كبر n. إذا كانت النهاية موجودة، المتتالية متقاربة، وإلا فهي متباعدة. قوانين النهايات للمتتاليات مشابهة للدوال. المتتالية الحسابية: تتباعد (إلا إذا d=0). المتتالية الهندسية: تتقارب إلى 0 إذا |r| < 1، تتباعد إذا |r| > 1، تتقارب إلى a₁ إذا r=1. قاعدة الساندويتش: إذا كانت bₙ ≤ aₙ ≤ cₙ و lim bₙ = lim cₙ = L، فإن lim aₙ = L.",
+        "content_en": "Limit of a sequence: lim_{n→∞} aₙ = L if aₙ approaches L as n grows large. If the limit exists, the sequence converges; otherwise it diverges. Limit laws for sequences are similar to functions. Arithmetic sequence: diverges (unless d=0). Geometric sequence: converges to 0 if |r| < 1, diverges if |r| > 1, converges to a₁ if r=1. Squeeze theorem: if bₙ ≤ aₙ ≤ cₙ and lim bₙ = lim cₙ = L, then lim aₙ = L.",
+        "content_zh": "数学归纳法是证明关于自然数的命题 P(n) 的方法。步骤：1) 归纳基础：验证 P(1) 成立。2) 归纳假设：假设 P(k) 成立。3) 归纳递推：证明 P(k) → P(k+1) 成立。例：证明 1+2+...+n = n(n+1)/2。基础：n=1 时，1=1×2/2=1 ✓。假设 n=k 成立，证明 n=k+1 时也成立。"
+      },
+      {
+        "heading_ar": "أمثلة محلولة على المتتاليات",
+        "heading_en": "Solved Examples on Sequences",
+        "heading_zh": "数列极限",
+        "content_ar": "مثال 1: متتالية حسابية حدها الثالث = 10 والخامس = 16. جد d و a₁ و a₁₀. d = (16−10)/2 = 3. a₁ = a₃ − 2d = 10−6 = 4. a₁₀ = 4 + 9×3 = 31. مثال 2: متتالية هندسية حدها الأول = 3 وأساسها = 2. جد a₆ و S₆. a₆ = 3×2⁵ = 96. S₆ = 3(1−2⁶)/(1−2) = 3(1−64)/(−1) = 189. مثال 3: جد مجموع المتسلسلة الهندسية اللانهائية: ½ + ¼ + ⅛ + ... a₁=½, r=½. S∞ = ½/(1−½) = 1.",
+        "content_en": "Example 1: Arithmetic sequence with 3rd term = 10 and 5th term = 16. Find d, a₁, and a₁₀. d = (16−10)/2 = 3. a₁ = a₃ − 2d = 10−6 = 4. a₁₀ = 4 + 9×3 = 31. Example 2: Geometric sequence with first term = 3 and ratio = 2. Find a₆ and S₆. a₆ = 3×2⁵ = 96. S₆ = 3(1−2⁶)/(1−2) = 3(1−64)/(−1) = 189. Example 3: Find sum of infinite geometric series: ½ + ¼ + ⅛ + ... a₁=½, r=½. S∞ = ½/(1−½) = 1.",
+        "content_zh": "数列极限：lim_{n→∞} aₙ = L 表示当 n 充分大时 aₙ 无限接近 L。收敛数列必有极限，发散数列无极限。常用极限：lim_{n→∞} 1/n = 0，lim_{n→∞} rⁿ = 0（若 |r| < 1）。极限运算法则与函数极限类似。单调有界数列必收敛。夹逼定理也适用于数列。"
+      },
+      {
+        "heading_ar": "نصائح CSCA وأخطاء شائعة في المتتاليات",
+        "heading_en": "CSCA Tips and Common Mistakes for Sequences",
+        "heading_zh": "CSCA数列提示",
+        "content_ar": "نصائح: 1) حدد نوع المتتالية أولاً (حسابية أم هندسية). 2) احفظ قانون الحد العام و قانون المجموع لكل نوع. 3) للمتسلسلة الهندسية اللانهائية، تحقق من |r| < 1 قبل تطبيق القانون. 4) فرّق بين المتتالية (ترتيب الأعداد) والمتسلسلة (مجموع الأعداد). أخطاء شائعة: 1) الخلط بين d و r (الفرق والنسبة). 2) استخدام قانون المتتالية الحسابية في الهندسية والعكس. 3) نسيان أن rⁿ⁻¹ للحد n في الهندسية. 4) نسيان شرط |r| < 1 للمتسلسلة الهندسية اللانهائية.",
+        "content_en": "Tips: 1) Identify the sequence type first (arithmetic vs geometric). 2) Memorize the general term and sum formulas for each type. 3) For infinite geometric series, check |r| < 1 before applying the formula. 4) Distinguish between sequence (ordered numbers) and series (sum of numbers). Common mistakes: 1) Confusing d and r (difference vs ratio). 2) Using arithmetic formula for geometric sequences and vice versa. 3) Forgetting rⁿ⁻¹ for the nth term in geometric sequences. 4) Forgetting the |r| < 1 condition for infinite geometric series.",
+        "content_zh": "（1）求通项时先判断是等差还是等比：看相邻项差是否为常数（等差），比是否为常数（等比）。（2）等差数列求和用首项加末项乘以项数除以2。（3）等比数列注意 r=1 的特殊情况。（4）无穷等比级数只有在 |r| < 1 时才收敛。"
+      }
+    ]
+  }
+]

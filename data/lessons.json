@@ -1,121 +1,314 @@
 [
-    {
-        "id": "math1",
-        "subject": "math",
-        "title": "المجموعات والمتباينات | Sets & Inequalities",
-        "path": "lessons/math_sets.html",
-        "summary": "أساسيات المجموعات، العمليات، وحل المتباينات من الدرجة الأولى والثانية والكسرية."
-    },
-    {
-        "id": "math2",
-        "subject": "math",
-        "title": "الدوال والمتتاليات | Functions & Sequences",
-        "path": "lessons/math_functions.html",
-        "summary": "دراسة الدوال (الأسية، اللوغاريتمية، المثلثية)، المتتاليات الحسابية والهندسية، ومبادئ التفاضل."
-    },
-    {
-        "id": "math3",
-        "subject": "math",
-        "title": "الهندسة والجبر | Geometry & Algebra",
-        "path": "lessons/math_geometry.html",
-        "summary": "الهندسة التحليلية، المتجهات، الأعداد المركبة، المصفوفات، والمحددات."
-    },
-    {
-        "id": "math4",
-        "subject": "math",
-        "title": "الاحتمالات والإحصاء | Probability & Statistics",
-        "path": "lessons/math_stats.html",
-        "summary": "نماذج الاحتمالات الكلاسيكية، المقاييس الإحصائية، والتوزيع الطبيعي."
-    },
-    {
-        "id": "math5",
-        "subject": "math",
-        "title": "التفاضل والتكامل | Calculus & Limits",
-        "path": "lessons/math_calculus.html",
-        "summary": "النهايات، قواعد التفاضل، التكامل غير المحدد والمحدد، وتطبيقاتهما."
-    },
-    {
-        "id": "phys1",
-        "subject": "physics",
-        "title": "الميكانيكا | Mechanics",
-        "path": "lessons/phys_mechanics.html",
-        "summary": "قوانين الحركة، نيوتن، الزخم، الطاقة، الجاذبية، والديناميكا الدورانية."
-    },
-    {
-        "id": "phys2",
-        "subject": "physics",
-        "title": "الكهرباء والمغناطيسية | Electricity & Magnetism",
-        "path": "lessons/phys_electricity.html",
-        "summary": "الدوائر الكهربائية، قوانين كيرشوف، الحث الكهرومغناطيسي، والفيزياء المغناطيسية."
-    },
-    {
-        "id": "phys3",
-        "subject": "physics",
-        "title": "الديناميكا الحرارية | Thermodynamics",
-        "path": "lessons/phys_thermo.html",
-        "summary": "نظرية الحركة للغازات، القانون الأول للديناميكا الحرارية، وقوانين الغاز المثالي."
-    },
-    {
-        "id": "phys4",
-        "subject": "physics",
-        "title": "البصريات والموجات | Optics & Waves",
-        "path": "lessons/phys_optics.html",
-        "summary": "البصريات الهندسية (المرايا والعدسات) والفيزيائية (التداخل والحيود)."
-    },
-    {
-        "id": "phys5",
-        "subject": "physics",
-        "title": "الفيزياء الحديثة | Modern Physics",
-        "path": "lessons/phys_modern.html",
-        "summary": "البنية الذرية، الفيزياء النووية، التأثير الكهروضوئي، ومبادئ النسبية."
-    },
-    {
-        "id": "phys6",
-        "subject": "physics",
-        "title": "ميكانيكا الموائع | Fluid Mechanics",
-        "path": "lessons/phys_fluids.html",
-        "summary": "ضغط السوائل، مبدأ باسكال، أرخميدس، معادلة برنولي، وتطبيقات الموائع."
-    },
-    {
-        "id": "chem1",
-        "subject": "chemistry",
-        "title": "البناء الذري | Atomic Structure",
-        "path": "lessons/chem_atomic.html",
-        "summary": "مكونات الذرة، الجدول الدوري، التوزيع الإلكتروني، أعداد الكم، والأطياف الذرية."
-    },
-    {
-        "id": "chem2",
-        "subject": "chemistry",
-        "title": "الروابط الكيميائية | Chemical Bonding",
-        "path": "lessons/chem_bonding.html",
-        "summary": "الروابط الأيونية والتساهمية والفلزية، نظرية VSEPR، الأشكال الهندسية، التهجين."
-    },
-    {
-        "id": "chem3",
-        "subject": "chemistry",
-        "title": "الكيمياء العضوية | Organic Chemistry",
-        "path": "lessons/chem_organic.html",
-        "summary": "الهيدروكربونات، المجموعات الوظيفية، التسمية النظامية، الأيزومرات، أنواع التفاعلات."
-    },
-    {
-        "id": "chem4",
-        "subject": "chemistry",
-        "title": "الاتزان الكيميائي والأحماض والقواعد | Chemical Equilibrium & Acids/Bases",
-        "path": "lessons/chem_equilibrium.html",
-        "summary": "ثابت الاتزان Kc، قاعدة لوشاتيليه، الأحماض والقواعد، pH، الأحماض الضعيفة، المحاليل المنظمة."
-    },
-    {
-        "id": "chem5",
-        "subject": "chemistry",
-        "title": "الحركية الكيميائية والترموديناميكا | Kinetics & Thermochemistry",
-        "path": "lessons/chem_kinetics.html",
-        "summary": "معدلات التفاعل، طاقة التنشيط، الإنثالبي، الإنتروبي، طاقة جيبس الحرة، المسعرية."
-    },
-    {
-        "id": "chem6",
-        "subject": "chemistry",
-        "title": "الحساب الكيميائي وتقنيات المختبر | Stoichiometry & Lab Methods",
-        "path": "lessons/chem_stoichiometry.html",
-        "summary": "المول، موازنة المعادلات، المادة المحددة، المردود المئوي، التركيز، المعايرة، قوانين الغازات."
-    }
+  {
+    "id": 1,
+    "subject": "فيزياء | Physics",
+    "topic": "mechanics",
+    "title_ar": "الميكانيكا الكلاسيكية",
+    "title_en": "Classical Mechanics",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=1"
+  },
+  {
+    "id": 2,
+    "subject": "فيزياء | Physics",
+    "topic": "electricity",
+    "title_ar": "الكهرباء والمغناطيسية",
+    "title_en": "Electricity and Magnetism",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=2"
+  },
+  {
+    "id": 3,
+    "subject": "فيزياء | Physics",
+    "topic": "waves",
+    "title_ar": "الموجات والصوت",
+    "title_en": "Waves and Sound",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=3"
+  },
+  {
+    "id": 4,
+    "subject": "فيزياء | Physics",
+    "topic": "optics",
+    "title_ar": "البصريات",
+    "title_en": "Optics",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=4"
+  },
+  {
+    "id": 5,
+    "subject": "فيزياء | Physics",
+    "topic": "thermo",
+    "title_ar": "الديناميكا الحرارية",
+    "title_en": "Thermodynamics",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=5"
+  },
+  {
+    "id": 6,
+    "subject": "فيزياء | Physics",
+    "topic": "modern",
+    "title_ar": "الفيزياء الحديثة",
+    "title_en": "Modern Physics",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=6"
+  },
+  {
+    "id": 7,
+    "subject": "فيزياء | Physics",
+    "topic": "fluids",
+    "title_ar": "ميكانيكا الموائع",
+    "title_en": "Fluid Mechanics",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=7"
+  },
+  {
+    "id": 8,
+    "subject": "رياضيات | Math",
+    "topic": "statistics",
+    "title_ar": "الإحصاء (Statistics)",
+    "title_en": "Statistics",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=8"
+  },
+  {
+    "id": "chem_atomic",
+    "subject": "كيمياء | Chemistry",
+    "topic": "atomic",
+    "title_ar": "البناء الذري",
+    "title_en": "Atomic Structure",
+    "title_zh": "原子结构",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_atomic"
+  },
+  {
+    "id": "chem_bonding",
+    "subject": "كيمياء | Chemistry",
+    "topic": "bonding",
+    "title_ar": "الروابط الكيميائية",
+    "title_en": "Chemical Bonding",
+    "title_zh": "化学键",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_bonding"
+  },
+  {
+    "id": "chem_equilibrium",
+    "subject": "كيمياء | Chemistry",
+    "topic": "equilibrium",
+    "title_ar": "الاتزان الكيميائي والأحماض والقواعد",
+    "title_en": "Chemical Equilibrium, Acids and Bases",
+    "title_zh": "化学平衡与酸碱",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_equilibrium"
+  },
+  {
+    "id": "chem_kinetics",
+    "subject": "كيمياء | Chemistry",
+    "topic": "kinetics",
+    "title_ar": "الحركية الكيميائية",
+    "title_en": "Chemical Kinetics",
+    "title_zh": "化学动力学",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_kinetics"
+  },
+  {
+    "id": "chem_basic",
+    "subject": "كيمياء | Chemistry",
+    "topic": "basic",
+    "title_ar": "المفاهيم الأساسية في الكيمياء",
+    "title_en": "Basic Concepts in Chemistry",
+    "title_zh": "化学基本概念",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_basic"
+  },
+  {
+    "id": "chem_inorganic",
+    "subject": "كيمياء | Chemistry",
+    "topic": "inorganic",
+    "title_ar": "الكيمياء غير العضوية",
+    "title_en": "Inorganic Chemistry",
+    "title_zh": "无机化学",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_inorganic"
+  },
+  {
+    "id": "chem_organic",
+    "subject": "كيمياء | Chemistry",
+    "topic": "organic",
+    "title_ar": "الكيمياء العضوية",
+    "title_en": "Organic Chemistry",
+    "title_zh": "有机化学",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_organic"
+  },
+  {
+    "id": "chem_organic_cn",
+    "subject": "كيمياء | Chemistry",
+    "topic": "organic_cn",
+    "title_ar": "الكيمياء العضوية - التسمية الصينية",
+    "title_en": "Organic Chemistry - Chinese Nomenclature",
+    "title_zh": "有机化学 - 中文命名",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_organic_cn"
+  },
+  {
+    "id": "chem_physical",
+    "subject": "كيمياء | Chemistry",
+    "topic": "physical",
+    "title_ar": "الكيمياء الفيزيائية",
+    "title_en": "Physical Chemistry",
+    "title_zh": "物理化学",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_physical"
+  },
+  {
+    "id": "chem_stoichiometry",
+    "subject": "كيمياء | Chemistry",
+    "topic": "stoichiometry",
+    "title_ar": "الحساب الكيميائي (الاستوكيومتريا)",
+    "title_en": "Stoichiometry",
+    "title_zh": "化学计量学",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_stoichiometry"
+  },
+  {
+    "id": "chem_thermochemistry",
+    "subject": "كيمياء | Chemistry",
+    "topic": "thermochemistry",
+    "title_ar": "الكيمياء الحرارية",
+    "title_en": "Thermochemistry",
+    "title_zh": "热化学",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=chem_thermochemistry"
+  },
+  {
+    "id": "math_sets",
+    "subject": "رياضيات | Math",
+    "topic": "sets",
+    "title_ar": "المجموعات",
+    "title_en": "Sets",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=math_sets"
+  },
+  {
+    "id": "math_inequalities",
+    "subject": "رياضيات | Math",
+    "topic": "inequalities",
+    "title_ar": "المتباينات",
+    "title_en": "Inequalities",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=math_inequalities"
+  },
+  {
+    "id": "math_functions",
+    "subject": "رياضيات | Math",
+    "topic": "functions",
+    "title_ar": "الدوال",
+    "title_en": "Functions",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=math_functions"
+  },
+  {
+    "id": "math_geometry",
+    "subject": "رياضيات | Math",
+    "topic": "geometry",
+    "title_ar": "الهندسة",
+    "title_en": "Geometry",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=math_geometry"
+  },
+  {
+    "id": "math_calculus",
+    "subject": "رياضيات | Math",
+    "topic": "calculus",
+    "title_ar": "التفاضل والتكامل",
+    "title_en": "Calculus",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=math_calculus"
+  },
+  {
+    "id": "math_probability",
+    "subject": "رياضيات | Math",
+    "topic": "probability",
+    "title_ar": "الاحتمالات",
+    "title_en": "Probability",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=math_probability"
+  },
+  {
+    "id": "math_sequences",
+    "subject": "رياضيات | Math",
+    "topic": "sequences",
+    "title_ar": "المتتاليات",
+    "title_en": "Sequences",
+    "title_zh": "",
+    "summary_ar": "",
+    "summary_en": "",
+    "summary_zh": "",
+    "path": "lessons.html?id=math_sequences"
+  }
 ]

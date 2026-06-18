@@ -1,290 +1,344 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أكاديمية CSCA - اختبار القدرات الدراسية الصيني</title>
+    <title>CSCA أكاديمية CSCA للتميز</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-        .stat-card {
-            background: rgba(76, 201, 240, 0.08);
-            border: 1px solid var(--primary);
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        .stat-label {
-            color: var(--text-dim);
-            margin-top: 8px;
-            font-size: 0.9rem;
-        }
-        .subject-section {
-            margin: 50px 0;
-        }
-        .exam-info {
-            background: linear-gradient(135deg, rgba(247, 37, 133, 0.1), rgba(76, 201, 240, 0.1));
-            border: 2px solid var(--accent);
-            border-radius: 24px;
-            padding: 40px;
-            margin: 50px 0;
-        }
-        .info-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .info-item {
-            text-align: center;
-            padding: 15px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 12px;
-        }
-        .info-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        .info-label {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            margin-top: 5px;
-        }
-    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+<body lang="ar">
+    <!-- Language Selector Bar -->
+    <div style="background: rgba(10,11,16,0.95); border-bottom: 1px solid var(--glass-border); padding: 8px 0;">
+        <div class="container" style="display:flex; justify-content:flex-start; align-items:center; gap:15px; flex-wrap:wrap;">
+            <span style="color:var(--text-dim); font-size:0.85rem;" data-i18n="lang_switcher.ar">🌐 اللغة | Language | 语言</span>
+            <div id="lang-switcher" class="lang-switcher"></div>
+        </div>
+    </div>
 
-<body>
     <header class="hero">
         <div class="hero-content">
-            <h1>🎯 أكاديمية CSCA للتميز <br> <span style="font-size: 0.5em; opacity: 0.8;">CSCA Excellence Academy</span>
-            </h1>
-            <p>منصتك الشاملة لاجتياز اختبار القدرات الدراسية الصيني<br>
-                <span style="font-size: 0.9em; opacity: 0.7;">Your complete CSCA (中国学业能力评估) exam preparation platform</span>
-            </p>
+            <h1 data-i18n="hero.title">🎯 أكاديمية CSCA للتميز</h1>
+            <p data-i18n="hero.subtitle_ar">منصتك الشاملة لاجتياز اختبار القدرات الدراسية الصيني</p>
             <div class="search-container">
-                <input type="text" id="search"
-                    placeholder="ابحث عن درس، قاعدة، أو سؤال... | Search for a lesson, rule, or question..." />
+                <input type="text" id="search" data-i18n="hero.search_placeholder" placeholder="ابحث عن درس، قاعدة، أو سؤال..." />
                 <span class="search-icon">🔍</span>
             </div>
         </div>
     </header>
 
     <nav class="main-nav">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: flex; gap: 30px;">
-                <a href="index.html" class="active">الرئيسية | Home</a>
-                <a href="questions.html">بنك الأسئلة | Question Bank</a>
-                <a href="#about">حول الاختبار | About Exam</a>
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html" class="active" data-i18n="nav.home">الرئيسية</a>
+                <a href="questions.html" data-i18n="nav.questions">بنك الأسئلة</a>
             </div>
+            <div id="lang-switcher-nav"></div>
         </div>
     </nav>
 
     <main class="container">
-
         <!-- Stats -->
         <div class="stats-grid">
-            <div class="stat-card">
+            <div class="stat-card" id="stat-lessons">
                 <div class="stat-number">19</div>
-                <div class="stat-label">درس كامل | Complete Lessons</div>
+                <div class="stat-label" data-i18n="stats.lessons">درس كامل</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">9,000+</div>
-                <div class="stat-label">سطر من المحتوى | Lines of Content</div>
+            <div class="stat-card" id="stat-lines">
+                <div class="stat-number">8,500+</div>
+                <div class="stat-label" data-i18n="stats.lines">سطر من المحتوى</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">سؤال تدريبي | Practice Questions</div>
+            <div class="stat-card" id="stat-questions">
+                <div class="stat-number">327</div>
+                <div class="stat-label" data-i18n="stats.questions">سؤال تدريبي</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" id="stat-subjects">
                 <div class="stat-number">3</div>
-                <div class="stat-label">مواد | Subjects</div>
+                <div class="stat-label" data-i18n="stats.subjects">مواد</div>
             </div>
         </div>
 
         <!-- Exam Info -->
         <section class="exam-info">
-            <h2 style="text-align:center; margin-bottom:30px;">📋 معلومات اختبار CSCA</h2>
+            <h2 style="text-align:center; margin-bottom:30px;" data-i18n="exam_info.title">📋 معلومات اختبار CSCA</h2>
             <div class="info-row">
                 <div class="info-item">
-                    <div class="info-value">60 دقيقة</div>
-                    <div class="info-label">مدة كل اختبار | Duration per Subject</div>
+                    <div class="info-value" data-i18n="exam_info.duration_val">60 دقيقة</div>
+                    <div class="info-label" data-i18n="exam_info.duration_label">مدة كل اختبار</div>
                 </div>
                 <div class="info-item">
-                    <div class="info-value">48 سؤال</div>
-                    <div class="info-label">أسئلة اختيار من متعدد | MCQ Questions</div>
+                    <div class="info-value" data-i18n="exam_info.questions_val">48 سؤال</div>
+                    <div class="info-label" data-i18n="exam_info.questions_label">أسئلة اختيار من متعدد</div>
                 </div>
                 <div class="info-item">
-                    <div class="info-value">100 درجة</div>
-                    <div class="info-label">الدرجة القصوى | Total Points</div>
+                    <div class="info-value" data-i18n="exam_info.points_val">100 درجة</div>
+                    <div class="info-label" data-i18n="exam_info.points_label">الدرجة القصوى</div>
                 </div>
                 <div class="info-item">
-                    <div class="info-value">中文</div>
-                    <div class="info-label">لغة الاختبار | Exam Language</div>
+                    <div class="info-value" data-i18n="exam_info.lang_val">中文</div>
+                    <div class="info-label" data-i18n="exam_info.lang_label">لغة الاختبار</div>
                 </div>
             </div>
-            <p style="text-align:center; color:var(--text-dim); margin-top:20px;">
-                اختبار القدرات الدراسية الصيني (China Scholastic Competency Assessment) هو الاختبار الموحد للطلاب الدوليين الراغبين في الدراسة في الجامعات الصينية
+            <p style="text-align:center; color:var(--text-dim); margin-top:20px;" data-i18n="exam_info.desc">
+                اختبار القدرات الدراسية الصيني (CSCA) هو الاختبار الموحد للطلاب الدوليين الراغبين في الدراسة في الجامعات الصينية
             </p>
         </section>
 
         <!-- Mathematics -->
         <section class="subject-section">
-            <h2 class="section-title">📐 الرياضيات | Mathematics (35% وزن)</h2>
-            <p style="color:var(--text-dim); margin-bottom:20px;">4 وحدات، 15% - 35% وزن لكل وحدة</p>
-            <div class="grid">
-                <a href="lessons/math_sets.html" class="card glass">
-                    <h4>🔢 المجموعات والمتباينات</h4>
-                    <p>Sets & Inequalities — أساسيات المجموعات، العمليات، حل المتباينات (15%)</p>
-                </a>
-                <a href="lessons/math_functions.html" class="card glass" style="border-color:var(--accent);">
-                    <h4>📈 الدوال (الأهم!)</h4>
-                    <p>Functions — الدوال الأسية، اللوغاريتمية، المثلثية، التفاضل (35%) ⭐</p>
-                </a>
-                <a href="lessons/math_geometry.html" class="card glass">
-                    <h4>📐 الهندسة والجبر</h4>
-                    <p>Geometry & Algebra — تحليلية، متجهات، أعداد مركبة، مصفوفات (30%)</p>
-                </a>
-                <a href="lessons/math_calculus.html" class="card glass">
-                    <h4>📊 التفاضل والتكامل</h4>
-                    <p>Calculus & Sequences — المتتاليات، النهايات، المشتقات، التكامل</p>
-                </a>
-                <a href="lessons/math_stats.html" class="card glass">
-                    <h4>🎲 الاحتمالات والإحصاء</h4>
-                    <p>Probability & Statistics — التوافيق، التباديل، التوزيع الطبيعي (20%)</p>
-                </a>
-            </div>
+            <h2 class="section-title" data-i18n="subjects.math">📐 الرياضيات</h2>
+            <p style="color:var(--text-dim); margin-bottom:20px;" data-i18n="subjects.math_weight">(35% وزن)</p>
+            <div class="grid" id="math-lessons"></div>
         </section>
 
         <!-- Physics -->
         <section class="subject-section">
-            <h2 class="section-title">⚡ الفيزياء | Physics</h2>
+            <h2 class="section-title" data-i18n="subjects.physics">⚡ الفيزياء</h2>
             <p style="color:var(--text-dim); margin-bottom:20px;">5 وحدات تغطي جميع مواضيع الفيزياء في CSCA</p>
-            <div class="grid">
-                <a href="lessons/phys_mechanics.html" class="card glass">
-                    <h4>🏋️ الميكانيكا</h4>
-                    <p>Mechanics — قوانين نيوتن، الحركة، الطاقة، الزخم، الجاذبية</p>
-                </a>
-                <a href="lessons/phys_electricity.html" class="card glass">
-                    <h4>⚡ الكهرباء والمغناطيسية</h4>
-                    <p>Electricity & Magnetism — المجالات، الدوائر، الحث، التيار المتردد</p>
-                </a>
-                <a href="lessons/phys_optics.html" class="card glass">
-                    <h4>🔦 البصريات</h4>
-                    <p>Optics — الانعكاس، الانكسار، العدسات، المرايا، تداخل الضوء</p>
-                </a>
-                <a href="lessons/phys_fluids.html" class="card glass">
-                    <h4>🌊 الموائع والديناميكا الحرارية</h4>
-                    <p>Fluids & Thermodynamics — برنولي، باسكال، قوانين الغازات، الحرارة</p>
-                </a>
-                <a href="lessons/phys_modern.html" class="card glass">
-                    <h4>⚛️ الفيزياء الحديثة</h4>
-                    <p>Modern Physics — التأثير الكهروضوئي، النشاط الإشعاعي، الفيزياء النووية</p>
-                </a>
-            </div>
+            <div class="grid" id="physics-lessons"></div>
         </section>
 
         <!-- Chemistry -->
         <section class="subject-section">
-            <h2 class="section-title">🧪 الكيمياء | Chemistry</h2>
+            <h2 class="section-title" data-i18n="subjects.chemistry">🧪 الكيمياء</h2>
             <p style="color:var(--text-dim); margin-bottom:20px;">6 وحدات تغطي الكيمياء العضوية وغير العضوية والفيزيائية</p>
-            <div class="grid">
-                <a href="lessons/chem_atomic.html" class="card glass">
-                    <h4>⚛️ التركيب الذري</h4>
-                    <p>Atomic Structure — الجدول الدوري، التوزيع الإلكتروني، الأعداد الكمية</p>
-                </a>
-                <a href="lessons/chem_bonding.html" class="card glass">
-                    <h4>🔗 الروابط الكيميائية</h4>
-                    <p>Chemical Bonding — أيونية، تساهمية، فلزية، VSEPR، الهندسة الجزيئية</p>
-                </a>
-                <a href="lessons/chem_organic.html" class="card glass">
-                    <h4>🧬 الكيمياء العضوية</h4>
-                    <p>Organic Chemistry — الهيدروكربونات، المجموعات الوظيفية، المتفاعلات</p>
-                </a>
-                <a href="lessons/chem_equilibrium.html" class="card glass">
-                    <h4>⚖️ الاتزان الكيميائي</h4>
-                    <p>Chemical Equilibrium — لوتشاتلييه، الأحماض والقواعد، الأس الهيدروجيني</p>
-                </a>
-                <a href="lessons/chem_kinetics.html" class="card glass">
-                    <h4>⏱️ الحركية والديناميكا الحرارية</h4>
-                    <p>Kinetics & Thermochemistry — سرعة التفاعل، المحتوى الحراري، الإنتروبيا</p>
-                </a>
-                <a href="lessons/chem_stoichiometry.html" class="card glass">
-                    <h4>📏 القياسات الكيميائية والمختبر</h4>
-                    <p>Stoichiometry & Lab — المول، المعادلات، الكاشف المحدد، تقنيات المختبر</p>
-                </a>
-            </div>
+            <div class="grid" id="chemistry-lessons"></div>
         </section>
 
         <!-- Study Plan -->
         <section class="subject-section">
-            <h2 class="section-title">📅 خطة الدراسة المقترحة</h2>
+            <h2 class="section-title" data-i18n="study_plan.title">📅 خطة الدراسة المقترحة</h2>
             <div class="grid">
                 <div class="card glass">
-                    <h4>🗓️ الأسبوع 1-2: الأساسيات</h4>
-                    <p>المجموعات، المتباينات، التركيب الذري، الميكانيكا الأساسية</p>
+                    <h4 data-i18n="study_plan.week1_title">🗓️ الأسبوع 1-2: الأساسيات</h4>
+                    <p data-i18n="study_plan.week1_desc">المجموعات، المتباينات، التركيب الذري، الميكانيكا الأساسية</p>
                 </div>
                 <div class="card glass">
-                    <h4>🗓️ الأسبوع 3-4: المواد الأثقل</h4>
-                    <p>الدوال (الرياضيات 35%)، الكهرباء والمغناطيسية، الكيمياء العضوية</p>
+                    <h4 data-i18n="study_plan.week2_title">🗓️ الأسبوع 3-4: المواد الأثقل</h4>
+                    <p data-i18n="study_plan.week2_desc">الدوال، الكهرباء والمغناطيسية، الكيمياء العضوية</p>
                 </div>
                 <div class="card glass">
-                    <h4>🗓️ الأسبوع 5-6: التكامل والتمارين</h4>
-                    <p>الهندسة، التفاضل والتكامل، الاحتمالات، التجارب المعملية</p>
+                    <h4 data-i18n="study_plan.week3_title">🗓️ الأسبوع 5-6: التكامل والتمارين</h4>
+                    <p data-i18n="study_plan.week3_desc">الهندسة، التفاضل والتكامل، الاحتمالات، التجارب المعملية</p>
                 </div>
                 <div class="card glass" style="border-color:var(--accent);">
-                    <h4>🎯 الأسبوع الأخير: نماذج امتحانات</h4>
-                    <p>حل 50+ سؤالاً تدريبياً، مراجعة الأخطاء، التركيز على نقاط الضعف</p>
+                    <h4 data-i18n="study_plan.week4_title">🎯 الأسبوع الأخير: نماذج امتحانات</h4>
+                    <p data-i18n="study_plan.week4_desc">حل 300+ سؤال تدريبي، مراجعة الأخطاء، التركيز على نقاط الضعف</p>
                 </div>
             </div>
         </section>
 
         <!-- Exam Tips -->
         <section class="subject-section" id="about">
-            <h2 class="section-title">💡 نصائح لاجتياز الاختبار</h2>
-            <div class="bilingual-row" style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
-                <div class="card glass" style="border-right:4px solid var(--primary); padding:20px;">
-                    <h4>🇸🇦 نصائح مهمة</h4>
-                    <ul style="list-style:none; padding:0;">
-                        <li style="margin:10px 0;">⏱️ <strong>إدارة الوقت</strong>: 48 سؤال في 60 دقيقة (75 ثانية لكل سؤال)</li>
-                        <li style="margin:10px 0;">📝 <strong>اللغة</strong>: كل الأسئلة بالصينية — راجع المصطلحات الأساسية</li>
-                        <li style="margin:10px 0;">🎯 <strong>الأولويات</strong>: ركز على الدوال (الرياضيات 35%) أولاً</li>
-                        <li style="margin:10px 0;">✅ <strong>استراتيجية الحل</strong>: ابدأ بالأسئلة السهلة لبناء الثقة</li>
-                        <li style="margin:10px 0;">📊 <strong>التخمين الذكي</strong>: استبعد الخيارات المستحيلة لرفع فرص التخمين</li>
-                    </ul>
-                </div>
-                <div class="card glass" style="border-left:4px solid var(--secondary); padding:20px; direction:ltr; text-align:left;">
-                    <h4>🇬🇧 Key Exam Tips</h4>
-                    <ul style="list-style:none; padding:0;">
-                        <li style="margin:10px 0;">⏱️ <strong>Time Management</strong>: 48 Q in 60 min (75 sec per question)</li>
-                        <li style="margin:10px 0;">📝 <strong>Language</strong>: All questions in Chinese — review key terms</li>
-                        <li style="margin:10px 0;">🎯 <strong>Priorities</strong>: Focus on Functions (Math 35%) first</li>
-                        <li style="margin:10px 0;">✅ <strong>Solve Strategy</strong>: Start with easy questions to build momentum</li>
-                        <li style="margin:10px 0;">📊 <strong>Smart Guessing</strong>: Eliminate impossible options</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 class="section-title" data-i18n="tips.title">💡 نصائح لاجتياز الاختبار</h2>
+            <div id="tips-container" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;"></div>
         </section>
 
         <section class="subject-section" style="text-align:center; padding:40px;">
-            <h2>🏆 انطلق في رحلة النجاح!</h2>
-            <p style="color:var(--text-dim); margin:20px 0;">اختر درساً أعلاه أو ابدأ ببنك الأسئلة</p>
-            <a href="questions.html" style="display:inline-block; background:var(--accent); color:#fff; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem;">ابدأ التدريب →</a>
+            <h2 id="motivation-title" style="font-size:1.8rem;">🏆 انطلق في رحلة النجاح!</h2>
+            <p style="color:var(--text-dim); margin:20px 0;" id="motivation-sub">اختر درساً أعلاه أو ابدأ ببنك الأسئلة</p>
+            <a href="questions.html" class="btn" id="start-btn" style="display:inline-block; background:var(--accent); color:#fff; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem;" data-i18n="start_btn">ابدأ التدريب الآن →</a>
         </section>
-
     </main>
 
-    <script src="script.js"></script>
+    <footer>
+        <p data-i18n="footer">© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // === Load lessons dynamically ===
+        let allLessons = [];
+        let allQuestions = [];
+
+        async function loadLessons() {
+            try {
+                const res = await fetch('data/content.json');
+                allLessons = await res.json();
+                await loadTranslations();
+                renderLessonCards();
+                renderTips();
+                renderStats();
+            } catch(e) {
+                console.error('Failed to load lessons:', e);
+                document.getElementById('math-lessons').innerHTML = '<p class="error-msg">⚠️ فشل تحميل الدروس</p>';
+            }
+        }
+
+        function getLessonTitle(lesson) {
+            const key = currentLang === 'ar' ? 'title_ar' : currentLang === 'en' ? 'title_en' : 'title_zh';
+            return lesson[key] || lesson.title_ar || lesson.title_en || 'Lesson';
+        }
+
+        function getLessonSummary(lesson) {
+            const key = `summary_${currentLang}`;
+            return lesson[key] || lesson.summary || '';
+        }
+
+        function getTopicName(topic) {
+            const map = {
+                'sets': {ar:'المجموعات', en:'Sets', zh:'集合'},
+                'inequalities': {ar:'المتباينات', en:'Inequalities', zh:'不等式'},
+                'functions': {ar:'الدوال', en:'Functions', zh:'函数'},
+                'geometry': {ar:'الهندسة', en:'Geometry', zh:'几何'},
+                'calculus': {ar:'التفاضل والتكامل', en:'Calculus', zh:'微积分'},
+                'probability': {ar:'الاحتمالات', en:'Probability', zh:'概率'},
+                'sequences': {ar:'المتتاليات', en:'Sequences', zh:'数列'},
+                'statistics': {ar:'الإحصاء', en:'Statistics', zh:'统计'},
+                'mechanics': {ar:'الميكانيكا', en:'Mechanics', zh:'力学'},
+                'electricity': {ar:'الكهرباء', en:'Electricity', zh:'电学'},
+                'waves': {ar:'الموجات', en:'Waves', zh:'波动'},
+                'optics': {ar:'البصريات', en:'Optics', zh:'光学'},
+                'thermo': {ar:'الديناميكا الحرارية', en:'Thermodynamics', zh:'热力学'},
+                'modern': {ar:'الفيزياء الحديثة', en:'Modern Physics', zh:'现代物理'},
+                'fluids': {ar:'الموائع', en:'Fluids', zh:'流体力学'},
+                'atomic': {ar:'التركيب الذري', en:'Atomic Structure', zh:'原子结构'},
+                'bonding': {ar:'الروابط الكيميائية', en:'Chemical Bonding', zh:'化学键'},
+                'equilibrium': {ar:'الاتزان الكيميائي', en:'Chemical Equilibrium', zh:'化学平衡'},
+                'kinetics': {ar:'الحركية الكيميائية', en:'Chemical Kinetics', zh:'化学动力学'},
+                'basic': {ar:'المفاهيم الأساسية', en:'Basic Concepts', zh:'基本概念'},
+                'inorganic': {ar:'الكيمياء غير العضوية', en:'Inorganic Chemistry', zh:'无机化学'},
+                'organic': {ar:'الكيمياء العضوية', en:'Organic Chemistry', zh:'有机化学'},
+                'organic_cn': {ar:'التسمية الصينية', en:'Chinese Nomenclature', zh:'中文命名'},
+                'physical': {ar:'الكيمياء الفيزيائية', en:'Physical Chemistry', zh:'物理化学'},
+                'stoichiometry': {ar:'الحساب الكيميائي', en:'Stoichiometry', zh:'化学计量'},
+                'thermochemistry': {ar:'الكيمياء الحرارية', en:'Thermochemistry', zh:'热化学'}
+            };
+            const m = map[topic];
+            return m ? m[currentLang] || m.en || topic : topic;
+        }
+
+        function renderLessonCards() {
+            const containers = {
+                'رياضيات | Math': 'math-lessons',
+                'فيزياء | Physics': 'physics-lessons',
+                'كيمياء | Chemistry': 'chemistry-lessons'
+            };
+            // Also match subject_en
+            const enMap = {
+                'Mathematics': 'math-lessons',
+                'Physics': 'physics-lessons',
+                'Chemistry': 'chemistry-lessons'
+            };
+
+            // Group lessons by subject
+            const grouped = {};
+
+            // Also try to get questions count per topic
+            async function getQuestionsCount() {
+                try {
+                    const res = await fetch('data/questions.json');
+                    allQuestions = await res.json();
+                    return allQuestions;
+                } catch(e) { return []; }
+            }
+
+            // First pass: group
+            allLessons.forEach(lesson => {
+                const subj = lesson.subject || '';
+                // Map subject to container
+                let containerId = null;
+                for (const [key, val] of Object.entries(containers)) {
+                    if (subj.includes(key)) { containerId = val; break; }
+                }
+                if (!containerId) {
+                    for (const [key, val] of Object.entries(enMap)) {
+                        if (subj.includes(key)) { containerId = val; break; }
+                    }
+                }
+                if (!containerId) {
+                    // Try to infer from topic/title
+                    const title = (lesson.title_ar + lesson.title_en).toLowerCase();
+                    if (title.includes('رياض') || title.includes('math')) containerId = 'math-lessons';
+                    else if (title.includes('فيزي') || title.includes('phys')) containerId = 'physics-lessons';
+                    else if (title.includes('كيم') || title.includes('chem')) containerId = 'chemistry-lessons';
+                }
+                if (containerId) {
+                    if (!grouped[containerId]) grouped[containerId] = [];
+                    grouped[containerId].push(lesson);
+                }
+            });
+
+            // Calculate questions per topic
+            const questionsPerTopic = {};
+            if (allQuestions.length === 0) {
+                // Will try async later
+            } else {
+                allQuestions.forEach(q => {
+                    const topic = q.topic;
+                    if (!questionsPerTopic[topic]) questionsPerTopic[topic] = 0;
+                    questionsPerTopic[topic]++;
+                });
+            }
+
+            // Render each container
+            for (const [containerId, lessons] of Object.entries(grouped)) {
+                const container = document.getElementById(containerId);
+                if (!container) continue;
+                container.innerHTML = '';
+                lessons.forEach(lesson => {
+                    const topic = lesson.topic || '';
+                    const qCount = questionsPerTopic[topic] || 0;
+                    const emoji = containerId.includes('math') ? '📐' : containerId.includes('physics') ? '⚡' : '🧪';
+                    const card = document.createElement('a');
+                    card.className = 'card glass';
+                    card.href = `lessons.html?id=${lesson.id}&lang=${currentLang}`;
+                    card.innerHTML = `
+                        <h4>${emoji} ${getLessonTitle(lesson)}</h4>
+                        <p>${getLessonSummary(lesson)}</p>
+                        ${qCount ? `<span class="card-difficulty diff-medium">${qCount} ${t('stats.questions') || 'أسئلة'}</span>` : ''}
+                    `;
+                    container.appendChild(card);
+                });
+            }
+        }
+
+        function renderTips() {
+            const container = document.getElementById('tips-container');
+            if (!container) return;
+            const tipsKey = currentLang === 'ar' ? 'tips_ar' : currentLang === 'zh' ? 'tips_zh' : 'tips_en';
+            const tips = translations.tips ? (translations.tips[tipsKey] || translations.tips['tips_en']) : [];
+            if (tips.length === 0) {
+                container.innerHTML = '<div class="card glass" style="padding:20px;"><p>Tips coming soon...</p></div>';
+                return;
+            }
+            // Split into 3 columns
+            const perCol = Math.ceil(tips.length / 3);
+            for (let c = 0; c < 3; c++) {
+                const col = document.createElement('div');
+                col.className = 'card glass';
+                col.style.padding = '20px';
+                col.style.listStyle = 'none';
+                const colTips = tips.slice(c * perCol, (c + 1) * perCol);
+                col.innerHTML = colTips.map(t => `<p style="margin:8px 0;">${t}</p>`).join('');
+                container.appendChild(col);
+            }
+        }
+
+        function renderStats() {
+            const totalQuestions = allQuestions.length || 327;
+            const totalLessons = allLessons.length || 19;
+            document.querySelectorAll('#stat-lessons .stat-number').forEach(el => el.textContent = totalLessons);
+            document.querySelectorAll('#stat-questions .stat-number').forEach(el => el.textContent = totalQuestions);
+        }
+
+        async function init() {
+            initLang();
+            // Load questions first
+            try {
+                const resQ = await fetch('data/questions.json');
+                allQuestions = await resQ.json();
+            } catch(e) {}
+            await loadLessons();
+            applyTranslations();
+            renderLangSwitcher();
+            // Also render in nav
+            const navSwitcher = document.getElementById('lang-switcher-nav');
+            if (navSwitcher) navSwitcher.innerHTML = document.getElementById('lang-switcher').innerHTML;
+        }
+
+        init();
+    </script>
 </body>
 </html>

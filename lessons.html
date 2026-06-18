@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرح الدرس - CSCA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body lang="ar">
+    <!-- Language Selector -->
+    <div style="background: rgba(10,11,16,0.95); border-bottom: 1px solid var(--glass-border); padding: 8px 0;">
+        <div class="container" style="display:flex; justify-content:flex-start; align-items:center; gap:15px;">
+            <span style="color:var(--text-dim); font-size:0.85rem;">🌐</span>
+            <div id="lang-switcher" class="lang-switcher"></div>
+        </div>
+    </div>
+
+    <main class="container">
+        <a href="index.html" class="back-btn" id="back-link" data-i18n="lessons_page.back">← العودة للرئيسية</a>
+        <div id="lesson-content">
+            <div class="loading" data-i18n="lessons_page.title">جاري تحميل الدرس...</div>
+        </div>
+    </main>
+
+    <footer>
+        <p data-i18n="footer">© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        let lessonData = null;
+
+        function getContent(lesson, field) {
+            const key = `${field}_${currentLang}`;
+            const fallbackKey = `${field}_ar`;
+            return lesson[key] || lesson[fallbackKey] || lesson[field] || '';
+        }
+
+        function renderLesson(lesson) {
+            const container = document.getElementById('lesson-content');
+            if (!lesson) {
+                container.innerHTML = '<div class="error-msg">❌ الدرس غير موجود</div>';
+                return;
+            }
+
+            const title = getContent(lesson, 'title');
+            const sections = lesson.sections || [];
+
+            document.title = `${title} - CSCA`;
+            document.querySelector('#back-link').innerHTML = `← ${t('lessons_page.back')}`;
+
+            let html = `<h1 class="section-title" style="margin-top:30px;">${title}</h1>`;
+
+            sections.forEach(section => {
+                const heading = getContent(section, 'heading');
+                const content = getContent(section, 'content');
+
+                if (!content) return;
+
+                // Determine box style based on heading keywords
+                let boxClass = '';
+                const hLower = (heading + '').toLowerCase();
+                const cLower = (content + '').toLowerCase();
+                if (hLower.includes('تعريف') || hLower.includes('definition') || hLower.includes('概念') || cLower.includes('هو') || cLower.includes('is defined')) {
+                    boxClass = 'definition-box';
+                } else if (hLower.includes('مثال') || hLower.includes('example') || hLower.includes('例题')) {
+                    boxClass = 'example-box';
+                } else if (hLower.includes('خطأ') || hLower.includes('mistake') || hLower.includes('错误') || hLower.includes('شائع')) {
+                    boxClass = 'pitfall-box';
+                } else if (hLower.includes('نصيحة') || hLower.includes('tip') || hLower.includes('csca') || hLower.includes('提示')) {
+                    boxClass = 'tip-box';
+                } else if (hLower.includes('قانون') || hLower.includes('law') || hLower.includes('formula') || hLower.includes('صيغة') || hLower.includes('公式') || hLower.includes('معادلة')) {
+                    boxClass = 'law-box';
+                }
+
+                html += `
+                    <div class="lesson-section ${boxClass}">
+                        <h2>${heading}</h2>
+                        ${content.split('\n').filter(line => line.trim()).map(line => {
+                            line = line.trim();
+                            if (line.startsWith('•') || line.startsWith('-') || line.startsWith('*')) {
+                                return `<p style="padding-right:15px;">${line}</p>`;
+                            }
+                            return `<p>${line}</p>`;
+                        }).join('')}
+                    </div>
+                `;
+            });
+
+            // Add practice link
+            html += `
+                <div style="text-align:center; margin:50px 0;">
+                    <a href="questions.html?lang=${currentLang}" class="btn" style="display:inline-block; background:var(--accent); color:#fff; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem;">📝 ${t('lessons_page.start_practice')}</a>
+                </div>
+                <div class="developer-sig">
+                    <h3>🏆 ${currentLang === 'ar' ? 'أتمنى لكم النجاح' : currentLang === 'zh' ? '祝您成功' : 'Wishing you success'}</h3>
+                    <p class="motivational">${currentLang === 'ar' ? 'بالاجتهاد والمثابرة تحقق الأحلام' : currentLang === 'zh' ? '通过努力和坚持实现梦想' : 'Through diligence and perseverance, dreams come true'}</p>
+                </div>
+            `;
+
+            container.innerHTML = html;
+
+            // Re-render MathJax
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        async function loadLesson() {
+            const params = new URLSearchParams(window.location.search);
+            const lessonId = params.get('id');
+
+            if (!lessonId) {
+                document.getElementById('lesson-content').innerHTML = '<div class="error-msg">❌ لم يتم تحديد الدرس. الرجاء العودة للصفحة الرئيسية واختيار درس.</div>';
+                return;
+            }
+
+            try {
+                const res = await fetch('data/content.json');
+                const lessons = await res.json();
+                lessonData = lessons.find(l => l.id === lessonId);
+                await loadTranslations();
+                renderLesson(lessonData);
+            } catch(e) {
+                console.error('Failed to load lesson:', e);
+                document.getElementById('lesson-content').innerHTML = '<div class="error-msg">❌ فشل تحميل الدرس. تأكد من اتصال الإنترنت.</div>';
+            }
+        }
+
+        async function init() {
+            initLang();
+            renderLangSwitcher();
+            await loadLesson();
+            applyTranslations();
+        }
+
+        init();
+    </script>
+</body>
+</html>

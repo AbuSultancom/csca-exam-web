@@ -1,0 +1,338 @@
+{
+  "nav": {
+    "home": {
+      "ar": "الرئيسية",
+      "en": "Home",
+      "zh": "首页"
+    },
+    "questions": {
+      "ar": "بنك الأسئلة",
+      "en": "Question Bank",
+      "zh": "题库"
+    },
+    "about_exam": {
+      "ar": "حول الاختبار",
+      "en": "About Exam",
+      "zh": "关于考试"
+    },
+    "lessons": {
+      "ar": "الدروس",
+      "en": "Lessons",
+      "zh": "课程"
+    }
+  },
+  "hero": {
+    "title": {
+      "ar": "🎯 أكاديمية CSCA للتميز",
+      "en": "🎯 CSCA Excellence Academy",
+      "zh": "🎯 CSCA卓越学院"
+    },
+    "subtitle_ar": {
+      "ar": "منصتك الشاملة لاجتياز اختبار القدرات الدراسية الصيني",
+      "en": "Your complete CSCA exam preparation platform",
+      "zh": "您准备中国学业能力评估考试的全面平台"
+    },
+    "search_placeholder": {
+      "ar": "ابحث عن درس، قاعدة، أو سؤال...",
+      "en": "Search for a lesson, rule, or question...",
+      "zh": "搜索课程、公式或问题..."
+    }
+  },
+  "stats": {
+    "lessons": {
+      "ar": "درس كامل",
+      "en": "Complete Lessons",
+      "zh": "完整课程"
+    },
+    "lines": {
+      "ar": "سطر من المحتوى",
+      "en": "Lines of Content",
+      "zh": "内容行数"
+    },
+    "questions": {
+      "ar": "سؤال تدريبي",
+      "en": "Practice Questions",
+      "zh": "练习题"
+    },
+    "subjects": {
+      "ar": "مواد",
+      "en": "Subjects",
+      "zh": "科目"
+    }
+  },
+  "exam_info": {
+    "title": {
+      "ar": "📋 معلومات اختبار CSCA",
+      "en": "📋 CSCA Exam Information",
+      "zh": "📋 CSCA考试信息"
+    },
+    "duration_label": {
+      "ar": "مدة كل اختبار",
+      "en": "Duration per Subject",
+      "zh": "每科考试时长"
+    },
+    "duration_val": {
+      "ar": "60 دقيقة",
+      "en": "60 Minutes",
+      "zh": "60分钟"
+    },
+    "questions_label": {
+      "ar": "أسئلة اختيار من متعدد",
+      "en": "MCQ Questions",
+      "zh": "多项选择题"
+    },
+    "questions_val": {
+      "ar": "48 سؤال",
+      "en": "48 Questions",
+      "zh": "48道题"
+    },
+    "points_label": {
+      "ar": "الدرجة القصوى",
+      "en": "Total Points",
+      "zh": "满分"
+    },
+    "points_val": {
+      "ar": "100 درجة",
+      "en": "100 Points",
+      "zh": "100分"
+    },
+    "lang_label": {
+      "ar": "لغة الاختبار",
+      "en": "Exam Language",
+      "zh": "考试语言"
+    },
+    "lang_val": {
+      "ar": "中文",
+      "en": "Chinese (中文)",
+      "zh": "中文"
+    },
+    "desc": {
+      "ar": "اختبار القدرات الدراسية الصيني (China Scholastic Competency Assessment) هو الاختبار الموحد للطلاب الدوليين الراغبين في الدراسة في الجامعات الصينية",
+      "en": "The China Scholastic Competency Assessment (CSCA) is the standardized exam for international students seeking admission to Chinese universities",
+      "zh": "中国学业能力评估（CSCA）是国际学生申请中国大学入学的标准化考试"
+    }
+  },
+  "subjects": {
+    "math": {
+      "ar": "📐 الرياضيات",
+      "en": "📐 Mathematics",
+      "zh": "📐 数学"
+    },
+    "math_weight": {
+      "ar": "(35% وزن)",
+      "en": "(35% Weight)",
+      "zh": "（占35%）"
+    },
+    "physics": {
+      "ar": "⚡ الفيزياء",
+      "en": "⚡ Physics",
+      "zh": "⚡ 物理"
+    },
+    "chemistry": {
+      "ar": "🧪 الكيمياء",
+      "en": "🧪 Chemistry",
+      "zh": "🧪 化学"
+    }
+  },
+  "study_plan": {
+    "title": {
+      "ar": "📅 خطة الدراسة المقترحة",
+      "en": "📅 Suggested Study Plan",
+      "zh": "📅 学习计划建议"
+    },
+    "week1_title": {
+      "ar": "🗓️ الأسبوع 1-2: الأساسيات",
+      "en": "🗓️ Week 1-2: Basics",
+      "zh": "🗓️ 第1-2周：基础"
+    },
+    "week1_desc": {
+      "ar": "المجموعات، المتباينات، التركيب الذري، الميكانيكا الأساسية",
+      "en": "Sets, Inequalities, Atomic Structure, Basic Mechanics",
+      "zh": "集合、不等式、原子结构、基础力学"
+    },
+    "week2_title": {
+      "ar": "🗓️ الأسبوع 3-4: المواد الأثقل",
+      "en": "🗓️ Week 3-4: Heavy Topics",
+      "zh": "🗓️ 第3-4周：重点专题"
+    },
+    "week2_desc": {
+      "ar": "الدوال (الرياضيات 35%)، الكهرباء والمغناطيسية، الكيمياء العضوية",
+      "en": "Functions (Math 35%), Electricity & Magnetism, Organic Chemistry",
+      "zh": "函数（数学35%）、电磁学、有机化学"
+    },
+    "week3_title": {
+      "ar": "🗓️ الأسبوع 5-6: التكامل والتمارين",
+      "en": "🗓️ Week 5-6: Integration & Practice",
+      "zh": "🗓️ 第5-6周：整合与练习"
+    },
+    "week3_desc": {
+      "ar": "الهندسة، التفاضل والتكامل، الاحتمالات، التجارب المعملية",
+      "en": "Geometry, Calculus, Probability, Lab Experiments",
+      "zh": "几何、微积分、概率、实验"
+    },
+    "week4_title": {
+      "ar": "🎯 الأسبوع الأخير: نماذج امتحانات",
+      "en": "🎯 Final Week: Mock Exams",
+      "zh": "🎯 最后一周：模拟考试"
+    },
+    "week4_desc": {
+      "ar": "حل 300+ سؤال تدريبي، مراجعة الأخطاء، التركيز على نقاط الضعف",
+      "en": "Solve 300+ practice questions, review mistakes, focus on weak areas",
+      "zh": "完成300+练习题，复习错误，集中攻克薄弱环节"
+    }
+  },
+  "tips": {
+    "title": {
+      "ar": "💡 نصائح لاجتياز الاختبار",
+      "en": "💡 Exam Tips",
+      "zh": "💡 考试技巧"
+    },
+    "tips_ar": [
+      "⏱️ إدارة الوقت: 48 سؤال في 60 دقيقة (75 ثانية لكل سؤال)",
+      "📝 اللغة: كل الأسئلة بالصينية — راجع المصطلحات الأساسية",
+      "🎯 الأولويات: ركز على الدوال (الرياضيات 35%) أولاً",
+      "✅ استراتيجية الحل: ابدأ بالأسئلة السهلة لبناء الثقة",
+      "📊 التخمين الذكي: استبعد الخيارات المستحيلة لرفع فرص التخمين"
+    ],
+    "tips_en": [
+      "⏱️ Time Management: 48 Q in 60 min (75 sec per question)",
+      "📝 Language: All questions in Chinese — review key terms",
+      "🎯 Priorities: Focus on Functions (Math 35%) first",
+      "✅ Strategy: Start with easy questions to build momentum",
+      "📊 Smart Guessing: Eliminate impossible options"
+    ],
+    "tips_zh": [
+      "⏱️ 时间管理：60分钟48道题（每题75秒）",
+      "📝 语言：所有试题均为中文——复习关键术语",
+      "🎯 优先级：先集中攻克函数（数学占35%）",
+      "✅ 答题策略：先做简单题建立信心",
+      "📊 合理猜测：排除不可能选项提高正确率"
+    ]
+  },
+  "questions_page": {
+    "title": {
+      "ar": "بنك الأسئلة التدريبية",
+      "en": "Practice Question Bank",
+      "zh": "练习题题库"
+    },
+    "subtitle": {
+      "ar": "تدرب على 327 سؤالاً بمستويات صعوبة مختلفة",
+      "en": "Practice with 327 questions at different difficulty levels",
+      "zh": "练习327道不同难度级别的问题"
+    },
+    "all": {
+      "ar": "الكل",
+      "en": "All",
+      "zh": "全部"
+    },
+    "easy": {
+      "ar": "سهل",
+      "en": "Easy",
+      "zh": "简单"
+    },
+    "medium": {
+      "ar": "متوسط",
+      "en": "Medium",
+      "zh": "中等"
+    },
+    "hard": {
+      "ar": "صعب",
+      "en": "Hard",
+      "zh": "困难"
+    },
+    "show_answer": {
+      "ar": "💡 عرض شرح الأستاذ",
+      "en": "💡 View Teacher's Explanation",
+      "zh": "💡 查看教师讲解"
+    },
+    "correct_answer": {
+      "ar": "الإجابة الصحيحة",
+      "en": "Correct Answer",
+      "zh": "正确答案"
+    },
+    "filter_subject": {
+      "ar": "المادة",
+      "en": "Subject",
+      "zh": "科目"
+    },
+    "filter_difficulty": {
+      "ar": "المستوى",
+      "en": "Level",
+      "zh": "难度"
+    }
+  },
+  "lessons_page": {
+    "title": {
+      "ar": "شروحات الدروس",
+      "en": "Lesson Explanations",
+      "zh": "课程讲解"
+    },
+    "back": {
+      "ar": "← العودة للرئيسية",
+      "en": "← Back to Home",
+      "zh": "← 返回首页"
+    },
+    "start_practice": {
+      "ar": "ابدأ التدريب على الأسئلة",
+      "en": "Start Practice Questions",
+      "zh": "开始练习题"
+    },
+    "sections": {
+      "ar": "الأقسام",
+      "en": "Sections",
+      "zh": "章节"
+    },
+    "definitions": {
+      "ar": "التعريفات والمفاهيم الأساسية",
+      "en": "Definitions & Basic Concepts",
+      "zh": "定义与基本概念"
+    },
+    "laws": {
+      "ar": "القوانين والصيغ الأساسية",
+      "en": "Key Laws & Formulas",
+      "zh": "关键定律与公式"
+    },
+    "examples": {
+      "ar": "أمثلة محلولة",
+      "en": "Solved Examples",
+      "zh": "例题解析"
+    },
+    "tips": {
+      "ar": "نصائح CSCA",
+      "en": "CSCA Tips",
+      "zh": "CSCA考试提示"
+    },
+    "mistakes": {
+      "ar": "الأخطاء الشائعة",
+      "en": "Common Mistakes",
+      "zh": "常见错误"
+    }
+  },
+  "lang_switcher": {
+    "ar": {
+      "ar": "🇸🇦 العربية",
+      "en": "🇸🇦 Arabic",
+      "zh": "🇸🇦 阿拉伯语"
+    },
+    "en": {
+      "ar": "🇬🇧 الإنجليزية",
+      "en": "🇬🇧 English",
+      "zh": "🇬🇧 英语"
+    },
+    "zh": {
+      "ar": "🇨🇳 الصينية",
+      "en": "🇨🇳 Chinese",
+      "zh": "🇨🇳 中文"
+    }
+  },
+  "start_btn": {
+    "ar": "ابدأ التدريب الآن →",
+    "en": "Start Practice Now →",
+    "zh": "开始练习 →"
+  },
+  "footer": {
+    "ar": "© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA",
+    "en": "© 2026 Abdul Hamid Excellence Academy | The Golden CSCA Syllabus",
+    "zh": "© 2026 阿卜杜勒·哈米德卓越学院 | CSCA黄金课程"
+  }
+}
