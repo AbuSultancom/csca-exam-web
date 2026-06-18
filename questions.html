@@ -9,8 +9,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body lang="ar">
-    <!-- Language Selector -->
-    <div style="background: rgba(10,11,16,0.95); border-bottom: 1px solid var(--glass-border); padding: 8px 0;">
+    <div style="background:rgba(10,11,16,0.95); border-bottom:1px solid var(--glass-border); padding:8px 0;">
         <div class="container" style="display:flex; justify-content:flex-start; align-items:center; gap:15px;">
             <span style="color:var(--text-dim); font-size:0.85rem;">🌐</span>
             <div id="lang-switcher" class="lang-switcher"></div>
@@ -20,235 +19,165 @@
     <nav class="main-nav">
         <div class="container">
             <div class="nav-links">
-                <a href="index.html" data-i18n="nav.home">الرئيسية</a>
-                <a href="questions.html" class="active" data-i18n="nav.questions">بنك الأسئلة</a>
+                <a href="index.html" id="nav-home">الرئيسية</a>
+                <a href="questions.html" class="active" id="nav-questions">بنك الأسئلة</a>
             </div>
-            <div id="lang-switcher-nav"></div>
         </div>
     </nav>
 
     <main class="container">
-        <h1 class="section-title" style="margin-top:40px;" data-i18n="questions_page.title">بنك الأسئلة التدريبية</h1>
-        <p id="questions-subtitle" data-i18n="questions_page.subtitle">تدرب على 327 سؤالاً بمستويات صعوبة مختلفة</p>
+        <h1 class="section-title" style="margin-top:40px;" id="page-title">بنك الأسئلة التدريبية</h1>
+        <p id="page-sub" style="color:var(--text-dim);">تدرب على 327 سؤالاً بمستويات صعوبة مختلفة</p>
 
-        <!-- Subject Filter -->
         <div class="filter-container" id="subject-filters">
-            <button class="filter-btn active" onclick="filterBySubject('all')" data-i18n="questions_page.all">الكل</button>
-            <button class="filter-btn" onclick="filterBySubject('رياضيات | Math')" data-i18n="subjects.math">📐 الرياضيات</button>
-            <button class="filter-btn" onclick="filterBySubject('فيزياء | Physics')" data-i18n="subjects.physics">⚡ الفيزياء</button>
-            <button class="filter-btn" onclick="filterBySubject('كيمياء | Chemistry')" data-i18n="subjects.chemistry">🧪 الكيمياء</button>
+            <button class="filter-btn active" onclick="filterSub('all',this)">الكل</button>
+            <button class="filter-btn" onclick="filterSub('رياضيات | Math',this)">📐 الرياضيات</button>
+            <button class="filter-btn" onclick="filterSub('فيزياء | Physics',this)">⚡ الفيزياء</button>
+            <button class="filter-btn" onclick="filterSub('كيمياء | Chemistry',this)">🧪 الكيمياء</button>
         </div>
 
-        <!-- Difficulty Filter -->
-        <div class="filter-container" id="difficulty-filters">
-            <button class="filter-btn active" id="diff-all" onclick="filterByDifficulty('all')">الكل | All | 全部</button>
-            <button class="filter-btn" id="diff-easy" onclick="filterByDifficulty('easy')"><span class="diff-easy">●</span> سهل | Easy</button>
-            <button class="filter-btn" id="diff-med" onclick="filterByDifficulty('medium')"><span class="diff-medium">●</span> متوسط | Medium</button>
-            <button class="filter-btn" id="diff-hard" onclick="filterByDifficulty('hard')"><span class="diff-hard">●</span> صعب | Hard</button>
+        <div class="filter-container" id="diff-filters">
+            <button class="filter-btn active" onclick="filterDiff('all',this)">الكل</button>
+            <button class="filter-btn" onclick="filterDiff('easy',this)"><span style="color:#2ed573">●</span> سهل</button>
+            <button class="filter-btn" onclick="filterDiff('medium',this)"><span style="color:#ffa502">●</span> متوسط</button>
+            <button class="filter-btn" onclick="filterDiff('hard',this)"><span style="color:#ff4757">●</span> صعب</button>
         </div>
 
-        <!-- Stats bar -->
-        <div style="display:flex; gap:15px; flex-wrap:wrap; margin:20px 0; color:var(--text-dim); font-size:0.9rem;" id="stats-bar">
-            <span id="total-count">0</span> أسئلة
-        </div>
+        <p style="color:var(--text-dim); margin:15px 0; font-size:0.9rem;" id="stats-line">0 سؤال</p>
 
         <div id="questions-list"></div>
     </main>
 
     <footer>
-        <p data-i18n="footer">© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
+        <p>© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
     </footer>
 
-    <script src="app.js"></script>
     <script>
-        let allQuestions = [];
+    let lang = 'ar', allQ = [], activeSub = 'all', activeDiff = 'all';
 
-        function getQuestionText(q) {
-            const key = currentLang === 'ar' ? 'question_ar' : currentLang === 'zh' ? 'question_zh' : 'question_en';
-            return q[key] || q.question_ar || q.question_en || q.question || '';
+    function getLang() {
+        const s = localStorage.getItem('csca_lang');
+        const u = new URLSearchParams(window.location.search).get('lang');
+        lang = u || s || 'ar';
+        if (!['ar','en','zh'].includes(lang)) lang = 'ar';
+        localStorage.setItem('csca_lang', lang);
+        document.documentElement.lang = lang;
+        document.body.lang = lang;
+    }
+    function switchLang(to) {
+        lang = to; localStorage.setItem('csca_lang', to);
+        const u = new URL(window.location); u.searchParams.set('lang', to);
+        window.location.href = u.toString();
+    }
+    function renderLang() {
+        const c = document.getElementById('lang-switcher');
+        if (!c) return; c.innerHTML = '';
+        ['ar','en','zh'].forEach(l => {
+            const b = document.createElement('button');
+            b.className = 'lang-btn' + (l === lang ? ' active' : '');
+            b.textContent = l === 'ar' ? '🇸🇦 عربي' : l === 'en' ? '🇬🇧 EN' : '🇨🇳 中文';
+            b.onclick = () => switchLang(l);
+            c.appendChild(b);
+        });
+    }
+
+    // Text helpers
+    function qText(q) { return q['question_' + lang] || q.question_ar || q.question_en || ''; }
+    function expText(q) { return q['explanation_' + lang] || q.explanation_ar || q.explanation_en || ''; }
+    function optText(o) { return lang === 'ar' ? o.text : (lang === 'zh' ? (o.text_zh || o.text) : o.text); }
+    function subjText(s) {
+        if (lang === 'ar') return s.split('|')[0].trim();
+        if (lang === 'en') { if (s.includes('رياضيات')) return 'Math'; if (s.includes('فيزياء')) return 'Physics'; if (s.includes('كيمياء')) return 'Chemistry'; return s; }
+        if (lang === 'zh') { if (s.includes('رياضيات')) return '数学'; if (s.includes('فيزياء')) return '物理'; if (s.includes('كيمياء')) return '化学'; return s; }
+    }
+    function diffText(d) {
+        const m = {'easy':{ar:'سهل',en:'Easy',zh:'简单'},'medium':{ar:'متوسط',en:'Medium',zh:'中等'},'hard':{ar:'صعب',en:'Hard',zh:'困难'}};
+        return (m[d] && m[d][lang]) || d;
+    }
+    function tagClass(s) {
+        if (s.includes('رياضيات')||s.includes('Math')) return 'tag-math';
+        if (s.includes('فيزياء')||s.includes('Physics')) return 'tag-phys';
+        return 'tag-chem';
+    }
+    function correctText(q) {
+        const o = q.options.find(o => o.label === q.correct);
+        return o ? q.correct + '. ' + optText(o) : q.correct;
+    }
+
+    function showQ(id) {
+        const d = document.getElementById('exp-' + id);
+        if (d) d.open = !d.open;
+    }
+
+    function display(questions) {
+        const el = document.getElementById('questions-list');
+        el.innerHTML = '';
+        if (!questions.length) {
+            el.innerHTML = '<div class="card glass" style="text-align:center;padding:40px;"><p style="color:var(--text-dim);">📭 ' + (lang==='ar'?'لا توجد أسئلة':lang==='zh'?'没有找到问题':'No questions found') + '</p></div>';
+            return;
         }
-
-        function getExplanation(q) {
-            const key = currentLang === 'ar' ? 'explanation_ar' : currentLang === 'zh' ? 'explanation_zh' : 'explanation_en';
-            return q[key] || q.explanation_ar || q.explanation_en || q.eng_explanation || '';
-        }
-
-        function getOptionText(opt) {
-            const key = currentLang === 'ar' ? 'text' : currentLang === 'zh' ? 'text_zh' : 'text';
-            return opt[key] || opt.text || opt.text_zh || '';
-        }
-
-        function getCorrectText(q) {
-            const opt = q.options.find(o => o.label === q.correct);
-            if (opt) {
-                return `${q.correct}. ${getOptionText(opt)}`;
-            }
-            return q.correct || '';
-        }
-
-        function getSubjectName(subject) {
-            if (currentLang === 'ar') {
-                return subject.split('|')[0].trim();
-            } else if (currentLang === 'zh') {
-                if (subject.includes('رياضيات')) return '数学';
-                if (subject.includes('فيزياء')) return '物理';
-                if (subject.includes('كيمياء')) return '化学';
-                return subject;
-            } else {
-                return subject.split('|')[1]?.trim() || subject;
-            }
-        }
-
-        function getDifficultyText(difficulty) {
-            const map = {
-                'easy': {ar: 'سهل', en: 'Easy', zh: '简单'},
-                'medium': {ar: 'متوسط', en: 'Medium', zh: '中等'},
-                'hard': {ar: 'صعب', en: 'Hard', zh: '困难'}
-            };
-            const m = map[difficulty];
-            return m ? m[currentLang] || m.en : difficulty;
-        }
-
-        function getTagClass(subject) {
-            if (subject.includes('رياضيات') || subject.includes('Math')) return 'tag-math';
-            if (subject.includes('فيزياء') || subject.includes('Physics')) return 'tag-phys';
-            if (subject.includes('كيمياء') || subject.includes('Chemistry')) return 'tag-chem';
-            return 'tag-math';
-        }
-
-        function showAnswer(questionId) {
-            const details = document.getElementById(`explanation-${questionId}`);
-            if (details) {
-                details.open = !details.open;
-            }
-        }
-
-        function displayQuestions(questions) {
-            const list = document.getElementById('questions-list');
-            list.innerHTML = '';
-
-            if (questions.length === 0) {
-                list.innerHTML = '<div class="card glass" style="text-align:center; padding:40px;"><p style="color:var(--text-dim);">📭 لا توجد أسئلة مطابقة</p></div>';
-                return;
-            }
-
-            questions.forEach(q => {
-                const tagClass = getTagClass(q.subject);
-                const subjectName = getSubjectName(q.subject);
-                const questionText = getQuestionText(q);
-                const difficulty = getDifficultyText(q.difficulty);
-                const diffClass = `diff-${q.difficulty}`;
-                const options = q.options || [];
-
-                const card = document.createElement('div');
-                card.className = 'card glass question-card';
-                card.style.marginBottom = '20px';
-                card.innerHTML = `
-                    <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px;">
-                        <span class="tag ${tagClass}">${subjectName}</span>
-                        <span class="card-difficulty ${diffClass}">${difficulty}</span>
+        questions.forEach(q => {
+            const opts = q.options || [];
+            const cards = document.createElement('div');
+            cards.className = 'card glass question-card';
+            cards.style.marginBottom = '20px';
+            cards.innerHTML = `
+                <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px;">
+                    <span class="tag ${tagClass(q.subject)}">${subjText(q.subject)}</span>
+                    <span class="card-difficulty diff-${q.difficulty}">${diffText(q.difficulty)}</span>
+                </div>
+                <p style="font-size:1.1rem; margin-bottom:15px; font-weight:600;">${qText(q)}</p>
+                <div style="margin:15px 0;">
+                    ${opts.map((o,i) => `<label style="display:block; margin:8px 0; cursor:pointer; padding:8px 15px; border-radius:10px;" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background=''">
+                        <input type="radio" name="q${q.id}" style="margin-left:10px;" onchange="showQ(${q.id})"> ${o.label}. ${optText(o)}
+                    </label>`).join('')}
+                </div>
+                <details id="exp-${q.id}">
+                    <summary style="color:var(--primary); cursor:pointer; font-weight:bold;">💡 ${lang==='ar'?'عرض شرح الأستاذ':lang==='zh'?'查看教师讲解':'View Explanation'}</summary>
+                    <div style="padding:20px; background:rgba(0,0,0,0.2); border-radius:12px; border-right:4px solid #2ed573;">
+                        <p style="color:#2ed573; font-weight:bold; margin-bottom:10px;">${lang==='ar'?'الإجابة الصحيحة':lang==='zh'?'正确答案':'Correct Answer'}: ${correctText(q)}</p>
+                        <p style="margin-top:10px;">${expText(q)}</p>
                     </div>
-                    <p class="question-text">${questionText}</p>
-                    ${currentLang === 'ar' || currentLang === 'zh' ? '' : `<p class="question-en"><em>${q.question_ar || ''}</em></p>`}
-                    <div style="margin: 15px 0;">
-                        ${options.map((opt, i) => `
-                            <label class="option-label" style="display:block; margin:8px 0; cursor:pointer;">
-                                <input type="radio" name="q${q.id}" class="option-input" onchange="showAnswer(${q.id})">
-                                ${opt.label}. ${getOptionText(opt)}
-                            </label>
-                        `).join('')}
-                    </div>
-                    <details id="explanation-${q.id}">
-                        <summary style="color: var(--primary); cursor: pointer; font-weight: bold;">
-                            💡 ${t('questions_page.show_answer') || 'عرض شرح الأستاذ'}
-                        </summary>
-                        <div class="explanation-box">
-                            <p class="correct-answer">${t('questions_page.correct_answer') || 'الإجابة الصحيحة'}: ${getCorrectText(q)}</p>
-                            <p style="margin-top:10px;">${getExplanation(q)}</p>
-                        </div>
-                    </details>
-                `;
-                list.appendChild(card);
-            });
+                </details>
+            `;
+            el.appendChild(cards);
+        });
+        document.getElementById('stats-line').textContent = questions.length + ' ' + (lang==='ar'?'سؤال':lang==='zh'?'道题':'questions');
+        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
+    }
 
-            // Update stats
-            const totalSpan = document.getElementById('total-count');
-            if (totalSpan) totalSpan.textContent = questions.length;
+    function apply() {
+        let f = [...allQ];
+        if (activeSub !== 'all') f = f.filter(q => q.subject === activeSub);
+        if (activeDiff !== 'all') f = f.filter(q => q.difficulty === activeDiff);
+        display(f);
+    }
 
-            // Re-render MathJax
-            if (window.MathJax && MathJax.typesetPromise) {
-                MathJax.typesetPromise();
-            }
+    function filterSub(sub, btn) {
+        activeSub = sub;
+        document.querySelectorAll('#subject-filters .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        apply();
+    }
+    function filterDiff(diff, btn) {
+        activeDiff = diff;
+        document.querySelectorAll('#diff-filters .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        apply();
+    }
+
+    async function init() {
+        getLang();
+        renderLang();
+        try {
+            const r = await fetch('data/questions.json');
+            allQ = await r.json();
+            apply();
+        } catch(e) {
+            document.getElementById('questions-list').innerHTML = '<div class="error-msg" style="text-align:center;padding:40px;color:var(--danger);">❌ فشل تحميل الأسئلة</div>';
         }
-
-        let activeSubject = 'all';
-        let activeDifficulty = 'all';
-
-        function filterBySubject(subject) {
-            activeSubject = subject;
-            document.querySelectorAll('#subject-filters .filter-btn').forEach(btn => {
-                btn.classList.toggle('active', 
-                    btn === event.target || 
-                    (subject === 'all' && btn.textContent.includes(t('questions_page.all'))));
-            });
-            // Better way:
-            document.querySelectorAll('#subject-filters .filter-btn').forEach((btn, i) => {
-                if (subject === 'all' && i === 0) btn.classList.add('active');
-                else if (subject !== 'all' && btn.textContent.replace(/[📐⚡🧪]/g,'').trim().includes(subject.split('|')[0].trim())) btn.classList.add('active');
-                else btn.classList.remove('active');
-            });
-            applyFilters();
-        }
-
-        function filterByDifficulty(difficulty) {
-            activeDifficulty = difficulty;
-            document.querySelectorAll('#difficulty-filters .filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            const idMap = {'all': 'diff-all', 'easy': 'diff-easy', 'medium': 'diff-med', 'hard': 'diff-hard'};
-            const target = document.getElementById(idMap[difficulty]);
-            if (target) target.classList.add('active');
-            applyFilters();
-        }
-
-        function applyFilters() {
-            let filtered = [...allQuestions];
-
-            if (activeSubject !== 'all') {
-                filtered = filtered.filter(q => q.subject === activeSubject);
-            }
-
-            if (activeDifficulty !== 'all') {
-                filtered = filtered.filter(q => q.difficulty === activeDifficulty);
-            }
-
-            displayQuestions(filtered);
-        }
-
-        async function loadQuestions() {
-            try {
-                const res = await fetch('data/questions.json');
-                allQuestions = await res.json();
-                await loadTranslations();
-                applyFilters();
-            } catch(e) {
-                console.error('Failed to load questions:', e);
-                document.getElementById('questions-list').innerHTML = 
-                    '<div class="error-msg">❌ فشل تحميل الأسئلة. تأكد من اتصال الإنترنت.</div>';
-            }
-        }
-
-        async function init() {
-            initLang();
-            renderLangSwitcher();
-            // Copy lang switcher to nav
-            const navSwitcher = document.getElementById('lang-switcher-nav');
-            if (navSwitcher) setTimeout(() => { navSwitcher.innerHTML = document.getElementById('lang-switcher').innerHTML; }, 100);
-            await loadQuestions();
-            applyTranslations();
-        }
-
-        init();
+    }
+    init();
     </script>
 </body>
 </html>

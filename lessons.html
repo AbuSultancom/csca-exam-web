@@ -7,10 +7,30 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .lesson-section { margin:30px 0; padding:25px; border-radius:16px; background:rgba(255,255,255,0.03); border:1px solid var(--glass-border); }
+        .lesson-section h2 { color:var(--primary); margin-bottom:20px; font-size:1.5rem; }
+        .lesson-section h3 { color:#fff; margin:20px 0 10px; font-size:1.2rem; }
+        .lesson-section p, .lesson-section li { color:var(--text-dim); line-height:1.8; margin:8px 0; }
+        .def-box { background:rgba(76,201,240,0.08); border-right:4px solid var(--primary); padding:20px; margin:20px 0; border-radius:12px; }
+        .law-box { background:rgba(67,97,238,0.08); border:1px dashed var(--secondary); padding:20px; margin:20px 0; border-radius:12px; }
+        .ex-box { background:rgba(46,213,115,0.05); border:1px dashed #2ed573; padding:25px; margin:25px 0; border-radius:15px; }
+        .ex-box h4 { color:#2ed573; margin-bottom:15px; }
+        .tip-box { background:rgba(255,165,2,0.08); border-right:5px solid #ffa502; padding:20px; margin:20px 0; border-radius:12px; }
+        .tip-box h4 { color:#ffa502; }
+        .pit-box { background:rgba(255,71,87,0.08); border-right:5px solid #ff4757; padding:20px; margin:20px 0; border-radius:12px; }
+        .pit-box h4 { color:#ff4757; }
+        body[lang="en"] .def-box, body[lang="zh"] .def-box { border-right:none; border-left:4px solid var(--primary); }
+        body[lang="en"] .tip-box, body[lang="zh"] .tip-box { border-right:none; border-left:5px solid #ffa502; }
+        body[lang="en"] .pit-box, body[lang="zh"] .pit-box { border-right:none; border-left:5px solid #ff4757; }
+        body[lang="zh"] .lesson-section p, body[lang="zh"] .lesson-section li { font-size:0.95rem; }
+        .back-link { display:inline-block; color:var(--primary); text-decoration:none; font-weight:600; margin:20px 0; }
+        body[lang="ar"] .back-link:hover { transform:translateX(-5px); }
+        body[lang="en"] .back-link { transform:scaleX(-1); } /* opposite direction */
+    </style>
 </head>
 <body lang="ar">
-    <!-- Language Selector -->
-    <div style="background: rgba(10,11,16,0.95); border-bottom: 1px solid var(--glass-border); padding: 8px 0;">
+    <div style="background:rgba(10,11,16,0.95); border-bottom:1px solid var(--glass-border); padding:8px 0;">
         <div class="container" style="display:flex; justify-content:flex-start; align-items:center; gap:15px;">
             <span style="color:var(--text-dim); font-size:0.85rem;">🌐</span>
             <div id="lang-switcher" class="lang-switcher"></div>
@@ -18,125 +38,116 @@
     </div>
 
     <main class="container">
-        <a href="index.html" class="back-btn" id="back-link" data-i18n="lessons_page.back">← العودة للرئيسية</a>
-        <div id="lesson-content">
-            <div class="loading" data-i18n="lessons_page.title">جاري تحميل الدرس...</div>
+        <a href="index.html" class="back-link" id="back-link">← العودة للرئيسية</a>
+        <div id="lesson-content" style="margin-top:20px;">
+            <div class="loading" style="text-align:center; padding:60px; color:var(--text-dim);">جاري تحميل الدرس...</div>
         </div>
     </main>
 
     <footer>
-        <p data-i18n="footer">© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
+        <p id="footer-text">© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
     </footer>
 
-    <script src="app.js"></script>
     <script>
-        let lessonData = null;
+    let lang = 'ar';
 
-        function getContent(lesson, field) {
-            const key = `${field}_${currentLang}`;
-            const fallbackKey = `${field}_ar`;
-            return lesson[key] || lesson[fallbackKey] || lesson[field] || '';
+    function getLang() {
+        const s = localStorage.getItem('csca_lang');
+        const u = new URLSearchParams(window.location.search).get('lang');
+        lang = u || s || 'ar';
+        if (!['ar','en','zh'].includes(lang)) lang = 'ar';
+        localStorage.setItem('csca_lang', lang);
+        document.documentElement.lang = lang;
+        document.body.lang = lang;
+    }
+
+    function switchLang(to) {
+        lang = to;
+        localStorage.setItem('csca_lang', to);
+        const u = new URL(window.location);
+        u.searchParams.set('lang', to);
+        window.location.href = u.toString();
+    }
+
+    function renderLang() {
+        const c = document.getElementById('lang-switcher');
+        if (!c) return;
+        c.innerHTML = '';
+        ['ar','en','zh'].forEach(l => {
+            const b = document.createElement('button');
+            b.className = 'lang-btn' + (l === lang ? ' active' : '');
+            b.textContent = l === 'ar' ? '🇸🇦 عربي' : l === 'en' ? '🇬🇧 EN' : '🇨🇳 中文';
+            b.onclick = () => switchLang(l);
+            c.appendChild(b);
+        });
+    }
+
+    function getContent(l, field) {
+        return l[field + '_' + lang] || l[field + '_ar'] || l[field] || '';
+    }
+
+    function renderLesson(lesson) {
+        const el = document.getElementById('lesson-content');
+        if (!lesson) { el.innerHTML = '<div class="error-msg" style="text-align:center;padding:40px;color:var(--danger);">❌ الدرس غير موجود</div>'; return; }
+
+        const title = getContent(lesson, 'title');
+        document.title = title + ' - CSCA';
+        document.getElementById('back-link').innerHTML = '← ' + (lang === 'ar' ? 'العودة للرئيسية' : lang === 'zh' ? '返回首页' : 'Back to Home');
+
+        let html = '<h1 class="section-title" style="margin-top:30px;">' + title + '</h1>';
+        const sections = lesson.sections || [];
+
+        sections.forEach(s => {
+            const h = getContent(s, 'heading');
+            const c = getContent(s, 'content');
+            if (!c) return;
+
+            let boxClass = '';
+            const hl = (h + '').toLowerCase();
+            const cl = (c + '').toLowerCase();
+            if (hl.includes('تعريف') || hl.includes('definition') || hl.includes('概念') || hl.includes('مفهوم') || hl.includes('basic')) boxClass = 'def-box';
+            else if (hl.includes('مثال') || hl.includes('example') || hl.includes('例题') || hl.includes('مسألة')) boxClass = 'ex-box';
+            else if (hl.includes('خطأ') || hl.includes('mistake') || hl.includes('شائع') || hl.includes('خطاء')) boxClass = 'pit-box';
+            else if (hl.includes('نصيحة') || hl.includes('tip') || hl.includes('csca') || hl.includes('提示')) boxClass = 'tip-box';
+            else if (hl.includes('قانون') || hl.includes('law') || hl.includes('formula') || hl.includes('صيغة') || hl.includes('معادلة') || hl.includes('قاعدة')) boxClass = 'law-box';
+
+            html += '<div class="lesson-section ' + boxClass + '"><h2>' + h + '</h2>';
+            html += c.split('\n').filter(l => l.trim()).map(l => '<p>' + l.replace(/^[•\-*]\s*/, '') + '</p>').join('');
+            html += '</div>';
+        });
+
+        html += '<div style="text-align:center; margin:50px 0;"><a href="questions.html?lang=' + lang + '" class="start-btn" style="display:inline-block; background:var(--accent); color:#fff; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem;">📝 ' + (lang === 'ar' ? 'ابدأ التدريب على الأسئلة' : lang === 'zh' ? '开始练习' : 'Start Practice') + '</a></div>';
+        html += '<div class="developer-sig"><h3>🏆 ' + (lang === 'ar' ? 'أتمنى لكم النجاح' : lang === 'zh' ? '祝您成功' : 'Wishing you success') + '</h3><p class="motivational">' + (lang === 'ar' ? 'بالاجتهاد والمثابرة تحقق الأحلام' : lang === 'zh' ? '通过努力和坚持实现梦想' : 'Through diligence and perseverance, dreams come true') + '</p></div>';
+
+        el.innerHTML = html;
+
+        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
+    }
+
+    async function init() {
+        getLang();
+        renderLang();
+
+        const params = new URLSearchParams(window.location.search);
+        const lid = params.get('id');
+
+        if (!lid) {
+            document.getElementById('lesson-content').innerHTML = '<div class="error-msg" style="text-align:center;padding:40px;color:var(--danger);">❌ لم يتم تحديد درس. اختر درساً من الصفحة الرئيسية.</div>';
+            return;
         }
 
-        function renderLesson(lesson) {
-            const container = document.getElementById('lesson-content');
-            if (!lesson) {
-                container.innerHTML = '<div class="error-msg">❌ الدرس غير موجود</div>';
-                return;
-            }
-
-            const title = getContent(lesson, 'title');
-            const sections = lesson.sections || [];
-
-            document.title = `${title} - CSCA`;
-            document.querySelector('#back-link').innerHTML = `← ${t('lessons_page.back')}`;
-
-            let html = `<h1 class="section-title" style="margin-top:30px;">${title}</h1>`;
-
-            sections.forEach(section => {
-                const heading = getContent(section, 'heading');
-                const content = getContent(section, 'content');
-
-                if (!content) return;
-
-                // Determine box style based on heading keywords
-                let boxClass = '';
-                const hLower = (heading + '').toLowerCase();
-                const cLower = (content + '').toLowerCase();
-                if (hLower.includes('تعريف') || hLower.includes('definition') || hLower.includes('概念') || cLower.includes('هو') || cLower.includes('is defined')) {
-                    boxClass = 'definition-box';
-                } else if (hLower.includes('مثال') || hLower.includes('example') || hLower.includes('例题')) {
-                    boxClass = 'example-box';
-                } else if (hLower.includes('خطأ') || hLower.includes('mistake') || hLower.includes('错误') || hLower.includes('شائع')) {
-                    boxClass = 'pitfall-box';
-                } else if (hLower.includes('نصيحة') || hLower.includes('tip') || hLower.includes('csca') || hLower.includes('提示')) {
-                    boxClass = 'tip-box';
-                } else if (hLower.includes('قانون') || hLower.includes('law') || hLower.includes('formula') || hLower.includes('صيغة') || hLower.includes('公式') || hLower.includes('معادلة')) {
-                    boxClass = 'law-box';
-                }
-
-                html += `
-                    <div class="lesson-section ${boxClass}">
-                        <h2>${heading}</h2>
-                        ${content.split('\n').filter(line => line.trim()).map(line => {
-                            line = line.trim();
-                            if (line.startsWith('•') || line.startsWith('-') || line.startsWith('*')) {
-                                return `<p style="padding-right:15px;">${line}</p>`;
-                            }
-                            return `<p>${line}</p>`;
-                        }).join('')}
-                    </div>
-                `;
-            });
-
-            // Add practice link
-            html += `
-                <div style="text-align:center; margin:50px 0;">
-                    <a href="questions.html?lang=${currentLang}" class="btn" style="display:inline-block; background:var(--accent); color:#fff; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem;">📝 ${t('lessons_page.start_practice')}</a>
-                </div>
-                <div class="developer-sig">
-                    <h3>🏆 ${currentLang === 'ar' ? 'أتمنى لكم النجاح' : currentLang === 'zh' ? '祝您成功' : 'Wishing you success'}</h3>
-                    <p class="motivational">${currentLang === 'ar' ? 'بالاجتهاد والمثابرة تحقق الأحلام' : currentLang === 'zh' ? '通过努力和坚持实现梦想' : 'Through diligence and perseverance, dreams come true'}</p>
-                </div>
-            `;
-
-            container.innerHTML = html;
-
-            // Re-render MathJax
-            if (window.MathJax && MathJax.typesetPromise) {
-                MathJax.typesetPromise();
-            }
+        try {
+            const r = await fetch('data/content.json');
+            const lessons = await r.json();
+            const lesson = lessons.find(l => String(l.id) === lid);
+            renderLesson(lesson);
+        } catch(e) {
+            console.error(e);
+            document.getElementById('lesson-content').innerHTML = '<div class="error-msg" style="text-align:center;padding:40px;color:var(--danger);">❌ فشل تحميل الدرس. تأكد من الاتصال.</div>';
         }
+    }
 
-        async function loadLesson() {
-            const params = new URLSearchParams(window.location.search);
-            const lessonId = params.get('id');
-
-            if (!lessonId) {
-                document.getElementById('lesson-content').innerHTML = '<div class="error-msg">❌ لم يتم تحديد الدرس. الرجاء العودة للصفحة الرئيسية واختيار درس.</div>';
-                return;
-            }
-
-            try {
-                const res = await fetch('data/content.json');
-                const lessons = await res.json();
-                lessonData = lessons.find(l => l.id === lessonId);
-                await loadTranslations();
-                renderLesson(lessonData);
-            } catch(e) {
-                console.error('Failed to load lesson:', e);
-                document.getElementById('lesson-content').innerHTML = '<div class="error-msg">❌ فشل تحميل الدرس. تأكد من اتصال الإنترنت.</div>';
-            }
-        }
-
-        async function init() {
-            initLang();
-            renderLangSwitcher();
-            await loadLesson();
-            applyTranslations();
-        }
-
-        init();
+    init();
     </script>
 </body>
 </html>

@@ -7,22 +7,34 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .lang-bar { background: rgba(10,11,16,0.95); border-bottom: 1px solid var(--glass-border); padding: 8px 0; }
+        .lang-bar .container { display:flex; justify-content:flex-start; align-items:center; gap:15px; flex-wrap:wrap; }
+        .top-lang-label { color:var(--text-dim); font-size:0.85rem; }
+        .exam-section { padding: 50px 0; }
+        .exam-section-title { font-size:1.8rem; margin-bottom:25px; position:relative; padding-bottom:10px; }
+        .exam-section-title::after { content:''; position:absolute; bottom:0; width:60px; height:4px; background:var(--primary); border-radius:2px; right:0; }
+        body[lang="en"] .exam-section-title::after, body[lang="zh"] .exam-section-title::after { right:auto; left:0; }
+        .exam-desc { background:linear-gradient(135deg, rgba(247,37,133,0.1), rgba(76,201,240,0.1)); border:2px solid var(--accent); border-radius:24px; padding:40px; margin:50px 0; }
+        .motivation-section { text-align:center; padding:40px; }
+        .start-btn { display:inline-block; background:var(--accent); color:#fff; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem; }
+        .study-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:25px; }
+    </style>
 </head>
 <body lang="ar">
-    <!-- Language Selector Bar -->
-    <div style="background: rgba(10,11,16,0.95); border-bottom: 1px solid var(--glass-border); padding: 8px 0;">
-        <div class="container" style="display:flex; justify-content:flex-start; align-items:center; gap:15px; flex-wrap:wrap;">
-            <span style="color:var(--text-dim); font-size:0.85rem;" data-i18n="lang_switcher.ar">🌐 اللغة | Language | 语言</span>
+    <div class="lang-bar">
+        <div class="container">
+            <span class="top-lang-label" id="lang-label">🌐</span>
             <div id="lang-switcher" class="lang-switcher"></div>
         </div>
     </div>
 
     <header class="hero">
         <div class="hero-content">
-            <h1 data-i18n="hero.title">🎯 أكاديمية CSCA للتميز</h1>
-            <p data-i18n="hero.subtitle_ar">منصتك الشاملة لاجتياز اختبار القدرات الدراسية الصيني</p>
+            <h1 id="hero-title">🎯 أكاديمية CSCA للتميز</h1>
+            <p id="hero-subtitle">منصتك الشاملة لاجتياز اختبار القدرات الدراسية الصيني</p>
             <div class="search-container">
-                <input type="text" id="search" data-i18n="hero.search_placeholder" placeholder="ابحث عن درس، قاعدة، أو سؤال..." />
+                <input type="text" id="search" placeholder="ابحث عن درس، قاعدة، أو سؤال..." />
                 <span class="search-icon">🔍</span>
             </div>
         </div>
@@ -31,314 +43,322 @@
     <nav class="main-nav">
         <div class="container">
             <div class="nav-links">
-                <a href="index.html" class="active" data-i18n="nav.home">الرئيسية</a>
-                <a href="questions.html" data-i18n="nav.questions">بنك الأسئلة</a>
+                <a href="index.html" class="active" id="nav-home">الرئيسية</a>
+                <a href="questions.html" id="nav-questions">بنك الأسئلة</a>
             </div>
             <div id="lang-switcher-nav"></div>
         </div>
     </nav>
 
     <main class="container">
-        <!-- Stats -->
         <div class="stats-grid">
-            <div class="stat-card" id="stat-lessons">
-                <div class="stat-number">19</div>
-                <div class="stat-label" data-i18n="stats.lessons">درس كامل</div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-lessons-num">0</div>
+                <div class="stat-label" id="stat-lessons-lbl">درس كامل</div>
             </div>
-            <div class="stat-card" id="stat-lines">
-                <div class="stat-number">8,500+</div>
-                <div class="stat-label" data-i18n="stats.lines">سطر من المحتوى</div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-lines-num">8,500+</div>
+                <div class="stat-label" id="stat-lines-lbl">سطر من المحتوى</div>
             </div>
-            <div class="stat-card" id="stat-questions">
-                <div class="stat-number">327</div>
-                <div class="stat-label" data-i18n="stats.questions">سؤال تدريبي</div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-questions-num">0</div>
+                <div class="stat-label" id="stat-questions-lbl">سؤال تدريبي</div>
             </div>
-            <div class="stat-card" id="stat-subjects">
+            <div class="stat-card">
                 <div class="stat-number">3</div>
-                <div class="stat-label" data-i18n="stats.subjects">مواد</div>
+                <div class="stat-label" id="stat-subjects-lbl">مواد</div>
             </div>
         </div>
 
-        <!-- Exam Info -->
-        <section class="exam-info">
-            <h2 style="text-align:center; margin-bottom:30px;" data-i18n="exam_info.title">📋 معلومات اختبار CSCA</h2>
-            <div class="info-row">
-                <div class="info-item">
-                    <div class="info-value" data-i18n="exam_info.duration_val">60 دقيقة</div>
-                    <div class="info-label" data-i18n="exam_info.duration_label">مدة كل اختبار</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-value" data-i18n="exam_info.questions_val">48 سؤال</div>
-                    <div class="info-label" data-i18n="exam_info.questions_label">أسئلة اختيار من متعدد</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-value" data-i18n="exam_info.points_val">100 درجة</div>
-                    <div class="info-label" data-i18n="exam_info.points_label">الدرجة القصوى</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-value" data-i18n="exam_info.lang_val">中文</div>
-                    <div class="info-label" data-i18n="exam_info.lang_label">لغة الاختبار</div>
-                </div>
-            </div>
-            <p style="text-align:center; color:var(--text-dim); margin-top:20px;" data-i18n="exam_info.desc">
-                اختبار القدرات الدراسية الصيني (CSCA) هو الاختبار الموحد للطلاب الدوليين الراغبين في الدراسة في الجامعات الصينية
-            </p>
-        </section>
+        <div class="exam-desc">
+            <h2 style="text-align:center; margin-bottom:30px;" id="exam-title">📋 معلومات اختبار CSCA</h2>
+            <div class="info-row" id="exam-info-row"></div>
+            <p style="text-align:center; color:var(--text-dim); margin-top:20px;" id="exam-desc-text">اختبار القدرات الدراسية الصيني (CSCA)...</p>
+        </div>
 
         <!-- Mathematics -->
-        <section class="subject-section">
-            <h2 class="section-title" data-i18n="subjects.math">📐 الرياضيات</h2>
-            <p style="color:var(--text-dim); margin-bottom:20px;" data-i18n="subjects.math_weight">(35% وزن)</p>
-            <div class="grid" id="math-lessons"></div>
+        <section class="exam-section">
+            <h2 class="exam-section-title" id="subject-math">📐 الرياضيات</h2>
+            <p style="color:var(--text-dim); margin-bottom:20px;" id="subject-math-w">(35% وزن)</p>
+            <div class="grid" id="math-lessons">
+                <div class="loading" style="text-align:center; padding:40px; color:var(--text-dim);">جاري تحميل الدروس...</div>
+            </div>
         </section>
 
         <!-- Physics -->
-        <section class="subject-section">
-            <h2 class="section-title" data-i18n="subjects.physics">⚡ الفيزياء</h2>
-            <p style="color:var(--text-dim); margin-bottom:20px;">5 وحدات تغطي جميع مواضيع الفيزياء في CSCA</p>
-            <div class="grid" id="physics-lessons"></div>
-        </section>
-
-        <!-- Chemistry -->
-        <section class="subject-section">
-            <h2 class="section-title" data-i18n="subjects.chemistry">🧪 الكيمياء</h2>
-            <p style="color:var(--text-dim); margin-bottom:20px;">6 وحدات تغطي الكيمياء العضوية وغير العضوية والفيزيائية</p>
-            <div class="grid" id="chemistry-lessons"></div>
-        </section>
-
-        <!-- Study Plan -->
-        <section class="subject-section">
-            <h2 class="section-title" data-i18n="study_plan.title">📅 خطة الدراسة المقترحة</h2>
-            <div class="grid">
-                <div class="card glass">
-                    <h4 data-i18n="study_plan.week1_title">🗓️ الأسبوع 1-2: الأساسيات</h4>
-                    <p data-i18n="study_plan.week1_desc">المجموعات، المتباينات، التركيب الذري، الميكانيكا الأساسية</p>
-                </div>
-                <div class="card glass">
-                    <h4 data-i18n="study_plan.week2_title">🗓️ الأسبوع 3-4: المواد الأثقل</h4>
-                    <p data-i18n="study_plan.week2_desc">الدوال، الكهرباء والمغناطيسية، الكيمياء العضوية</p>
-                </div>
-                <div class="card glass">
-                    <h4 data-i18n="study_plan.week3_title">🗓️ الأسبوع 5-6: التكامل والتمارين</h4>
-                    <p data-i18n="study_plan.week3_desc">الهندسة، التفاضل والتكامل، الاحتمالات، التجارب المعملية</p>
-                </div>
-                <div class="card glass" style="border-color:var(--accent);">
-                    <h4 data-i18n="study_plan.week4_title">🎯 الأسبوع الأخير: نماذج امتحانات</h4>
-                    <p data-i18n="study_plan.week4_desc">حل 300+ سؤال تدريبي، مراجعة الأخطاء، التركيز على نقاط الضعف</p>
-                </div>
+        <section class="exam-section">
+            <h2 class="exam-section-title" id="subject-phys">⚡ الفيزياء</h2>
+            <p style="color:var(--text-dim); margin-bottom:20px;">5 وحدات</p>
+            <div class="grid" id="physics-lessons">
+                <div class="loading" style="text-align:center; padding:40px; color:var(--text-dim);">جاري تحميل الدروس...</div>
             </div>
         </section>
 
-        <!-- Exam Tips -->
-        <section class="subject-section" id="about">
-            <h2 class="section-title" data-i18n="tips.title">💡 نصائح لاجتياز الاختبار</h2>
-            <div id="tips-container" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;"></div>
+        <!-- Chemistry -->
+        <section class="exam-section">
+            <h2 class="exam-section-title" id="subject-chem">🧪 الكيمياء</h2>
+            <p style="color:var(--text-dim); margin-bottom:20px;">6 وحدات</p>
+            <div class="grid" id="chemistry-lessons">
+                <div class="loading" style="text-align:center; padding:40px; color:var(--text-dim);">جاري تحميل الدروس...</div>
+            </div>
         </section>
 
-        <section class="subject-section" style="text-align:center; padding:40px;">
-            <h2 id="motivation-title" style="font-size:1.8rem;">🏆 انطلق في رحلة النجاح!</h2>
-            <p style="color:var(--text-dim); margin:20px 0;" id="motivation-sub">اختر درساً أعلاه أو ابدأ ببنك الأسئلة</p>
-            <a href="questions.html" class="btn" id="start-btn" style="display:inline-block; background:var(--accent); color:#fff; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem;" data-i18n="start_btn">ابدأ التدريب الآن →</a>
+        <!-- Study Plan -->
+        <section class="exam-section">
+            <h2 class="exam-section-title" id="plan-title">📅 خطة الدراسة المقترحة</h2>
+            <div class="study-grid" id="plan-grid"></div>
+        </section>
+
+        <section class="exam-section" id="about">
+            <h2 class="exam-section-title" id="tips-title">💡 نصائح لاجتياز الاختبار</h2>
+            <div class="grid" id="tips-grid"></div>
+        </section>
+
+        <section class="motivation-section">
+            <h2 id="motiv-title">🏆 انطلق في رحلة النجاح!</h2>
+            <p style="color:var(--text-dim); margin:20px 0;" id="motiv-sub">اختر درساً أعلاه أو ابدأ ببنك الأسئلة</p>
+            <a href="questions.html" class="start-btn" id="motiv-btn">ابدأ التدريب الآن →</a>
         </section>
     </main>
 
     <footer>
-        <p data-i18n="footer">© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
+        <p id="footer-text">© 2026 أكاديمية عبد الحميد للتميز | المنهج الذهبي CSCA</p>
     </footer>
 
-    <script src="app.js"></script>
     <script>
-        // === Load lessons dynamically ===
-        let allLessons = [];
-        let allQuestions = [];
+    // ====== Core App ======
+    let lang = 'ar';
+    let tr = {};
+    let allQs = [];
+    let allLs = [];
 
-        async function loadLessons() {
-            try {
-                const res = await fetch('data/content.json');
-                allLessons = await res.json();
-                await loadTranslations();
-                renderLessonCards();
-                renderTips();
-                renderStats();
-            } catch(e) {
-                console.error('Failed to load lessons:', e);
-                document.getElementById('math-lessons').innerHTML = '<p class="error-msg">⚠️ فشل تحميل الدروس</p>';
-            }
-        }
+    // Language
+    function getLang() {
+        const stored = localStorage.getItem('csca_lang');
+        const url = new URLSearchParams(window.location.search).get('lang');
+        lang = url || stored || 'ar';
+        if (!['ar','en','zh'].includes(lang)) lang = 'ar';
+        localStorage.setItem('csca_lang', lang);
+        document.documentElement.lang = lang;
+        document.body.lang = lang;
+    }
 
-        function getLessonTitle(lesson) {
-            const key = currentLang === 'ar' ? 'title_ar' : currentLang === 'en' ? 'title_en' : 'title_zh';
-            return lesson[key] || lesson.title_ar || lesson.title_en || 'Lesson';
-        }
+    function switchLang(to) {
+        lang = to;
+        localStorage.setItem('csca_lang', to);
+        const u = new URL(window.location);
+        u.searchParams.set('lang', to);
+        window.location.href = u.toString();
+    }
 
-        function getLessonSummary(lesson) {
-            const key = `summary_${currentLang}`;
-            return lesson[key] || lesson.summary || '';
-        }
+    function trTxt(key) {
+        const k = key.split('.');
+        let v = tr;
+        for (const p of k) { if (v && v[p]) v = v[p]; else return key; }
+        return v && v[lang] ? v[lang] : (v && v.ar ? v.ar : key);
+    }
 
-        function getTopicName(topic) {
-            const map = {
-                'sets': {ar:'المجموعات', en:'Sets', zh:'集合'},
-                'inequalities': {ar:'المتباينات', en:'Inequalities', zh:'不等式'},
-                'functions': {ar:'الدوال', en:'Functions', zh:'函数'},
-                'geometry': {ar:'الهندسة', en:'Geometry', zh:'几何'},
-                'calculus': {ar:'التفاضل والتكامل', en:'Calculus', zh:'微积分'},
-                'probability': {ar:'الاحتمالات', en:'Probability', zh:'概率'},
-                'sequences': {ar:'المتتاليات', en:'Sequences', zh:'数列'},
-                'statistics': {ar:'الإحصاء', en:'Statistics', zh:'统计'},
-                'mechanics': {ar:'الميكانيكا', en:'Mechanics', zh:'力学'},
-                'electricity': {ar:'الكهرباء', en:'Electricity', zh:'电学'},
-                'waves': {ar:'الموجات', en:'Waves', zh:'波动'},
-                'optics': {ar:'البصريات', en:'Optics', zh:'光学'},
-                'thermo': {ar:'الديناميكا الحرارية', en:'Thermodynamics', zh:'热力学'},
-                'modern': {ar:'الفيزياء الحديثة', en:'Modern Physics', zh:'现代物理'},
-                'fluids': {ar:'الموائع', en:'Fluids', zh:'流体力学'},
-                'atomic': {ar:'التركيب الذري', en:'Atomic Structure', zh:'原子结构'},
-                'bonding': {ar:'الروابط الكيميائية', en:'Chemical Bonding', zh:'化学键'},
-                'equilibrium': {ar:'الاتزان الكيميائي', en:'Chemical Equilibrium', zh:'化学平衡'},
-                'kinetics': {ar:'الحركية الكيميائية', en:'Chemical Kinetics', zh:'化学动力学'},
-                'basic': {ar:'المفاهيم الأساسية', en:'Basic Concepts', zh:'基本概念'},
-                'inorganic': {ar:'الكيمياء غير العضوية', en:'Inorganic Chemistry', zh:'无机化学'},
-                'organic': {ar:'الكيمياء العضوية', en:'Organic Chemistry', zh:'有机化学'},
-                'organic_cn': {ar:'التسمية الصينية', en:'Chinese Nomenclature', zh:'中文命名'},
-                'physical': {ar:'الكيمياء الفيزيائية', en:'Physical Chemistry', zh:'物理化学'},
-                'stoichiometry': {ar:'الحساب الكيميائي', en:'Stoichiometry', zh:'化学计量'},
-                'thermochemistry': {ar:'الكيمياء الحرارية', en:'Thermochemistry', zh:'热化学'}
-            };
-            const m = map[topic];
-            return m ? m[currentLang] || m.en || topic : topic;
-        }
+    function langBtn(l) {
+        return l === 'ar' ? '🇸🇦 عربي' : l === 'en' ? '🇬🇧 EN' : '🇨🇳 中文';
+    }
 
-        function renderLessonCards() {
-            const containers = {
-                'رياضيات | Math': 'math-lessons',
-                'فيزياء | Physics': 'physics-lessons',
-                'كيمياء | Chemistry': 'chemistry-lessons'
-            };
-            // Also match subject_en
-            const enMap = {
-                'Mathematics': 'math-lessons',
-                'Physics': 'physics-lessons',
-                'Chemistry': 'chemistry-lessons'
-            };
-
-            // Group lessons by subject
-            const grouped = {};
-
-            // Also try to get questions count per topic
-            async function getQuestionsCount() {
-                try {
-                    const res = await fetch('data/questions.json');
-                    allQuestions = await res.json();
-                    return allQuestions;
-                } catch(e) { return []; }
-            }
-
-            // First pass: group
-            allLessons.forEach(lesson => {
-                const subj = lesson.subject || '';
-                // Map subject to container
-                let containerId = null;
-                for (const [key, val] of Object.entries(containers)) {
-                    if (subj.includes(key)) { containerId = val; break; }
-                }
-                if (!containerId) {
-                    for (const [key, val] of Object.entries(enMap)) {
-                        if (subj.includes(key)) { containerId = val; break; }
-                    }
-                }
-                if (!containerId) {
-                    // Try to infer from topic/title
-                    const title = (lesson.title_ar + lesson.title_en).toLowerCase();
-                    if (title.includes('رياض') || title.includes('math')) containerId = 'math-lessons';
-                    else if (title.includes('فيزي') || title.includes('phys')) containerId = 'physics-lessons';
-                    else if (title.includes('كيم') || title.includes('chem')) containerId = 'chemistry-lessons';
-                }
-                if (containerId) {
-                    if (!grouped[containerId]) grouped[containerId] = [];
-                    grouped[containerId].push(lesson);
-                }
+    function renderLangBtns() {
+        const ids = ['lang-switcher', 'lang-switcher-nav'];
+        ids.forEach(id => {
+            const c = document.getElementById(id);
+            if (!c) return;
+            c.innerHTML = '';
+            ['ar','en','zh'].forEach(l => {
+                const b = document.createElement('button');
+                b.className = 'lang-btn' + (l === lang ? ' active' : '');
+                b.textContent = langBtn(l);
+                b.onclick = () => switchLang(l);
+                c.appendChild(b);
             });
+        });
+    }
 
-            // Calculate questions per topic
-            const questionsPerTopic = {};
-            if (allQuestions.length === 0) {
-                // Will try async later
-            } else {
-                allQuestions.forEach(q => {
-                    const topic = q.topic;
-                    if (!questionsPerTopic[topic]) questionsPerTopic[topic] = 0;
-                    questionsPerTopic[topic]++;
-                });
+    // Apply translations to elements
+    function applyTr() {
+        document.querySelectorAll('[data-t]').forEach(el => {
+            const key = el.getAttribute('data-t');
+            const txt = trTxt(key);
+            if (txt && txt !== key) el.innerHTML = txt;
+        });
+    }
+
+    // ====== Lessons ======
+    function lessonTitle(l) {
+        return l['title_' + lang] || l.title_ar || l.title_en || 'Lesson';
+    }
+    function lessonSummary(l) {
+        return l['summary_' + lang] || l.summary || '';
+    }
+
+    function renderLessons() {
+        const map = {'رياضيات | Math':'math-lessons','فيزياء | Physics':'physics-lessons','كيمياء | Chemistry':'chemistry-lessons'};
+        const enMap = {'Mathematics':'math-lessons','Physics':'physics-lessons','Chemistry':'chemistry-lessons'};
+        const grp = {};
+
+        allLs.forEach(l => {
+            let s = l.subject || '';
+            let cid = null;
+            for (const [k,v] of Object.entries(map)) { if (s.includes(k)) { cid = v; break; } }
+            if (!cid) { for (const [k,v] of Object.entries(enMap)) { if (s.includes(k)) { cid = v; break; } } }
+            if (!cid) {
+                const t = ((l.title_ar||'') + (l.title_en||'')).toLowerCase();
+                if (t.includes('رياض') || t.includes('math')) cid = 'math-lessons';
+                else if (t.includes('فيزي') || t.includes('phys')) cid = 'physics-lessons';
+                else if (t.includes('كيم') || t.includes('chem')) cid = 'chemistry-lessons';
             }
+            if (cid) { if (!grp[cid]) grp[cid] = []; grp[cid].push(l); }
+        });
 
-            // Render each container
-            for (const [containerId, lessons] of Object.entries(grouped)) {
-                const container = document.getElementById(containerId);
-                if (!container) continue;
-                container.innerHTML = '';
-                lessons.forEach(lesson => {
-                    const topic = lesson.topic || '';
-                    const qCount = questionsPerTopic[topic] || 0;
-                    const emoji = containerId.includes('math') ? '📐' : containerId.includes('physics') ? '⚡' : '🧪';
-                    const card = document.createElement('a');
-                    card.className = 'card glass';
-                    card.href = `lessons.html?id=${lesson.id}&lang=${currentLang}`;
-                    card.innerHTML = `
-                        <h4>${emoji} ${getLessonTitle(lesson)}</h4>
-                        <p>${getLessonSummary(lesson)}</p>
-                        ${qCount ? `<span class="card-difficulty diff-medium">${qCount} ${t('stats.questions') || 'أسئلة'}</span>` : ''}
-                    `;
-                    container.appendChild(card);
-                });
-            }
+        // Questions per topic
+        const qpt = {};
+        allQs.forEach(q => { const t = q.topic; if (!qpt[t]) qpt[t] = 0; qpt[t]++; });
+
+        // Render
+        for (const [cid, lessons] of Object.entries(grp)) {
+            const el = document.getElementById(cid);
+            if (!el) continue;
+            const isMath = cid.includes('math');
+            const isPhys = cid.includes('physics');
+            const emoji = isMath ? '📐' : isPhys ? '⚡' : '🧪';
+            el.innerHTML = '';
+            lessons.forEach(l => {
+                const qt = qpt[l.topic] || 0;
+                const a = document.createElement('a');
+                a.className = 'card glass';
+                a.href = 'lessons.html?id=' + l.id + '&lang=' + lang;
+                a.innerHTML = '<h4>' + emoji + ' ' + lessonTitle(l) + '</h4>' +
+                    '<p>' + lessonSummary(l) + '</p>' +
+                    (qt ? '<span class="card-difficulty diff-medium">' + qt + ' ' + trTxt('stats.questions') + '</span>' : '');
+                el.appendChild(a);
+            });
         }
+    }
 
-        function renderTips() {
-            const container = document.getElementById('tips-container');
-            if (!container) return;
-            const tipsKey = currentLang === 'ar' ? 'tips_ar' : currentLang === 'zh' ? 'tips_zh' : 'tips_en';
-            const tips = translations.tips ? (translations.tips[tipsKey] || translations.tips['tips_en']) : [];
-            if (tips.length === 0) {
-                container.innerHTML = '<div class="card glass" style="padding:20px;"><p>Tips coming soon...</p></div>';
-                return;
-            }
-            // Split into 3 columns
-            const perCol = Math.ceil(tips.length / 3);
-            for (let c = 0; c < 3; c++) {
-                const col = document.createElement('div');
-                col.className = 'card glass';
-                col.style.padding = '20px';
-                col.style.listStyle = 'none';
-                const colTips = tips.slice(c * perCol, (c + 1) * perCol);
-                col.innerHTML = colTips.map(t => `<p style="margin:8px 0;">${t}</p>`).join('');
-                container.appendChild(col);
-            }
+    function renderStudyPlan() {
+        const el = document.getElementById('plan-grid');
+        if (!el) return;
+        el.innerHTML = '';
+        const plan = [
+            {t: trTxt('study_plan.week1_title'), d: trTxt('study_plan.week1_desc')},
+            {t: trTxt('study_plan.week2_title'), d: trTxt('study_plan.week2_desc')},
+            {t: trTxt('study_plan.week3_title'), d: trTxt('study_plan.week3_desc')},
+            {t: trTxt('study_plan.week4_title'), d: trTxt('study_plan.week4_desc')}
+        ];
+        plan.forEach((p, i) => {
+            const d = document.createElement('div');
+            d.className = 'card glass';
+            if (i === 3) d.style.borderColor = 'var(--accent)';
+            d.innerHTML = '<h4>' + p.t + '</h4><p>' + p.d + '</p>';
+            el.appendChild(d);
+        });
+    }
+
+    function renderTips() {
+        const el = document.getElementById('tips-grid');
+        if (!el) return;
+        const tk = lang === 'ar' ? 'tips_ar' : lang === 'zh' ? 'tips_zh' : 'tips_en';
+        const tips = tr.tips ? (tr.tips[tk] || tr.tips.tips_en || []) : [];
+        el.innerHTML = '';
+        if (!tips.length) { el.innerHTML = '<div class="card glass" style="padding:20px;"><p>Tips...</p></div>'; return; }
+        const pc = Math.ceil(tips.length / 3);
+        for (let c = 0; c < 3; c++) {
+            const col = document.createElement('div');
+            col.className = 'card glass';
+            col.style.padding = '20px';
+            col.innerHTML = tips.slice(c*pc, (c+1)*pc).map(t => '<p style="margin:8px 0;">' + t + '</p>').join('');
+            el.appendChild(col);
         }
+    }
 
-        function renderStats() {
-            const totalQuestions = allQuestions.length || 327;
-            const totalLessons = allLessons.length || 19;
-            document.querySelectorAll('#stat-lessons .stat-number').forEach(el => el.textContent = totalLessons);
-            document.querySelectorAll('#stat-questions .stat-number').forEach(el => el.textContent = totalQuestions);
+    function renderExamInfo() {
+        const el = document.getElementById('exam-info-row');
+        if (!el) return;
+        const items = [
+            {v: trTxt('exam_info.duration_val'), l: trTxt('exam_info.duration_label')},
+            {v: trTxt('exam_info.questions_val'), l: trTxt('exam_info.questions_label')},
+            {v: trTxt('exam_info.points_val'), l: trTxt('exam_info.points_label')},
+            {v: trTxt('exam_info.lang_val'), l: trTxt('exam_info.lang_label')}
+        ];
+        el.innerHTML = items.map(i => '<div class="info-item"><div class="info-value">' + i.v + '</div><div class="info-label">' + i.l + '</div></div>').join('');
+    }
+
+    function updateStats() {
+        const nLessons = allLs.length || 26;
+        const nQuestions = allQs.length || 327;
+        const el = document.getElementById('stat-lessons-num');
+        if (el) el.textContent = nLessons;
+        const el2 = document.getElementById('stat-questions-num');
+        if (el2) el2.textContent = nQuestions;
+        // Apply translations for labels
+        const labels = {'stat-lessons-lbl':'stats.lessons','stat-lines-lbl':'stats.lines','stat-questions-lbl':'stats.questions','stat-subjects-lbl':'stats.subjects'};
+        for (const [id, key] of Object.entries(labels)) {
+            const e = document.getElementById(id);
+            if (e) e.innerHTML = trTxt(key);
         }
+    }
 
-        async function init() {
-            initLang();
-            // Load questions first
-            try {
-                const resQ = await fetch('data/questions.json');
-                allQuestions = await resQ.json();
-            } catch(e) {}
-            await loadLessons();
-            applyTranslations();
-            renderLangSwitcher();
-            // Also render in nav
-            const navSwitcher = document.getElementById('lang-switcher-nav');
-            if (navSwitcher) navSwitcher.innerHTML = document.getElementById('lang-switcher').innerHTML;
+    function applyUIText() {
+        // Titles and text
+        const textMap = {
+            'hero-title':'hero.title', 'hero-subtitle':'hero.subtitle_ar',
+            'nav-home':'nav.home', 'nav-questions':'nav.questions',
+            'exam-title':'exam_info.title', 'exam-desc-text':'exam_info.desc',
+            'subject-math':'subjects.math', 'subject-math-w':'subjects.math_weight',
+            'subject-phys':'subjects.physics', 'subject-chem':'subjects.chemistry',
+            'plan-title':'study_plan.title', 'tips-title':'tips.title',
+            'motiv-title': 'motiv-title-key',
+            'motiv-sub': 'motiv-sub-key',
+            'motiv-btn': 'start_btn',
+            'footer-text': 'footer'
+        };
+        for (const [id, key] of Object.entries(textMap)) {
+            const e = document.getElementById(id);
+            if (e) e.innerHTML = trTxt(key);
         }
+        // Nav home active state
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.classList.toggle('active', a.href.includes('index.html'));
+        });
+    }
 
-        init();
+    // ====== Init ======
+    async function init() {
+        getLang();
+        renderLangBtns();
+
+        // Load translations
+        try {
+            const r = await fetch('data/translations.json');
+            tr = await r.json();
+        } catch(e) { console.error('tr fail', e); }
+
+        // Load questions
+        try {
+            const r = await fetch('data/questions.json');
+            allQs = await r.json();
+        } catch(e) { console.error('qs fail', e); }
+
+        // Load content (lessons)
+        try {
+            const r = await fetch('data/content.json');
+            allLs = await r.json();
+        } catch(e) { console.error('content fail', e); }
+
+        // Render everything
+        applyUIText();
+        renderExamInfo();
+        renderLessons();
+        renderStudyPlan();
+        renderTips();
+        updateStats();
+    }
+
+    init();
     </script>
 </body>
 </html>
